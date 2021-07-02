@@ -1,0 +1,25 @@
+
+ {
+"defenseSkill"	: 7,
+"attackSkill"	: 10,
+"exp"			: 40,
+"maxLvl"		: 31,
+"dmgMin"		: 4,
+"dmgMax"		: 22,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 0.5,
+"ht"			: 100,
+"name"			:"Крысиный император",
+"name_objective":"Императора",
+"description"	:"Крыса с синей мантией и другими крысами под плащём.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/RatImperator_Desc.json",
+ "scriptFile"	: "scripts/bosses/RatImperator",
+"lootChance"	: 0,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying"		: false,
+"friendly"		: false
+}

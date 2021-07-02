@@ -1,0 +1,25 @@
+
+ {
+"defenseSkill"	: 12,
+"attackSkill"	: 150,
+"exp"			: 4,
+"maxLvl"		: 31,
+"dmgMin"		: 80,
+"dmgMax"		: 135,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 5000,
+"name"			:"Ледяной король",
+"name_objective":"Короля",
+"description"	:"Могущественный маг с ледяной короной на голове... Кого-то он тебе напоминает.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/IceKing_Desc.json",
+ "scriptFile"	: "scripts/bosses/IceKing",
+"lootChance"	: 0,
+"attackRange"	: 10000,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying"		: false,
+"friendly"		: false
+}

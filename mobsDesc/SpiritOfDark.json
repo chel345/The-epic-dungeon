@@ -1,0 +1,24 @@
+
+ {
+"defenseSkill"	: 18,
+"attackSkill"	: 15,
+"exp"			: 5,
+"maxLvl"		: 34,
+"dmgMin"		: 20,
+"dmgMax"		: 70,
+"dr"			: 7,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 85,
+"name"			:"Предательский дух",
+"name_objective":"Духа",
+"description"	:"Брат Высшего Предательского Духа, но Тупее И Не Умеющий Призывать (нубло).",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/TreacherousSpirit.json",
+"lootChance"	: 0.1,
+"loot":{"kind":"Potion/PoisonOfDarknes","level":2},"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying" : true,
+"friendly"		: false
+}

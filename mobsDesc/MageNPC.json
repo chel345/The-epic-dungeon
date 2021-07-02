@@ -1,0 +1,14 @@
+{
+   "baseSpeed"     :0,
+   "attackDelay"   :1,
+   "ht"            :5000000,
+   "name"          :"Маг",
+   "name_objective":"хех",
+   "description"   :"Стильный чуваааааак.",
+   "gender"        :"masculine",
+   "spriteDesc"    :"spritesDesc/MageNPC_Desc.json",
+   "scriptFile"    :"scripts/npc/MageNPC",
+   "friendly"      :true,
+"aiState": "Passive",
+   "fraction"      :"NEUTRAL"
+}

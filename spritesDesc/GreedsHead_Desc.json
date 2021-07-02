@@ -1,0 +1,30 @@
+{
+   "texture" : "GreedsHead.png",
+   "width" : 8,
+   "height" : 13,
+   "idle" : {
+      "fps" : 4,
+      "looped" : true,
+      "frames" : [0]
+   },
+   "run" : {
+      "fps" : 15,
+      "looped" : true,
+      "frames" : [0,1,2,1,0]
+   },
+   "attack" : {
+      "fps" : 12,
+      "looped" : false,
+      "frames" : [0,3]
+   },
+   "die" : {
+      "fps" : 6,
+      "looped" : false,
+      "frames" : [4]
+   },
+  "bloodColor": "#868686"
+}
+
+
+
+

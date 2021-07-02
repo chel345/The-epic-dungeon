@@ -1,0 +1,27 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 12,
+"exp"			: 5,
+"maxLvl"		: 31,
+"dmgMin"		: 20,
+"dmgMax"		: 70,
+"dr"			: 1,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 90,
+"viewDistance"	: 10,
+"name"			:"Ангел",
+"name_objective":"Ангел",
+"description"	:"Древние защитники справедливости.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/Angel_Desc.json",
+ "scriptFile"	: "scripts/mobs/MagicEye",
+"loot":{"kind":"Gold"},
+"lootChance"	: 1,
+"attackRange"	: 100,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying" : true,
+"friendly"		: false
+}

@@ -1,0 +1,20 @@
+{
+   "defenseSkill"  :4,
+   "attackSkill"   :17,
+   "exp"           :10,
+   "maxLvl"        :32,
+   "dmgMin"        :7,
+   "dmgMax"        :24,
+   "dr"            :10,
+   "baseSpeed"     :2,
+   "attackDelay"   :1.5,
+   "ht"            :10,
+   "viewDistance"  :8,
+   "lootChance"    :1,
+   "name"          :"Паук броненосец",
+   "name_objective":"паука",
+   "description"   :"На этом пауке щит из брони.",
+   "gender"        :"mashlne",
+   "spriteDesc"    :"spritesDesc/ArmorySpider_Desc.json",
+   "walkingType"   :"NORMAL"
+}

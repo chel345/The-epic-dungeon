@@ -1,0 +1,23 @@
+ {
+"defenseSkill"	: 0,
+"attackSkill"	: 28,
+"exp"			: 0,
+"maxLvl"		: 0,
+"dmgMin"		: 40,
+"dmgMax"		: 100,
+"dr"			: 10,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 100,
+"name"			:"Прлклятая душа",
+"name_objective":"Душу",
+"description"	: "Тёмные силы заключили эту душу и овладели ей.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/DarkSoul_Desc.json",
+ "scriptFile"	: "scripts/mobs/DarkSoul",
+"attackRange"	: 100,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: true,
+"friendly"		: false
+}

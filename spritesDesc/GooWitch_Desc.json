@@ -1,0 +1,41 @@
+{
+  "idle": {
+    "looped": true,
+    "frames": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "fps": 1
+  },
+  "height": 13,
+  "texture": "GooWitch.png",
+  "width": 12,
+  "die": {
+    "looped": false,
+    "frames": [0
+    ],
+    "fps": 10
+  },
+  "attack": {
+    "looped": false,
+    "frames": [
+      0
+    ],
+    "fps": 12
+  },
+  "run": {
+    "looped": true,
+    "frames": [
+      0
+    ],
+    "fps": 15
+  },
+  "bloodColor": "0xffbb0000"
+}

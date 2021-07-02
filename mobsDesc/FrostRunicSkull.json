@@ -1,0 +1,23 @@
+ {
+"defenseSkill"	: 5,
+"attackSkill"	: 100000,
+"exp"			: 0,
+"maxLvl"		: 0,
+"dmgMin"		: 30,
+"dmgMax"		: 40,
+"dr"			: 2,
+"baseSpeed"		: 1,
+"attackDelay"	: 6,
+"ht"			: 100,
+"name"			:"RunicSkull_Name",
+"name_objective":"RunicSkull_Name",
+"description"	:"RunicSkull_Desc",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/FrostRunicSkull_Desc.json",
+ "scriptFile"	: "scripts/mobs/FrostRunicSkull",
+"attackRange"	: 32,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying"		: false,
+"friendly"		: false
+}

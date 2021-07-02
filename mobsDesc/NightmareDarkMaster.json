@@ -1,0 +1,26 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 12,
+"exp"			: 5,
+"maxLvl"		: 31,
+"dmgMin"		: 20,
+"dmgMax"		: 70,
+"dr"			: 1,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 90,
+"viewDistance"	: 10,
+"name"			:"Именталист",
+"name_objective":"Именталист",
+"description"	:"Фантом в броне с рогами.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/NightmareDarkMaster_Desc.json",
+"loot":{"kind":"Gold"},
+"lootChance"	: 1,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying" : true,
+"friendly"		: false
+}

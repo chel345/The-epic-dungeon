@@ -1,0 +1,25 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 15,
+"exp"			: 4,
+"maxLvl"		: 31,
+"dmgMin"		: 80,
+"dmgMax"		: 100,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 2000,
+"name"			:"Король скелетов",
+"name_objective":"Короля",
+"description"	:"Огромная, могучая, сильная голова великого короля скелетов.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/SkeletonKing_Desc.json",
+ "scriptFile"	: "scripts/bosses/SkeletonKing",
+"lootChance"	: 0,
+"attackRange"	: 10000,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying"		: false,
+"friendly"		: false
+}

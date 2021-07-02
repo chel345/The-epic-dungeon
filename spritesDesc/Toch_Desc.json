@@ -1,0 +1,12 @@
+{
+  "texture" : "Toch.png",
+  "width"   : 7,
+  "height"  : 6,
+"idle"    : { "fps" : 20,  "looped" : true,     "frames" : [0,1,2] },
+"run"     : { "fps" : 20, "looped" : true,     "frames" : [0,1,2] },
+"die"     : { "fps" : 20, "looped" : false,    "frames" : [0,1,2] },
+"attack"  : { "fps" : 20, "looped" : false,    "frames" : [0,1,2] },
+"zap"     : { "fps" : 20, "looped" : false,    "frames" : [0,1,2] },
+
+"operate" : { "fps" : 8,  "looped" : false,    "frames" : [0,1,2] }
+}

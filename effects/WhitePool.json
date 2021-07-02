@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/WhitePool.png",
+  "width"  : 48,
+  "height" : 48,
+  "anim"   : { "fps" : 1,  "looped" : true,    "frames" : [0] }
+}

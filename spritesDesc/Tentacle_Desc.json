@@ -1,0 +1,11 @@
+{
+  "texture" : "Tentacle.png",
+  "width"   : 16,
+  "height"  : 32,
+"idle"    : { "fps" : 6,  "looped" : true,     "frames" : [0,1,2,3,4] },
+"run"     : { "fps" : 6, "looped" : true,     "frames" : [0,1] },
+"die"     : { "fps" : 20, "looped" : false,    "frames" : [7,8,9] },
+"attack"  : { "fps" : 15, "looped" : false,    "frames" : [2,1,0,5,6,5]
+    
+}
+}

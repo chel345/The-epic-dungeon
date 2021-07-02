@@ -1,0 +1,11 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/ShopShopers_Desc.json",
+   "scriptFile"    :"scripts/npc/ShopShopers",
+   "friendly"      :true,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+"name"			:"Торговец торговцами",
+"name_objective":"Элементаля",
+"description"	:"Этот седой мужчина очень бодр и оптимистичен."
+}

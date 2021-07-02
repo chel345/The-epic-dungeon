@@ -1,0 +1,14 @@
+{
+   "baseSpeed"     :0,
+   "attackDelay"   :1,
+   "ht"            :5000000,
+   "name"          :"Торговец свечаии",
+   "name_objective":"хех",
+   "description"   :"Цвет настроения синий",
+   "gender"        :"masculine",
+   "spriteDesc"    :"spritesDesc/CandleKeeperNPC_Desc.json",
+   "scriptFile"    :"scripts/npc/CandleKeeperNPC",
+   "friendly"      :true,
+"aiState": "Passive",
+   "fraction"      :"NEUTRAL"
+}

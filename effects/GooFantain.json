@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/GooFantain.png",
+  "width"  : 15,
+  "height" : 27,
+  "anim"   : { "fps" : 10,  "looped" : false,    "frames" : [0,1,2] }
+}

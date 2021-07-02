@@ -1,0 +1,16 @@
+{
+  "kind":"Deco",
+
+  "appearance": {
+    "desc": {
+      "desc": "Старая, ржавая наковальня.",
+      "name": "Наковальня",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/Anvil.png",
+      "imageIndex" : 0
+    }
+  }
+}

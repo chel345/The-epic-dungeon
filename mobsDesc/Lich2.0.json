@@ -1,0 +1,23 @@
+
+ {
+"defenseSkill"	: 18,
+"attackSkill"	: 150000,
+"exp"			: 5,
+"maxLvl"		: 34,
+"dmgMin"		: 20,
+"dmgMax"		: 100,
+"dr"			: 7,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 200,
+"name"			:"Лич 2.0",
+"name_objective":"Лича",
+"description"	:"Брат Высшего Лича, но Тупее И Не Умеет Призывать *(второсортный маг).",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/Lich.json",
+"attackRange"	: 1000,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying" : false,
+"friendly"		: false
+}

@@ -1,0 +1,16 @@
+{
+  "kind":"Deco",
+
+  "appearance": {
+    "desc": {
+      "desc": "На ней можно посидеть.",
+      "name": "Скамейка",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/Bench.png",
+      "imageIndex" : 0
+    }
+  }
+}

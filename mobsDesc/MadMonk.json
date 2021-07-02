@@ -1,0 +1,26 @@
+
+ {
+"defenseSkill"	: 19,
+"attackSkill"	: 8,
+"exp"			: 6,
+"maxLvl"		: 31,
+"dmgMin"		: 10,
+"dmgMax"		: 60,
+"dr"			: 0,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 70,
+"name"			:"Безумнай монах",
+"name_objective":"монаха",
+"description"	:"У этого монаха закончился срок годности... Просто когда-то он был кефиром...",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/MadMonk_Desc.json",
+ "scriptFile"	: "scripts/mobs/MadMonk",
+"loot":{"kind":"ScrollOfMagicMapping"},
+"lootChance"	: 0.5,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying" : false,
+"friendly"		: false
+}

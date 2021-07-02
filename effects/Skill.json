@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/skill.png",
+  "width"  : 16,
+  "height" : 16,
+  "anim"   : { "fps" : 3,  "looped" : false,    "frames" : [0] }
+}

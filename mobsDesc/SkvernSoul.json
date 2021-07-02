@@ -1,0 +1,22 @@
+ {
+"defenseSkill"	: 5,
+"attackSkill"	: 35,
+"exp"			: 0,
+"maxLvl"		: 0,
+"dmgMin"		: 10,
+"dmgMax"		: 30,
+"dr"			: 2,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 40,
+"name"			:"Оскверненная душа",
+"name_objective":"Душу",
+"description"	:"Масса зелённой быстро меняющей форму сферы, в центре которой виднеется лицо.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/SkvernSoul_Desc.json",
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: true,
+"friendly"		: false
+}

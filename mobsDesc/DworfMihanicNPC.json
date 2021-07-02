@@ -1,0 +1,12 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/DworfMihanicNPC_Desc.json",
+   "scriptFile"    :"scripts/npc/DworfMihanicNPC",
+   "ht":100000000000,
+   "friendly"      :true,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+"name"			:"Дворф-механик",
+"name_objective":"Элементаля",
+"description"	:"Этот дворф выглядит озадаченным. Он держит в руках разводной ключ."
+}

@@ -1,0 +1,23 @@
+ {
+"defenseSkill"	: 4,
+"attackSkill"	: 8,
+"exp"			: 3,
+"maxLvl"		: 5,
+"dmgMin"		: 12,
+"dmgMax"		: 30,
+"dr"			: 0,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 40,
+"name"			:"Статуя",
+"name_objective":"статую",
+"description"	:"Она кого-то напоминает... Намёк на дальнейший сюжет... Когда-нибудь я добавлю его в мод.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/RatStatue_Desc.json",
+"lootChance"	: 1,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying"		: false,
+"friendly"		: false
+}

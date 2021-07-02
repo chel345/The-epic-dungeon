@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/TreuhnitsStup.png",
+  "width"  : 25,
+  "height" : 50,
+  "anim"   : { "fps" : 10,  "looped" : false,    "frames" : [0,1,2] }
+}

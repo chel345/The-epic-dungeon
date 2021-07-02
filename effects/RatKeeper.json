@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/RatKeeper.png",
+  "width"  : 16,
+  "height" : 15,
+  "anim"   : {  "fps" : 2,  "looped" : true,     "frames" : [0,0,0,1] }
+}

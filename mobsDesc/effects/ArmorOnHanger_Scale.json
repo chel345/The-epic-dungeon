@@ -1,0 +1,12 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/ArmorOnHanger_Scale_Desc.json",
+   "scriptFile"    :"scripts/mobs/timed/ArmorOnHanger_Scale",
+   "ht":100000000000,
+   "friendly"      :true,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+"name"			:"Стойка для брони",
+"name_objective":"Элементаля",
+"description"	:"На этой стойке висит чешуйчатый доспех."
+}

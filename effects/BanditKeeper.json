@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/BanditKeeper.png",
+  "width"  : 14,
+  "height" : 14,
+  "anim"   : { "fps" : 10,  "looped" : true,    "frames" : [1,1,1,1,1,0,0,0,0] }
+}

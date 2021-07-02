@@ -1,0 +1,34 @@
+{
+   "texture" : "Conqest.png",
+   "width" : 39,
+   "height" : 30,
+   "idle" : {
+      "fps" : 5,
+      "looped" : true,
+      "frames" : [0,1]
+   },
+   "run" : {
+      "fps" : 15,
+      "looped" : true,
+      "frames" : [0,1]
+   },
+   "attack" : {
+      "fps" : 12,
+      "looped" : false,
+      "frames" : [0,1]
+   },
+   "die" : {
+      "fps" : 12,
+      "looped" : false,
+      "frames" : [3]
+   },
+   "zap" : {
+       "fps":7,
+       "looped":false,
+       "frames":[3]
+   }
+}
+
+
+
+

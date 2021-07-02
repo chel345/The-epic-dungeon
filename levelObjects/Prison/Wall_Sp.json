@@ -1,0 +1,14 @@
+{
+  "kind":"Deco",
+
+  "appearance": {
+    "desc": { 
+      "desc": "Здесь ничего нет.",
+      "name": "Стена"
+    },
+    "sprite":{ 
+      "textureFile": "levelObjects/Sewer/SewerTiles.png",
+      "imageIndex" : 1
+    }
+  }
+}

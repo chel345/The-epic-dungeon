@@ -1,0 +1,25 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 15,
+"exp"			: 4,
+"maxLvl"		: 31,
+"dmgMin"		: 80,
+"dmgMax"		: 135,
+"dr"			: 50,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 1500,
+"name"			:"Кристаллический краб-гигант",
+"name_objective":"Краба",
+"description"	:"Огромный краб, состоящий из кристаллов породивших остальных крабов.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/BigCrystalCrab_Desc.json",
+ "scriptFile"	: "scripts/bosses/BigCrystalCrab",
+"lootChance"	: 0,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying"		: false,
+"friendly"		: false
+}

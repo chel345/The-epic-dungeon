@@ -1,0 +1,12 @@
+{
+   "width":48,
+   "height":48,
+
+   "tiles":"tiles_goo_kingoom.png",
+   "water":"water_goo.png",
+   
+    "rooms":[ "NULL" ,"NULL" ,"NULL"],
+ "items": [
+    {"kind":"PotionOfStrength" }
+  ]
+}
