@@ -1,0 +1,26 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 0,
+"exp"			: 0,
+"maxLvl"		: 31,
+"dmgMin"		: 0,
+"dmgMax"		: 0,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 1,
+"name"			:"Гримм",
+"name_objective":"Гримма",
+"description"	:"
+Сквозь тьму,                      по следам фонаря звучащего,        иду собрать я пламя королевства падшего...",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/Grimm_Desc.json",
+ "scriptFile"	: "scripts/mobs/MirorGrimm",
+"lootChance"	: 1,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying"		: false,
+"friendly"		: false
+}

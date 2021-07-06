@@ -1,0 +1,23 @@
+ {
+"defenseSkill"	: 2,
+"attackSkill"	: 10,
+"exp"			: 1,
+"maxLvl"		: 1,
+"dmgMin"		: 2,
+"dmgMax"		: 5,
+"dr"			: 0,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 5,
+"name"			:"Вредина",
+"name_objective":"Вредину",
+"description"	:"Это существо похоже на большую серую букашку с широченными красными глазами.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/Bee_Desc.json",
+"lootChance"	: 0,
+"attackRange"	: 1,
+"walkingType"	: "ABSOLUTE",
+"canBePet"		: true,
+"flying" : true,
+"friendly"		: false
+}

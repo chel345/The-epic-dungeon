@@ -1,0 +1,20 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Здесь ничего нет.",
+      "name": "Стена",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/RatTiles.png",
+      "imageIndex" : 10
+    }
+  },
+   "particles":"Candle"
+}

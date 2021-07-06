@@ -1,0 +1,9 @@
+{
+   "width":32,
+   "height":32,
+
+   "tiles":"tiles_water_caves.png",
+   "water":"water_water_caves.png",
+
+   "rooms": [ "NULL" ,"NULL" ,"NULL"]
+}

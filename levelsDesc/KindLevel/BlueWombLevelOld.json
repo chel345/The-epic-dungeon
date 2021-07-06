@@ -1,0 +1,13 @@
+{
+   "width":50,
+   "height":50,
+
+   "tiles":"tiles_blue_womb.png",
+   "water":"water_portal.png",
+   
+    "rooms":[ "NULL" ,"NULL" ,"NULL"],
+ "items": [
+    {"kind":"PotionOfStrength" },
+    {"kind":"ScrollOfUpgrade"}
+  ]
+}

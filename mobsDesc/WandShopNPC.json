@@ -1,0 +1,11 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/WandChop.json",
+   "scriptFile"    :"scripts/npc/WandChop",
+   "friendly"      :true,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+"name"			:"Богдан Иванов",
+"name_objective":"Элементаля",
+"description"	:"Это создатель мода."
+}

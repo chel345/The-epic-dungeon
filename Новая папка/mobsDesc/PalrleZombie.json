@@ -1,0 +1,23 @@
+ {
+"defenseSkill"	: 20,
+"attackSkill"	: 25,
+"exp"			: 20,
+"maxLvl"		: 32,
+"dmgMin"		: 30,
+"dmgMax"		: 40,
+"dr"			: 3,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 200,
+"name"			:"Мумия",
+"name_objective":"Мумию",
+"description"	:"Фиолетовый человек, опутанный лентой которую почему-то так хочется снять...",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/PalrleZombie_Desc.json",
+"lootChance"	: 0,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: false,
+"friendly"		: false
+}

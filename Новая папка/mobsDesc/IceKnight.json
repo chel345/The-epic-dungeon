@@ -1,0 +1,22 @@
+ {
+"defenseSkill"	: 3,
+"attackSkill"	: 35,
+"exp"			: 0,
+"maxLvl"		: 0,
+"dmgMin"		: 15,
+"dmgMax"		: 35,
+"dr"			: 0,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 30,
+"name"			:"Ледяной рыцарь",
+"name_objective":"Рыцаря",
+"description"	:"Ледяные рыцари- надёжные солдаты ледяных пещер.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/IceKnihgt_Desc.json",
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: false,
+"friendly"		: false
+}

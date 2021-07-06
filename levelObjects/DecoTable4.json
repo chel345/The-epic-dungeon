@@ -1,0 +1,18 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Здесь ничего нет.",
+      "name": "Стена"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/DecoTable4.png",
+      "imageIndex" : 0
+    },
+   "particles":"Candle"
+  }
+}

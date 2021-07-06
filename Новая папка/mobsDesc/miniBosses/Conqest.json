@@ -1,0 +1,25 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 15,
+"exp"			: 4,
+"maxLvl"		: 31,
+"dmgMin"		: 40,
+"dmgMax"		: 70,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 150,
+"name"			:"Завоеватель",
+"name_objective":"Завоевателя",
+"description"	:"Плаааааааааагиаааааат!",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/Conqest_Desc.json",
+ "scriptFile"	: "scripts/miniBosses/Conqest",
+"lootChance"	: 0.5,
+"attackRange"	: 5,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: true,
+"friendly"		: false
+}

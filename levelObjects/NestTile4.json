@@ -1,0 +1,19 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Здесь ничего нет.",
+      "name": "Паутина",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/NestTiles.png",
+      "imageIndex" : 3
+    }
+  }
+}

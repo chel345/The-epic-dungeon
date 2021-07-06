@@ -1,0 +1,31 @@
+{
+   "texture" : "Lloyd.png",
+   "width" : 24,
+   "height" : 29,
+   "idle" : {
+      "fps" : 6,
+      "looped" : true,
+      "frames" : [5]
+   },
+   "run" : {
+      "fps" : 10,
+      "looped" : true,
+      "frames" : [0,5]
+   },
+   "attack" : {
+      "fps" : 20,
+      "looped" : false,
+      "frames" : [0,1,2,3,4,0]
+   },
+   "die" : {
+      "fps" : 10,
+      "looped" : false,
+      "frames" : [0,6,7,8,9,10,11]
+   },
+   "zap" : {
+      "fps" : 3,
+      "looped" : true,
+      "frames" : [4]
+   },
+   "bloodColor" : "0x33CCFF"
+}

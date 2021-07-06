@@ -1,0 +1,14 @@
+{
+  "kind":"Deco",
+
+  "appearance": {
+    "desc": {
+      "desc": "Вода заполнила проход.",
+      "name": "Вода"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/Sewer/SewerTiles.png",
+      "imageIndex" : 2
+    }
+  }
+}

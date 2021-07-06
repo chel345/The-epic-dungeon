@@ -1,0 +1,12 @@
+{
+   "width":52,
+   "height":52,
+
+   "tiles":"tiles_ice_castle.png",
+   "water":"water_ice_castle.png",
+   
+    "rooms":[ "NULL" ,"NULL" ,"NULL"],
+ "items": [
+    {"kind":"ScrollOfWeaponUpgrade" }
+  ]
+}

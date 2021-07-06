@@ -1,0 +1,17 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Какие-то ржавые детали.",
+      "name": "Детали"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/DM-50Details.png",
+      "imageIndex" : 2
+    }
+  }
+}

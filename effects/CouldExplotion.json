@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/CouldExplotion.png",
+   "width" : 64,
+   "height" : 64,
+  "anim"   : { "fps" : 6, "looped" : false, "frames" : [0,1,2,3,4] }
+}

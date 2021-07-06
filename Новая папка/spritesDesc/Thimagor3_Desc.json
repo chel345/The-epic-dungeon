@@ -1,0 +1,32 @@
+{
+   "texture" : "Thimagor3.png",
+   "width" : 12,
+   "height" : 16,
+  "zapEffect" : "CommonArrow",
+
+   "idle" : {
+      "fps" : 2,
+      "looped" : true,
+      "frames" : [0, 1, 1, 1, 0, 1]
+   },
+   "run" : {
+      "fps" : 8,
+      "looped" : true,
+      "frames" : [ 2, 3, 4, 5, 6, 7]
+   },
+   "attack" : {
+      "fps" : 8,
+      "looped" : true,
+      "frames" : [ 8, 9, 10 ]
+   },
+   "die" : {
+      "fps" : 8,
+      "looped" : false,
+      "frames" : [ 11, 12, 13]
+   }
+
+}
+
+
+
+

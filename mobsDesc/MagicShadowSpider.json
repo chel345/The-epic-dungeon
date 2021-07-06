@@ -1,0 +1,25 @@
+
+ {
+"defenseSkill"	: 14,
+"attackSkill"	: 17,
+"exp"			: 6,
+"maxLvl"		: 34,
+"dmgMin"		: 25,
+"dmgMax"		: 75,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 170,
+"name"			:"Тенесник Неруба",
+"name_objective":"Тенесника",
+"description"	:"Неруб- великий и могущественный король пауков.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/MagicShadowSpider_Desc.json",
+ "scriptFile"	: "scripts/mobs/MagicShadowSpider",
+"lootChance"	: 0,
+"attackRange"	: 100,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: false,
+"friendly"		: false
+}

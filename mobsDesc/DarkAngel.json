@@ -1,0 +1,23 @@
+ {
+"defenseSkill"	: 20,
+"attackSkill"	: 25,
+"exp"			: 20,
+"maxLvl"		: 32,
+"dmgMin"		: 30,
+"dmgMax"		: 70,
+"dr"			: 3,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 300,
+"name"			:"Тёмный ангел",
+"name_objective":"Ангела",
+"description"	:"Ангел порабощённый тьмой.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/DarkAngel_Desc.json",
+"lootChance"	: 0,
+"attackRange"	: 1000,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: true,
+"friendly"		: false
+}

@@ -1,0 +1,25 @@
+ {
+"defenseSkill"	: 20,
+"attackSkill"	: 25,
+"exp"			: 0,
+"maxLvl"		: 32,
+"dmgMin"		: 30,
+"dmgMax"		: 40,
+"dr"			: 3,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 70,
+"name"			:"Страж",
+"name_objective":"Стража",
+"description"	:"Ожившая статуя, созданная с целью защиты города.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/DworfSolder_Desc.json",
+ "scriptFile"    :"scripts/npc/DworfSolderGuard",
+"lootChance"	: 0,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: false,
+"friendly"		: false
+
+}

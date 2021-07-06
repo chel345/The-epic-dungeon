@@ -1,0 +1,17 @@
+{
+  "kind":"Deco",
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Здесь ничего нет.",
+      "name": "Стена",
+  "canStepOn":false,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/BanditTiles.png",
+      "imageIndex" : 4
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+   "baseSpeed"     :0,
+   "attackDelay"   :1,
+   "ht"            :5000000,
+   "name"          :"Некромант",
+   "name_objective":"хех",
+   "description"   :"Этот человек одет в чёрную мантию",
+   "gender"        :"masculine",
+   "spriteDesc"    :"spritesDesc/NecromanterNPC_Desc.json",
+   "scriptFile"    :"scripts/npc/NecroNPC",
+   "friendly"      :true,
+"aiState": "Passive",
+   "fraction"      :"NEUTRAL"
+}

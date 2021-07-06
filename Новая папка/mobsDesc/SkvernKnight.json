@@ -1,0 +1,22 @@
+ {
+"defenseSkill"	: 5,
+"attackSkill"	: 35,
+"exp"			: 0,
+"maxLvl"		: 0,
+"dmgMin"		: 10,
+"dmgMax"		: 30,
+"dr"			: 2,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 40,
+"name"			:"Порабощённый рыцарь",
+"name_objective":"Рыцаря",
+"description"	:"Порабощённый скверной рыцарь похож на летающий в воздухе доспех с кусками плоти.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/SkvernKnight_Desc.json",
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: false,
+"friendly"		: false
+}

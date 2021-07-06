@@ -1,0 +1,23 @@
+ {
+"defenseSkill"	: 4,
+"attackSkill"	: 8,
+"exp"			: 3,
+"maxLvl"		: 5,
+"dmgMin"		: 6,
+"dmgMax"		: 13,
+"dr"			: 0,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 20,
+"name"			:"Крыс-лучник",
+"name_objective":"Крыса",
+"description"	:"На голове этой крысы надет зелёный колпак. В лапах она держит деревянный лук. *(не спрашивайте как)",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/RatArcher_Desc.json",
+"lootChance"	: 1,
+"attackRange"	: 1000,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: false,
+"friendly"		: false
+}

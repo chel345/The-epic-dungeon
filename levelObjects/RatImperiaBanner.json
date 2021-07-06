@@ -1,0 +1,19 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Красный флаг, с вышитой  жёлтыми нитками крысиной головой.",
+      "name": "Знамя",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/RatImperiaBanner.png",
+      "imageIndex" : 0
+    }
+  }
+}

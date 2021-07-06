@@ -1,0 +1,12 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/DworfStatueNPC_Desc.json",
+   "scriptFile"    :"scripts/npc/DworfStatueNPC",
+   "ht":100000000000,
+   "friendly"      :true,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+"name"			:"Подозрительная статуя",
+"name_objective":"статую.",
+"description"	:"Странно... Ты готов покдяться, что видел, как она моргает..."
+}

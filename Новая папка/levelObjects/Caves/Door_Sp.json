@@ -1,0 +1,14 @@
+{
+  "kind":"Deco",
+
+  "appearance": {
+    "desc": {
+      "desc": "Здесь ничего нет.",
+      "name": "Дверь"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/Caves/CavesTiles.png",
+      "imageIndex" : 6
+    }
+  }
+}

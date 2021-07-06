@@ -1,0 +1,19 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "В этом фонаре грит яркий огонь.",
+      "name": "Фонарь",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/Light.png",
+      "imageIndex" : 0
+    }
+  }
+}

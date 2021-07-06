@@ -1,0 +1,12 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/DworfWomenNPC_Desc.json",
+   "scriptFile"    :"scripts/npc/DworfWomenNPC",
+   "ht":100000000000,
+   "friendly"      :true,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+"name"			:"Дворфийка",
+"name_objective":"Элементаля",
+"description"	:"Красивая ;)"
+}

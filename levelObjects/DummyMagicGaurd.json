@@ -1,0 +1,17 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "На этом педестале разложены различные инструменты.",
+      "name": "Педестал с инструментами"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/DummyMagicGaurd.png",
+      "imageIndex" : 0
+    }
+  }
+}

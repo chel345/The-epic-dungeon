@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/WaterExplotion.png",
+  "width"  : 20,
+  "height" : 16,
+  "anim"   : { "fps" : 10,  "looped" : false,    "frames" : [0,1,2] }
+}

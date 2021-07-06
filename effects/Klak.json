@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/Klak.png",
+  "width"  : 8,
+  "height" : 10,
+  "anim"   : { "fps" : 20,  "looped" : false,    "frames" : [0,1,2,3,4,3,2,1] }
+}

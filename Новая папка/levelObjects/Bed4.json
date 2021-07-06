@@ -1,0 +1,17 @@
+{
+  "kind":"Deco",
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Кровать.",
+      "name": "Кровать",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/Beds.png",
+      "imageIndex" : 3
+    }
+  }
+}

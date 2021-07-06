@@ -1,0 +1,12 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/DworfMonkNPC_Desc.json",
+   "scriptFile"    :"scripts/npc/DworfMonkNPC",
+   "ht":100000000000,
+   "friendly"      :true,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+"name"			:"Monk_Name",
+"name_objective":"Элементаля",
+"description"	:"Monk_Desc"
+}

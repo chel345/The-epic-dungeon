@@ -1,0 +1,25 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 10000,
+"exp"			: 4,
+"maxLvl"		: 31,
+"dmgMin"		: 40,
+"dmgMax"		: 67,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 100,
+"name"			:"Демонолог",
+"name_objective":"Демонолог",
+"description"	:"Древний, могущественный маг, отдавший свою душу тёмным силам...",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/PcevdoMage_Desc.json",
+ "scriptFile"	: "scripts/mobs/PcevdoMage",
+"lootChance"	: 0.5,
+"attackRange"	: 5,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: false,
+"friendly"		: false
+}

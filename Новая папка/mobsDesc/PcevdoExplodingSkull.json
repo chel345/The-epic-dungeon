@@ -1,0 +1,25 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 15,
+"exp"			: 4,
+"maxLvl"		: 31,
+"dmgMin"		: 80,
+"dmgMax"		: 135,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 300,
+"name"			:"Чёрный взрывающийся череп",
+"name_objective":"Череп",
+"description"	:"Этот череп чёрного цвета горит синим пламенем.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/PcevdoExplodingSkull_Desc.json",
+ "scriptFile"	: "scripts/mobs/PcevdoExplodingSkull",
+"lootChance"	: 0.5,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: false,
+"friendly"		: false
+}

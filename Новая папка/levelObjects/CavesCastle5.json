@@ -1,0 +1,19 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Здесь ничего нет.",
+      "name": "Стена",
+  "canStepOn":false,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/CavesCastle.png",
+      "imageIndex" : 4
+    }
+  }
+}

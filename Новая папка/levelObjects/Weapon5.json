@@ -1,0 +1,19 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "На этом щите вешают различные предметы.",
+      "name": "Щит",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/Weapons.png",
+      "imageIndex" : 4
+    }
+  }
+}

@@ -1,0 +1,26 @@
+
+ {
+"defenseSkill"	: 13,
+"attackSkill"	: 10,
+"exp"			: 4,
+"maxLvl"		: 31,
+"dmgMin"		: 15,
+"dmgMax"		: 65,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 400,
+"name"			:"Владыка теней",
+"name_objective":"Чернокнижника",
+"description"	:"Это существо создано из зла и непроглядной тьмы.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/ShadowLord.json",
+ "scriptFile"	: "scripts/bosses/ShadowLord",
+"loot":{"kind":"ScrollOfWeaponUpgrade"},
+"lootChance"	: 1,
+"attackRange"	: 10000,
+"walkingType"	: "ABSOLUTE",
+"canBePet"		: false,
+"flying" : true,
+"friendly"		: false
+}

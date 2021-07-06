@@ -1,0 +1,14 @@
+{
+  "kind":"Deco",
+
+  "appearance": {
+    "desc": {
+      "desc": "Вода заполонила проход.",
+      "name": "Вода"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/Caves/CavesTiles.png",
+      "imageIndex" : 2
+    }
+  }
+}

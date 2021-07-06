@@ -1,0 +1,14 @@
+{
+   "baseSpeed"     :0,
+   "attackDelay"   :1,
+   "ht"            :5000000,
+   "name"          :"Дворф путник",
+   "name_objective":"хех",
+   "description"   :"Дворф бомж",
+   "gender"        :"masculine",
+   "spriteDesc"    :"spritesDesc/DworfTravelerNPC_Desc.json",
+   "scriptFile"    :"scripts/npc/DworfTravelerNPC",
+   "friendly"      :true,
+"aiState": "Passive",
+   "fraction"      :"NEUTRAL"
+}

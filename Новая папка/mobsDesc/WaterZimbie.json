@@ -1,0 +1,23 @@
+ {
+"defenseSkill"	: 15,
+"attackSkill"	: 20,
+"exp"			: 2,
+"maxLvl"		: 32,
+"dmgMin"		: 15,
+"dmgMax"		: 20,
+"dr"			: 2,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 50,
+"name"			:"Утопленник",
+"name_objective":"Утопленника",
+"description"	:"Этот зомби вылез из-под воды и странно покачивается в разные стороны *(ну хоть стоит).",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/WaterZimbie_Desc.json",
+"lootChance"	: 0,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		:  true,
+"flying"		: false,
+"friendly"		: false
+}

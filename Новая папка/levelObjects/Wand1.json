@@ -1,0 +1,19 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Палочка ледяной стрелы на стенде.",
+      "name": "Палочка ледяной стрелы",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/Wands.png",
+      "imageIndex" : 0
+    }
+  }
+}

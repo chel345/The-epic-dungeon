@@ -1,0 +1,17 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Здесь ничего нет.",
+      "name": "Статуя"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/DworfKingStatue.png",
+      "imageIndex" : 1
+    }
+  }
+}

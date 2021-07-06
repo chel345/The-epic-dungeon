@@ -1,0 +1,23 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "В ней кто-то сидит.",
+      "name": "Клетка",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/CollectorsCagets.png",
+      "imageIndex" : 0,
+      "animations": {
+        "basic": {
+ "fps" : 10,  "looped" : true,    "frames" : [0, 1 ]         }
+      }
+    }
+  }
+}

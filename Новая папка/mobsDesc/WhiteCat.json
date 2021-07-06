@@ -1,0 +1,11 @@
+{
+   "baseSpeed"     : 1,
+   "spriteDesc"    :"spritesDesc/WhiteCat_Desc.json",
+   "scriptFile"    :"scripts/npc/BlackCat",
+   "name":"Кошак",
+   "name_objective":"нету",
+   "description":"Обычная белая кошка",
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+   "friendly"      :true
+}

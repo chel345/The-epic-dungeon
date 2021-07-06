@@ -1,0 +1,39 @@
+ {
+"defenseSkill"	: 10,
+"attackSkill"	: 30,
+"exp"			: 25,
+"maxLvl"		: 20,
+"dmgMin"		: 15,
+"dmgMax"		: 24,
+"dr"			: 15,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 180,
+"name"			:"Ледомант",
+"name_objective":"Ледоманта",
+"description"	:"Ледяной маг нашёл свою смерть в глубинах некрополя. Постепенно тёмные силы превратили его в лича- безвольную марионетку, управляющую тёмными силами. Этот босс является улучшенной версией Лича.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/IceNecromanter_Desc.json",
+ "scriptFile"	: "scripts/bosses/IceNecromanter",
+"lootChance"	: 1,
+"loot": { "kind": "SkeletonKey" },
+"attackRange"	: 32,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying" : false,
+"friendly"		: false,
+    "immunities": [
+      "Paralysis",
+      "ToxicGas",
+      "Terror",
+      "Death",
+      "Amok",
+      "Blindness",
+      "Frost",
+      "Poison",
+      "Vertigo",
+      "Bleeding"
+    ]
+
+
+}

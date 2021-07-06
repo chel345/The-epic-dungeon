@@ -1,0 +1,27 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "deco_candle_desc",
+      "name": "deco_candle_name",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/SmokingCandle.png",
+      "imageIndex" : 0,
+      "animations": {
+        "basic": {
+          "fps": 1,
+          "frames": [0],
+          "looped": true
+        }
+      }
+    },
+   "particles":"Smoke"
+  }
+}

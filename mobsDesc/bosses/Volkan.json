@@ -1,0 +1,26 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 15,
+"exp"			: 4,
+"maxLvl"		: 31,
+"dmgMin"		: 80,
+"dmgMax"		: 135,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 5,
+"ht"			: 800,
+"name"			:"Вулкан",
+"name_objective":"Вулкана",
+"description"	:"Это огромная каменная гора, пылающая огнём.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/Volkan_Desc.json",
+ "scriptFile"	: "scripts/bosses/Volkan",
+"loot":{"kind":"Wands/DragonWand"},
+"lootChance"	: 1,
+"attackRange"	: 10000,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying"		: false,
+"friendly"		: false
+}

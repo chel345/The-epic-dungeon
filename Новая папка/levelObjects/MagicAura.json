@@ -1,0 +1,26 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Странная летающая сфера",
+      "name": "Сфера",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/MagicAura.png",
+      "imageIndex" : 0,
+      "animations": {
+        "basic": {
+          "fps": 15,
+          "frames": [1, 2,2,2, 1, 0],
+          "looped": true
+        }
+      }
+    }
+  }
+}

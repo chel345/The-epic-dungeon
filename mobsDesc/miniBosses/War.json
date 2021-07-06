@@ -1,0 +1,25 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 15,
+"exp"			: 4,
+"maxLvl"		: 31,
+"dmgMin"		: 40,
+"dmgMax"		: 50,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 200,
+"name"			:"Война",
+"name_objective":"Война",
+"description"	:"Плаааааааааагиаааааат!",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/War_Desc.json",
+ "scriptFile"	: "scripts/miniBosses/War",
+"lootChance"	: 0.5,
+"attackRange"	: 5,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: true,
+"friendly"		: false
+}

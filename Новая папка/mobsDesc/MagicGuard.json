@@ -1,0 +1,24 @@
+
+ {
+"defenseSkill"	: 13,
+"attackSkill"	: 10,
+"exp"			: 4,
+"maxLvl"		: 31,
+"dmgMin"		: 15,
+"dmgMax"		: 65,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 80,
+"name"			:"Магический воин",
+"name_objective":"Воина",
+"description"	:"Армия демонов старого бога сметала цивилизацию за цивилизацией. Кем-бы не были эти существа, но даже до них дошла эта война.Они были обычными воинами, чаще всего используемых в нападениях и захватах.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/MagicGuard_Desc.json",
+"lootChance"	: 0,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: false,
+"friendly"		: false
+}

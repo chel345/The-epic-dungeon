@@ -1,0 +1,13 @@
+{
+   "width":64,
+   "height":64,
+
+   "tiles":"tiles_castle_level_clear.png",
+   "water":"water4.png",
+   
+    "rooms":[ "NULL" ,"NULL" ,"NULL", "NULL" ,"NULL","SHOP" ],
+ "items": [
+      {"kind":"ScrollOfUpgrade"},
+      {"kind":"ScrollOfUpgrade"},
+      {"kind":"ScrollOfUpgrade"}    ]
+}

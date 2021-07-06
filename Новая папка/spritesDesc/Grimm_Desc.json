@@ -1,0 +1,10 @@
+{
+  "texture" : "Grimm.png",
+  "width"   : 25,
+  "height"  : 19,
+"idle"    : { "fps" : 10,  "looped" : true,     "frames" : [2] },
+"run"     : { "fps" : 20, "looped" : false,     "frames" : [2,3,4] },
+"die"     : { "fps" : 20, "looped" : false,    "frames" : [3,4,4,4,4,4,4] },
+"attack"  : { "fps" : 15, "looped" : false,    "frames" : [0,1] },
+"operate" : { "fps" : 8,  "looped" : false,    "frames" : [0,1,2] }
+}

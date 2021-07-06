@@ -1,0 +1,26 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 12,
+"exp"			: 5,
+"maxLvl"		: 31,
+"dmgMin"		: 20,
+"dmgMax"		: 70,
+"dr"			: 1,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 90,
+"viewDistance"	: 10,
+"name"			:"Порабощённый гнолл",
+"name_objective":"гнолла",
+"description"	:"Когда нажрался мухаморов.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/FungusGnoll_Desc.json",
+"lootChance"	: 0.2,
+"loot": { "kind": "Ration/Fungus"},
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying" : false,
+"friendly"		: false
+}

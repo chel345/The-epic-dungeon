@@ -1,0 +1,14 @@
+{
+   "baseSpeed"     :0,
+   "attackDelay"   :1,
+   "ht"            :5000000,
+   "name"          :"Гадалка",
+   "name_objective":"хех",
+   "description"   :"Цвет настроения красныыыый",
+   "gender"        :"masculine",
+   "spriteDesc"    :"spritesDesc/TearsFutureTellerNPC_Desc.json",
+   "scriptFile"    :"scripts/npc/TearsFutureTellerNPC",
+   "friendly"      :true,
+"aiState": "Passive",
+   "fraction"      :"NEUTRAL"
+}

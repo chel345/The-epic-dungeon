@@ -1,0 +1,17 @@
+{
+  "kind":"Deco",
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Здесь ничего нет.",
+      "name": "Плиты",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/BlueTiles.png",
+      "imageIndex" : 0
+    }
+  }
+}

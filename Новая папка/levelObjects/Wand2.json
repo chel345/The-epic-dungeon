@@ -1,0 +1,19 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Палочка теневой стрелы на стенде.",
+      "name": "Палочка теневой стрелы",
+  "canStepOn":true,
+  "nonPassable":false
+    },
+    "sprite":{
+      "textureFile": "levelObjects/Wands.png",
+      "imageIndex" : 1
+    }
+  }
+}

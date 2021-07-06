@@ -1,0 +1,23 @@
+ {
+"defenseSkill"	: 20,
+"attackSkill"	: 25,
+"exp"			: 20,
+"maxLvl"		: 32,
+"dmgMin"		: 30,
+"dmgMax"		: 40,
+"dr"			: 3,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 100,
+"name"			:"Глова грида",
+"name_objective":"Голову",
+"description"	:"Прыгующая голова грида. Было бы забавно, если бы она не отвалилась от ожившего безумного трупа пожирающего золото",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/GreedsHead_Desc.json",
+"lootChance"	: 0,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: false,
+"friendly"		: false
+}

@@ -1,0 +1,14 @@
+{
+   "width":20,
+   "height":20,
+
+   "tiles":"tiles0.png",
+   "water":"water0.png",
+   
+    "rooms":[ "NULL" ,"NULL" ,"NULL"],
+ "items": [
+    {"kind":"PotionOfStrength" },
+    {"kind":"ScrollOfUpgrade"}
+  ],
+  "nTraps":0
+}

@@ -1,0 +1,25 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 15,
+"exp"			: 4,
+"maxLvl"		: 31,
+"dmgMin"		: 60,
+"dmgMax"		: 80,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 900,
+"name"			:"Чернильный хаш",
+"name_objective":"Хаша",
+"description"	:"Огромная чёрная пупырка!",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/GooHash_Desc.json",
+ "scriptFile"	: "scripts/miniBosses/GooHash",
+"lootChance"	: 0,
+"attackRange"	: 10000,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying"		: false,
+"friendly"		: false
+}

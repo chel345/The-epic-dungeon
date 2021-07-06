@@ -1,0 +1,12 @@
+{
+   "width":32,
+   "height":32,
+
+   "tiles":"tiles_skeleton.png",
+   "water":"water_necropolis.png",
+   
+  "rooms":["LIBRARY", "LIBRARY", "LIBRARY", "LIBRARY", "STATUE"],
+ "items": [
+    {"kind":"ScrollOfWeaponUpgrade" }
+  ]
+}

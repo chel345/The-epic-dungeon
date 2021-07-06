@@ -1,0 +1,23 @@
+ {
+"defenseSkill"	: 15,
+"attackSkill"	: 30,
+"exp"			: 4,
+"maxLvl"		: 20,
+"dmgMin"		: 15,
+"dmgMax"		: 40,
+"dr"			: 4,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 50,
+"name"			:"Советник Неруба",
+"name_objective":"Советника",
+"description"	:"Советник Неруба, рекомендовал ему поднять налоги.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/WarlokSpider_Desc.json",
+"lootChance"	: 1,
+"attackRange"	: 32,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: false,
+"friendly"		: false
+}

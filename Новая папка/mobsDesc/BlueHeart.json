@@ -1,0 +1,25 @@
+
+ {
+"defenseSkill"	: 9,
+"attackSkill"	: 15,
+"exp"			: 4,
+"maxLvl"		: 31,
+"dmgMin"		: 80,
+"dmgMax"		: 135,
+"dr"			: 5,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 1000,
+"name"			:"Синее сердце",
+"name_objective":"Сердца",
+"description"	:"Огромное пульсируещее синее сердце.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/BlueHeart_Desc.json",
+ "scriptFile"	: "scripts/mobs/BlueHeart",
+"lootChance"	: 0,
+"attackRange"	: 10000,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying"		: false,
+"friendly"		: false
+}

@@ -1,0 +1,25 @@
+{
+  "kind":"Deco",
+  "canStepOn":true,
+  "nonPassable":false,
+
+
+  "appearance": {
+    "desc": {
+      "desc": "Странная летающая сфера",
+      "name": "Сфера"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/GooTiles.png",
+      "imageIndex" : 4,
+      "animations": {
+        "basic": {
+          "fps": 5,
+          "frames": [4,5],
+          "looped": true
+        }
+      }
+    },
+   "particles":"Candle"
+  }
+}

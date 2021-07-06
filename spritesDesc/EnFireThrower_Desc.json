@@ -1,0 +1,32 @@
+{
+   "texture" : "EnFireThrower.png",
+   "width" : 16,
+   "height" : 16,
+  "deathEffect" : "Golem",
+   "idle" : {
+      "fps" : 2,
+      "looped" : true,
+      "frames" : [0]
+   },
+   "run" : {
+      "fps" : 8,
+      "looped" : true,
+      "frames" : [0]
+   },
+   "attack" : {
+      "fps" : 10,
+      "looped" : false,
+      "frames" : [0,1,2,0]
+   },
+   "die" : {
+      "fps" : 6,
+      "looped" : false,
+      "frames" : [0,3,3,4,5]
+   },
+   "zap" : {
+      "fps" : 10,
+      "looped" : true,
+      "frames" : [0,1,2,0]
+   },
+   "bloodColor" : "0xFF777777"
+}

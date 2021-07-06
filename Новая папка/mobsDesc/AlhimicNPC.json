@@ -1,0 +1,14 @@
+{
+   "baseSpeed"     :0,
+   "attackDelay"   :1,
+   "ht"            :5000000,
+   "name"          :"Алхимик",
+   "name_objective":"хех",
+   "description"   :"Человек в маске с причудливой шляпой.",
+   "gender"        :"masculine",
+   "spriteDesc"    :"spritesDesc/AlhimicNPC_Desc.json",
+   "scriptFile"    :"scripts/npc/AlhimicNPC",
+   "friendly"      :true,
+"aiState": "Passive",
+   "fraction"      :"NEUTRAL"
+}

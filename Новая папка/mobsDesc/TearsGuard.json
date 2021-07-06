@@ -1,0 +1,23 @@
+ {
+"defenseSkill"	: 0,
+"attackSkill"	: 28,
+"exp"			: 0,
+"maxLvl"		: 0,
+"dmgMin"		: 70,
+"dmgMax"		: 150,
+"dr"			: 20,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 400,
+"name"			:"Страж слёз",
+"name_objective":"стража",
+"description"	: "Тьма в доспехах.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/TearsGuard_Desc.json",
+ "scriptFile"	: "scripts/mobs/TearsGuard",
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying"		: true,
+"friendly"		: false
+}

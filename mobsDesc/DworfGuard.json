@@ -1,0 +1,12 @@
+{
+   "baseSpeed"     :0,
+   "spriteDesc"    :"spritesDesc/DworfGuard_Desc.json",
+   "scriptFile"    :"scripts/npc/DworfGuard",
+   "ht":100000000000,
+   "friendly"      :true,
+   "aiState"       :"Passive",
+   "fraction"      :"NEUTRAL",
+"name"			:"Дворф стражник",
+"name_objective":"Элементаля",
+"description"	:"Техника, конечно, хорошо, но гвардия армии состоит из дворфов."
+}

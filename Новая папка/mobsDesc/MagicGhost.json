@@ -1,0 +1,27 @@
+
+ {
+"defenseSkill"	: 19,
+"attackSkill"	: 8,
+"exp"			: 6,
+"maxLvl"		: 31,
+"dmgMin"		: 10,
+"dmgMax"		: 60,
+"dr"			: 0,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 70,
+"viewDistance"	: 10,
+"name"			:"Призрак",
+"name_objective":"Призрака",
+"description"	:"Некогда бывший обитатель этого храма. Внешне неотличим от обычного фантома, но лишь слегка синеватый оттенок выдаёт его.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/MagicGhost_Desc.json",
+ "scriptFile"	: "scripts/mobs/MagicGhost",
+"loot":{"kind":"ScrollOfMagicMapping"},
+"lootChance"	: 0.1,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: true,
+"flying" : true,
+"friendly"		: false
+}

@@ -1,0 +1,23 @@
+ {
+"defenseSkill"	: 20,
+"attackSkill"	: 25,
+"exp"			: 10,
+"maxLvl"		: 32,
+"dmgMin"		: 30,
+"dmgMax"		: 50,
+"dr"			: 3,
+"baseSpeed"		: 1,
+"attackDelay"	: 1,
+"ht"			: 400,
+"name"			:"Магический голем",
+"name_objective":"Голема",
+"description"	:"Внешне этот голем почти ничем не отличается от обычного голема.",
+"gender"		:"masculine",
+"spriteDesc"	:"spritesDesc/MagicGolem_Desc.json",
+"lootChance"	: 0,
+"attackRange"	: 1,
+"walkingType"	: "NORMAL",
+"canBePet"		: false,
+"flying" : true,
+"friendly"		: false
+}
