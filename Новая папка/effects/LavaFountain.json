@@ -1,6 +1,0 @@
-{
-  "texture" : "effects/LavaFountain.png",
-  "width"  : 16,
-  "height" : 16,
-  "anim"   : { "fps" : 15,  "looped" : false,    "frames" : [0,1,2,3,4,5,6,7,8] }
-}

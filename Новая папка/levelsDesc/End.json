@@ -1,9 +1,0 @@
-{
-   "width":100,
-   "height":100,
-
-   "tiles":"tiles_end.png",
-   "water":"water_portal.png",
-   
-    "rooms":[ "NULL" ,"NULL" ,"NULL"]
-}

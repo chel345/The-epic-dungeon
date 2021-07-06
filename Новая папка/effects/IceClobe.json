@@ -1,6 +1,0 @@
-{
-  "texture" : "effects/ice_cube_effect.png",
-  "width"  : 17,
-  "height" : 16,
-  "anim"   : { "fps" : 20,  "looped" : false,    "frames" : [5,4,3,2,1,0,1,2,3,4,5] }
-}

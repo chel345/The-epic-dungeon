@@ -1,6 +1,0 @@
-{
-  "texture" : "effects/FireRune.png",
-  "width"  : 17,
-  "height" : 16,
-  "anim"   : { "fps" : 1,  "looped" : false,    "frames" : [0] }
-}

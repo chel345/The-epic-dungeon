@@ -1,6 +1,0 @@
-{
-  "texture" : "effects/LightLevelEffect.png",
-  "width"  : 16,
-  "height" : 16,
-  "anim"   : { "fps" : 5,  "looped" : true,    "frames" : [0,1,2,2,2,2,2,2,1,0,3,3,3,3,3,3] }
-}

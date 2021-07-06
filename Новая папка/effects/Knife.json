@@ -1,6 +1,0 @@
-{
-  "texture" : "effects/Knife.png",
-  "width"  : 16,
-  "height" : 16,
-  "anim"   : { "fps" : 3,  "looped" : true,    "frames" : [0] }
-}

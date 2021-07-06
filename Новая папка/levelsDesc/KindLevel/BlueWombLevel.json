@@ -1,9 +1,0 @@
-{
-   "width":50,
-   "height":50,
-   "map":[],
-   "tiles":"tiles_blue_womb.png",
-   "water":"water_blue.png",
-   "exit":[5,5],
-   "entrance":[7,7]
-}
