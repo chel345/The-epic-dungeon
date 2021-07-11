@@ -7,7 +7,7 @@
  "Shad3":{"Shadow":1,"ShadowScorpio":1,"BlackGuard":1 },
  "Shad4":{"Shadow":1,"ShadowScorpio":1,"BlackGuard":1 },
 "Water1":{"Hydra":1,"GnollLiber":1,"Bat":1},
-"Water2":{"Hydra":1,"GnollLiber":1,"Bat":1},
+"Water2":{"Hydra":1,"GnollLiber":1,"Bat":1,"WaterElemental":1},
 "Water3":{"Hydra":1,"GnollLiber":1,"Bat":1, "LightingElemental":1},
 "Water4":{"Hydra":1,"GnollLiber":1,"Bat":1, "LightingElemental":1},
 "Light1":{"MagicGhost":1,"MagicEye":1,"MagicGuard":1,"GhostAngel":1}, 
@@ -145,9 +145,9 @@
 "Nest5":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.5,"SpiderGuard":0.03,"SpiderMindAmber":0.018, "IceSpider":1}
 },
   "Feelings":{
-    "Chance":0.2,
-    "CHASM":{"AirElemental":1},
-    "WATER":{"WaterElemental":1},
-    "GRASS":{"EarthElemental":1}
+    "Chance":0,
+    "CHASM":{"AirElemental":0},
+    "WATER":{"WaterElemental":0},
+    "GRASS":{"EarthElemental":0}
   }
 }

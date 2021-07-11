@@ -1,3 +1,4 @@
+local RPD = require "scripts/lib/commonClasses"
 local table = 
 {
 kind = "Castle",
@@ -8,7 +9,7 @@ ExitHeigth = 4,
 ExitWidth = 4,
 RoomHeigth = 7,
 RoomWidth = 7,
-RandRooms = {"Gold","Fishbowl","Sewer","Alhimy","Chasm","StatueRoom","Warehouse","Workshop","ArmorWarehouse","Library","BigLibrary","RatPost","LostRoom","LooserRoom","BestRoom","LowerRoom"},
+RandRooms = nil,
 HasBase = false,
 Chanse = 1,
 Items = {"Ration"},
@@ -53,5 +54,12 @@ RoomFactor = 0,
 MiniBoss = "HugeCrabRoom",
 LevelMiniBoss = 4
 }
+if RPD.Dungeon.depth > 3 then
+table.RandRooms = {"Gold","Fishbowl","Sewer","Alhimy","Chasm","StatueRoom","Warehouse","Workshop","ArmorWarehouse","Library","BigLibrary","RatPost","LostRoom","LooserRoom","BestRoom","LowerRoom"}
+elseif RPD.Dungeon.depth > 2 then
+table.RandRooms = {"Gold","Fishbowl","Sewer","Alhimy","Chasm","StatueRoom","Warehouse","Workshop","ArmorWarehouse","Library","BigLibrary","LostRoom","LooserRoom","BestRoom","LowerRoom"}
+else
+table.RandRooms = {"Gold","Fishbowl","Alhimy","Chasm","StatueRoom","Warehouse","Workshop","ArmorWarehouse","Library","BigLibrary","LostRoom","LooserRoom","BestRoom","LowerRoom"}
+end
 
 return table

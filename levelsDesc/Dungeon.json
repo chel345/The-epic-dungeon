@@ -3,23 +3,23 @@
 
 "0":{"kind":"SewerLevel", "depth":0,        "size":[0,0]},
 
-"Inn":{"kind":"PredesignedLevel", "depth":-1, "file":"levelsDesc/Inn_2021_03.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1"},
+"Inn":{"kind":"PredesignedLevel", "depth":-1, "file":"levelsDesc/Inn_2021_03.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","script":"scripts/actors/town/TownInn"},
 
 "Test":{"kind":"TestLevel"},
 
-"TownLibrary":{"kind":"PredesignedLevel", "depth":-1,  "size":[32,32], "noFogOfWar":true, "isStatic":true, "isSafe":true,"music":"ost_town_1.ogg", "file":"levelsDesc/WandShop.json"},
+"TownLibrary":{"kind":"PredesignedLevel", "depth":1,  "size":[32,32], "noFogOfWar":true, "isStatic":true, "isSafe":true,"music":"ost_town_1.ogg", "file":"levelsDesc/WandShop.json"},
       
-"TownWandShop":{"kind":"PredesignedLevel", "depth":-7,  "size":[32,32], "noFogOfWar":true, "isStatic":true, "isSafe":true, "file":"levelsDesc/WandShopLevel2.json", "music":"ost_town_1.ogg", "script":"scripts/actors/WandShopEffect"},
+"ModRoom":{"kind":"PredesignedLevel", "depth":1,  "size":[32,32], "noFogOfWar":true, "isStatic":true, "isSafe":true, "file":"levelsDesc/ModRoom.json", "music":"ost_town_1.ogg", "script":"scripts/actors/town/ModRoom"},
       
-"TownChurch":{"kind":"PredesignedLevel", "depth":-1,  "size":[32,32], "isSafe":true,"noFogOfWar":true, "isStatic":true, "file":"levelsDesc/Church.json", "music":"ost_town_1.ogg","script":"scripts/actors/town/TownChurch"},
+"TownChurch":{"kind":"PredesignedLevel", "depth":1,  "size":[32,32], "isSafe":true,"noFogOfWar":true, "isStatic":true, "file":"levelsDesc/Church.json", "music":"ost_town_1.ogg","script":"scripts/actors/town/TownChurch"},
       
-"TownMovieTheater":{"kind":"PredesignedLevel", "depth":-3,  "size":[12,8], "isSafe":true,"noFogOfWar":true, "file":"levelsDesc/Cinema.json", "music":"ost_town_1.ogg"},
+"TownMovieTheater":{"kind":"PredesignedLevel", "depth":1,  "size":[12,8], "isSafe":true,"noFogOfWar":true, "file":"levelsDesc/Cinema.json", "music":"ost_town_1.ogg"},
       
-"Town":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/Town.json", "noFogOfWar":true, "isSafe":true, "isStatic":false, "music":"ost_town_1.ogg","script":"scripts/actors/town/Compass"},
+"Town":{"kind":"PredesignedLevel", "depth":1, "file":"levelsDesc/Town.json", "noFogOfWar":true, "isSafe":true, "isStatic":false, "music":"ost_town_1.ogg","script":"scripts/actors/town/Compass"},
       
-"TownShop":{"kind":"PredesignedLevel", "depth":-4, "size":[14,14],"file":"levelsDesc/Shop_Town.json","noFogOfWar":true, "music":"Shop.ogg","script":"scripts/actors/town/TownShop"},
+"TownShop":{"kind":"PredesignedLevel", "depth":1, "size":[14,14],"file":"levelsDesc/Shop_Town.json","noFogOfWar":true, "music":"Shop.ogg","script":"scripts/actors/town/TownShop"},
       
-"FortuneShop":{"kind":"PredesignedLevel", "depth":-5, "file":"levelsDesc/Fortune.json", "noFogOfWar":true, "isSafe":true, "isStatic":true, "music":"ost_town_1.ogg","script":"scripts/actors/town/TownFortuneShop"},
+"FortuneShop":{"kind":"PredesignedLevel", "depth":1, "file":"levelsDesc/Fortune.json", "noFogOfWar":true, "isSafe":true, "isStatic":true, "music":"ost_town_1.ogg","script":"scripts/actors/town/TownFortuneShop"},
       
  
 
@@ -492,11 +492,13 @@
 "TownShop":[[],["Town"]],
 "TownMovieTheater":[[],["Town"]],
 "TownChurch":[[],["Town"]],
-"TownLibrary":[["WandShop"],["Town"]],
+"TownLibrary":[["ModRoom"],["Town"]],
 "TownWandShop":[[],["library"]],      
 "FortuneShop":[[],["Town"]],
+"ModRoom":[[],["TownLibrary"]],
+"Inn":[[],["Town"]],
 
-"Town":[["TownChurch", "TownMovieTheater", "Sewer1","TownLibrary", "TownShop","Inn", "FortuneShop"],[]],
+"Town":[["TownChurch", "TownMovieTheater", "Sewer1","TownLibrary", "TownShop","FortuneShop", "Inn"],[]],
 
 
 "portal_room_lvl5":[["Prison1"],["Sewer5"]],
