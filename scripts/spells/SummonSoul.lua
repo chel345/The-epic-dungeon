@@ -14,10 +14,10 @@ return spell.init{
         return {
             image         = 5,
             imageFile     = "spellsIcons/necromancy.png",
-            name          = "Призвать порабощённую душу",
-            info          = "Призывает порабощённую душу.",
+            name          = RPD.textById("SummonSoul_Name"),
+            info          = RPD.textById("SummonSoul_Info"),
             magicAffinity = "Combat",
-            targetingType = "self",          level         = 1,
+            targetingType = "self",          level         = 2,
             spellCost     = 7,
             cooldown      = 5,
             castTime      = 2

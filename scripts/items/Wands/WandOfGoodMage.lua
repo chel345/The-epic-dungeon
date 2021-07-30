@@ -12,13 +12,13 @@ local wand = require "scripts/lib/wand"
 local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
-
+local TIME_TO_ZAP = 1
 return wand.init{ 
     desc  = function()  
         return {
            image     = 2,
-            name      = "Жезл друида",
-            info      = "При использовании этот жезл вызовет регенерацию травы в указанной области. Цена 5 маны."
+            name      = RPD.textById("WandOfGoodMage_Name"),
+            info      = RPD.textById("WandOfGoodMage_Info")
         }
 end, 
 
@@ -34,7 +34,7 @@ end,
     end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)
-
+thisItem:getUser():spend(TIME_TO_ZAP)
 EPD.ZapWand("WandOfRegrowth",lvl+2,thisItem:getUser(),dst)
 if math.random(1,4) == 1 then
 EPD.SpawnMob("EarthElemental",dst,true)
@@ -55,6 +55,6 @@ return 5
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

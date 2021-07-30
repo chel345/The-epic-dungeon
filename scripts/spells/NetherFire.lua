@@ -14,8 +14,8 @@ return spell.init{
         return {
             image         = 17,
             imageFile     = "spellsIcons/elemental(new).png",
-            name          = "Адское пламя",
-            info          = "Заклинание создаст огромное количество огненной энергии в определённом месте.",
+            name          = RPD.textById("NetherFire_Name"),
+            info          = RPD.textById("NetherFire_Info"),
             magicAffinity = "Elemental",
             targetingType = "cell",
             level         = 3,

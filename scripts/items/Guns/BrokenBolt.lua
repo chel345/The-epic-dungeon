@@ -15,8 +15,8 @@ return item.init{
         return {
             image     = 4,
             imageFile = "items/Guns.png",
-            name      = "Сломанный патрон",
-            info      = "В этом патроне трещины и вмяттны. Он больше ниуда не годится.",
+            name      = RPD.textById("BrokenBolt_Name"),
+            info      = RPD.textById("BrokenBolt_Info"),
             stackable = true,
             price     = 1
         }

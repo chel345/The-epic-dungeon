@@ -1,19 +1,17 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "Просто часы.",
-      "name": "Часы",
-  "canStepOn":true,
-  "nonPassable":false
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/Tickets.png",
-      "imageIndex" : 1
+    "sprite": {
+      "imageIndex": 1,
+      "textureFile": "levelObjects/Tickets.png"
     }
-  }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

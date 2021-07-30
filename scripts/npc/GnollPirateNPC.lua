@@ -27,23 +27,23 @@ end,
 
 interact = function(self, chr)
 if not storage.get("interact") then
-EPD.showQuestWindow(self, "Эй, ты, путник! Ты, да, ты! Я тебя видел! Слушай, дружище, у меня к тебе просьба: видишь ли один злой волшебник проклял мой глаз и теперь я медленно теряю зрение- было бы у меня два глаза, да второй я тоже в бою потерял... И вот я пришёл в это место, чтобы отыскать особый артефакт, 'Магический глаз', похищенный разбойниками много лет назад, но как на зло не вижу ничерта... Мы, гноллы, хоть и очень подозрительны и пугливы, но очень ценим помощь собратям, особенно от людей.")
+EPD.showQuestWindow(self, RPD.textById("GnollPirateNPC_Phrase1"))
 storage.put("interact",true)
 return
 end
 if RPD.Dungeon.hero:getBelongings():getItem("Artifacts/MagicEye") then
-EPD.showQuestWindow(self, "Спасибо, путник, ты меня спас! За это я вручаю тебе вещь, которую ты достоин! Спасибо! *снимает повязку и суёт в глаз в глазницу* Я вижу! Я снова вижу! Прощай, путник, желаю тебе удачи.")
+EPD.showQuestWindow(self, RPD.textById("GnollPirateNPC_Phrase2"))
 local hero = RPD.Dungeon.hero
 hero:getBelongings():getItem("Artifacts/MagicEye"):detach(hero:getBelongings().backpack)
 local wand = RPD.item("Artifacts/GnollHorn")
 RPD.Dungeon.hero:collect(wand)
-RPD.glog("Теперь у тебя есть "..wand:name())
+RPD.glog(RPD.textById("GnollPirateNPC_Phrase3")..wand:name())
 self:getSprite():killAndErase()
 self:getSprite():emitter():burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.WOOL ), 4)
 self:destroy()
 storage.put("complete",true)
 elseif not storage.get("complete") then
-EPD.showQuestWindow(self, "Это кто там?")
+EPD.showQuestWindow(self, RPD.textById("GnollPirateNPC_Phrase4"))
 end
 end
 })

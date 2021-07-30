@@ -24,12 +24,12 @@ level:drop(RPD.item("Artifacts/SpiderEye"),cell).type = RPD.Heap.Type.SKELETON
 end,
 interact = function(self, chr)
 if not storage.get("interact") then
-EPD.showQuestWindow(self, "Здравствуйте, не могли бы вы помочь мне с одним делом. В награду я отдам вам пару тройку золотых. Я пришёл в это место, чтобы найти кое-какие ингредиенты для зелья. Мне нужен паучий глаз.")
+EPD.showQuestWindow(self, RPD.textById("AlhimicNPC_Phrase_"))
 storage.put("interact",true)
 return
 end
 if RPD.Dungeon.hero:getBelongings():getItem("Artifacts/SpiderEye") then
-EPD.showQuestWindow(self, "Спасибо, как и обещал я... *быстро читает свиток телепортации*.")
+EPD.showQuestWindow(self, RPD.textById("AlhimicNPC_Phrase_"))
 local hero = RPD.Dungeon.hero
 hero:getBelongings():getItem("Artifacts/SpiderEye"):detach(hero:getBelongings().backpack)
 RPD.Dungeon.level:drop(RPD.item("Potion/Test8"),self:getPos())
@@ -38,7 +38,7 @@ self:destroy()
 self:getSprite():killAndErase()
 storage.put("complete",true)
 elseif not storage.get("complete") then
-EPD.showQuestWindow(self, "Ну и мерзкое это место... Как дела с поиском?")
+EPD.showQuestWindow(self, RPD.textById("AlhimicNPC_Phrase_"))
 end
 end
 })

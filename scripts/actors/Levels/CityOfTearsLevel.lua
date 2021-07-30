@@ -16,6 +16,13 @@ return actor.init({
 activate = function()
 local level = RPD.Dungeon.level
 if RPD.Dungeon.depth == 31 then
+if not storage.get("storytears") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("CityOfTears_Story"))
+       RPD.GameScene:show(wnd)
+       storage.get("storytears",true)
+end
+end
+if RPD.Dungeon.depth == 31 then
 RPD.GameScene:particleEffect("Smoke", 194)
 RPD.GameScene:particleEffect("Smoke", 196)
 RPD.GameScene:particleEffect("Torch", 274)

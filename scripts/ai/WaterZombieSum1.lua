@@ -25,6 +25,5 @@ end,
     end,
 
     status = function(self, ai, me)
-        return "охотится на тебя"
-    end
+        return RPD.textById("attack_on_you")
 }

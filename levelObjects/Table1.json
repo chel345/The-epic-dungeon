@@ -1,19 +1,17 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "Обычный дубовый стол.",
-      "name": "Дубовый стол",
-  "canStepOn":true,
-  "nonPassable":false
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/Table.png",
-      "imageIndex" : 0
+    "sprite": {
+      "imageIndex": 0,
+      "textureFile": "levelObjects/Table.png"
     }
-  }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

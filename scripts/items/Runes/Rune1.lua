@@ -15,23 +15,23 @@ return item.init{
         return {
             image         = 0,
             imageFile     = "items/Runes.png",
-            name          = "Руна стада",
-            info          = "Эта руна мигает тёмно-фиолетовым цветом. На ней имеются искусстно вырезанные заклятья. При использовании эта руна призовёт стадо волшебных овец.",
+            name          = RPD.textById("RuneOfFlock_Name"),
+            info          = RPD.textById("RuneOfFlock_Info"),
             stackable     = true,
-            defaultAction = "АКТИВИРОВАТЬ",
+            defaultAction = RPD.textById("Activate"),
             price         = 50,
             upgradable    = true
         }
     end,
-    actions = function() return {"АКТИВИРОВАТЬ"} end,
+    actions = function() return {RPD.textById("Activate")} end,
 
     cellSelected = function(self, thisItem, action, cell,item)
 thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack) 
 
-        if action == "АКТИВИРОВАТЬ" then 
+        if action == RPD.textById("Activate") then 
 local wand = RPD.ItemFactory:itemByName("WandOfFlock")
 wand:mobWandUse(thisItem:getUser(), cell)
-
+thisItem:getUser():spend(1)
 for i = 1, thisItem:level() do
 local wand = RPD.ItemFactory:itemByName("WandOfFlock")
 wand:mobWandUse(thisItem:getUser(), cell)
@@ -41,8 +41,8 @@ end
 end
 end,
     execute = function(self, item, hero, action)
-        if action == "АКТИВИРОВАТЬ" then
-            item:selectCell( "АКТИВИРОВАТЬ" ,"Выбирите клетку.")
+        if action == RPD.textById("Activate") then
+            item:selectCell( RPD.textById("Activate") ,RPD.textById("Select_A_Cage"))
         end
 end,
   bag = function(self, item)

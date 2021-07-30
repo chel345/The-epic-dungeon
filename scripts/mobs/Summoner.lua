@@ -15,7 +15,7 @@ return mob.init{
 
     if self:isPet() then
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("Bee")
+            local mob = RPD.MobFactory:mobByName("BeeBad")
             local pos = level:getEmptyCellNextTo(self:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)
@@ -26,7 +26,7 @@ RPD.Sfx.SpellSprite:show(self, RPD.Sfx.SpellSprite.SUMMON)
         end
 else
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("Bee")
+            local mob = RPD.MobFactory:mobByName("BeeBad")
             local pos = level:getEmptyCellNextTo(self:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

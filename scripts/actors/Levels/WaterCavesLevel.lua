@@ -18,7 +18,13 @@ activate = function()
 if RPD.Dungeon.depth ~= 20 then
 Ginerator.CreateLevel("WaterCavesLevel",true)
 end
-
+if RPD.Dungeon.depth == 16 then
+if not storage.get("storywater") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("Water_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storywater",true)
+end
+end
 local level = RPD.Dungeon.level
 local W = level:getWidth()
 for i = 1,level:getLength()-1 do

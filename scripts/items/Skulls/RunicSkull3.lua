@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 0,
             imageFile = "RunicSkull3.png",
-            name      = "Рунный череп",
-            info = "Рунные черепа- это хрустальные черепа, содержащие определённое заклятье, которое активируется черепом во время того, когда он видит опасность.",
+            name      = RPD.textById("IceRunicSkull_3_Name"),
+            info      = RPD.textById("IceRunicSkull_3_Info"),
             stackable = true,
             price     = 150
         }

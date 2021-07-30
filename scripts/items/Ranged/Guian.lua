@@ -14,8 +14,8 @@ return item.init{
         return {
            image     = 2,
             imageFile = "items/RangedMod.png",
-            name      = "Гаян",
-            info      = "Этот волшебный кинжал пропитан магией природы.",
+            name      = RPD.textById("Guian_Name"),
+            info      = RPD.textById("Guian_Info"),
             stackable = true,
             upgradable    = true,
             price     = 10
@@ -52,7 +52,7 @@ if ver == chanse then
 RPD.playSound( "snd_hit.mp3")
         return dmg
 else
-soul:getSprite():showStatus(0xCCAA44,"Уклонился")
+soul:getSprite():showStatus(0xCCAA44,RPD.textById("Dodged"))
 item:dropTo(cell)
 end
 

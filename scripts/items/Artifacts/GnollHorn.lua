@@ -14,22 +14,22 @@ return item.init{
         return {
            image     = 15,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Рог гноллов",
-            info      = "Особый магический рог, способный призвать на помощь гноллов-собратьев, которые объязаны прийдти на помощь. Обычно такие роги выдают героям за храбрость в бою. При использовании этот рог также может ошеломить ближайших врагов. Цена- 45 маны.",
+            name      = RPD.textById("GnollHorn_Name"),
+            info      = RPD.textById("GnollHorn_Info"),
             stackable = false,
             upgradable    = false,
  
              price     = 50
         }
-    end, actions = function() return {"ПОДУТЬ"} end,
+    end, actions = function() return {RPD.textById("Blow")} end,
     execute = function(self, item, hero, action, cell, char, data) 
-    if action == "ПОДУТЬ" then  
+    if action == RPD.textById("Blow") then  
 
 mana = RPD.Dungeon.hero:getSkillPoints()
 if mana > 45 then
 RPD.Dungeon.hero:spendSkillPoints(45)
 else
-RPD.glog("-- Не хватает маны")
+RPD.glog(RPD.textById("No_Mana"))
 return
 end
 

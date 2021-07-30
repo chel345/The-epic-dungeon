@@ -18,8 +18,8 @@ return wand.init{
         return {
             image     = 17,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Фонарь смотрителя",
-            info      = "Этот фонарь позводит тебе вызывать огненную стрелу. Цена 10 маны."
+            name      = RPD.textById("CaretakerLight_Name"),
+            info      = RPD.textById("CaretakerLight_Info")
         }
 end, 
 
@@ -48,6 +48,6 @@ return 10
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

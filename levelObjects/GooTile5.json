@@ -1,25 +1,26 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "Странная летающая сфера",
-      "name": "Сфера"
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
     },
-    "sprite":{
-      "textureFile": "levelObjects/GooTiles.png",
-      "imageIndex" : 4,
+    "particles": "Candle",
+    "sprite": {
       "animations": {
         "basic": {
           "fps": 5,
-          "frames": [4,5],
+          "frames": [
+            4,
+            5
+          ],
           "looped": true
         }
-      }
-    },
-   "particles":"Candle"
-  }
+      },
+      "imageIndex": 4,
+      "textureFile": "levelObjects/GooTiles.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

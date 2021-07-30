@@ -1,14 +1,14 @@
 {
-   "baseSpeed"     :0,
-   "attackDelay"   :1,
-   "ht"            :5000000,
-   "name"          :"Торговец оружием",
-   "name_objective":"хех",
-   "description"   :"Этот человек одет в кольчужный доспех, за его спиной виднеется колчан *(лучше его не злить, что-то в нём есть такое).",
-   "gender"        :"masculine",
-   "spriteDesc"    :"spritesDesc/CastleKeeperNPC_Desc.json",
-   "scriptFile"    :"scripts/npc/CastleKeeperNPC",
-   "friendly"      :true,
-"aiState": "Passive",
-   "fraction"      :"NEUTRAL"
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "CastleKeeperNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "CastleKeeperNPC_Gender",
+  "ht": 5000000,
+  "name": "CastleKeeperNPC_Name",
+  "name_objective": "CastleKeeperNPC_Object",
+  "scriptFile": "scripts/npc/CastleKeeperNPC",
+  "spriteDesc": "spritesDesc/CastleKeeperNPC_Desc.json"
 }

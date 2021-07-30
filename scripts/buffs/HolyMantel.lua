@@ -8,7 +8,7 @@ return buff.init{
 desc = function ()
 return {
 icon = 50,
-name = "Святое покровительство.",
+name = RPD.textById("Holy_Mantel_Buff"),
 info = "DieHard_Info",
 }
 end,

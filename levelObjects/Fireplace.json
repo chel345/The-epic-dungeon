@@ -1,17 +1,15 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "Судя по всему здесь когда-то был костёр.",
-      "name": "Потухший костёр"
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
     },
-    "sprite":{
-      "textureFile": "levelObjects/Fireplace.png",
-      "imageIndex" : 0
+    "sprite": {
+      "imageIndex": 0,
+      "textureFile": "levelObjects/Fireplace.png"
     }
-  }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

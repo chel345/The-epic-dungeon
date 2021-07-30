@@ -15,18 +15,19 @@ return item.init{
         return {
             image         = 1,
             imageFile     = "items/Runes.png",
-            name          = "Руна защитного поля",
-            info          = "Эта руна мигает тёмно-фиолетовым цветом. На ней имеются искусстно вырезанные заклятья. При использовании эта руна наложит на тебя особый щит, который сделает тебя неуязвимым к любому урону (кроме некоторых видов заклинаний).",
+            name          = RPD.textById("RuneOfProtectiveField_Name"),
+            info          = RPD.textById("RuneOfProtectiveField_Info"),
             stackable     = true,
-            defaultAction = "АКТИВИРОВАТЬ",
+            defaultAction = RPD.textById("Activate"),
             price         = 50,
             upgradable    = true
         }
     end,
-    actions = function() return {"АКТИВИРОВАТЬ"} end,
+    actions = function() return {RPD.textById("Activate")} end,
 
     execute = function(self, item, hero, action)
-        if action == "АКТИВИРОВАТЬ" then 
+        if action == RPD.textById("Activate") then 
+item:getUser():spend(1)
    RPD.affectBuff(RPD.Dungeon.hero, "LightShild" , 10+item:level())
    item:detach(RPD.Dungeon.hero:getBelongings().backpack)
         end

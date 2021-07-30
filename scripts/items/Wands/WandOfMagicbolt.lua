@@ -12,13 +12,13 @@ local wand    = require "scripts/lib/wand"
 local EPD     = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
-
+local TIME_TO_ZAP = 1
 return wand.init {
     desc       = function()
         return {
             image = 1,
-            name  = "Жезл магических молний",
-            info  = "При использовании этот жезл испустит молнию, которая нанесёт урон врагам, а также с шансом может оживить статую. Цена 20 маны."
+            name  = RPD.textById("WandOfMagicbolt_Name"),
+            info  = RPD.textById("WandOfMagicbolt_Info")
         }
     end,
 
@@ -39,14 +39,12 @@ return wand.init {
     end,
 
     castOnCell = function(self, thisItem, cell, dst, lvl)
-
-        if math.random(1, 2) == 1 then
+thisItem:getUser():spend(TIME_TO_ZAP)
             if RPD.Dungeon.level.map[cell] == RPD.Terrain.STATUE or RPD.Dungeon.level.map[cell] == RPD.Terrain.STATUE_SP then
                 RPD.Dungeon.level:set(cell, RPD.Terrain.EMPTY)
                 EPD.SpawnMob("SumStatue", cell, true)
                 RPD.zapEffect(thisItem:getUser():getPos(), cell, "Lightning")
             end
-        end
 
         if enemy then
 
@@ -75,6 +73,6 @@ return wand.init {
     end,
 
     getManaMes = function()
-        return "-- не хватает маны"
+        return RPD.textById("No_Mana")
     end
 }

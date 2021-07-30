@@ -28,12 +28,12 @@ level:spawnMob(mob)
 end,
 interact = function(self, chr)
 if not storage.get("interact") then
-EPD.showQuestWindow(self, "Извините, не могли бы вы помочь мне найти в этом месте одно существо... Кристаллического червя. Он обитает в этих местах и мне нужен осколок от него. Я буду очень признательна, если вы поможете мне с этим делом.")
+EPD.showQuestWindow(self, RPD.textById("GooWitch_Phrase1"))
 storage.put("interact",true)
 return
 end
 if RPD.Dungeon.hero:getBelongings():getItem("Artifacts/MirrorWormsShard") then
-EPD.showQuestWindow(self, "Благодарствую! Чем бы мне тебя отблагадорить... А! Знаю! *ведьма стукнула своим посохом по трепещущей плоти*")
+EPD.showQuestWindow(self, RPD.textById("GooWitch_Phrase2"))
 local hero = RPD.Dungeon.hero
 hero:getBelongings():getItem("Artifacts/MirrorWormsShard"):detach(hero:getBelongings().backpack)
 
@@ -65,9 +65,9 @@ RPD.playSound( "snd_cursed.mp3" )
 
 storage.put("complete",true)
 elseif not storage.get("complete") then
-EPD.showQuestWindow(self, "Как успехи?")
+EPD.showQuestWindow(self, RPD.textById("GooWitch_Phrase3"))
 else
-EPD.showQuestWindow(self, "Думаю, столько хватит. До свидания, была вам очень признательна.")
+EPD.showQuestWindow(self, RPD.textById("GooWitch_Phrase4"))
 self:getSprite():emitter():burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.LIGHT ), 4)
 self:die()
 self:getSprite():killAndErase()

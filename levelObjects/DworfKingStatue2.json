@@ -1,17 +1,15 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "Здесь ничего нет.",
-      "name": "Статуя"
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
     },
-    "sprite":{
-      "textureFile": "levelObjects/DworfKingStatue.png",
-      "imageIndex" : 1
+    "sprite": {
+      "imageIndex": 1,
+      "textureFile": "levelObjects/DworfKingStatue.png"
     }
-  }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

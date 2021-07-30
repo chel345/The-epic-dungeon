@@ -12,13 +12,13 @@ local wand = require "scripts/lib/wand"
 local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
-
+local TIME_TO_ZAP = 1
 return wand.init{ 
     desc  = function()  
         return {
            image     = 12,
-            name      = "Жезл призывателя",
-            info      = "При использовании этот жезл призовёт вредин. Цена 15 маны."
+            name      = RPD.textById("SummonerWand_Name"),
+            info      = RPD.textById("SummonerWand_Info")
         }
 end, 
 
@@ -33,6 +33,7 @@ end,
     end,
 
 cast = function(self,thisItem,lvl)
+thisItem:getUser():spend(TIME_TO_ZAP)
 RPD.playSound( "snd_meld.mp3" )
 
         local level = RPD.Dungeon.level
@@ -40,7 +41,7 @@ RPD.playSound( "snd_meld.mp3" )
         local hero = RPD.Dungeon.hero
 
         for i = 1,1+thisItem:level() do
-            local mob = RPD.MobFactory:mobByName("Bee")
+            local mob = RPD.MobFactory:mobByName("BeeBad")
             local pos = level:getEmptyCellNextTo(hero:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)
@@ -64,6 +65,6 @@ return 15
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

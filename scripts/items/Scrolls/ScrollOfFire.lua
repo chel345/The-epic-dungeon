@@ -6,7 +6,7 @@
 --
 
 local RPD = require "scripts/lib/commonClasses"
-
+local TIME_TO_READ = 1
 local item = require "scripts/lib/item"
 
 
@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = math.random(0,11),
             imageFile = "items/Scrolls.png",
-            name      = "Свиток огненного щита",
-            info      = "При прочтении этот свиток создаст вокруг героя огненный щит.",
+            name      = RPD.textById("ScrollOfFire_Name"),
+            info      = RPD.textById("ScrollOfFire_Info"),
             stackable = true,
             upgradable    = false,
  defaultAction = RPD.Actions.read,

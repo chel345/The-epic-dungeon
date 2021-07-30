@@ -1,14 +1,14 @@
 {
-   "baseSpeed"     :0,
-   "attackDelay"   :1,
-   "ht"            :5000000,
-   "name"          :"Торговец свечаии",
-   "name_objective":"хех",
-   "description"   :"Цвет настроения синий",
-   "gender"        :"masculine",
-   "spriteDesc"    :"spritesDesc/CandleKeeperNPC_Desc.json",
-   "scriptFile"    :"scripts/npc/CandleKeeperNPC",
-   "friendly"      :true,
-"aiState": "Passive",
-   "fraction"      :"NEUTRAL"
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "CandleKeeperNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "CandleKeeperNPC_Gender",
+  "ht": 5000000,
+  "name": "CandleKeeperNPC_Name",
+  "name_objective": "CandleKeeperNPC_Object",
+  "scriptFile": "scripts/npc/CandleKeeperNPC",
+  "spriteDesc": "spritesDesc/CandleKeeperNPC_Desc.json"
 }

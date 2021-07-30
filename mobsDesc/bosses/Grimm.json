@@ -1,27 +1,27 @@
-
- {
-"defenseSkill"	: 9,
-"attackSkill"	: 15,
-"exp"			: 40,
-"maxLvl"		: 31,
-"dmgMin"		: 80,
-"dmgMax"		: 110,
-"dr"			: 5,
-"baseSpeed"		: 1,
-"attackDelay"	: 1,
-"ht"			: 3000,
-"name"			:"Гримм",
-"name_objective":"Гримма",
-"description"	:"
-Сквозь тьму,                      по следам фонаря звучащего,        иду собрать я пламя королевства падшего...",
-"gender"		:"masculine",
-"spriteDesc"	:"spritesDesc/Grimm_Desc.json",
- "scriptFile"	: "scripts/bosses/Grimm",
- "loot":{"kind":"Artifacts/GrimmsClack"},
-"lootChance"	: 1,
-"attackRange"	: 1,
-"walkingType"	: "NORMAL",
-"canBePet"		: false,
-"flying"		: false,
-"friendly"		: false
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 15,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 9,
+  "description": "Grimm_Desc",
+  "dmgMax": 110,
+  "dmgMin": 80,
+  "dr": 5,
+  "exp": 40,
+  "flying": false,
+  "friendly": false,
+  "gender": "Grimm_Gender",
+  "ht": 3000,
+  "loot": {
+    "kind": "Artifacts/GrimmsClack"
+  },
+  "lootChance": 1,
+  "maxLvl": 31,
+  "name": "Grimm_Name",
+  "name_objective": "Grimm_Object",
+  "scriptFile": "scripts/bosses/Grimm",
+  "spriteDesc": "spritesDesc/Grimm_Desc.json",
+  "walkingType": "NORMAL"
 }

@@ -28,7 +28,7 @@ end
 if index == 3 then
 RPD.removeBuff(selff,"FollowMe")
 RPD.removeBuff(selff,"Attacher")
-ctor:selectCell(selectMob,"Выбирете цель")
+ctor:selectCell(selectMob,RPD.textById("Choose_A_Target"))
 end
 end
 
@@ -38,14 +38,14 @@ return item.init{
         return {
            image     = 5,
             imageFile = "items/BooksInCityLibrary.png",
-            name      = "Кодекс подземелья",
-            info      = "В этой книге находятся множество текстов о языках подземелья. Теперь ты можешь разговаривать с другими обитателями и командовать своими приспешниками!, Пхх-Пхх,Ааа!",
+            name      = RPD.textById("BookOfDragoman_Name"),
+            info      = RPD.textById("BookOfDragoman_Info"),
             stackable = false,
             upgradable    = false,
          equipable     = "left_hand",
              price     = 200,
          --   isArtifact    = true,
-defaultAction = "ИСПОЛЬЗОВАТЬ"
+defaultAction = RPD.textById("Action_Use")
         }
     end,   
 activate = function(self, item, hero)
@@ -60,12 +60,12 @@ activate = function(self, item, hero)
 
     actions = function(self, item,  hero)
         if item:isEquipped(hero) then
-            return {"ИСПОЛЬЗОВАТЬ"}
+            return {RPD.textById("Action_Use")}
         end
     end,
     
 cellSelected = function(self, thisItem, action, cell)
-if action == "ИСПОЛЬЗОВАТЬ" then
+if action == RPD.textById("Action_Use") then
 ctor = thisItem
 --local dst = RPD.Ballistica:cast(thisItem:getUser():getPos(), cell, true, true, true)
 local char = RPD.Actor:findChar(cell)
@@ -74,17 +74,17 @@ if char:isPet() then
 selff = char
 RPD.chooseOption( dialog,
 selff:getName(),
-("Чего желаешь, хозяин? Сейчас у меня "..selff:hp().." здоровья из "..selff:ht()..".Моя ловкость "..selff:attackSkill().." ."),
-"Стой на месте",
-"Следуй за мной.",
-"Исследуй уровень",
-"Задать приоритетную цель"
+(RPD.textById("HealthPointsMobs_1")..selff:hp()..RPD.textById("HealthPointsMobs_2")..selff:ht()..RPD.textById("AgilityMobs_1")..selff:attackSkill()..RPD.textById("AgilityMobs_2")),
+RPD.textById("StandStill"),
+RPD.textById("MoveInMyDirection"),
+RPD.textById("ExploreTheLevel"),
+RPD.textById("ChoosePriorityTarget")
         )
 else
-char:yell("У тебя нет власти надо мной")
+char:yell(RPD.textById("IAmStronger"))
 end
 else
-RPD.glog("Здесь никого нет")
+RPD.glog(RPD.textById("EmptyHere"))
 end
 end
 if action == selectMob then
@@ -92,14 +92,14 @@ if RPD.Actor:findChar(cell) then
 EPD.Char = RPD.Actor:findChar(cell)
 RPD.permanentBuff(selff,"Attacher")
 else
-RPD.glog("Здесь никого нет")
+RPD.glog(RPD.textById("EmptyHere"))
 end
 end
 
 end,
     execute = function(self, item, hero, action)
-        if action == "ИСПОЛЬЗОВАТЬ" then
-            item:selectCell("ИСПОЛЬЗОВАТЬ","Выбирете клетку")
+        if action == RPD.textById("Action_Use") then
+            item:selectCell(RPD.textById("Action_Use"),RPD.textById("Select_A_Cage"))
         end
     end
 

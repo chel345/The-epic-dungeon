@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 0,
             imageFile = "items/PotionsMod.png",
-            name      = "Зелье теней",
-            info      = "Точно не известно как работает это зелье и как его сварить.",
+            name      = RPD.textById("PoisonOfDarknes_Name"),
+            info      = RPD.textById("PoisonOfDarknes_Info"),
             stackable = true,
             upgradable    = true,
  
@@ -27,6 +27,7 @@ defaultAction = RPD.Actions.drink
     actions = function() return {RPD.Actions.drink} end,
     execute = function(self, item, hero, action)
         if action == RPD.Actions.drink then
+item:getUser():spend(1)
 RPD.Buffs.Buff:affect(hero, RPD.Buffs.Poison, 10)
 item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
         end

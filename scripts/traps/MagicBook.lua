@@ -23,8 +23,8 @@ return trap.init(
         function (cell, char, data)
 
             RPD.chooseOption( dialog1,
-                    "Книга заклинаний",
-                    "Выбирете заклинание",
-                    "Благословение огня")
+                    RPD.textById("MagicBook_Name"),
+                    RPD.textById("MagicBook_Info"),
+                    RPD.textById("MagicBook_Spells"))
                 end
 )

@@ -13,12 +13,14 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 
+local TIME_TO_ZAP = 1
+
 return wand.init{ 
     desc  = function()  
         return {
            image     = 16,
-            name      = "Жезл тьмы",
-            info      = "При использовании этот жезл создаст облако тьмы. Цена 20 маны."
+            name      = RPD.textById("BlackWand_Name"),
+            info      = RPD.textById("BlackWand_Info")
         }
 end, 
 
@@ -29,7 +31,7 @@ deactivate = function(self, item, hero)
 end,
 
 castOnCell = function(self, thisItem, cell,tcell,l)
-
+thisItem:getUser():spend(TIME_TO_ZAP)
 if thisItem:isEquipped(RPD.Dungeon
 .hero) then
 local dst = thisItem:getUser():getPos()
@@ -87,7 +89,6 @@ end
 end
 end
 end
-
 end,
 
 cast = function(self,item,lvl)
@@ -107,6 +108,6 @@ return 20
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

@@ -28,23 +28,23 @@ level:drop(RPD.item("CorpseDust"),cell).type = RPD.Heap.Type.SKELETON
 end,
 interact = function(self, chr)
 if not storage.get("interact") then
-EPD.showQuestWindow(self, "Ох, здравствуйте, странник. Небось сами недоумеваете, что согбенный старичок делает в таком неприветливом месте? Я достаточно известный в столице мастер, когда-то работал на производстве палочек, пока не стал слишком стар. И вот... Я открыл свою небольшую лавку здесь, в подземелье. Здесь я продаю всякие магические палочки, черепа и прочий магический хлам. Многие вещи я делаю сам, а некоторое сырьё я закупаю в городе. Кстати, насчёт сырья... У меня есть к тебе небольшая просьба. Мне не хватает одного ингридиента для одного заклинания. Трупной пыли. Где-то на этом этаже есть захоронение, котрому уже лет так пятьдесят. Найди его и принеси мне немного праха. Я бы и сам сходил, но старость не радость, почти всё атакующие заклинания забыл. Буду очень благодарен, если ты поможешь. В награду я могу отдать тебе что-нибудь из товара.")
+EPD.showQuestWindow(self, RPD.textById("WandmakerNPC_Phrase1"))
 storage.put("interact",true)
 return
 end
 if RPD.Dungeon.hero:getBelongings():getItem("CorpseDust") then
-EPD.showQuestWindow(self, "Спасибо тебе большое, путник. Как я и обещал, отдаю тебе вот это.")
+EPD.showQuestWindow(self, RPD.textById("WandmakerNPC_Phrase2"))
 local hero = RPD.Dungeon.hero
 hero:getBelongings():getItem("CorpseDust"):detach(hero:getBelongings().backpack)
 Treasury = luajava.bindClass("com.nyrds.pixeldungeon.items.Treasury")
 local wand = Treasury:getLevelTreasury():bestOf(Treasury.Category.WAND,4 )
 RPD.Dungeon.hero:collect(wand)
-RPD.glog("Теперь у тебя есть "..wand:name())
+RPD.glog(RPD.textById("WandmakerNPC_Phrase3")..wand:name())
 storage.put("complete",true)
 elseif not storage.get("complete") then
-EPD.showQuestWindow(self, "День добрый, путник, чего расскажешь? Прах нашёл? Нет? Ну тогда удачи в поисках!")
+EPD.showQuestWindow(self, RPD.textById("WandmakerNPC_Phrase4"))
 else
-EPD.showQuestWindow(self, "Как много дел! Как много дел!")
+EPD.showQuestWindow(self, RPD.textById("WandmakerNPC_Phrase5"))
 end
 end
 })

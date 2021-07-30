@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 7,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Сундучный амулет",
-            info      = "Весьма странная штуковина: миниатюрный амулет в форме пустого сундука, подвязанный на коричневой резине.",
+            name      = RPD.textById("ChestSharm_Name"),
+            info      = RPD.textById("ChestSharm_Info"),
             stackable = false,
             upgradable    = false,
             isArtifact    = true,

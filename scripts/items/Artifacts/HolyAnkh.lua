@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 5,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Священный крест",
-            info      = "Единственное святое,что осталось от нечестивого Чернокнижника,но даже этот предмет наделён частью его силы.Когда вы будете при смерти,он восстановит ваши силы и поможет вам пробиваться в глубь подземелья.",
+            name      = RPD.textById("HolyAnkh_Name"),
+            info      = RPD.textById("HolyAnkh_Info"),
             stackable = true,
             upgradable    = false,
  

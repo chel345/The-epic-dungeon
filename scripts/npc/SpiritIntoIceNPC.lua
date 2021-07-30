@@ -30,23 +30,23 @@ end,
 --]]
 interact = function(self, chr)
 if not storage.get("interact") then
-EPD.showQuestWindow(self, "Путник... Путник...Прошу тебя помочь мне. Вот уже 1000 лет я заперт во льдах. Принеси мне ледяное сердце, прошу тебя...")
+EPD.showQuestWindow(self, RPD.textById("SpiritIntoIceNPC_Phrase1"))
 storage.put("interact",true)
 return
 end
 if RPD.Dungeon.hero:getBelongings():getItem("Artifacts/IceHeart") then
-EPD.showQuestWindow(self, "Да! Это оно! Положи мне его в руку. В награду можешь взять магическое кольцо на моей правой руке...")
+EPD.showQuestWindow(self, RPD.textById("SpiritIntoIceNPC_Phrase2"))
 local hero = RPD.Dungeon.hero
 hero:getBelongings():getItem("Artifacts/IceHeart"):detach(hero:getBelongings().backpack)
 Treasury = luajava.bindClass("com.nyrds.pixeldungeon.items.Treasury")
 local wand = RPD.item("RingOfFrost")
 RPD.Dungeon.hero:collect(wand)
-RPD.glog("Теперь у тебя есть "..wand:name())
+RPD.glog(RPD.textById("SpiritIntoIceNPC_Phrase3")..wand:name())
 self:destroy()
 self:getSprite():die()
 storage.put("complete",true)
 elseif not storage.get("complete") then
-EPD.showQuestWindow(self, "Прошу... Прошу...")
+EPD.showQuestWindow(self, RPD.textById("SpiritIntoIceNPC_Phrase4"))
 end
 end
 })

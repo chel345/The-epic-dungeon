@@ -50,6 +50,6 @@ end,
 end,
 
     status = function(me, ai, me)
-        return "охотится на тебя."
+        return RPD.textById("sing")
     end
 }

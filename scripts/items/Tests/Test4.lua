@@ -11,7 +11,7 @@ local item = require "scripts/lib/item"
 
 local Process = require "scripts/lib/Process"
 
-local Ginerator = require "scripts/lib/Ginerator"
+--local Ginerator = require "scripts/lib/Ginerator"
 
 local room = require "scripts/lib/room"
 
@@ -35,7 +35,7 @@ if RPD.Actor:findChar(cell) then
 RPD.glog(RPD.Actor:findChar(cell):getMobClassName())
 end
 local level = RPD.Dungeon.level
---RPD.glog(level.passable[cell])
+RPD.glog(level.map[cell])
 --RPD.glog((not (level.solid[cell] or level.nearWalls[cell] or level.pit[cell] or level.fieldOfView[cell] or (not level.passable[cell]) or level.map[cell] == RPD.Terrain.WALL or level.map[cell] == RPD.Terrain.WALL_DECO or RPD.Actor:findChar(cell) or cell == 0)))
 end
         if action == "action3" then

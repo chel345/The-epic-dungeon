@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 0,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Звезда ада",
-            info      = "В этой звезде заключены души грешников.",
+            name      = RPD.textById("NetherStar_Name"),
+            info      = RPD.textById("NetherStar_Info"),
             stackable = false,
             price     = 10
         }

@@ -14,8 +14,8 @@ return spell.init{
         return {
             image         = 1,
             imageFile     = "spellsIcons/elemental(new).png",
-            name          = "Елементальное заклинание",
-            info          = "Заклинание создаст одного из представителей стихий. (молнии, воды, воздуха, льда, земли и огня)",
+            name          = RPD.textById("ElementalSpell_Name"),
+            info          = RPD.textById("ElementalSpell_Info"),
             magicAffinity = "Elemental",
             targetingType = "none",
             level         = 2,

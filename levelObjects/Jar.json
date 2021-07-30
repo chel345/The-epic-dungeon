@@ -1,19 +1,17 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "JarOfSouls_Desc",
-      "name": "JarOfSouls_Name",
-  "canStepOn":true,
-  "nonPassable":false
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "mobs/jar_of_souls.png",
-      "imageIndex" : 0
+    "sprite": {
+      "imageIndex": 0,
+      "textureFile": "mobs/jar_of_souls.png"
     }
-  }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

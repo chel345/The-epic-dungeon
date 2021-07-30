@@ -1,16 +1,15 @@
 {
-  "kind":"Deco",
-
   "appearance": {
     "desc": {
-      "desc": "Кровать.",
-      "name": "Кровать",
-  "canStepOn":true,
-  "nonPassable":false
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/Beds.png",
-      "imageIndex" : 1
+    "sprite": {
+      "imageIndex": 1,
+      "textureFile": "levelObjects/Beds.png"
     }
-  }
+  },
+  "kind": "Deco"
 }

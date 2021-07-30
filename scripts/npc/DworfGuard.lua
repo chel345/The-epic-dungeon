@@ -14,7 +14,7 @@ local EPD = require "scripts/lib/dopClasses"
 return mob.init({
     interact = function(self, chr)
 local EPD = require "scripts/lib/dopClasses"
-EPD.showQuestWindow(self,"Проходим, не задерживаемся... хе хе хе хе...")
+EPD.showQuestWindow(self,RPD.textById("DworfGuard_Phrase1"))
 end
 })
 

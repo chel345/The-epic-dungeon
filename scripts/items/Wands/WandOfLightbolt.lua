@@ -12,13 +12,13 @@ local wand = require "scripts/lib/wand"
 local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
-
+local TIME_TO_ZAP = 1
 return wand.init{ 
     desc  = function()  
         return {
            image     = 0,
-            name      = "Жезл светого патрона",
-            info      = "При использовании этот жезл выпустит луч света в указанную точку. Цена 15 маны."
+            name      = RPD.textById("WandOfLightbolt_Name"),
+            info      = RPD.textById("WandOfLightbolt_Info")
         }
 end, 
 
@@ -32,7 +32,7 @@ RPD.removeBuff(item:getUser(), RPD.Buffs.Light)
 end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)
-
+thisItem:getUser():spend(TIME_TO_ZAP)
 local enemy = RPD.Actor:findChar(dst)
 if enemy then
 RPD.affectBuff(enemy, RPD.Buffs.Light , 10*(thisItem:level()+1))
@@ -59,6 +59,6 @@ return 15
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

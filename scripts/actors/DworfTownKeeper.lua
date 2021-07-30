@@ -15,18 +15,25 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
     activate = function()
-RPD.Dungeon.level:drop(RPD.item("PotionOfStrength"),55).type = RPD.Heap.Type.CRYSTAL_CHEST
-RPD.GameScene:updateMap(55)
-RPD.GameScene:updateMap(55)
-RPD.Dungeon.level:drop(RPD.item("PotionOfHealing"),75).type = RPD.Heap.Type.CRYSTAL_CHEST
-RPD.GameScene:updateMap(75) 
-RPD.GameScene:updateMap(75)
-RPD.Dungeon.level:drop(RPD.item("ScrollOfWeaponUpgrade"),77).type = RPD.Heap.Type.CRYSTAL_CHEST
-RPD.GameScene:updateMap(77)
-RPD.GameScene:updateMap(77)
-RPD.Dungeon.level:drop(RPD.item("Ration"),58).type = RPD.Heap.Type.CRYSTAL_CHEST
-RPD.GameScene:updateMap(58)
-RPD.GameScene:updateMap(58)
+if RPD.Dungeon.depth == 16 then
+if not storage.get("storydworf") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("DworfTown_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storydworf",true)
+end
+end
+local item = RPD.Dungeon.level:drop(RPD.item("PotionOfStrength"),55)
+item.type = RPD.Heap.Type.CRYSTAL_CHEST
+
+local item = RPD.Dungeon.level:drop(RPD.item("PotionOfHealing"),75)
+item.type = RPD.Heap.Type.CRYSTAL_CHEST
+
+local item = RPD.Dungeon.level:drop(RPD.item("ScrollOfWeaponUpgrade"),77)
+item.type = RPD.Heap.Type.CRYSTAL_CHEST
+
+local item = RPD.Dungeon.level:drop(RPD.item("Ration"),58)
+item.type = RPD.Heap.Type.CRYSTAL_CHEST
+
 return true
 end,
     actionTime = function()

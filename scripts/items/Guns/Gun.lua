@@ -19,8 +19,8 @@ return item.init{
         return {
            image     = 2,
             imageFile = "items/Guns.png",
-            name       = "Гвардейское ружьё",
-            info      = "Такое оружие носят стрельцы из полка короля Андервонда. Лучше ружья пока никто не придумал.",
+            name       = RPD.textById("Gun_Name"),
+            info      = RPD.textById("Gun_Info"),
             stackable = false,
             upgradable    = true,
              price     = 250,
@@ -30,7 +30,7 @@ end,
 
 actions = function(self,item,hero)
 if item:isEquipped(RPD.Dungeon.hero) then
-return {"ВЫСТРЕЛИТЬ",("ЗАРЯДИТЬ("..now.."/"..get..")")} 
+return {RPD.textById("Fire"),("ЗАРЯДИТЬ("..now.."/"..get..")")} 
 else
 return {("ЗАРЯДИТЬ("..now.."/"..get..")")}
 end
@@ -59,7 +59,7 @@ end,
 
 cellSelected = function(self, thisItem, action, cell)
 
-if action == "ВЫСТРЕЛИТЬ" and cell ~= nil then
+if action == RPD.textById("Fire") and cell ~= nil then
 thisItem:getUser():getSprite():zap(cell)
 if now <= get and now ~= 0 then
 now = now -1
@@ -80,7 +80,7 @@ if math.random(1,4) == 1 then
 RPD.Dungeon.level:drop(item,pos)
 end
 else
-RPD.glog("** Оружие не заряжено")
+RPD.glog(RPD.textById("NoCharge"))
 
 end
 end
@@ -99,14 +99,14 @@ item:getUser():getBelongings()
 .backpack)
 now = now + 1
 else
-RPD.glog("** Оружие и так заряжено")
+RPD.glog(RPD.textById("WeaponLoaded"))
 end
 else
-RPD.glog("** В твоём инвентаре нет патронов")
+RPD.glog(RPD.textById("NoBullets"))
 end
 end
-if action == "ВЫСТРЕЛИТЬ" then
-item:selectCell( "ВЫСТРЕЛИТЬ" ,"Выбирите клетку.")
+if action == RPD.textById("Fire") then
+item:selectCell( RPD.textById("Fire") ,RPD.textById("Select_A_Cage")")
 end
 end,
 

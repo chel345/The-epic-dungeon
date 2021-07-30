@@ -1,12 +1,13 @@
 {
-   "baseSpeed"     :0,
-   "spriteDesc"    :"spritesDesc/DworfMasterNPC_Desc.json",
-   "scriptFile"    :"scripts/npc/DworfMasterNPC",
-   "ht":100000000000,
-   "friendly"      :true,
-   "aiState"       :"Passive",
-   "fraction"      :"NEUTRAL",
-"name"			:"Министр",
-"name_objective":"ооо",
-"description"	:"Дворф, одетый в красный пиджак."
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "DworfMasterNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "DworfMasterNPC_Gender",
+  "ht": 100000000000,
+  "name": "DworfMasterNPC_Name",
+  "name_objective": "DworfMasterNPC_Object",
+  "scriptFile": "scripts/npc/DworfMasterNPC",
+  "spriteDesc": "spritesDesc/DworfMasterNPC_Desc.json"
 }

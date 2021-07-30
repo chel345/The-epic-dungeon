@@ -1,26 +1,43 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "Здесь ничего нет",
-      "name": "Стена",
-  "canStepOn":true,
-  "nonPassable":false
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/WaterCavesTiles.png",
-      "imageIndex" : 6,
+    "sprite": {
       "animations": {
         "basic": {
           "fps": 15,
-          "frames": [6,7,8,7,6,6,6,6,6,6,6,6,6,6,6,6,6,6],
+          "frames": [
+            6,
+            7,
+            8,
+            7,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
           "looped": true
         }
-      }
+      },
+      "imageIndex": 6,
+      "textureFile": "levelObjects/WaterCavesTiles.png"
     }
-  }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

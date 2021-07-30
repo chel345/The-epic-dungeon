@@ -1,14 +1,14 @@
 {
-   "baseSpeed"     :0,
-   "attackDelay"   :1,
-   "ht"            :5000000,
-   "name"          :"Маг",
-   "name_objective":"хех",
-   "description"   :"Стильный чуваааааак.",
-   "gender"        :"masculine",
-   "spriteDesc"    :"spritesDesc/MageNPC_Desc.json",
-   "scriptFile"    :"scripts/npc/MageNPC",
-   "friendly"      :true,
-"aiState": "Passive",
-   "fraction"      :"NEUTRAL"
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "MageNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "MageNPC_Gender",
+  "ht": 5000000,
+  "name": "MageNPC_Name",
+  "name_objective": "MageNPC_Object",
+  "scriptFile": "scripts/npc/MageNPC",
+  "spriteDesc": "spritesDesc/MageNPC_Desc.json"
 }

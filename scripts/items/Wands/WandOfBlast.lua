@@ -12,13 +12,13 @@ local wand = require "scripts/lib/wand"
 local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
-
+local TIME_TO_ZAP = 1
 return wand.init{ 
     desc  = function()  
         return {
            image     = 6,
-            name      = "Жезл инфузиса",
-            info      = "При использовании этот жезл начнёт создаст отравляющий заряд. Цена 10 маны."
+            name      = RPD.textById("WandOfBlast_Name"),
+            info      = RPD.textById("WandOfBlast_Info")
         }
 end, 
 
@@ -33,7 +33,7 @@ end,
     end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)
-
+thisItem:getUser():spend(TIME_TO_ZAP)
 local enemy = RPD.Actor:findChar(dst)
 local lvl = thisItem:level()
 RPD.zapEffect(thisItem:getUser():getPos(),dst,"LightZap")
@@ -57,6 +57,6 @@ return 10
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

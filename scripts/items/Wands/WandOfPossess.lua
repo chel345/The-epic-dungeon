@@ -12,13 +12,13 @@ local wand = require "scripts/lib/wand"
 local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
-
+local TIME_TO_ZAP = 1
 return wand.init{ 
     desc  = function()  
         return {
            image     = 8,
-            name      = "Жезл одержимости",
-            info      = "Имба за 40 маны."
+            name      = RPD.textById("WandOfPossess_Name"),
+            info      = RPD.textById("WandOfPossess_Info")
         }
 end, 
 
@@ -34,7 +34,7 @@ end,
     end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)
-
+thisItem:getUser():spend(TIME_TO_ZAP)
 local soul =  RPD.Actor:findChar(dst)
 if soul and soul ~= RPD.Dungeon.hero  then
 soul:setState(RPD.MobAi:getStateByTag("ControlledAi"))
@@ -61,6 +61,6 @@ return 40
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 8,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Ледяной череп",
-            info      = "Странный серый череп из которого льётся тусклый сине-голубой свет. На ощуп он весьма холодный.",
+            name      = RPD.textById("IceSkull_Name"),
+            info      = RPD.textById("IceSkull_Info"),
             stackable = false,
             upgradable    = false,
             isArtifact    = true,

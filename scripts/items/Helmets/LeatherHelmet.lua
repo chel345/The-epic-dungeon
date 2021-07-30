@@ -12,7 +12,7 @@ local helmet = require "scripts/lib/helmet"
 local EPD = require "scripts/lib/dopClasses"
 
 descript = function(dr,str)
-return ("\n\nЭтот шлем блокирует "..dr.." единиц урона и требует "..str.." очков силы. В противном случае, в нём будет плохо видно.")
+return (RPD.textById("ArmorPoints")..dr..RPD.textById("StrengthPoints_1")..str..RPD.textById("StrengthPoints_2"))
 end
 
 return helmet.init{
@@ -20,8 +20,8 @@ return helmet.init{
 desc  = function ()
 return {
 image     = 0,
-name       = "Кожанный шлем",
-info      = ("Шлем из шкуры монстра обеспечивает нормальную защиту."..descript(5,12))
+name       = RPD.textById("LeatherHelmet_Name"),
+info      = (RPD.textById("LeatherHelmet_Info")..descript(5,12))
 }
 end,
 

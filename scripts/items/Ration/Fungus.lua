@@ -14,8 +14,8 @@ return item.init{
         return {
             image     = 0,
             imageFile = "items/FoodMod.png",
-            name      = "Нарост",
-            info      = "Может вызвать отравление",
+            name      = RPD.textById("Fungus_Name"),
+            info      = RPD.textById("Fungus_Info"),
             stackable = true,
             defaultAction = "Food_ACEat",
             price         = 7

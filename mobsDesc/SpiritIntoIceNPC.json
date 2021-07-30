@@ -1,14 +1,14 @@
 {
-   "baseSpeed"     :0,
-   "attackDelay"   :1,
-   "ht"            :5000000,
-   "name"          :"Нечто во льдах",
-   "name_objective":"хех",
-   "description"   :"Скелет выглядывает из стены. Его светящиеся глаза сверлят тебя взглядом..",
-   "gender"        :"masculine",
-   "spriteDesc"    :"spritesDesc/SpiritIntoIceNPC_Desc.json",
-   "scriptFile"    :"scripts/npc/SpiritIntoIceNPC",
-   "friendly"      :true,
-"aiState": "Passive",
-   "fraction"      :"NEUTRAL"
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "SpiritIntoIceNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "SpiritIntoIceNPC_Gender",
+  "ht": 5000000,
+  "name": "SpiritIntoIceNPC_Name",
+  "name_objective": "SpiritIntoIceNPC_Object",
+  "scriptFile": "scripts/npc/SpiritIntoIceNPC",
+  "spriteDesc": "spritesDesc/SpiritIntoIceNPC_Desc.json"
 }

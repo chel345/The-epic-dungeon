@@ -13,11 +13,11 @@ if index == 0 then
 local Bundle = luajava.bindClass("com.watabou.utils.Bundle")
 local HeroClass = luajava.bindClass("com.watabou.pixeldungeon.actors.hero.HeroClass")
 local HeroSubClass = luajava.bindClass("com.watabou.pixeldungeon.actors.hero.HeroSubClass")
---error("Кто прочитал, тот гей")
+--error(RPD.textById("HeroClass_Necromancer_Error"))
 --os.rename("/strings_ru_2.json", "/strings_ru_1.json")
-HeroClass_Necromancer = "Ледомант"
+HeroClass_Necromancer = RPD.textById("HeroClass_Necromancer")
 
-RPD.glog("** теперь ты ледомант!")
+RPD.glog(RPD.textById("YouIceMaster"))
 end
 end
 
@@ -27,8 +27,8 @@ return item.init{
         return {
            image     = 8,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Плащ маэстро Гримма",
-            info      = "Это плащ состоит из нескольких сшитых между собой чёрных с одной стороны и красных с другой лент.",
+            name      = RPD.textById("GrimmsClack_Name"),
+            info      = RPD.textById("GrimmsClack_Info"),
             stackable = true,
             upgradable    = false,
             isArtifact    = true,
@@ -36,7 +36,7 @@ return item.init{
              }
     end,   
     actions = function(self, item,  hero)
-            return {"ПОГЛАТИТЬ"}
+            return {RPD.textById("Absorb")}
     end,
 
 activate = function(self, item, hero)
@@ -50,13 +50,13 @@ deactivate = function(self, item, hero)
         RPD.removeBuff(RPD.Dungeon.hero, "IceSkull")
     end,
     execute = function(self, item, hero, action)
-if action == "ПОГЛАТИТЬ" then
+if action == RPD.textById("Absorb") then
 RPD.chooseOption(
 dialog,
-"Ледомантия",
-"Ты уверен в своём решении?",
-"Да...",
-"Нет, я не хочу этого"
+RPD.textById("IceMagic"),
+RPD.textById("IceMagic_Question"),
+RPD.textById("IceMagic_Yes"),
+RPD.textById("IceMagic_No")
 )
 
 end

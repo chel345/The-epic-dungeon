@@ -13,12 +13,14 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 
+local TIME_TO_ZAP = 1
+
 return wand.init{ 
     desc  = function()  
         return {
            image     = 13,
-            name      = "Жезл дракона",
-            info      = "При использовании этот жезл наложит на уровень проклятье огня. Цена 50 маны.",
+            name      = RPD.textById("DragonWand_Name"),
+            info      = RPD.textById("DragonWand_Info"),
 equipable = ""
         }
 end, 
@@ -39,6 +41,7 @@ RPD.glog(tostring(self).." "..tostring(thisItem).." "..tostring(cell).." "..tost
 end,
 
 cast = function(self,item,lvl)
+item:getUser():spend(TIME_TO_ZAP)
 RPD.Dungeon.level:addScriptedActor(RPD.new(RPD.Objects.Actors.ScriptedActor,"scripts/actors/Burn"))
 end,
 
@@ -55,6 +58,6 @@ return 50
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

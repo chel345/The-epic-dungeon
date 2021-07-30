@@ -8,7 +8,7 @@ return buff.init{
     desc  = function ()
         return {
             icon          = 55,
-            name          = "Удача",
+            name          = RPD.textById("Luck_Buff"),
             info          = "CounterBuff_Info",
         }
     end,

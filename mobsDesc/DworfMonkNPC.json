@@ -1,12 +1,13 @@
 {
-   "baseSpeed"     :0,
-   "spriteDesc"    :"spritesDesc/DworfMonkNPC_Desc.json",
-   "scriptFile"    :"scripts/npc/DworfMonkNPC",
-   "ht":100000000000,
-   "friendly"      :true,
-   "aiState"       :"Passive",
-   "fraction"      :"NEUTRAL",
-"name"			:"Monk_Name",
-"name_objective":"Элементаля",
-"description"	:"Monk_Desc"
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "DworfMonkNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "DworfMonkNPC_Gender",
+  "ht": 100000000000,
+  "name": "DworfMonkNPC_Name",
+  "name_objective": "DworfMonkNPC_Object",
+  "scriptFile": "scripts/npc/DworfMonkNPC",
+  "spriteDesc": "spritesDesc/DworfMonkNPC_Desc.json"
 }

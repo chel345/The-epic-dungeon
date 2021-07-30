@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 3,
             imageFile = "items/Shards.png",
-            name      = "Осколок",
-            info      = "Осколок призматического кристалла. В нём мелькают магические лучи.",
+            name      = RPD.textById("IceShard_Name"),
+            info      = RPD.textById("IceShard_Info"),
             stackable = false,
             upgradable    = false,
              price     = 50
@@ -26,8 +26,9 @@ return item.init{
 
     cellSelected = function(self, thisItem, action, cell)
         if action == RPD.Actions.zap then 
+thisItem:getUser():spend(1)
         local dst = RPD.Ballistica:cast(thisItem:getUser():getPos(), cell, true, true, true)
-
+thisItem:getUser():spend(1)
        RPD.zapEffect(thisItem:getUser():getPos(), dst, "Ice")
             RPD.placePseudoBlob( RPD.PseudoBlobs.Freezing, dst)
  
@@ -36,7 +37,7 @@ thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack)
 end,
     execute = function(self, item, hero, action)
         if action == RPD.Actions.zap then
-            item:selectCell( RPD.Actions.zap ,"Выбирете клетку")
+            item:selectCell( RPD.Actions.zap ,RPD.textById("Select_A_Cage"))
         end
 end
 }

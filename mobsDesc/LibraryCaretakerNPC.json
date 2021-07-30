@@ -1,14 +1,14 @@
 {
-   "baseSpeed"     :0,
-   "attackDelay"   :1,
-   "ht"            :5000000,
-   "name"          :"Смотритель библиотеки",
-   "name_objective":"хех",
-   "description"   :"Человек ,похожий на рыбака.",
-   "gender"        :"masculine",
-   "spriteDesc"    :"spritesDesc/LibraryCaretakerNPC_Desc.json",
-   "scriptFile"    :"scripts/npc/LibraryCaretakerNPC",
-   "friendly"      :true,
-"aiState": "Passive",
-   "fraction"      :"NEUTRAL"
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "LibraryCaretakerNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "LibraryCaretakerNPC_Gender",
+  "ht": 5000000,
+  "name": "LibraryCaretakerNPC_Name",
+  "name_objective": "LibraryCaretakerNPC_Object",
+  "scriptFile": "scripts/npc/LibraryCaretakerNPC",
+  "spriteDesc": "spritesDesc/LibraryCaretakerNPC_Desc.json"
 }

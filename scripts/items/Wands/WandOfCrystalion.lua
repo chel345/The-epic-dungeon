@@ -12,13 +12,13 @@ local wand = require "scripts/lib/wand"
 local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
-
+local TIME_TO_ZAP = 1
 return wand.init{ 
     desc  = function()  
         return {
            image     = 3,
-            name      = "Жезл кристализации",
-            info      = "При использовании этот жезл начнёт начнёт кристализировать окружающую среду. Цена 10 маны."
+            name      = RPD.textById("WandOfCrystalion_Name"),
+            info      = RPD.textById("WandOfCrystalion_Info")
         }
 end, 
 
@@ -32,7 +32,7 @@ RPD.removeBuff(item:getUser(), RPD.Buffs.Light)
 end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)
-
+thisItem:getUser():spend(TIME_TO_ZAP)
 for i = 1,RPD.Dungeon.level:getLength()-1 do                local maybeMob = RPD.Actor:findChar(dst)          
 if maybeMob and RPD.Dungeon.level.fieldOfView[i] and maybeMob ~= RPD.Dungeon.hero then 
 RPD.playSound( "snd_degrade.ogg" )
@@ -57,6 +57,6 @@ return 10
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

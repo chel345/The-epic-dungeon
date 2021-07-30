@@ -1,14 +1,13 @@
 {
-  "kind":"Deco",
-
   "appearance": {
     "desc": {
-      "desc": "Здесь ничего нет.",
-      "name": "Дверь"
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
     },
-    "sprite":{
-      "textureFile": "levelObjects/Caves/CavesTiles.png",
-      "imageIndex" : 5
+    "sprite": {
+      "imageIndex": 5,
+      "textureFile": "levelObjects/Caves/CavesTiles.png"
     }
-  }
+  },
+  "kind": "Deco"
 }

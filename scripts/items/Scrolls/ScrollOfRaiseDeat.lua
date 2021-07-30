@@ -6,7 +6,7 @@
 --
 
 local RPD = require "scripts/lib/commonClasses"
-
+local TIME_TO_READ = 1
 local hero = RPD.Dungeon.hero
 
 local item = require "scripts/lib/item"
@@ -30,8 +30,8 @@ return item.init{
         return {
            image     = math.random(0,11),
             imageFile = "items/Scrolls.png",
-            name          = "Свиток воскрешения",
-            info          = "При прочтении этот свиток воскресит  недавно убитого моба на уровне.",
+            name          = RPD.textById("ScrollOfRaiseDeat_Name"),
+            info          = RPD.textById("ScrollOfRaiseDeat_Info"),
             stackable     = true,
             defaultAction = "Scroll_ACRead",
             price         = 50

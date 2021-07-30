@@ -1,12 +1,13 @@
 {
-   "baseSpeed"     :0,
-   "spriteDesc"    :"spritesDesc/DworfKeeperNPC_Desc.json",
-   "scriptFile"    :"scripts/npc/DworfKeeperNPC",
-   "ht":100000000000,
-   "friendly"      :true,
-   "aiState"       :"Passive",
-   "fraction"      :"NEUTRAL",
-"name"			:"Дворф торговец",
-"name_objective":"Элементаля",
-"description"	:"Хоть он и дворф, но он типичный торговец. Даже не сомневайся."
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "DworfKeeperNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "DworfKeeperNPC_Gender",
+  "ht": 100000000000,
+  "name": "DworfKeeperNPC_Name",
+  "name_objective": "DworfKeeperNPC_Object",
+  "scriptFile": "scripts/npc/DworfKeeperNPC",
+  "spriteDesc": "spritesDesc/DworfKeeperNPC_Desc.json"
 }

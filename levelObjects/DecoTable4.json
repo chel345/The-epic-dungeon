@@ -1,18 +1,16 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "Здесь ничего нет.",
-      "name": "Стена"
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
     },
-    "sprite":{
-      "textureFile": "levelObjects/DecoTable4.png",
-      "imageIndex" : 0
-    },
-   "particles":"Candle"
-  }
+    "particles": "Candle",
+    "sprite": {
+      "imageIndex": 0,
+      "textureFile": "levelObjects/DecoTable4.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

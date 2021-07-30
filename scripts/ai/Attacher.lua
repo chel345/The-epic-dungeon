@@ -47,6 +47,6 @@ end,
 end,
 
     status = function(me, ai, me)
-        return (me:getName().." собирается атаковать "..f:getName())
+        return (me:getName()..RPD.textById("ai_mob_attack")..f:getName())
     end
 }

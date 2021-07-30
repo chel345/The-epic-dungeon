@@ -15,8 +15,8 @@ return item.init{
         return {
             image     = 14,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Глаз",
-            info      = "Этот глаз размером с яйцо.",
+            name      = RPD.textById("MagicEye_Name"),
+            info      = RPD.textById("MagicEye_Info"),
             stackable = true,
             price     = 10000
         }

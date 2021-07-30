@@ -1,14 +1,14 @@
 {
-   "baseSpeed"     :0,
-   "attackDelay"   :1,
-   "ht"            :5000000,
-   "name"          :"Чернильная ведьма",
-   "name_objective":"хех",
-   "description"   :"Эта старушка одета в чёрную мантию, покрытую слизью.",
-   "gender"        :"masculine",
-   "spriteDesc"    :"spritesDesc/GooWitch_Desc.json",
-   "scriptFile"    :"scripts/npc/GooWitch",
-   "friendly"      :true,
-"aiState": "Passive",
-   "fraction"      :"NEUTRAL"
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "GooWitch_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "GooWitch_Gender",
+  "ht": 5000000,
+  "name": "GooWitch_Name",
+  "name_objective": "GooWitch_Object",
+  "scriptFile": "scripts/npc/GooWitch",
+  "spriteDesc": "spritesDesc/GooWitch_Desc.json"
 }

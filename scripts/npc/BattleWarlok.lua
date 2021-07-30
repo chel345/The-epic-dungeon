@@ -22,12 +22,12 @@ if bttt == nil then
 bttt = 1
 local EPD = require "scripts/lib/dopClasses"
 
-EPD.showQuestWindow(self,"Ты очень помог нам в этом сражении. Благодаря тебе мой народ может спать спокойно... Я знаю, зачем ты пришёл в подземелье и мне не нравится твоя цель, но я помогу тебе. Возьми эти инструменты,определённо, они тебе пригодятся...")
+EPD.showQuestWindow(self,RPD.textById("BattleWarlok_Phrase1"))
 RPD.Dungeon.level:drop(RPD.ItemFactory:itemByName("ArmorKit"),chr:getPos())
 else
 local EPD = require "scripts/lib/dopClasses"
 
-EPD.showQuestWindow(self,"Удачи, странник!")
+EPD.showQuestWindow(self,RPD.textById("BattleWarlok_Phrase2"))
 
 end
 end

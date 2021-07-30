@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 21,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Табличка с рунами",
-            info      = "Вернее часть таблички с рунами.",
+            name      = RPD.textById("DeskOfRuns_Name"),
+            info      = RPD.textById("DeskOfRuns_Info"),
             stackable = false,
             upgradable    = false,
  

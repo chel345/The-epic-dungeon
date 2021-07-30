@@ -15,8 +15,8 @@ return item.init{
 itt = item
         return {
             imageFile = "items/TearsArmor.png",
-            name      = "Броня слёз",
-            info      = "Переливающийся блекло - синими и блекло - фиолетовыми оттенками, броня, что была выкованна неизвестным кузнецом из руды печали и закалённая в слезах. Она приобрела свойство впитывать боль своего носителя, тем самым укрепляясь.",
+            name      = RPD.textById("TearsArmor_Name"),
+            info      = RPD.textById("TearsArmor_Info"),
             stackable = false,
             price     = 10000,
             upgradable = true,

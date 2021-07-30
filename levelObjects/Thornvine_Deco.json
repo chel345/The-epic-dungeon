@@ -1,24 +1,26 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "Лоза- отличное растение для декора... Кажется оно шевелится... Вот же дрянь...",
-      "name": "Лоза"
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
     },
-    "sprite":{
-      "textureFile": "Thornvine.png",
-      "imageIndex" : 0,
+    "sprite": {
       "animations": {
         "basic": {
-      "fps" : 15,
-      "looped" : true,
-      "frames" : [3,4,5]
+          "fps": 15,
+          "frames": [
+            3,
+            4,
+            5
+          ],
+          "looped": true
         }
-      }
+      },
+      "imageIndex": 0,
+      "textureFile": "Thornvine.png"
     }
-  }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

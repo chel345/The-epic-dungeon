@@ -1,12 +1,13 @@
 {
-   "baseSpeed"     :0,
-   "spriteDesc"    :"spritesDesc/WorkingDM300NPC_Desc.json",
-   "scriptFile"    :"scripts/npc/WorkingDM300NPC",
-   "ht":100000000000,
-   "friendly"      :true,
-   "aiState"       :"Passive",
-   "fraction"      :"NEUTRAL",
-"name"			:"DM300_Name",
-"name_objective":"Элементаля",
-"description"	:"DM300_Desc"
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "WorkingDM300NPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "WorkingDM300NPC_Gender",
+  "ht": 100000000000,
+  "name": "WorkingDM300NPC_Name",
+  "name_objective": "WorkingDM300NPC_Object",
+  "scriptFile": "scripts/npc/WorkingDM300NPC",
+  "spriteDesc": "spritesDesc/WorkingDM300NPC_Desc.json"
 }

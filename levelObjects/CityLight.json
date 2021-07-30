@@ -1,20 +1,18 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "В этом фонаре горит яркий свет.",
-      "name": "Фонарь",
-  "canStepOn":true,
-  "nonPassable":false
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/CityLight.png",
-      "imageIndex" : 0
-    },
-   "particles":"Candle"
-  }
+    "particles": "Candle",
+    "sprite": {
+      "imageIndex": 0,
+      "textureFile": "levelObjects/CityLight.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

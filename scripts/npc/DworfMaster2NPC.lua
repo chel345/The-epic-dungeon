@@ -16,7 +16,7 @@ stats = function(self)
 end,
     interact = function(self, chr)
 self:getSprite():turnTo(self:getPos(),self:getPos()+1)
-EPD.showQuestWindow(self,"Хм...")
+EPD.showQuestWindow(self,RPD.textById("DworfMaster2NPC_Phrase1"))
 end
 })
 

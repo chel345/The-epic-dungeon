@@ -16,7 +16,7 @@ stats = function(self)
 end,
     interact = function(self, chr)
 self:getSprite():turnTo(self:getPos(),self:getPos()-1)
-EPD.showQuestWindow(self,"Давайте! Раз! Два! Раз! Два!")
+EPD.showQuestWindow(self,RPD.textById("UpDworfMonkNPC_Phrase1"))
 end
 })
 

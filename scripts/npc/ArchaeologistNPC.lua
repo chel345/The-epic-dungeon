@@ -25,23 +25,23 @@ level:drop(RPD.item("Artifacts/DeskOfRuns"),cell).type = RPD.Heap.Type.SKELETON
 end,
 interact = function(self, chr)
 if not storage.get("interact") then
-EPD.showQuestWindow(self, "Эх где же второй кусок? Может ты знаешь, а?")
+EPD.showQuestWindow(self, RPD.textById("ArchaeologistNPC_Phrase1"))
 storage.put("interact",true)
 return
 end
 if RPD.Dungeon.hero:getBelongings():getItem("Artifacts/DeskOfRuns") then
-EPD.showQuestWindow(self, "О вот она! Спасибо, вам за неё. В награду я отдам вам одну очень интересную вещь...")
+EPD.showQuestWindow(self, RPD.textById("ArchaeologistNPC_Phrase2"))
 local hero = RPD.Dungeon.hero
 hero:getBelongings():getItem("Artifacts/DeskOfRuns"):detach(hero:getBelongings().backpack)
 
 local wand = RPD.item("Artifacts/AmuletOfDomination")
 RPD.Dungeon.hero:collect(wand)
-RPD.glog("Теперь у тебя есть "..wand:name())
+RPD.glog(RPD.textById("ArchaeologistNPC_Phrase3")..wand:name())
 storage.put("complete",true)
 elseif not storage.get("complete") then
-EPD.showQuestWindow(self, "Где же где же...")
+EPD.showQuestWindow(self, RPD.textById("ArchaeologistNPC_Phrase4"))
 else
-EPD.showQuestWindow(self, "Не мешай! Я пытаюсь её прочитать...")
+EPD.showQuestWindow(self, RPD.textById("ArchaeologistNPC_Phrase5"))
 end
 end
 })

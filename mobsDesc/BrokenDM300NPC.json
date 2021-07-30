@@ -1,12 +1,13 @@
 {
-   "baseSpeed"     :0,
-   "spriteDesc"    :"spritesDesc/BrokenDM300NPC_Desc.json",
-   "scriptFile"    :"scripts/npc/BrokenDM300NPC",
-   "ht":100000000000,
-   "friendly"      :true,
-   "aiState"       :"Passive",
-   "fraction"      :"NEUTRAL",
-"name"			:"DM300_Name",
-"name_objective":"Элементаля",
-"description"	:"DM300_Desc"
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "BrokenDM300NPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "BrokenDM300NPC_Gender",
+  "ht": 100000000000,
+  "name": "BrokenDM300NPC_Name",
+  "name_objective": "BrokenDM300NPC_Object",
+  "scriptFile": "scripts/npc/BrokenDM300NPC",
+  "spriteDesc": "spritesDesc/BrokenDM300NPC_Desc.json"
 }

@@ -26,13 +26,13 @@ return spell.init{
         return {
             image         = 0,
             imageFile     = "mobs/enslavedsoul.png",
-            name          = "Порабощение",
-            info          = "Это заклинание призовёт душу покойного врага и подчинит её.",
+            name          = RPD.textById("RaiseSoul_Name"),
+            info          = RPD.textById("RaiseSoul_Info"),
             magicAffinity = "Necromancy",
             targetingType = "none",
             spellCost     = 5,
             castTime      = 2,
-            level         = 2
+            level         = 3
         }
     end,
     cast = function(self, spell, chr)

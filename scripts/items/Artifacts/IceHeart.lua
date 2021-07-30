@@ -15,8 +15,8 @@ return item.init{
         return {
             image     = 16,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Странное сердце",
-            info      = "Странное сердце бьющееся у тебя в руках.",
+            name      = RPD.textById("IceHeart_Name"),
+            info      = RPD.textById("IceHeart_Info"),
             stackable = true,
             price     = 10000
         }

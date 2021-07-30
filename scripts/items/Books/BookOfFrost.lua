@@ -18,16 +18,16 @@ return item.init{
         return {
            image     = 1,
             imageFile = "items/BooksInCityLibrary.png",
-            name          = "Книга льда",
-            info          = "Эта книга веет хлодом, который чуть-чуть отмараживает руки. Книга написана на древнем языке кобольтов, но ты можешь прочесть некоторые заклятья.",
+            name          = RPD.textById("BookOfFrost_Name"),
+            info          = RPD.textById("BookOfFrost_Info"),
             stackable     = true,
             defaultAction = "Scroll_ACRead",
             price         = 50
         }
     end,
-    actions = function() return {"Ледяная стрела","Создать ледяной предмет","Призвать ледяную сущность"} end,
+    actions = function() return {RPD.textById("IceArrow"),RPD.textById("CraftIceItem"),RPD.textById("SummonIcyEssence")} end,
 cellSelected = function(self, thisItem, action, cell)
-        if action == "Ледяная стрела" then 
+        if action == RPD.textById("IceArrow") then 
                 local soul =  RPD.Actor:findChar(cell)
                 if soul then
         RPD.affectBuff(soul, RPD.Buffs.Slow , 10);
@@ -38,10 +38,10 @@ end
 end
   end,
     execute = function(self, item, hero, action)
-        if action == "Ледяная стрела" then
-            item:selectCell( "Ледяная стрела" , "Выберете клетку")
+        if action == RPD.textById("IceArrow") then
+            item:selectCell( RPD.textById("IceArrow") , RPD.textById("Select_A_Cage"))
 end
-        if action == "Создать ледяной предмет" then
+        if action == RPD.textById("CraftIceItem") then
 local IceItems = {
 "IceWand",
 "NefritWand",
@@ -50,7 +50,7 @@ local IceItems = {
 }
 RPD.Dungeon.level:drop( RPD.ItemFactory:itemByName(IceItems[math.random(1,4)]), hero:getPos())
 end
-    if action == "Призвать ледяную сущность" then
+    if action == RPD.textById("SummonIcyEssence") then
  local mobs = {
 "IceElemental",
 "IceNefrit",

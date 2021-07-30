@@ -1,16 +1,15 @@
 {
-  "kind":"Deco",
-
   "appearance": {
     "desc": {
-      "desc": "Старая.",
-      "name": "Броня гнолла",
-  "canStepOn":true,
-  "nonPassable":false
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/GnollsArmor.png",
-      "imageIndex" : 0
+    "sprite": {
+      "imageIndex": 0,
+      "textureFile": "levelObjects/GnollsArmor.png"
     }
-  }
+  },
+  "kind": "Deco"
 }

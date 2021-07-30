@@ -18,19 +18,19 @@ return item.init {
         return {
             image      = 4,
             imageFile  = "items/BooksInCityLibrary.png",
-            name       = "Книга тайн",
-            info       = "Подземелье хранит в себе множество секретов и многие из них нельзя раскрыть просто открыв нужную дверь. С помощью этой книги ты сможешь открывать те, комнаты которые можно открыть только с помощью магии. Некоторые из секретов защищены особым заклятьем призыва стражей, которые будут атаковать всех, кого видят (врагов и героя). Стоит такое заклинание 15 маны.",
+            name       = RPD.textById("BookOfSecrets_Name"),
+            info       = RPD.textById("BookOfSecrets_Info"),
             stackable  = false,
             upgradable = false,
             equipable  = "left_hand",
             price      = 200,
             --   isArtifact    = true,
-defaultAction = "ИСПОЛЬЗОВАТЬ"
+defaultAction = RPD.textById("Action_Use")
         }
     end,
     actions      = function(self, item, hero)
         if item:isEquipped(hero) then
-            return { "ИСПОЛЬЗОВАТЬ" }
+            return { RPD.textById("Action_Use") }
         end
     end,
     activate     = function(self, item, hero)
@@ -39,8 +39,8 @@ defaultAction = "ИСПОЛЬЗОВАТЬ"
     deactivate   = function(self, item, hero)
     end,
     cellSelected = function(self, thisItem, action, cell)
-        if action == "ИСПОЛЬЗОВАТЬ" and cell ~= nil then
-
+        if action == RPD.textById("Action_Use") and cell ~= nil then
+thisItem:getUser():spend(2)
             local user         = thisItem:getUser()
             local level        = RPD.Dungeon.level
             local neutralGhost = RPD.MobFactory:mobByName("SumGhost")
@@ -48,7 +48,7 @@ defaultAction = "ИСПОЛЬЗОВАТЬ"
             if user:getSkillPoints() >= 15 then
                 user:spendSkillPoints(15)
             else
-                RPD.glog("-- Не хватает маны")
+                RPD.glog(RPD.textById("No_Mana"))
                 return
             end
 
@@ -63,7 +63,7 @@ defaultAction = "ИСПОЛЬЗОВАТЬ"
                             neutralGhost:ht(RPD.Dungeon.depth * 15)
                             neutralGhost:hp(neutralGhost:ht())
                         end
-                        -- neutralGhost:yell("Ты не сможешь открыть эту комнату!")
+                        -- neutralGhost:yell(RPD.textById("RoomNotOpening"))
                     end
 
                 else
@@ -87,13 +87,13 @@ defaultAction = "ИСПОЛЬЗОВАТЬ"
                 end
 
             else
-                RPD.glog("Здесь нет секретов")
+                RPD.glog(RPD.textById("HereAreNoSecrets"))
             end
         end
     end,
     execute      = function(self, item, hero, action)
-        if action == "ИСПОЛЬЗОВАТЬ" then
-            item:selectCell("ИСПОЛЬЗОВАТЬ", "Выбирете клетку")
+        if action == RPD.textById("Action_Use") then
+            item:selectCell(RPD.textById("Action_Use"), RPD.textById("Select_A_Cage"))
         end
     end
 

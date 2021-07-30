@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 6,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Плащ маэстро Гримма",
-            info      = "Это плащ состоит из нескольких сшитых между собой чёрных с одной стороны и красных с другой лент.",
+            name      = RPD.textById("GrimmsClack_Name"),
+            info      = RPD.textById("GrimmsClack_Info"),
             stackable = true,
             upgradable    = false,
             isArtifact    = true,

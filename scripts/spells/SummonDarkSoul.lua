@@ -14,13 +14,13 @@ return spell.init{
         return {
             image         = 7,
             imageFile     = "spellsIcons/necromancy.png",
-            name          = "Призвать проклятую душу",
-            info          = "Призывает проклятую душу.",
+            name          = RPD.textById("SummonDarkSoul_Name"),
+            info          = RPD.textById("SummonDarkSoul_Info"),
             magicAffinity = "Combat",
-            targetingType = "self",          level         = 1,
+            targetingType = "self",          level         = 4,
             spellCost     = 9,
             cooldown      = 5,
-            castTime      = 2
+            castTime      = 5
         }
     end,
     cast = function(self, spell, chr,caster,cell)

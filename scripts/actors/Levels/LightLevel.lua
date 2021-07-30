@@ -15,9 +15,12 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
     activate = function()
-if RPD.Dungeon.depth == 25 then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,"После дворфийской метрополии простирался ещё один подземный город. Никто не знает, кто здесь жил и почему он погиб. Некоторые полагают, что город погиб по той же причине, что и дворфийская метрополия: великая война со старым богом. Лишь немногие добирались так далеко...")
-RPD.GameScene:show(wnd)
+if RPD.Dungeon.depth == 26 then
+if not storage.get("storylight") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("Light_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storylight",true)
+end
 end
 if RPD.Dungeon.depth ~= 30 then
 Ginerator.CreateLevel("LightLevel",true)

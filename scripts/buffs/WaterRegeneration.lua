@@ -12,7 +12,7 @@ return buff.init{
     desc  = function ()
         return {
             icon          = 48,
-            name          = "Водная регенерация",
+            name          = RPD.textById("Water_Regeneration_Buff"),
             info          = "DieHard_Info",
         }
     end,

@@ -13,7 +13,7 @@ local EPD = require "scripts/lib/dopClasses"
 
 local room = require "scripts/lib/room"
 
-local Ginerator = require "scripts/lib/Ginerator"
+--local Ginerator = require "scripts/lib/Ginerator"
 
 return item.init{
     desc  = function ()
@@ -38,8 +38,15 @@ end,
 
     execute = function(self, item, hero, action, cell, char, data) 
          if action == RPD.Actions.zap then
-local image = RPD.new("com.watabou.noosa.Image","ui/title.png")
-RPD.GameScene:effect(image)
+--local image = RPD.new("com.watabou.noosa.Image","ui/title.png")
+--RPD.GameScene:effect(image)
+local SClientLua = luajava.bindClass("com.nyrds.pixeldungeon.networking.SClientLua")
+local client = SClientLua:createNew( "192.168.10.102" ,3002):connect()
+client:sendMessage("test")
+while not client:canReceive() do
+end
+RPD.glog(client:receiveMessage())
+client:stop()
 end 
 end 
 }

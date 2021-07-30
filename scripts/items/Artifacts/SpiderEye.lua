@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 20,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Глаз паука",
-            info      = "Мерзость.",
+            name      = RPD.textById("SpiderEye_Name"),
+            info      = RPD.textById("SpiderEye_Info"),
             stackable = true,
             upgradable    = true,
  

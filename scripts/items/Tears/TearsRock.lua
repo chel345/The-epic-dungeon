@@ -17,8 +17,8 @@ return item.init{
         return {
            image     = 0,
             imageFile = "items/Tears.png",
-            name      = "Камень слёз",
-            info     = "Саммонит стражей. Цена - 20 маны.",
+            name      = RPD.textById("TearsRock_Name"),
+            info     = RPD.textById("TearsRock_Info"),
             stackable = false,
              price     = 200,
            isArtifact    = true
@@ -26,18 +26,18 @@ return item.init{
     end,   
     actions = function(self, item,  hero)
         if item:isEquipped(hero) then
-            return {"ИСПОЛЬЗОВАТЬ"}
+            return {RPD.textById("Action_Use")}
         end
         return {}
     end,
         cellSelected = function(self, thisItem, action, cell)
-        if action == "ИСПОЛЬЗОВАТЬ" then
-
+        if action == RPD.textById("Action_Use") then
+thisItem:getUser():spend(1)
 mana = RPD.Dungeon.hero:getSkillPoints()
 if mana > 20 then
 RPD.Dungeon.hero:spendSkillPoints(20)
 else
-RPD.glog("-- Не хватает маны")
+RPD.glog(RPD.textById("No_Mana"))
 return
 end
 
@@ -54,8 +54,8 @@ end
 end
 end,
     execute = function(self, item, hero, action)
-        if action == "ИСПОЛЬЗОВАТЬ" then
-            item:selectCell("ИСПОЛЬЗОВАТЬ","Выбирете клетку")
+        if action == RPD.textById("Action_Use") then
+            item:selectCell(RPD.textById("Action_Use"),RPD.textById("Select_A_Cage"))
         end
     end
 

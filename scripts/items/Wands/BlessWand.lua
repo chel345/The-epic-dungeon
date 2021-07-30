@@ -18,8 +18,8 @@ return wand.init{
         return {
             image         = 21,
             imageFile     = "items/wands_remastered.png",
-            name      = "Жезл света",
-            info      = "Подобный жезл ты видел у епископа. Цена 5 маны."
+            name      = RPD.textById("BlessWand_Name"),
+            info      = RPD.textById("BlessWand_Info")
         }
 end, 
 
@@ -30,7 +30,7 @@ deactivate = function(self, item, hero)
 end,
 
 castOnCell = function(self, thisItem, cell,dsty,l)
-
+thisItem:getUser():spend(TIME_TO_ZAP)
 if thisItem:isEquipped(RPD.Dungeon
 .hero) then
 local dst = RPD.Ballistica:cast(thisItem:getUser():getPos(), cell, true, true, true)
@@ -86,6 +86,6 @@ return 5
 end,
 
 getManaMes = function()
-return "-- Не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

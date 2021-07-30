@@ -1,28 +1,27 @@
-
- {
-"defenseSkill"	: 9,
-"attackSkill"	: 15,
-"exp"			: 4,
-"maxLvl"		: 31,
-"dmgMin"		: 0,
-"dmgMax"		: 0,
-"dr"			: 5,
-"baseSpeed"		: 1,
-"attackDelay"	: 10000,
-"ht"			: 200,
-"name"			:"Паучий кокон Неруба",
-"name_objective":"Кокон",
-"description"	:"Чёрный паучий кокон великого Неруба... Отвратительно!",
-"gender"		:"masculine",
-"spriteDesc"	:"spritesDesc/ShadowSpiderEgg_Desc.json",
- "scriptFile"	: "scripts/mobs/ShadowSpiderEgg",
-"lootChance"	: 0.5,
-"attackRange"	: 0,
-"walkingType"	: "NORMAL",
-"canBePet"		: false,
-"flying"		: false,
-"friendly"		: false,
- "immunities": [
-      "Terror"
-      ]
+{
+  "attackDelay": 10000,
+  "attackRange": 0,
+  "attackSkill": 15,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 9,
+  "description": "ShadowSpiderEgg_Desc",
+  "dmgMax": 0,
+  "dmgMin": 0,
+  "dr": 5,
+  "exp": 4,
+  "flying": false,
+  "friendly": false,
+  "gender": "ShadowSpiderEgg_Gender",
+  "ht": 200,
+  "immunities": [
+    "Terror"
+  ],
+  "lootChance": 0.5,
+  "maxLvl": 31,
+  "name": "ShadowSpiderEgg_Name",
+  "name_objective": "ShadowSpiderEgg_Object",
+  "scriptFile": "scripts/mobs/ShadowSpiderEgg",
+  "spriteDesc": "spritesDesc/ShadowSpiderEgg_Desc.json",
+  "walkingType": "NORMAL"
 }

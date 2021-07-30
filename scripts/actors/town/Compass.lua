@@ -17,7 +17,13 @@ return actor.init({
     activate = function()
 RPD.removeBuff(RPD.Dungeon.hero, "ModBuff");
 RPD.permanentBuff(RPD.Dungeon.hero, "ModBuff");
-
+if RPD.Dungeon.depth == 1 then
+if not storage.get("storymod") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("Mod_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storymod",true)
+end
+end
 if not storage.gameGet("light_in_town") then
 storage.gamePut("light_in_town",true)
 RPD.createLevelObject({

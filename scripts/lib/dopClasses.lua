@@ -54,7 +54,7 @@ if cast then
 if mana > b then
 RPD.Dungeon.hero:spendSkillPoints(b)
 else
-RPD.glog("** Не хватает маны")
+RPD.glog(RPD.textById("No_Mana"))
 return
 end
 end
@@ -67,13 +67,7 @@ end
 mob:damage(math.random(min,max),user)
 b = b +1
 RPD.topEffect(cell,"Klak")
-if user == RPD.Dungeon.hero then
-user:spend(1)
-end
 else
-if user == RPD.Dungeon.hero then
-user:spend(1)
-end
 b = b+1
 RPD.topEffect(cell,"Klak")
 end

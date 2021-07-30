@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 23,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Осколок кристаллического червя",
-            info      = "Жёлтый кристалл размером с кулак.",
+            name      = RPD.textById("MirrorWormsShard_Name"),
+            info      = RPD.textById("MirrorWormsShard_Info"),
             stackable = false,
             price     = 300
         }

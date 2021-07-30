@@ -46,8 +46,8 @@ return item.init{
         return {
            image     = 1,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Аура заклинателя",
-            info      = "Эта штука никак не влияет на геймплей, но с её помощью вы сможете наложить на героя рандомный визуальный эффект, который исчезнет если покинуть этаж или перезайти в игру.",
+            name      = RPD.textById("MagicAura_Name"),
+            info      = RPD.textById("MagicAura_Info"),
             stackable = false,
             upgradable    = false,
  

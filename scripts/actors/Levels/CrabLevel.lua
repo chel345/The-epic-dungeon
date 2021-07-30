@@ -15,6 +15,13 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
     activate = function()
+if RPD.Dungeon.depth == 6 then
+if not storage.get("storycrab") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("Crab_Story"))
+       RPD.GameScene:show(wnd)
+       storage.get("storycrab",true)
+end
+end
 return true
 end,
     actionTime = function()

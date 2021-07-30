@@ -1,18 +1,15 @@
 {
-  "kind":"Deco",
-
-
   "appearance": {
     "desc": {
-      "desc": "На ней можно посидеть.",
-      "name": "Скамейка",
-  "canStepOn":true,
-  "nonPassable":false
-
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/Bench.png",
-      "imageIndex" : 1
+    "sprite": {
+      "imageIndex": 1,
+      "textureFile": "levelObjects/Bench.png"
     }
-  }
+  },
+  "kind": "Deco"
 }

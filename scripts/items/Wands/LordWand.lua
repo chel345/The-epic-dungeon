@@ -12,14 +12,14 @@ local wand = require "scripts/lib/wand"
 local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
-
+local TIME_TO_ZAP = 1
 return wand.init{ 
     desc  = function()  
     
         return {
            image     = 19,
-            name      = "Жезл гнева",
-            info      = "При использовании этот жезл создаст множество лучей в определённых местах. Цена 25 маны."
+            name      = RPD.textById("LordWand_Name"),
+            info      = RPD.textById("LordWand_Info")
         }
 end, 
 
@@ -33,7 +33,7 @@ RPD.removeBuff(item:getUser(), RPD.Buffs.Light)
 end,
 
 castOnCell = function(self, thisItem, on,dst,lvl)
-
+thisItem:getUser():spend(TIME_TO_ZAP)
 local level = RPD.Dungeon.level
 local me = thisItem:getUser()
 lvl = lvl + 1
@@ -73,6 +73,6 @@ return 25
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

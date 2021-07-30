@@ -15,8 +15,8 @@ return item.init{
         return {
             image     = 11,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Пчелинное гнездо",
-            info      = "В нём лежит гиганская пчола!",
+            name      = RPD.textById("BeeNest_Name"),
+            info      = RPD.textById("BeeNest_Info"),
             stackable = true,
             price     = 15
         }

@@ -1,12 +1,13 @@
 {
-   "baseSpeed"     :0,
-   "spriteDesc"    :"spritesDesc/ArmorOnHanger_Lether_Desc.json",
-   "scriptFile"    :"scripts/mobs/timed/ArmorOnHanger_Lether",
-   "ht":100000000000,
-   "friendly"      :true,
-   "aiState"       :"Passive",
-   "fraction"      :"NEUTRAL",
-"name"			:"Стойка для брони",
-"name_objective":"Элементаля",
-"description"	:"На этой стойке висит кожаный доспех."
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "ArmorOnHanger_Lether_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "ArmorOnHanger_Lether_Gender",
+  "ht": 100000000000,
+  "name": "ArmorOnHanger_Lether_Name",
+  "name_objective": "ArmorOnHanger_Lether_Object",
+  "scriptFile": "scripts/mobs/timed/ArmorOnHanger_Lether",
+  "spriteDesc": "spritesDesc/ArmorOnHanger_Lether_Desc.json"
 }

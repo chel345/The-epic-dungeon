@@ -19,20 +19,20 @@ if chr:gold() >= 300 then
 chr:spendGold(300)
 local key = RPD.ItemFactory:itemByName("GoldenKey")
 RPD.Dungeon.level:drop(key, chr:getPos())
-self:say("Выбирай, что нужно.")
+self:say(RPD.textById("DworfKeeperNPC_Phrase1"))
 return
 end
 end
 if index == 1 then
-chr:say("И чем тебе моя идея не понравилась...")
+chr:say(RPD.textById("DworfKeeperNPC_Phrase2"))
 end
 end
 RPD.chooseOption(
 dialog,
-"Дворф-торговец",
-"Здраствуй! Добро пожаловать в месный fix price мы предлагаем вам купить ключ, которым вы отроете сундук, с тем, что вам нужно! Сундуки прозрачные! Не стисняйтесь!",
-"Купить ключ- 300g",
-"Уйти"
+RPD.textById("DworfKeeperNPC_Phrase3"),
+RPD.textById("DworfKeeperNPC_Phrase4"),
+RPD.textById("DworfKeeperNPC_Phrase5"),
+RPD.textById("DworfKeeperNPC_Phrase6")
 )
 
 end

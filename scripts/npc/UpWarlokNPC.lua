@@ -13,7 +13,7 @@ local EPD = require "scripts/lib/dopClasses"
 
 return mob.init({
     interact = function(self, chr)
-EPD.showQuestWindow(self,"Эх... какой спокойный день...")
+EPD.showQuestWindow(self,RPD.textById("UpWarlokNPC_Phrase1"))
 end
 })
 

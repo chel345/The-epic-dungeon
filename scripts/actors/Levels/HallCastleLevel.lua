@@ -15,13 +15,14 @@ local Ginerator = require "scripts/lib/Ginerator"
 
 return actor.init({
 activate = function()
+
 if RPD.Dungeon.depth == 31 then
 if not storage.get("storycastle") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,"Адская крепость, пролигающая после изумрудного собора является тоже своеобразной задворкой. Никому не известно кто построил её. Историки утверждают, что она была создана той неизвестной рассой и использовалось как укрытие, другие же суйверные говорят, что её построил сам дьявол, чтобы пытать там грешные души...")
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("HellCastle_Story"))
        RPD.GameScene:show(wnd)
+       storage.put("storycastle",true)
 end
 end
-storage.put("storycastle",true)
 if RPD.Dungeon.depth ~= 33 then
 
 local level = RPD.Dungeon.level

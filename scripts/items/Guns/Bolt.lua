@@ -15,8 +15,8 @@ return item.init{
         return {
             image     = 3,
             imageFile = "items/Guns.png",
-            name      = "Патрон",
-            info      = "Стальной шарик оазмером с небольшой флакончик с зельем. Он отлично подойдёт для стрельбы из любого оружия.",
+            name      = RPD.textById("Bolt_Name"),
+            info      = RPD.textById("Bolt_Info"),
             stackable = true,
             price     = 15
         }

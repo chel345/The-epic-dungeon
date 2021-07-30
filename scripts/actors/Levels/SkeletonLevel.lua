@@ -16,9 +16,12 @@ local storage = require "scripts/lib/storage"
 return actor.init({
     activate = function()
 if RPD.Dungeon.depth == 26 then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,"Кто прочитал, тот гей")
+if not storage.get("storyskeleton") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("Skeleton_Story"))
        RPD.GameScene:show(wnd)
-    end
+       storage.put("storyskeleton",true)
+end
+end
 for i = 0,RPD.Dungeon.level:getLength()-1 do            
     if RPD.Dungeon.level.map[i] == RPD.Terrain.STATUE then
 RPD.Sfx.CellEmitter:get(i-1):start(RPD.Sfx.ElmoParticle.FACTORY, 0.2);

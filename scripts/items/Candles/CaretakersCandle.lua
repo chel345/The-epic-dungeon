@@ -20,8 +20,8 @@ return wand.init{
 caretakerscandle = item
         return {
         imageFile = "items/Candles.png",
-        name      = "Свеча смотрителя",
-        info      = "свечаааа."
+        name      = RPD.textById("CaretakersCandle_Name"),
+        info      = RPD.textById("CaretakersCandle_Info")
         }
 end, 
 
@@ -52,7 +52,7 @@ end,
 
 activate = function(self, item, hero)
 if item:level() <= 0 then
-RPD.glog("** Свеча потухала и пытаться зажечь её бессмысленно")
+RPD.glog(RPD.textById("ExtinguishedCandle"))
 item:getUser():collect(RPD.item("Candles/CaretakersCandle"))
 item:removeItemFrom(item:getUser())
 return
@@ -73,7 +73,7 @@ end
 if caretakerscandle:level() <= 0 then
 caretakerscandle:deactivate()
 
-RPD.glog("** Свеча потухала и пытаться зажечь её бессмысленно")
+RPD.glog(RPD.textById("ExtinguishedCandle"))
 caretakerscandle:removeItemFrom(caretakerscandle:getUser())
 RPD.Dungeon.hero:collect(RPD.item("Candles/CaretakersCandle"))
 

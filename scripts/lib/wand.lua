@@ -41,7 +41,7 @@ function wand.cast(self, wand, lvl)
 end
 
 function wand.cellSelected(self, wand, action, cell)
-    if cell ~= nil and action == "ВЗМАХНУТЬ" then
+    if cell ~= nil and action == RPD.textById("Wave") then
 
         wand:getUser():getSprite():zap(cell)
         local dst = RPD.Ballistica:cast(wand:getUser():getPos(), cell, true, true)
@@ -86,7 +86,7 @@ function wand.defaultDesc()
         stackable     = false,
         upgradable    = true,
         identified    = true,
-        defaultAction = "ВЗМАХНУТЬ",
+        defaultAction = RPD.textById("Wave"),
         price         = 500,
         equipable     = "left_hand"
     }
@@ -101,12 +101,12 @@ function wand.getMana()
 end
 
 function wand.getManaMes()
-    return "-- не хватает маны"
+    return RPD.textById("No_Mana")
 end
 
 function wand.execute(self, wand, hero, action)
     local own = self:selectType()
-    if action == "ВЗМАХНУТЬ" then
+    if action == RPD.textById("Wave") then
         if own == "cell" then
             mana = self:getMana()
             if mana <= hero:getSkillPoints() then
@@ -115,7 +115,7 @@ function wand.execute(self, wand, hero, action)
                 RPD.glog(self:getManaMes())
                 return
             end
-            wand:selectCell("ВЗМАХНУТЬ", "Выберите направление взмаха")
+            wand:selectCell(RPD.textById("Wave"), RPD.textById("SelectDirectionWave"))
         else
             mana = self:getMana()
             if mana <= hero:getSkillPoints() then

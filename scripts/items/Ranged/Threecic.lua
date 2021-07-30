@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 3,
             imageFile = "items/RangedMod.png",
-            name      = "Вилы",
-            info      = "К большой палке прикреплено железа в форме трезубца. Он очень неуклюжий.",
+            name      = RPD.textById("Threecic_Name"),
+            info      = RPD.textById("Threecic_Info"),
             stackable = true,
             upgradable    = true,
             price     = 10
@@ -48,7 +48,7 @@ if ver == chanse then
 RPD.playSound( "snd_hit.mp3")
         return dmg
 else
-soul:getSprite():showStatus(0xCCAA44,"Уклонился")
+soul:getSprite():showStatus(0xCCAA44,RPD.textById("Dodged"))
 item:dropTo(cell)
 end
 

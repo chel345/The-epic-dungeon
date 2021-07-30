@@ -1,17 +1,15 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "Какие-то ржавые детали.",
-      "name": "Детали"
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
     },
-    "sprite":{
-      "textureFile": "levelObjects/DM-50Details.png",
-      "imageIndex" : 3
+    "sprite": {
+      "imageIndex": 3,
+      "textureFile": "levelObjects/DM-50Details.png"
     }
-  }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

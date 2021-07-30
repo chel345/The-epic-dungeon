@@ -1,14 +1,13 @@
 {
-  "kind":"Deco",
-
   "appearance": {
     "desc": {
-      "desc": "Эта дверь заперта. Тебе нужен подходящий ключ.",
-      "name": "Запертая дверь"
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
     },
-    "sprite":{
-      "textureFile": "levelObjects/Caves/CavesTiles.png",
-      "imageIndex" : 7
+    "sprite": {
+      "imageIndex": 7,
+      "textureFile": "levelObjects/Caves/CavesTiles.png"
     }
-  }
+  },
+  "kind": "Deco"
 }

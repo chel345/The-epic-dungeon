@@ -1,14 +1,14 @@
 {
-   "baseSpeed"     :0,
-   "attackDelay"   :1,
-   "ht"            :5000000,
-   "name"          :"Гнолл",
-   "name_objective":"хех",
-   "description"   :"У этого гнолла повязка и железная нога.",
-   "gender"        :"masculine",
-   "spriteDesc"    :"spritesDesc/GnollPirateNPC_Desc.json",
-   "scriptFile"    :"scripts/npc/GnollPirateNPC",
-   "friendly"      :true,
-"aiState": "Passive",
-   "fraction"      :"NEUTRAL"
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "GnollPirateNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "GnollPirateNPC_Gender",
+  "ht": 5000000,
+  "name": "GnollPirateNPC_Name",
+  "name_objective": "GnollPirateNPC_Object",
+  "scriptFile": "scripts/npc/GnollPirateNPC",
+  "spriteDesc": "spritesDesc/GnollPirateNPC_Desc.json"
 }

@@ -1,12 +1,13 @@
 {
-   "baseSpeed"     :0,
-   "spriteDesc"    :"spritesDesc/ArmorOnHanger_Desc.json",
-   "scriptFile"    :"scripts/mobs/timed/ArmorOnHanger",
-   "ht":100000000000,
-   "friendly"      :true,
-   "aiState"       :"Passive",
-   "fraction"      :"NEUTRAL",
-"name"			:"Пустая стойка для брони",
-"name_objective":"Элементаля",
-"description"	:"На этой стойке ничего нет."
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "ArmorOnHanger_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "ArmorOnHanger_Gender",
+  "ht": 100000000000,
+  "name": "ArmorOnHanger_Name",
+  "name_objective": "ArmorOnHanger_Object",
+  "scriptFile": "scripts/mobs/timed/ArmorOnHanger",
+  "spriteDesc": "spritesDesc/ArmorOnHanger_Desc.json"
 }

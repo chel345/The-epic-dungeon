@@ -1,14 +1,13 @@
 {
-   "baseSpeed"     :0,
-   "attackDelay"   :1,
-   "ht"            :5000000,
-   "name"          :"Гнолл",
-   "name_objective":"хех",
-   "description"   :".",
-   "gender"        :"masculine",
-   "spriteDesc"    :"spritesDesc/SleepingGnollNPC_Desc.json",
-   /*"scriptFile"    :"scripts/npc/AlhimicNPC",*/
-   "friendly"      :true,
-"aiState": "Sleeping",
-   "fraction"      :"NEUTRAL"
+  "aiState": "Sleeping",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "SleepingGnollNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "SleepingGnollNPC_Gender",
+  "ht": 5000000,
+  "name": "SleepingGnollNPC_Name",
+  "name_objective": "SleepingGnollNPC_Object",
+  "spriteDesc": "spritesDesc/SleepingGnollNPC_Desc.json"
 }

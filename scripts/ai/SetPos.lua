@@ -43,6 +43,6 @@ end,
 end,
 
     status = function(me, ai, me)
-        return (me:getName().." удерживает позицию")
+        return RPD.textById("Mob_StaWanderingStatus",me)
     end
 }

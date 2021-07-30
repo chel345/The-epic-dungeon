@@ -38,7 +38,7 @@ return mob.init({
                 RPD.playSound( "snd_cursed.mp3" )
             end 
  end
-        self:yell("Нееет!")
+        self:yell(RPD.textById("Yell_No"))
  end
   })
 

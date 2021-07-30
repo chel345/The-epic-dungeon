@@ -29,8 +29,8 @@ portal =
 kind = "PortalGateSender",
 target = {
 levelId = "DworfTown",
-x = 12,
-y = 28
+x = 3,
+y = 8
 }
 }
 

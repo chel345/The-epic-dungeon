@@ -11,7 +11,7 @@ return buff.init{
     desc  = function ()
         return {
             icon          = 51,
-            name         = "Тёмная мантия.",
+            name         = RPD.textById("Darck_Mantel_Buff"),
             info          = "DieHard_Info",
         }
     end,

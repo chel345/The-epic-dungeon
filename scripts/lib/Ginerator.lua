@@ -11,6 +11,8 @@ local room = require "scripts/lib/room"
 
 local Process = require"scripts/lib/Process"
 
+local Spawner = loadfile"scripts/actors/Spawner.lua"
+
 local storage = require"scripts/lib/storage"
 
 local Ginerator =
@@ -125,7 +127,7 @@ room.MakeBorder()
 
 if gin.Items ~= nil then
 for i = 1, #gin.Items do
-r = RPD.Dungeon.level:randomRespawnCell()
+r = Spawner().getCell()
 if r ~= nil and r ~= -1 then
 RPD.Dungeon.level:drop(RPD.item(gin.Items[i]),r)
 end
@@ -259,7 +261,7 @@ room.addTraps(gin.Traps,gin.ChanseTrap)
 end
 if gin.Items ~= nil then
 for i = 1, #gin.Items do
-r = RPD.Dungeon.level:randomRespawnCell()
+r = Spawner().getCell()
 if r ~= nil and r ~= -1 then
 RPD.Dungeon.level:drop(RPD.item(gin.Items[i]),r)
 end
@@ -398,7 +400,7 @@ room.MakeBorder()
 
 if gin.Items ~= nil then
 for i = 1, #gin.Items do
-r = RPD.Dungeon.level:randomRespawnCell()
+r = Spawner.getCell()
 if r ~= nil and r ~= -1 then
 RPD.Dungeon.level:drop(RPD.item(gin.Items[i]),r)
 end
@@ -523,7 +525,7 @@ end
 
 if gin.Items ~= nil then
 for i = 1, #gin.Items do
-r = RPD.Dungeon.level:randomRespawnCell()
+r = Spawner().getCell()
 if r ~= nil and r ~= -1 then
 RPD.Dungeon.level:drop(RPD.item(gin.Items[i]),r)
 end

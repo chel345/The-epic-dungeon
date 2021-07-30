@@ -1,23 +1,27 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "В ней кто-то сидит.",
-      "name": "Клетка",
-  "canStepOn":true,
-  "nonPassable":false
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/CollectorsCagets.png",
-      "imageIndex" : 6,
+    "sprite": {
       "animations": {
         "basic": {
- "fps" : 10,  "looped" : true,    "frames" : [6, 7 ]         }
-      }
+          "fps": 10,
+          "frames": [
+            6,
+            7
+          ],
+          "looped": true
+        }
+      },
+      "imageIndex": 6,
+      "textureFile": "levelObjects/CollectorsCagets.png"
     }
-  }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

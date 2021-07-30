@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 5,
             imageFile = "items/RangedMod.png",
-            name      = "Кинжал света",
-            info      = "Лезвие этого кинжала сделано из хрусталя, на рукояди из железа есть еле заметные узоры. Интересно, зачем он нужен?",
+            name      = RPD.textById("LightDanger_Name"),
+            info      = RPD.textById("LightDanger_Info"),
             stackable = true,
             price     = 10
         }
@@ -49,7 +49,7 @@ RPD.affectBuff(soul, RPD.Buffs.Light , 5+item:level());
 soul:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.UP, 8 )
 soul:damage(3*RPD.Dungeon.depth+item:level(),item:getUser())
 else
-soul:getSprite():showStatus(0xCCAA44,"Уклонился")
+soul:getSprite():showStatus(0xCCAA44,RPD.textById("Dodged"))
 item:dropTo(cell)
 end
 

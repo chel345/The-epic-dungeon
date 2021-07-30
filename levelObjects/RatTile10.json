@@ -1,20 +1,18 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "Здесь ничего нет.",
-      "name": "Стена",
-  "canStepOn":true,
-  "nonPassable":false
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/RatTiles.png",
-      "imageIndex" : 9
+    "sprite": {
+      "imageIndex": 9,
+      "textureFile": "levelObjects/RatTiles.png"
     }
   },
-   "particles":"Candle"
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false,
+  "particles": "Candle"
 }

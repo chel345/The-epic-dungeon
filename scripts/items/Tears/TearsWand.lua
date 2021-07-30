@@ -18,8 +18,8 @@ return wand.init{
 ittt = item
         return {
         imageFile = "items/TearsWand.png",
-        name      = "Жезл уныния",
-        info      = "Цена 20 маны."
+        name      = RPD.textById("TearsWand_Name"),
+        info      = RPD.textById("TearsWand_Info")
         }
 end, 
 
@@ -46,7 +46,7 @@ RPD.removeBuff(item:getUser(), RPD.Buffs.MindVision)
 end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)
-
+thisItem:getUser():spend(1)
 local enemy = RPD.Actor:findChar(dst)
 local l = thisItem:level()
 RPD.playSound( "snd_zap.mp3" )
@@ -230,7 +230,7 @@ return 20
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end,
 
 UpdateSprite = function()

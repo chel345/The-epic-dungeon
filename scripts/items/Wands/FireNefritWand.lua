@@ -17,8 +17,8 @@ return wand.init{
     desc  = function()  
         return {
            image     = 3,
-            name      = "Жезл кристализации",
-            info      = "При использовании этот жезл начнёт начнёт кристализировать окружающую среду."
+            name      = RPD.textById("FireNefritWand_Name"),
+            info      = RPD.textById("FireNefritWand_Info")
         }
 end, 
 

@@ -12,13 +12,13 @@ local wand = require "scripts/lib/wand"
 local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
-
+local TIME_TO_ZAP = 1
 return wand.init{ 
     desc  = function()  
         return {
            image     = 18,
-            name      = "Жезл илюзий",
-            info      = "При использовании этот жезл создаст твою илюзию. Цена 30 маны."
+            name      = RPD.textById("WandOfMirror_Name"),
+            info      = RPD.textById("WandOfMirror_Info")
         }
 end, 
 
@@ -35,7 +35,7 @@ end,
 
 cast = function(self,thisItem,lvl)
 local level = RPD.Dungeon.level
-
+thisItem:getUser():spend(TIME_TO_ZAP)
         local hero = RPD.Dungeon.hero
         print(self, cause)
 
@@ -62,6 +62,6 @@ return 30
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

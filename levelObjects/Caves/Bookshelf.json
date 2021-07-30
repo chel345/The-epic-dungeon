@@ -1,14 +1,13 @@
 {
-  "kind":"Deco",
- 
   "appearance": {
     "desc": {
-      "desc": "Полку наполняют дешёвые и бесполезные книги. Интересно, загорится?",
-      "name": "Книжная полка"
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
     },
-    "sprite":{
-      "textureFile": "levelObjects/Caves/CavesTiles.png",
-      "imageIndex" : 13
+    "sprite": {
+      "imageIndex": 13,
+      "textureFile": "levelObjects/Caves/CavesTiles.png"
     }
-  }
+  },
+  "kind": "Deco"
 }

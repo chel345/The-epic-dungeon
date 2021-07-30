@@ -14,16 +14,16 @@ return item.init{
         return {
            image     = 10,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Призрачная роза",
-            info      = "Эта роза почти прозрачна, она напоминает ,нарисованный простым карандашём на картине, цветок. Смотря на этот цветок тебя всё сильнее хочется уколоться об её шипы.",
+            name      = RPD.textById("GhostRose_Name"),
+            info      = RPD.textById("GhostRose_Info"),
             stackable = false,
             upgradable    = false,
  
              price     = 50
         }
-    end, actions = function() return {"УКОЛОТЬСЯ"} end,
+    end, actions = function() return {RPD.textById("Prick")} end,
     execute = function(self, item, hero, action, cell, char, data) 
-        if action == "УКОЛОТЬСЯ" then       
+        if action == RPD.textById("Prick") then       
 local hero = RPD.Dungeon.hero
 hero:getSprite():emitter():burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.STEAM), 2)
 if math.random(1,2) == 1 then

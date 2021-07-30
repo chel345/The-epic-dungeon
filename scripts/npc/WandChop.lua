@@ -46,7 +46,7 @@ local dialog = function(index)
 RPD.Dungeon.level:drop( RPD.ItemFactory:itemByName(NormalItem[math.random(1,3)]), client:getPos())
             return
         end
-        npc:say("Прости, но ниже цену вообще никак.")
+        npc:say(RPD.textById("WandChop_Phrase1"))
     end
 
     if index == 1 then
@@ -55,7 +55,7 @@ RPD.Dungeon.level:drop( RPD.ItemFactory:itemByName(NormalItem[math.random(1,3)])
    RPD.Dungeon.level:drop( RPD.ItemFactory:itemByName(PremiomItem[math.random(1,8)]), client:getPos())
             return
         end
-        npc:say("Прости, но ниже цену вообще никак.")
+        npc:say(RPD.textById("WandChop_Phrase1"))
     end
 
 if index == 2 then
@@ -64,7 +64,7 @@ if index == 2 then
    RPD.Dungeon.level:drop( RPD.ItemFactory:itemByName(CoolItem[math.random(1,2)]), client:getPos())
             return
         end
-        npc:say("Прости, но ниже цену вообще никак.")
+        npc:say(RPD.textById("WandChop_Phrase1"))
     end
  end
 

@@ -14,10 +14,10 @@ return spell.init{
         return {
             image         = 6,
             imageFile     = "spellsIcons/necromancy.png",
-            name          = "Призвать осквернённую душу",
-            info          = "Призывает осквернённую душу.",
+            name          = RPD.textById("SummonSkvernSoul_Name"),
+            info          = RPD.textById("SummonSkvernSoul_Info"),
             magicAffinity = "Combat",
-            targetingType = "self",          level         = 1,
+            targetingType = "self",          level         = 3,
             spellCost     = 9,
             cooldown      = 5,
             castTime      = 2

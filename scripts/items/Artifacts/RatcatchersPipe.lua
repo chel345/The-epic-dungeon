@@ -15,8 +15,8 @@ return item.init{
         return {
             image     = 18,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Дудочка крысолова",
-            info      = "На этой магической дудочке сможет сыграть лишь профессионал.",
+            name      = RPD.textById("RatcatchersPipe_Name"),
+            info      = RPD.textById("RatcatchersPipe_Info"),
             stackable = true,
             price     = 10
         }

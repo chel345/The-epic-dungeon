@@ -435,23 +435,23 @@
 
 
 
-"DworfTown":{"kind":"PredesignedLevel", "depth":16, "file":"levelsDesc/DworfTown.json", "music":"DworfTown.ogg","noFogOfWar":true, "isSafe":true, "isStatic":true,"script":"scripts/actors/DworfTownKeeper"},
+"DworfTown":{"kind":"PredesignedLevel", "depth":16, "file":"levelsDesc/DworfTown.json", "music":"DworfTown.ogg","noFogOfWar":true,"script":"scripts/actors/DworfTownKeeper"},
 
-"DworfCastleTown":{"kind":"PredesignedLevel", "depth":19, "file":"levelsDesc/DworfCastle.json", "music":"DworfTown.ogg","noFogOfWar":true, "isSafe":true, "isStatic":true},
+"DworfCastleTown":{"kind":"PredesignedLevel", "depth":19, "file":"levelsDesc/DworfCastle.json", "music":"DworfTown.ogg","noFogOfWar":true},
 
-"DworfCastleHell":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/DworfCastleHell.json", "music":"DworfTown.ogg","noFogOfWar":false, "isSafe":true, "isStatic":true},
+"DworfCastleHell":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/DworfCastleHell.json", "music":"DworfTown.ogg"},
 
 
 
-"DworfSewer1":{"kind":"PredesignedLevel", "depth":21, "file":"levelsDesc/KindLevel/DworfSewerLevel.json", "music":"DworfSewerLevel.ogg","script":"scripts/actors/Levels/DworfSewerLevel",   "tiles":"tiles_dworf_sewer.png","water":"water_portal.png"},
+"DworfSewer1":{"kind":"PredesignedLevel", "depth":21, "file":"levelsDesc/KindLevel/DworfSewerLevel.json", "music":"DworfSewerLevel.ogg","script":"scripts/actors/Ginerators/DworfSewer",   "tiles":"tiles_dworf_sewer.png","water":"water_portal.png"},
       
-"DworfSewer2":{"kind":"PredesignedLevel", "depth":22, "file":"levelsDesc/KindLevel/DworfSewerLevel.json", "music":"DworfSewerLevel.ogg","script":"scripts/actors/Levels/DworfSewerLevel"},
+"DworfSewer2":{"kind":"PredesignedLevel", "depth":22, "file":"levelsDesc/KindLevel/DworfSewerLevel.json", "music":"DworfSewerLevel.ogg","script":"scripts/actors/Ginerators/DworfSewer"},
       
-"DworfSewer3":{"kind":"PredesignedLevel", "depth":23, "file":"levelsDesc/KindLevel/DworfSewerLevel.json", "music":"DworfSewerLevel.ogg","script":"scripts/actors/Levels/DworfSewerLevel"},
+"DworfSewer3":{"kind":"PredesignedLevel", "depth":23, "file":"levelsDesc/KindLevel/DworfSewerLevel.json", "music":"DworfSewerLevel.ogg","script":"scripts/actors/Ginerators/DworfSewer"},
       
-"DworfSewer4":{"kind":"PredesignedLevel", "depth":24, "file":"levelsDesc/KindLevel/DworfSewerLevel.json", "music":"DworfSewerLevel.ogg","script":"scripts/actors/Levels/DworfSewerLevel"},
+"DworfSewer4":{"kind":"PredesignedLevel", "depth":24, "file":"levelsDesc/KindLevel/DworfSewerLevel.json", "music":"DworfSewerLevel.ogg","script":"scripts/actors/Ginerators/DworfSewer"},
       
-"DworfSewer5":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/BossLevel/DworfSewerBossLevel.json", "music":"DworfSewerLevel.ogg", "noFogOfWar":true ,"script":"scripts/actors/Levels/DworfSewerLevel"},
+"DworfSewer5":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/BossLevel/DworfSewerBossLevel.json", "music":"DworfSewerLevel.ogg", "noFogOfWar":true },
 
 
 
@@ -635,7 +635,7 @@
 "portal_room_lvl10_i":[["Mehanic1"],["Crab5"]],
 "portal_room_lvl15_i":[["DworfTown"],["Mehanic5"]],
 "portal_room_lvl20_i":[["Magic1"],["DworfSewer5"]],
-"portal_room_lvl25_i":[["LastLevel_s"],["Magic5"]],
+"portal_room_lvl25_i":[["LastLevel_i"],["Magic5"]],
 
 
 "Crab1":[["Crab2"],["portal_room_lvl5_i"]], 

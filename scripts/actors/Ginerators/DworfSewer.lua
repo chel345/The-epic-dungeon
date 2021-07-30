@@ -9,7 +9,7 @@ local RPD = require "scripts/lib/commonClasses"
 
 local actor = require "scripts/lib/actor"
 
-local Ginerator = require "scripts/lib/Ginerator"
+local Ginerator = require "scripts/lib/GineratorDebag"
 
 local storage = require "scripts/lib/storage"
 

@@ -1,12 +1,13 @@
 {
-   "baseSpeed"     :0,
-   "spriteDesc"    :"spritesDesc/UpDworfMonkNPC_Desc.json",
-   "scriptFile"    :"scripts/npc/UpDworfMonkNPC",
-   "ht":100000000000,
-   "friendly"      :true,
-   "aiState"       :"Passive",
-   "fraction"      :"NEUTRAL",
-"name"			:"Старший монах",
-"name_objective":"Элементаля",
-"description"	:"Monk_Desc"
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "UpDworfMonkNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "UpDworfMonkNPC_Gender",
+  "ht": 100000000000,
+  "name": "UpDworfMonkNPC_Name",
+  "name_objective": "UpDworfMonkNPC_Object",
+  "scriptFile": "scripts/npc/UpDworfMonkNPC",
+  "spriteDesc": "spritesDesc/UpDworfMonkNPC_Desc.json"
 }

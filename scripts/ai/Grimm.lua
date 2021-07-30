@@ -95,6 +95,6 @@ RPD.Wands.wandOfBlink:mobWandUse(me, RPD.Dungeon.level:randomRespawnCell())
     end,
 
     status = function(me, ai, me)
-        return "охотится на тебя."
+        return RPD.textById("attack_on_you")
     end
 }

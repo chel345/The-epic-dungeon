@@ -90,7 +90,7 @@ return
 end
 if index == 1 then
 if level <= 0 then
-npc:say("Извини, но я хламом не торгую")
+npc:say(RPD.textById("CastleKeeperNPC_Phrase1"))
 return
 end
 storage.put("level",level)
@@ -111,7 +111,7 @@ storage.put("level",level )
 RPD.Dungeon.level:drop(maybeItem, client:getPos())
 return
 end
-npc:say("Тебе нужно больше золотых, чтобы купить")
+npc:say(RPD.textById("CastleKeeperNPC_Phrase2"))
 end
 
 if index == 3 then
@@ -121,7 +121,7 @@ level =0
 storage.put("level",level )
 end
 if not index then
-RPD.glog("!!!")
+RPD.glog(RPD.textById("CastleKeeperNPC_Phrase3"))
 gold = 0
 storage.put("cast",cast )
 level =0
@@ -146,11 +146,11 @@ end
 RPD.chooseOption(
 dialogBuy,
 (itemm:name().." + "..level),
-(itemm:info().." Цена за товар "..cast),
-"Больше уровень",
-"Меньше уровень",
-"Покупаю!",
-"Уйти"
+(itemm:info()..RPD.textById("CastleKeeperNPC_Phrase4")..cast),
+RPD.textById("CastleKeeperNPC_Phrase5"),
+RPD.textById("CastleKeeperNPC_Phrase6"),
+RPD.textById("CastleKeeperNPC_Phrase7"),
+RPD.textById("CastleKeeperNPC_Phrase8")
         )
 end
 
@@ -164,7 +164,7 @@ BuyItem(Weapon4_,5*Weapon4:price(),0)
 BuyItem(Weapon10_,5*Weapon10:price(),0)
     end
     if index == 2 then
-        npc:say("Приходи ещё.")
+        npc:say(RPD.textById("CastleKeeperNPC_Phrase9"))
     end
 end
 -- меткое
@@ -187,7 +187,7 @@ BuyItem(Weapon6_,5*Weapon6:price(),0)
 BuyItem(Weapon1_,5*Weapon1:price(),0)
     end
     if index == 5 then
-        npc:say("Приходи ещё.")
+        npc:say(RPD.textById("CastleKeeperNPC_Phrase9"))
     end
 end
 -- быстрое и меткое
@@ -197,7 +197,7 @@ BuyItem(Weapon15_,5*Weapon15:price(),0)
     end
 
     if index == 1 then
-        npc:say("Приходи ещё.")
+        npc:say(RPD.textById("CastleKeeperNPC_Phrase9"))
     end
 end
 -- обычное
@@ -226,37 +226,37 @@ BuyItem(Weapon11_,5*Weapon11:price(),0)
 BuyItem(Weapon9_,5*Weapon9:price(),0)
     end
     if index == 7 then
-        npc:say("Приходи ещё.")
+        npc:say(RPD.textById("CastleKeeperNPC_Phrase9"))
     end
 end
 
 local dialog1 = function(index)
 if index == 0 then
 RPD.chooseOption( dialog2,
-                "Торговец оружием",
-                "Значит быстрое... Хм... У нас его не так уж и много.",
+                RPD.textById("CastleKeeperNPC_Phrase10"),
+                RPD.textById("CastleKeeperNPC_Phrase11"),
 (Weapon4:name()),
 (Weapon10:name()),
-                "Уйти"
+                RPD.textById("CastleKeeperNPC_Phrase8")
         )
 end
 if index == 1 then
 RPD.chooseOption( dialog3,
-                "Торговец оружием",
-                "Так... Меткое... Меткое так меткое! Какое предпочитаете?",
+                RPD.textById("CastleKeeperNPC_Phrase10"),
+                RPD.textById("CastleKeeperNPC_Phrase12"),
 (Weapon14:name()),
 (Weapon3:name()),
 (Weapon7:name()),
 (Weapon6:name()),
 (Weapon1:name()),
 
-                "Уйти"
+                RPD.textById("CastleKeeperNPC_Phrase8")
         )
 end
 if index == 2 then
 RPD.chooseOption( dialog5,
-                "Торговец оружием",
-                "Обычное! Да у нас такого завались!",
+                RPD.textById("CastleKeeperNPC_Phrase10"),
+                RPD.textById("CastleKeeperNPC_Phrase13"),
 (Weapon13:name()),
 (Weapon2:name()),
 (Weapon8:name()),
@@ -265,16 +265,16 @@ RPD.chooseOption( dialog5,
 (Weapon11:name()),
 (Weapon9:name()),
 
-                "Уйти"
+                RPD.textById("CastleKeeperNPC_Phrase8")
         )
 end
 if index == 3 then
 RPD.chooseOption( dialog4,
-                "Торговец оружием",
-                "А здесь у нас... антеквариант!",
+                RPD.textById("CastleKeeperNPC_Phrase10"),
+                RPD.textById("CastleKeeperNPC_Phrase14"),
 (Weapon15:name()),
 
-                "Уйти"
+                RPD.textById("CastleKeeperNPC_Phrase8")
         )
 end
 
@@ -287,14 +287,14 @@ return mob.init({
         npc = self
 
         RPD.chooseOption( dialog1,
-                "Торговец оружием",
-                "Кхм... кхм... а!  Извеняюсь. Какое оружие предпочитаете?",
-"Быстрое",
-"Меткое",
-"Обычное",
-"Быстрое и меткое",
+                RPD.textById("CastleKeeperNPC_Phrase10"),
+                RPD.textById("CastleKeeperNPC_Phrase15"),
+RPD.textById("CastleKeeperNPC_Phrase16"),
+RPD.textById("CastleKeeperNPC_Phrase17"),
+RPD.textById("CastleKeeperNPC_Phrase18"),
+RPD.textById("CastleKeeperNPC_Phrase19"),
 
-                "Уйти"
+                RPD.textById("CastleKeeperNPC_Phrase8")
         )
     end,
 })

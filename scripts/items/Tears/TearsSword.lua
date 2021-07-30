@@ -15,8 +15,8 @@ return item.init{
 it = item
         return {
             imageFile = "items/TearsSword.png",
-            name      = "Клинок отчаяния",
-            info      = "Плак-плак.",
+            name      = RPD.textById("TearsSword_Name"),
+            info      = RPD.textById("TearsSword_Info"),
             stackable = false,
             price     = 10000,
             upgradable = true,

@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 1,
             imageFile = "items/RangedMod.png",
-            name      = "Бомба",
-            info      = "Эта бомба доверху набита порохом. Взрыв будет знатный.",
+            name      = RPD.textById("Bomb_Name"),
+            info      = RPD.textById("Bomb_Info"),
             stackable = true,
             upgradable    = true,
  

@@ -83,6 +83,6 @@ end,
 end,
 
     status = function(me, ai, me)
-        return "охотится на тебя."
+        return RPD.textById("attack_on_you")
     end
 }

@@ -12,13 +12,13 @@ local wand = require "scripts/lib/wand"
 local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
-
+local TIME_TO_ZAP = 1
 return wand.init{ 
     desc  = function()  
         return {
            image     = 11,
-            name      = "Жезл ледяного эфрита",
-            info      = "Подобные жезлы имеются у ледяных эфритов."
+            name      = RPD.textById("NefritWand_Name"),
+            info      = RPD.textById("NefritWand_Info")
         }
 end, 
 
@@ -29,7 +29,7 @@ deactivate = function(self, item, hero)
 end,
 
 cast = function(self,thisItem,lvl)
-thisItem:getUser():getSprite():zap()
+thisItem:getUser():spend(TIME_TO_ZAP)
 if thisItem:isEquipped(RPD.Dungeon
 .hero) then
 if math.random(1,3) == 1 then
@@ -45,8 +45,7 @@ local cell = hero:getPos()
             mob:setPos(cell)
       level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
 else
-if math.random(1,2) == 1   then 
-thisItem:getUser():getSprite():zap()
+if math.random(1,2) == 1   then
 
 local level = RPD.Dungeon.level
         local hero = RPD.Dungeon.hero
@@ -56,7 +55,7 @@ local cell = hero:getPos()
             mob:setPos(cell)
       level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
       else
-      RPD.glog("Ничего не произошло")
+      RPD.glog(RPD.textById("NothingHasHappened"))
 end  
 end
 thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack)
@@ -75,6 +74,6 @@ return 0
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

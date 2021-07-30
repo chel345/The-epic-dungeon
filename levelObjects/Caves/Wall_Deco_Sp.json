@@ -1,14 +1,13 @@
 {
-  "kind":"Deco",
-
   "appearance": {
     "desc": {
-      "desc": "В этой стене самородок мракозлата.",
-      "name": "Мракозлато."
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
     },
-    "sprite":{
-      "textureFile": "levelObjects/Caves/CavesTiles.png",
-      "imageIndex" : 4
+    "sprite": {
+      "imageIndex": 4,
+      "textureFile": "levelObjects/Caves/CavesTiles.png"
     }
-  }
+  },
+  "kind": "Deco"
 }

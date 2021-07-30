@@ -12,13 +12,13 @@ local wand = require "scripts/lib/wand"
 local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
-
+local TIME_TO_ZAP = 1
 return wand.init{ 
     desc  = function()  
         return {
            image     = 5,
-            name      = "Жезл землятресения",
-            info      = "При использовании этот жезл вызовет землетрясение в указанной области. Цена 15 маны."
+            name      = RPD.textById("WandOfRock_Name"),
+            info      = RPD.textById("WandOfRock_Info")
         }
 end, 
 
@@ -34,7 +34,7 @@ end,
     end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)
-
+thisItem:getUser():spend(TIME_TO_ZAP)
 local l = thisItem:level()
 
 RPD.playSound( "snd_zap.mp3" )
@@ -78,6 +78,6 @@ return 15
 end,
 
 getManaMes = function()
-return "-- не хватает маны"
+return RPD.textById("No_Mana")
 end
 }

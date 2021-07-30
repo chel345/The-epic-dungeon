@@ -1,20 +1,18 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "Здесь ничего нет.",
-      "name": "Стена",
-  "canStepOn":true,
-  "nonPassable":false
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/CitySink.png",
-      "imageIndex" : 0
-    },
-   "particles":"BloodSink"
-  }
+    "particles": "BloodSink",
+    "sprite": {
+      "imageIndex": 0,
+      "textureFile": "levelObjects/CitySink.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

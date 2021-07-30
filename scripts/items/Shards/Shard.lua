@@ -14,8 +14,8 @@ return item.init{
         return {
            image     = 0,
             imageFile = "items/Shards.png",
-            name      = "Осколок",
-            info      = "Осколок призматического кристалла. В нём мелькают магические лучи.",
+            name      = RPD.textById("Shard_Name"),
+            info      = RPD.textById("Shard_Info"),
             stackable = false,
             upgradable    = false,
              price     = 50

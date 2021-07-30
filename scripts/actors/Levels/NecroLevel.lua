@@ -15,6 +15,13 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
 activate = function()
+if RPD.Dungeon.depth == 11 then
+if not storage.get("storynecro") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("Necro_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storynecro",true)
+end
+end
 if RPD.Dungeon.depth == 14 then
 for i = 1,15*15-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.WALL_DECO then

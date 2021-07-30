@@ -14,13 +14,13 @@ return spell.init{
         return {
             image         = 52,
             imageFile     = "spellsIcons/elemental(new).png",
-            name          = "Мана беорн",
-            info          = "Пожертвуй своим верным слугой, чтобы восстановить свою магическую силу.",
+            name          = RPD.textById("ManaBeorn_Name"),
+            info          = RPD.textById("ManaBeorn_Info"),
             magicAffinity = "Necromancy",
             targetingType = "cell",
             level         = 4,
             spellCost     = -10,
-            castTime      = 1
+            castTime      = 3
         }
     end,
     castOnCell = function(self, spell, chr, cell)
@@ -34,7 +34,7 @@ return true
 end
 return false
 end
-RPD.glog("Здесь никого нет.")
+RPD.glog(RPD.textById("EmptyHereSpells"))
 return false
     end
 }

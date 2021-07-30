@@ -14,8 +14,8 @@ return item.init{
         return {
            image     = 0,
             imageFile = "items/RangedMod.png",
-            name      = "Молот",
-            info      = "Этот огромный молот способен парализовать своим ударом любого врага.",
+            name      = RPD.textById("GuardsHammer_Name"),
+            info      = RPD.textById("GuardsHammer_Info"),
             stackable = true,
             upgradable    = true,
             price     = 100

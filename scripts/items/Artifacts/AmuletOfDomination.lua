@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 22,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Амулет подчинения",
-            info      = "Метни меня во врага.",
+            name      = RPD.textById("AmuletOfDomination_Name"),
+            info      = RPD.textById("AmuletOfDomination_Info"),
             stackable = false,
             price     = 300
         }

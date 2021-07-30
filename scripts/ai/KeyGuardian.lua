@@ -23,6 +23,6 @@ return ai.init{
     end,
 
     status = function(me, ai, me)
-        return "Спит"
+        return RPD.textById("Mob_StaSleepingStatus",me)
     end
 }

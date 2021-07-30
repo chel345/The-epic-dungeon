@@ -16,23 +16,23 @@ local mob = require"scripts/lib/mob"
 return mob.init({
 interact = function(self, chr)
 if not storage.get("interact") then
-EPD.showQuestWindow(self, "Здравствуй, путник. Не поможешь ли мне? Я бы не отказался от одного сухпайка...")
+EPD.showQuestWindow(self, RPD.textById("DworfTravelerNPC_Phrase1"))
 storage.put("interact",true)
 return
 end
 if RPD.Dungeon.hero:getBelongings():getItem("Ration") then
-EPD.showQuestWindow(self, "Спасибо! У меня нет ничего, что я могу дать в награду, кроме ключа, который я нашёл неподалеку от этих мест.")
+EPD.showQuestWindow(self, RPD.textById("DworfTravelerNPC_Phrase2"))
 local hero = RPD.Dungeon.hero
 hero:getBelongings():getItem("Ration"):detach(hero:getBelongings().backpack)
 RPD.Sfx.SpellSprite:show(self, RPD.Sfx.SpellSprite.FOOD)
 local wand = RPD.creteItem("GoldenKey", {levelId="TempleOfTears"})
 RPD.Dungeon.hero:collect(wand)
-RPD.glog("Теперь у тебя есть "..wand:name())
+RPD.glog(RPD.textById("DworfTravelerNPC_Phrase3")..wand:name())
 storage.put("complete",true)
 elseif not storage.get("complete") then
-EPD.showQuestWindow(self, "Всего лишь один сухпаёк, дружище!")
+EPD.showQuestWindow(self, RPD.textById("DworfTravelerNPC_Phrase4"))
 else
-EPD.showQuestWindow(self, "Ам ням...")
+EPD.showQuestWindow(self, RPD.textById("DworfTravelerNPC_Phrase5"))
 end
 end
 })

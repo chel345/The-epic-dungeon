@@ -17,29 +17,29 @@ return item.init{
         return {
            image     = 13,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Амулет",
-            info     = "По словам мага ты сможешь вызывать большие вспески энергии, коснувшись амулета указательным пальцем. Цена - 15 маны.",
+            name      = RPD.textById("AmuletOfEnergy_Name"),
+            info     = RPD.textById("AmuletOfEnergy_Info"),
             stackable = false,
             upgradable    = true,
              price     = 200,
            isArtifact    = true,
-defaultAction = "ИСПОЛЬЗОВАТЬ"
+defaultAction = RPD.textById("Action_Use")
         }
     end,   
     actions = function(self, item,  hero)
         if item:isEquipped(hero) then
-            return {"ИСПОЛЬЗОВАТЬ"}
+            return {RPD.textById("Action_Use")}
         end
         return {}
     end,
         cellSelected = function(self, thisItem, action, cell)
-        if action == "ИСПОЛЬЗОВАТЬ" then
+        if action == RPD.textById("Action_Use") then
 
 mana = RPD.Dungeon.hero:getSkillPoints()
 if mana > 15 then
 RPD.Dungeon.hero:spendSkillPoints(15)
 else
-RPD.glog("-- Не хватает маны")
+RPD.glog(RPD.textById("No_Mana"))
 return
 end
 
@@ -81,8 +81,8 @@ end
 end
 end,
     execute = function(self, item, hero, action)
-        if action == "ИСПОЛЬЗОВАТЬ" then
-            item:selectCell("ИСПОЛЬЗОВАТЬ","Выбирете клетку")
+        if action == RPD.textById("Action_Use") then
+            item:selectCell(RPD.textById("Action_Use"),RPD.textById("Select_A_Cage"))
         end
     end
 

@@ -8,22 +8,24 @@ local RPD = require "scripts/lib/commonClasses"
 
 local ai = require "scripts/lib/ai"
 
-b = 1
+local storage = require "scripts/lib/storage"
+
+local EPD = require "scripts/lib/dopClasses"
 
 return ai.init{
 
-    act       = function(me, ai, me)
+    act       = function(mee, ai, me)
 --me:getSprite():setScale(-5,-5)
 --me:getSprite():update()
-if b == 1 then
-b = b + 1
+if not storage.get("scream") then
 me:spend(1)
 me:getSprite():emitter():burst(RPD.Sfx.Speck:factory( RPD.Sfx.Speck.SCREAM), 6)
-me:getSprite():zap()
+me:getSprite():zap(1)
+storage.put("scream",true)
 end
 
 if math.random(1,2) == 1 then
-me:spend(3)
+me:spend(4)
 for i=1,RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.CHASM_WATER then
 if math.random(1,100) == 1 then
@@ -37,7 +39,7 @@ elseif math.random(1,2) == 1 then
 me:spend(1)
 for i = 1, math.random(2,5) do
 for i = 1, RPD.Dungeon.level:getLength() do
-if RPD.Dungeon.level.map[i] ~= RPD.Dungeon.level.solid[i-1] and math.random(1,100) == 1 then
+if RPD.Dungeon.level.map[i] ~= RPD.Dungeon.level.solid[i-1] and math.random(1,30) == 1 then
 pos = i-1 
 break
 end
@@ -54,17 +56,14 @@ if pos == RPD.Dungeon.hero:getPos() then
 RPD.Dungeon.hero:damage(math.random(45,70),me)
 end
 end
-a = 1246521256 - 33566322
 else
 RPD.placeBlob(RPD.Blobs.ToxicGas, me:getPos(),100)
-me:spend(4)
+me:spend(2)
 end
 if me:hp() < 1000 then
-local storage = require "scripts/lib/storage"
 
-
-if not storage.get("keys") then
-storage.put("keys",true) 
+if not storage.get("warlock") then
+storage.put("warlock",true) 
 local Music = luajava.bindClass("com.watabou.noosa.audio.Music")
 Music.INSTANCE:play("Help.ogg",true)
 
@@ -74,32 +73,32 @@ RPD.topEffect(i-1,"Portal")
 local mob = RPD.MobFactory:mobByName("BattleWarlok") 
 mob:setPos(i-1)
 RPD.Dungeon.level:spawnMob(mob)
-local EPD = require "scripts/lib/dopClasses"
 
-EPD.showQuestWindow(mob,"Стражи, атакуйте щупальца!")
+EPD.showQuestWindow(mob,RPD.textById("BattleWarlock_Phrase1"))
 
 break
 end
 end
 RPD.topEffect(40,"Portal")
-
 local mob = RPD.MobFactory:mobByName("DworfSolder") 
 mob:setPos(40)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.topEffect(51,"Portal")
-
+RPD.setAi(mob,"Wandering")
 local mob = RPD.MobFactory:mobByName("DworfSolder") 
 mob:setPos(51)
 RPD.Dungeon.level:spawnMob(mob)
+RPD.setAi(mob,"Wandering")
 RPD.topEffect(274,"Portal")
 local mob = RPD.MobFactory:mobByName("DworfSolder") 
 mob:setPos(274)
 RPD.Dungeon.level:spawnMob(mob)
+RPD.setAi(mob,"Wandering")
 RPD.topEffect(285,"Portal")
 local mob = RPD.MobFactory:mobByName("DworfSolder") 
 mob:setPos(285)
 RPD.Dungeon.level:spawnMob(mob)
-
+RPD.setAi(mob,"Wandering")
 end
 end
 end,
@@ -108,6 +107,6 @@ end,
 end,
 
     status = function(me, ai, me)
-        return "охотится на тебя."
+        return RPD.textById("attack_on_you")
     end
 }

@@ -17,7 +17,7 @@ client:spendGold(cast)
 client:collect(item)
 return
 else
-RPD.glog("Денег нет")
+RPD.glog(RPD.textById("CandleKeeperNPC_Phrase1"))
 end
 end
 
@@ -50,15 +50,15 @@ return mob.init({
         client = chr
         npc = self
         RPD.chooseOption( dialog,
-                "Торговец свечами",
-                "Свечу не желаете?",
-    "Свеча слёз -400 g",
-    "Крысья свеча -300 g",
-    "Свеча смотрителя -400 g",
-    "Свеча ада -500 g",
-    "Свеча -100 g",
+                RPD.textById("CandleKeeperNPC_Phrase2"),
+                RPD.textById("CandleKeeperNPC_Phrase3"),
+    RPD.textById("CandleKeeperNPC_Phrase4"),
+    RPD.textById("CandleKeeperNPC_Phrase5"),
+    RPD.textById("CandleKeeperNPC_Phrase6"),
+    RPD.textById("CandleKeeperNPC_Phrase7"),
+    RPD.textById("CandleKeeperNPC_Phrase8"),
 
-                "Уйти"
+                RPD.textById("CandleKeeperNPC_Phrase9")
         )
     end,
 })

@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 19,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Тест #8",
-            info      = "Это странное зелье обранил алхимик. На нём имеется надпись 'тест номер 8'.",
+            name      = RPD.textById("Test8_Name"),
+            info      = RPD.textById("Test8_Info"),
             stackable = true,
             upgradable    = false,
  
@@ -27,9 +27,10 @@ defaultAction = RPD.Actions.drink
     actions = function() return {RPD.Actions.drink} end,
 execute = function(self, item, user, action)
 if action == RPD.Actions.drink then
+item:getUser():spend(1)
 local hero = RPD.Dungeon.hero
-hero:getSprite():showStatus( 0xFF0000, "-5 здоровье")
-hero:getSprite():showStatus( 0x81ff2f, "+1 сила")
+hero:getSprite():showStatus( 0xFF0000, RPD.textById("Stats_1"))
+hero:getSprite():showStatus( 0x81ff2f, RPD.textById("Stats_2"))
 if hero:hp() == hero:ht() then
 hero:hp(hero:hp()-5)
 end

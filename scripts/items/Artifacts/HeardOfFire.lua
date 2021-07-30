@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 2,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Сердце огня",
-            info      = "Это сердце обжигает руки и слегка подрагивает.",
+            name      = RPD.textById("HeardOfFire_Name"),
+            info      = RPD.textById("HeardOfFire_Info"),
             stackable = true,
             upgradable    = false,
  

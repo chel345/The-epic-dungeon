@@ -6,7 +6,7 @@
 --
 
 local RPD = require "scripts/lib/commonClasses"
-
+local TIME_TO_READ = 1
 local item = require "scripts/lib/item"
 
 
@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = math.random(0,11),
             imageFile = "items/Scrolls.png",
-            name          = "Свиток Стражей",
-            info          = "При использовании этот свиток создаст несколько статуй рядом с героем. Количество зависит от глубины.",
+            name          = RPD.textById("ScrollOfGuards_Name"),
+            info          = RPD.textById("ScrollOfGuards_Info"),
             stackable     = true,
             defaultAction = "Scroll_ACRead",
             price         = 50
@@ -24,7 +24,7 @@ return item.init{
     end,
     actions = function() return {RPD.Actions.read} end,
     execute = function(self, item, hero, action, cause )
-RPD.Dungeon.hero:spend(TIME_TO_READ)
+RPD.Dungeon.hero:spend( TIME_TO_READ)
 RPD.playSound( "snd_read.mp3")
         if action == RPD.Actions.read then
 local mobs = {

@@ -18,6 +18,6 @@ end,
 end,
 
     status = function(me, ai, me)
-        return (me:getName().." рыщет")
+        return RPD.textById("Mob_StaWanderingStatus",me)
     end
 }

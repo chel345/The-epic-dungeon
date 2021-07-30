@@ -1,12 +1,13 @@
 {
-   "baseSpeed"     :0,
-   "spriteDesc"    :"spritesDesc/DworfKingNPC_Desc.json",
-   "scriptFile"    :"scripts/npc/DworfKingNPC",
-   "ht":100000000000,
-   "friendly"      :true,
-   "aiState"       :"Passive",
-   "fraction"      :"NEUTRAL",
-"name"			:"Король дворфов",
-"name_objective":"Элементаля",
-"description"	:"Восседающий на троне король."
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "DworfKingNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "DworfKingNPC_Gender",
+  "ht": 100000000000,
+  "name": "DworfKingNPC_Name",
+  "name_objective": "DworfKingNPC_Object",
+  "scriptFile": "scripts/npc/DworfKingNPC",
+  "spriteDesc": "spritesDesc/DworfKingNPC_Desc.json"
 }

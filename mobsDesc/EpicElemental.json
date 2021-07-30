@@ -1,27 +1,32 @@
- {
-"defenseSkill"	: 20,
-"attackSkill"	: 25,
-"exp"			: 10,
-"maxLvl"		: 32,
-"dmgMin"		: 30,
-"dmgMax"		: 50,
-"dr"			: 3,
-"baseSpeed"		: 1,
-"attackDelay"	: 1,
-"ht"			: 70,
-"name"			:"Высший огненный элементаль.",
-"name_objective":"Элементаля",
-"description"	:"Высшие элементали не являются побочным эффектом ритуала призыва великих сущностей. Это и есть высшие сущности! Они относятся к этой группе, так в книжке одной написанно...",
-"gender"		:"masculine",
-"spriteDesc"	:"spritesDesc/EpicElemental_Desc.json",
- "scriptFile"	: "scripts/mobs/EpicElemental",
-"loot": { "kind":"Artifacts/HeardOfFire" },
-"lootChance"	: 1,
-"attackRange"	: 1,
-"walkingType"	: "NORMAL",
-"canBePet"		: false,
-"flying" : true,
-"friendly"		: false,
-    "immunities": [
-"Fire", "LiquidFlame","Burning"]
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 25,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 20,
+  "description": "EpicElemental_Desc",
+  "dmgMax": 50,
+  "dmgMin": 30,
+  "dr": 3,
+  "exp": 10,
+  "flying": true,
+  "friendly": false,
+  "gender": "EpicElemental_Gender",
+  "ht": 70,
+  "immunities": [
+    "Fire",
+    "LiquidFlame",
+    "Burning"
+  ],
+  "loot": {
+    "kind": "Artifacts/HeardOfFire"
+  },
+  "lootChance": 1,
+  "maxLvl": 32,
+  "name": "EpicElemental_Name",
+  "name_objective": "EpicElemental_Object",
+  "scriptFile": "scripts/mobs/EpicElemental",
+  "spriteDesc": "spritesDesc/EpicElemental_Desc.json",
+  "walkingType": "NORMAL"
 }

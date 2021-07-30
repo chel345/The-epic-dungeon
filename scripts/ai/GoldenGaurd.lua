@@ -38,6 +38,6 @@ return ai.init {
     end,
 
     status    = function(self, ai, me)
-        return "атакует"
+        return RPD.textById("attack_on_you")
     end
 }

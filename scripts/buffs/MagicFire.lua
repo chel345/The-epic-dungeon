@@ -11,7 +11,7 @@ return buff.init{
     desc  = function ()
         return {
             icon          = -1,
-            name          = "Путь исправления",
+            name          = RPD.textById("Magic_Fire_Buff"),
             info          = "DieHardBuff_Info",
         }
     end,

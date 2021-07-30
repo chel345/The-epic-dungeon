@@ -1,16 +1,15 @@
 {
-  "kind":"Deco",
-
   "appearance": {
     "desc": {
-      "desc": "Здесь ничего нет.",
-      "name": "Стена",
-  "canStepOn":false,
-  "nonPassable":false
+      "canStepOn": false,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/BanditTiles.png",
-      "imageIndex" : 5
+    "sprite": {
+      "imageIndex": 5,
+      "textureFile": "levelObjects/BanditTiles.png"
     }
-  }
+  },
+  "kind": "Deco"
 }

@@ -15,8 +15,8 @@ return item.init{
         return {
             image         = 11,
             imageFile     = "items/food.png",
-            name          = "Индейка",
-            info          = "Гигантский кусок индейки.",
+            name          = RPD.textById("Chicen_Name"),
+            info          = RPD.textById("Chicen_Info"),
             stackable     = true,
             defaultAction = "Food_ACEat",
             price         = 10
@@ -25,7 +25,7 @@ return item.init{
     actions = function() return {RPD.Actions.eat} end,
     execute = function(self, item, hero, action)
         if action == RPD.Actions.eat then
-            hero:eat(item,RPD.Buffs.Hunger.STARVING, "Вкусно!")
+            hero:eat(item,RPD.Buffs.Hunger.STARVING, RPD.textById("Delicious"))
         end
     end 
 }

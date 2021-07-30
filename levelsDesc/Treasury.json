@@ -47,8 +47,8 @@
     "Ranged/Guian":1,
     "Ranged/GuardsHammer":1,
     "Ranged/Threecic":1,
-    "Ranged/LightDanger":1,
-    "Guns/Bolt":1
+    "Ranged/LightDanger":1
+    /*"Guns/Bolt":1*/
   },
   "ARMOR": {
     "PlateArmor": 1,

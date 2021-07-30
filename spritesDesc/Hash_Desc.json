@@ -1,26 +1,26 @@
 {
-   "texture" : "Hash.png",
-   "width" : 28,
-   "height" : 25,
+   "texture" : "Maul.png",
+   "width" : 48,
+   "height" : 48,
    "idle" : {
       "fps" : 2,
-      "looped" : false,
+      "looped" : true,
       "frames" : [1,0]
    },
    "run" : {
-      "fps" : 3,
+      "fps" : 2,
       "looped" : true,
-      "frames" : [2]
+      "frames" : [1,0]
    },
    "attack" : {
-      "fps" : 3,
+      "fps" : 10,
       "looped" : false,
-      "frames" : [0]
+      "frames" : [0,1,2,3,4,5,4,3,2]
    },
    "die" : {
       "fps" : 3,
       "looped" : false,
-      "frames" : [3,4]
+      "frames" : [4]
    }
 }
 

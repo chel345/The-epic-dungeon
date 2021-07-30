@@ -19,7 +19,6 @@ if RPD.Dungeon.depth ~= 40 then
 Ginerator.CreateLevel("GutsLevel",true)
 end
 
-
 for i = 1, RPD.Dungeon.level:getLength()-1 do
 if math.random(1,50) == 1 then
 if RPD.Dungeon.level.map[i] == RPD.Terrain.EMPTY then

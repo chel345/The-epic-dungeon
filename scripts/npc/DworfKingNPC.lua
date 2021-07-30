@@ -15,7 +15,7 @@ return mob.init({
 stats = function(self)
 end,
     interact = function(self, chr)
-EPD.showQuestWindow(self,"Что нужно тебе, странник? Не отвлекай меня по пустякам!")
+EPD.showQuestWindow(self,RPD.textById("DworfKingNPC_Phrase1"))
 end
 })
 

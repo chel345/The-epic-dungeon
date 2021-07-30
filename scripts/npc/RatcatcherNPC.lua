@@ -26,12 +26,12 @@ RPD.Dungeon.level:drop(item,cell)
 end,
 interact = function(self, chr)
 if not storage.get("interact") then
-EPD.showQuestWindow(self, "Здарствуй, человечишка. Не поможешь ли мне? Видишь ли, я потерял свою дудочку. Найди её мне пожалуйста.")
+EPD.showQuestWindow(self, RPD.textById("RatcatcherNPC_Phrase1"))
 storage.put("interact",true)
 return
 end
 if RPD.Dungeon.hero:getBelongings():getItem("Artifacts/RatcatchersPipe") then
-EPD.showQuestWindow(self, "Спасибо тебе большое, проходимец...")
+EPD.showQuestWindow(self, RPD.textById("RatcatcherNPC_Phrase2"))
 local hero = RPD.Dungeon.hero
 hero:getBelongings():getItem("Artifacts/RatcatchersPipe"):detach(hero:getBelongings().backpack)
 Treasury = luajava.bindClass("com.nyrds.pixeldungeon.items.Treasury")
@@ -43,7 +43,7 @@ RPD.Sfx.CellEmitter:get(self:getPos()):start(RPD.Sfx.ElmoParticle.FACTORY, 0.08,
 self:destroy()
 storage.put("complete",true)
 elseif not storage.get("complete") then
-EPD.showQuestWindow(self, "Это моя любимая дудочка...")
+EPD.showQuestWindow(self, RPD.textById("RatcatcherNPC_Phrase3"))
 end
 end
 })

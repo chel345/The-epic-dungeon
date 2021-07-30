@@ -8,7 +8,7 @@ return buff.init{
     desc  = function ()
         return {
             icon          = 56,
-            name          = "Ледомантия",
+            name          = RPD.textById("Ice_Skull_Buff"),
             info          = "CounterBuff_Info",
         }
     end,

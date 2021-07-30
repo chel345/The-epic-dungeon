@@ -12,7 +12,7 @@ local mob = require"scripts/lib/mob"
 return mob.init({
     interact = function(self, chr)
 local EPD = require "scripts/lib/dopClasses"
-EPD.showQuestWindow(self,"Какой чудесный день!")
+EPD.showQuestWindow(self,RPD.textById("DworfWomenNPC_Phrase1"))
 end
 })
 

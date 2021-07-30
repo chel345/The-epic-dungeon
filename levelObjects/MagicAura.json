@@ -1,26 +1,31 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "Странная летающая сфера",
-      "name": "Сфера",
-  "canStepOn":true,
-  "nonPassable":false
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/MagicAura.png",
-      "imageIndex" : 0,
+    "sprite": {
       "animations": {
         "basic": {
           "fps": 15,
-          "frames": [1, 2,2,2, 1, 0],
+          "frames": [
+            1,
+            2,
+            2,
+            2,
+            1,
+            0
+          ],
           "looped": true
         }
-      }
+      },
+      "imageIndex": 0,
+      "textureFile": "levelObjects/MagicAura.png"
     }
-  }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

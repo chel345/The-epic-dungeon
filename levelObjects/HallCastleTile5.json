@@ -1,20 +1,18 @@
 {
-  "kind":"Deco",
-  "canStepOn":true,
-  "nonPassable":false,
-
-
   "appearance": {
     "desc": {
-      "desc": "В этой стене не достаёт кирпичей.",
-      "name": "Стена",
-  "canStepOn":true,
-  "nonPassable":false
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
     },
-    "sprite":{
-      "textureFile": "levelObjects/HallCastleTiles.png",
-      "imageIndex" : 4
-      },
-   "particles":"Smoke"
-  }
+    "particles": "Smoke",
+    "sprite": {
+      "imageIndex": 4,
+      "textureFile": "levelObjects/HallCastleTiles.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
 }

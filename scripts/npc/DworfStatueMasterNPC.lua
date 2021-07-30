@@ -22,7 +22,7 @@ mob:hp(mob:ht())
 mob:dr(dr_)
 --mob:attackSkill(def_)
 else
-EPD.showQuestWindow(cc,"У тебя столько нет.")
+EPD.showQuestWindow(cc,RPD.textById("DworfStatueMasterNPC_Phrase1"))
 end
 end
 
@@ -37,12 +37,12 @@ cast = level*200
 
 RPD.chooseOption(
 dialogBuy,
-("Создатель стражей"),
-("Здравствуйте, не желаете ли преобрести стража? У нас самые лучшие стражи! Сейчас у вашего стража "..level.." уровень это соответствует "..hp.." единицам здоровья и "..dr.." единицам брони. Урон и ловкость у наших стражей зависит от глубины. Цена такого стража: "..cast.." золотых."),
-"Больше уровень",
-"Меньше уровень",
-"Покупаю!",
-"Уйти"
+(RPD.textById("DworfStatueMasterNPC_Phrase2")),
+(RPD.textById("DworfStatueMasterNPC_Phrase3")..level..RPD.textById("DworfStatueMasterNPC_Phrase4")..hp..RPD.textById("DworfStatueMasterNPC_Phrase5")..dr..RPD.textById("DworfStatueMasterNPC_Phrase6")..cast..RPD.textById("DworfStatueMasterNPC_Phrase7")),
+RPD.textById("DworfStatueMasterNPC_Phrase8"),
+RPD.textById("DworfStatueMasterNPC_Phrase9"),
+RPD.textById("DworfStatueMasterNPC_Phrase10"),
+RPD.textById("DworfStatueMasterNPC_Phrase11")
         )
 end
 
@@ -53,17 +53,17 @@ hp = 70*level
 cast = level*200
 
 if level < 1 then
-RPD.glog("Ты, чё, стебёшься?")
+RPD.glog(RPD.textById("DworfStatueMasterNPC_Phrase12"))
 return
 end
 RPD.chooseOption(
 dialogBuy,
-("Создатель стражей"),
-("Здравствуйте, не желаете ли преобрести стража? У нас самые лучшие стражи! Сейчас у вашего стража "..level.." уровень это соответствует "..hp.." единицам здоровья и "..dr.." единицам брони. Урон и ловкость у наших стражей зависит от глубины. Цена такого стража: "..cast.." золотых."),
-"Больше уровень",
-"Меньше уровень",
-"Покупаю!",
-"Уйти"
+(RPD.textById("DworfStatueMasterNPC_Phrase2")),
+(RPD.textById("DworfStatueMasterNPC_Phrase3")..level..RPD.textById("DworfStatueMasterNPC_Phrase4")..hp..RPD.textById("DworfStatueMasterNPC_Phrase5")..dr..RPD.textById("DworfStatueMasterNPC_Phrase6")..cast..RPD.textById("DworfStatueMasterNPC_Phrase7")),
+RPD.textById("DworfStatueMasterNPC_Phrase8"),
+RPD.textById("DworfStatueMasterNPC_Phrase9"),
+RPD.textById("DworfStatueMasterNPC_Phrase10"),
+RPD.textById("DworfStatueMasterNPC_Phrase11")
         )
 end
 if index == 2 then
@@ -82,12 +82,12 @@ cast = level*200
 self:getSprite():turnTo(self:getPos()+1)
 RPD.chooseOption(
 dialogBuy,
-("Создатель стражей"),
-("Здравствуйте, не желаете ли преобрести стража? У нас самые лучшие стражи! Сейчас у вашего стража "..level.." уровень это соответствует "..hp.." единицам здоровья и "..dr.." единицам брони. Урон и ловкость у наших стражей зависит от глубины. Цена такого стража: "..cast.." золотых."),
-"Больше уровень",
-"Меньше уровень",
-"Покупаю!",
-"Уйти"
+(RPD.textById("DworfStatueMasterNPC_Phrase2")),
+(RPD.textById("DworfStatueMasterNPC_Phrase3")..level..RPD.textById("DworfStatueMasterNPC_Phrase4")..hp..RPD.textById("DworfStatueMasterNPC_Phrase5")..dr..RPD.textById("DworfStatueMasterNPC_Phrase6")..cast..RPD.textById("DworfStatueMasterNPC_Phrase7")),
+RPD.textById("DworfStatueMasterNPC_Phrase8"),
+RPD.textById("DworfStatueMasterNPC_Phrase9"),
+RPD.textById("DworfStatueMasterNPC_Phrase10"),
+RPD.textById("DworfStatueMasterNPC_Phrase11")
         )
 end
 })

@@ -28,7 +28,7 @@ end
 
 local W = RPD.Dungeon.level:getWidth()
 addStatue(me:getPos()+W*5+2,"miniBosses/RatStatue")
-addStatue(me:getPos()+W*5-2,"miniBosses/RatStatue2")
+addStatue(me:getPos()+W*5-2,"miniBosses/RatStatue")
 me:beckon(RPD.Dungeon.hero:getPos())
 end
 me:spend(1)
@@ -39,6 +39,6 @@ end,
     end,
 
     status = function(self, ai, me)
-        return "охотится на тебя"
+        return RPD.textById("attack_on_you")
     end
 }

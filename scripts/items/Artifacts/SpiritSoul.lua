@@ -15,8 +15,8 @@ return item.init{
         return {
             image     = 12,
             imageFile = "items/ArtifactsMod.png",
-            name      = "Эсенция призрака",
-            info      = "Маленький огонёк размером с кулак.",
+            name      = RPD.textById("SpiritSoul_Name"),
+            info      = RPD.textById("SpiritSoul_Info"),
             stackable = true,
             price     = 15
         }
