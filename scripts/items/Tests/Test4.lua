@@ -5,6 +5,8 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
+local LightRay = require "scripts/effects/LightRay"
+
 local RPD = require "scripts/lib/commonClasses"
 
 local item = require "scripts/lib/item"
@@ -23,7 +25,7 @@ return item.init{
             name      = "Test item",
             info      = "Item for script tests",
             stackable = true,
-            defaultAction = "action1",
+            defaultAction = "action3",
             price         = 7
         }
     end,
@@ -43,20 +45,24 @@ end
 --[[
 RPD.Sfx.MagicMissile:purpleLight(thisItem:getUser():getSprite():getParent(),thisItem:getUser():getPos(),cell,Callback.callback)
 --]]
-Process.beckon_player = cell
-local Callback = luajava.bindClass("com.watabou.utils.Callback")
-missile = thisItem:getUser():getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset( thisItem:getUser():getPos(),cell,Callback.callback)
-missile:size(40)
-BloodParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.BloodParticle")
+--local Callback = luajava.bindClass("com.watabou.utils.Callback")
+--missile = thisItem:getUser():getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
+--missile:reset( thisItem:getUser():getPos(),cell,Callback.callback)
+--missile:size(40)
+--BloodParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.BloodParticle")
 --missile:pour( BloodParticle.FACTORY, 0.04)
-Splash = luajava.bindClass("com.watabou.pixeldungeon.effects.Splash")
+--Splash = luajava.bindClass("com.watabou.pixeldungeon.effects.Splash")
 --Splash.at(missile, 3.1415926f / 2, 0xFFBB0000, 9)
-Splash.at(missile, RPD.Dungeon.hero:getPos(),1,5, 0xFFBB0000, 90)
+--Splash.at(missile, RPD.Dungeon.hero:getPos(),1,5, 0xFFBB0000, 90)
 --missile:pour(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.COIN  ), 0.01)
 RPD.glog(RPD.Dungeon.level:cellX(cell))
 RPD.glog(RPD.Dungeon.level:cellY(cell))
-RPD.glog(tostring(RPD.Dungeon.level.solid[cell]))
+
+
+--RPD.new("com.watabou.noosa.particles.Emitter")
+--RPD.new("com.watabou.noosa.particles.PixelParticle")
+
+LightRay.ray(RPD.Dungeon.hero:getPos(),cell)
         end
 if action == "action2" then
 RPD.glog(tostring(cell))

@@ -7,11 +7,17 @@
 
 local RPD = require "scripts/lib/commonClasses"
 
+local LightRay = require "scripts/effects/LightRay"
+
 local item = require "scripts/lib/item"
 
 local EPD = require "scripts/lib/dopClasses"
 
 local room = require "scripts/lib/room"
+
+local gameScene = require "scripts/userServices/gameScene"
+
+local storage = require "scripts/lib/storage"
 
 --local Ginerator = require "scripts/lib/Ginerator"
 
@@ -40,6 +46,13 @@ end,
          if action == RPD.Actions.zap then
 --local image = RPD.new("com.watabou.noosa.Image","ui/title.png")
 --RPD.GameScene:effect(image)
+
+local test = function()
+RPD.glog("F")
+end
+storage.put("functions",test)
+
+--[[
 local SClientLua = luajava.bindClass("com.nyrds.pixeldungeon.networking.SClientLua")
 local client = SClientLua:createNew( "192.168.10.102" ,3002):connect()
 client:sendMessage("test")
@@ -47,6 +60,7 @@ while not client:canReceive() do
 end
 RPD.glog(client:receiveMessage())
 client:stop()
+--]]
 end 
 end 
 }

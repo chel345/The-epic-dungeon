@@ -32,8 +32,6 @@ end
 
 if gin.kind == "Caves" then
 
---room.ClearLevel()
-
 if not gin.HasBase then
 if room.canSpawnAt(RPD.Dungeon.hero:getPos(),gin.RoomWidth-1,gin.RoomHeigth-1) then
 room.ClearLevel()
@@ -155,33 +153,32 @@ elseif gin.kind == "Castle" then
 local level = RPD.Dungeon.level
 local l = level:getLength()
 local w = level:getWidth()
+local st = RPD.Dungeon.hero:getPos()
 
 if not gin.HasBase then
 if room.canSpawnAt(RPD.Dungeon.hero:getPos(),gin.RoomWidth,gin.RoomHeigth) then
 room.ClearLevel()
-st = RPD.Dungeon.hero:getPos()
-room.printRoom(RPD.Dungeon.hero:getPos(), gin.Entrance)
+room.printRoom(st, gin.Entrance)
 else
 room.ClearLevel()
-st = RPD.Dungeon.hero:getPos()
-room.printRoom(RPD.Dungeon.hero:getPos(), gin.EntranceDebag)
+room.printRoom(st, gin.EntranceDebag)
 end
 else
-if gin.Exit ~= nil then
-if room.canSpawnAt(RPD.Dungeon.hero:getPos(),gin.RoomWidth,gin.RoomHeigth) then
-room.printRoom(RPD.Dungeon.hero:getPos(), gin.Entrance)
+if gin.Exit then
+if room.canSpawnAt(st,gin.RoomWidth,gin.RoomHeigth) then
+room.printRoom(st, gin.Entrance)
 else
-room.printRoom(RPD.Dungeon.hero:getPos(), gin.EntranceDebag)
+room.printRoom(st, gin.EntranceDebag)
 end
 end
 end
-st = RPD.Dungeon.hero:getPos()
+
 local Hr = gin.RoomHeigth+gin.GinFactor
 local Wr = gin.RoomWidth+gin.GinFactor
 
 while (true) do
 
-if enD ~= nil then
+if enD then
 room.printRoom(st,gin.Exit)
 --RPD.glog(tostring(st).." "..tostring(old))
 room.Tunel(old, st)
@@ -190,46 +187,44 @@ break
 end
 
 
-z = nil
+z = false
 
 x = level:cellX(st)
 y = level:cellY(st)
 for i = x - math.ceil(Wr*2), x + math.ceil(Wr*2) do
 for j = y - math.ceil(Hr*2), y + math.ceil(Hr*2) do
 local pos = RPD.Dungeon.level:cell(i,j)
-if room.canSpawnAt(pos,gin.RoomWidth+gin.RoomFactor,gin.RoomHeigth+gin.RoomFactor) then
 
-if gin.NPCRoom ~= nil and gin.levelNPC == RPD.Dungeon.depth and room.canSpawnAt(pos,gin.RoomWidth+gin.RoomFactor,gin.RoomHeigth+gin.RoomFactor) then
+if gin.NPCRoom and gin.levelNPC == RPD.Dungeon.depth and room.canSpawnAt(pos,gin.RoomWidth+gin.RoomFactor,gin.RoomHeigth+gin.RoomFactor) then
 z = 1
-enD = nil
+enD = false
 room.printRoom(pos,gin.NPCRoom)
 room.Tunel(st, pos)
 old = st
 st = pos
-gin.NPCRoom = nil
+gin.NPCRoom = false
 end
 if gin.Shop ~= nil and gin.LevelShop == RPD.Dungeon.depth and room.canSpawnAt(pos,gin.RoomWidth+gin.RoomFactor,gin.RoomHeigth+gin.RoomFactor) then
 z = 1
-enD = nil
+enD = false
 room.printRoom(pos,gin.Shop)
 room.Tunel(st, pos)
 old = st
 st = pos
-gin.Shop = nil
+gin.Shop = false
 end
-if gin.MiniBoss ~= nil and gin.LevelMiniBoss == RPD.Dungeon.depth and room.canSpawnAt(pos,gin.RoomWidth+gin.RoomFactor,gin.RoomHeigth+gin.RoomFactor) then
+if gin.MiniBoss and gin.LevelMiniBoss == RPD.Dungeon.depth and room.canSpawnAt(pos,gin.RoomWidth+gin.RoomFactor,gin.RoomHeigth+gin.RoomFactor) then
 z = 1
-enD = nil
+enD = false
 room.printRoom(pos,gin.MiniBoss)
 room.Tunel(st, pos)
 old = st
 st = pos
-gin.MiniBoss = nil
-end
+gin.MiniBoss = false
 end
 if room.canSpawnAt(pos,gin.RoomWidth+gin.RoomFactor,gin.RoomHeigth+gin.RoomFactor) then
 z = 1
-enD = nil
+enD = false
 local rooms = gin.RandRooms
 s = rooms[math.random(1,#rooms)]
 room.printRoom(pos,s)
@@ -237,7 +232,7 @@ room.Tunel(st, pos)
 old = st
 st = pos
 end
-if level:cellX(x + math.ceil(Wr*2)-1) and level:cellY(y + math.ceil(Hr*2)-1) and z == nil then
+if not z then
 
 enD = true
 end
@@ -270,7 +265,7 @@ end
 
 RPD.RemixedDungeon:resetScene()
 st = nil
-enD = nil
+enD = false
 old = nil
 
 

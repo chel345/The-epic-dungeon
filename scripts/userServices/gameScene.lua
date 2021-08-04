@@ -6,17 +6,19 @@
 
 local RPD = require "scripts/lib/commonClasses"
 
+local storage = require "scripts/lib/storage"
+
 local gameScene = {}
 
-local Camera = luajava.bindClass("com.watabou.noosa.Camera")
+local prevTime = 0.
 
---! Called each game logic step
 gameScene.onStep = function()
+if storage.get("functions") then
+storage.get("functions")()
+end
 end
 
---! Called when cell should be selected
 gameScene.selectCell = function()
-
 end
 
 return gameScene
