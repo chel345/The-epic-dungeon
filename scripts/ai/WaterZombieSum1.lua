@@ -26,4 +26,5 @@ end,
 
     status = function(self, ai, me)
         return RPD.textById("attack_on_you")
+    end
 }
