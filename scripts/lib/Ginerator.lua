@@ -11,7 +11,7 @@ local room = require "scripts/lib/room"
 
 local Process = require"scripts/lib/Process"
 
-local Spawner = require"scripts/actors/Spawner.lua"
+local Spawner = loadfile"scripts/actors/Spawner.lua"
 
 local storage = require"scripts/lib/storage"
 
