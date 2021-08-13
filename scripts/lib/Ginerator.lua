@@ -395,7 +395,7 @@ room.MakeBorder()
 
 if gin.Items ~= nil then
 for i = 1, #gin.Items do
-r = Spawner.getCell()
+r = Spawner().getCell()
 if r ~= nil and r ~= -1 then
 RPD.Dungeon.level:drop(RPD.item(gin.Items[i]),r)
 end
@@ -443,13 +443,13 @@ local l = level:getLength()
 for t = x - math.floor(w/2),x + math.floor(w/2) do
 for j = y - math.floor(h/2), y + math.floor(h/2) do
 local pos = level:cell(t,j)
-if 
+if
 level.map[pos] == RPD.Terrain.WALL or
 level.map[pos] == RPD.Terrain.WALL_DECO
 or
 level.map[pos] == RPD.Terrain.EMPTY_SP
 or
-level.map[pos] == RPD.Terrain.STATUE 
+level.map[pos] == RPD.Terrain.STATUE
 or
 level.map[pos] == RPD.Terrain.BOOKSHELF
 or
@@ -702,10 +702,10 @@ end
 for i = 1, RPD.Dungeon.level:getLength() do
 if i ~= RPD.Dungeon.level:getLength() then
 if level.map[i] == RPD.Terrain.WALL or level.map[i] == RPD.Terrain.DOOR or level.map[i] == RPD.Terrain.LOCKEDDOOR or level.map[i] == RPD.Terrain.WALL_DECO then
-if 
-level.map[i+W] == RPD.Terrain.WATER or 
-level.map[i+W] == RPD.Terrain.WATER_TILES or 
-level.water[W+i] 
+if
+level.map[i+W] == RPD.Terrain.WATER or
+level.map[i+W] == RPD.Terrain.WATER_TILES or
+level.water[W+i]
 then
 RPD.createLevelObject({
     kind="Deco",
