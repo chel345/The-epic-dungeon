@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local wand = require "scripts/lib/wand"
 
@@ -17,8 +17,8 @@ return wand.init{
     desc  = function()  
         return {
            image     = 3,
-            name      = RPD.textById("FireNefritWand_Name"),
-            info      = RPD.textById("FireNefritWand_Info")
+            name      = RPD.StringsManager:maybeId("FireNefritWand_Name"),
+            info      = RPD.StringsManager:maybeId("FireNefritWand_Info")
         }
 end, 
 

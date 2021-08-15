@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local actor = require "scripts/lib/actor"
 
@@ -17,13 +17,13 @@ return actor.init({
 activate = function()
 if RPD.Dungeon.depth == 31 then
 if not storage.get("storylib") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("Library_Story"))
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Library_Story"))
        RPD.GameScene:show(wnd)
        storage.put("storylib",true)
 end
 end
 if RPD.Dungeon.depth ~= 35 then
-Ginerator.CreateLevel("LibraryLevel",true)
+Ginerator.CreateLevel("LibraryLevel")
 end
 local tile =
 {

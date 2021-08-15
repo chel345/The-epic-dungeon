@@ -1,6 +1,6 @@
 -- This is demo buff for charAct
 
-local RPD  = require "scripts/lib/commonClasses"
+local RPD  = require "scripts/lib/epicClasses"
 
 local buff = require "scripts/lib/buff"
 

@@ -4,7 +4,7 @@
 --- DateTime: 23.08.18 22:51
 ---
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local ai = require "scripts/lib/ai"
 
@@ -74,7 +74,7 @@ local mob = RPD.MobFactory:mobByName("BattleWarlok")
 mob:setPos(i-1)
 RPD.Dungeon.level:spawnMob(mob)
 
-EPD.showQuestWindow(mob,RPD.textById("BattleWarlock_Phrase1"))
+EPD.showQuestWindow(mob,RPD.StringsManager:maybeId("BattleWarlock_Phrase1"))
 
 break
 end
@@ -107,6 +107,6 @@ end,
 end,
 
     status = function(me, ai, me)
-        return RPD.textById("attack_on_you")
+        return RPD.StringsManager:maybeId("attack_on_you")
     end
 }

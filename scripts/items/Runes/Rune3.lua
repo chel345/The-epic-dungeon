@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -15,20 +15,20 @@ return item.init{
         return {
             image         = 0,
             imageFile     = "items/Runes.png",
-            name          = RPD.textById("RuneOfLight_Name"),
-            info          = RPD.textById("RuneOfLight_Info"),
+            name          = RPD.StringsManager:maybeId("RuneOfLight_Name"),
+            info          = RPD.StringsManager:maybeId("RuneOfLight_Info"),
             stackable     = true,
-            defaultAction = RPD.textById("Activate"),
+            defaultAction = RPD.StringsManager:maybeId("Activate"),
             price         = 50,
             upgradable    = true
         }
     end,
-    actions = function() return {RPD.textById("Activate")} end,
+    actions = function() return {RPD.StringsManager:maybeId("Activate")} end,
 
     cellSelected = function(self, thisItem, action, cell,item)
 thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack) 
 
-        if action == RPD.textById("Activate") and cell ~= nil then
+        if action == RPD.StringsManager:maybeId("Activate") and cell ~= nil then
 thisItem:getUser():spend(1)
 local dst = RPD.Ballistica:cast(thisItem:getUser():getPos(), cell, true, true, true)
 local enemy = RPD.Actor:findChar(dst)
@@ -45,8 +45,8 @@ end
 end
 end,
     execute = function(self, item, hero, action)
-        if action == RPD.textById("Activate") then
-            item:selectCell( RPD.textById("Activate") ,RPD.textById("Select_A_Cage"))
+        if action == RPD.StringsManager:maybeId("Activate") then
+            item:selectCell( RPD.StringsManager:maybeId("Activate") ,RPD.StringsManager:maybeId("Select_A_Cage"))
         end
 end,
   bag = function(self, item)

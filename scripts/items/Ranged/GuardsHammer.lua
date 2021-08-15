@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -14,8 +14,8 @@ return item.init{
         return {
            image     = 0,
             imageFile = "items/RangedMod.png",
-            name      = RPD.textById("GuardsHammer_Name"),
-            info      = RPD.textById("GuardsHammer_Info"),
+            name      = RPD.StringsManager:maybeId("GuardsHammer_Name"),
+            info      = RPD.StringsManager:maybeId("GuardsHammer_Info"),
             stackable = true,
             upgradable    = true,
             price     = 100

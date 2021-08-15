@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -14,16 +14,16 @@ return item.init{
         return {
            image     = 10,
             imageFile = "items/ArtifactsMod.png",
-            name      = RPD.textById("GhostRose_Name"),
-            info      = RPD.textById("GhostRose_Info"),
+            name      = RPD.StringsManager:maybeId("GhostRose_Name"),
+            info      = RPD.StringsManager:maybeId("GhostRose_Info"),
             stackable = false,
             upgradable    = false,
  
              price     = 50
         }
-    end, actions = function() return {RPD.textById("Prick")} end,
+    end, actions = function() return {RPD.StringsManager:maybeId("Prick")} end,
     execute = function(self, item, hero, action, cell, char, data) 
-        if action == RPD.textById("Prick") then       
+        if action == RPD.StringsManager:maybeId("Prick") then       
 local hero = RPD.Dungeon.hero
 hero:getSprite():emitter():burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.STEAM), 2)
 if math.random(1,2) == 1 then

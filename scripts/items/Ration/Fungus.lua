@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -14,8 +14,8 @@ return item.init{
         return {
             image     = 0,
             imageFile = "items/FoodMod.png",
-            name      = RPD.textById("Fungus_Name"),
-            info      = RPD.textById("Fungus_Info"),
+            name      = RPD.StringsManager:maybeId("Fungus_Name"),
+            info      = RPD.StringsManager:maybeId("Fungus_Info"),
             stackable = true,
             defaultAction = "Food_ACEat",
             price         = 7

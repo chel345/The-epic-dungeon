@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local spell = require "scripts/lib/spell"
 
@@ -14,8 +14,8 @@ return spell.init{
         return {
             image         = 52,
             imageFile     = "spellsIcons/elemental(new).png",
-            name          = RPD.textById("ManaBeorn_Name"),
-            info          = RPD.textById("ManaBeorn_Info"),
+            name          = RPD.StringsManager:maybeId("ManaBeorn_Name"),
+            info          = RPD.StringsManager:maybeId("ManaBeorn_Info"),
             magicAffinity = "Necromancy",
             targetingType = "cell",
             level         = 4,
@@ -34,7 +34,7 @@ return true
 end
 return false
 end
-RPD.glog(RPD.textById("EmptyHereSpells"))
+RPD.glog(RPD.StringsManager:maybeId("EmptyHereSpells"))
 return false
     end
 }

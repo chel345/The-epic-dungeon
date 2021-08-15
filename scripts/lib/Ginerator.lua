@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local room = require "scripts/lib/room"
 
@@ -154,242 +154,80 @@ local level = RPD.Dungeon.level
 local l = level:getLength()
 local w = level:getWidth()
 local st = RPD.Dungeon.hero:getPos()
+local wr = gin.RoomWidth
+local hr = gin.RoomHeigth
+local old = st
+local l = st
 
 if not gin.HasBase then
-if room.canSpawnAt(RPD.Dungeon.hero:getPos(),gin.RoomWidth,gin.RoomHeigth) then
 room.ClearLevel()
-room.printRoom(st, gin.Entrance)
+end
+if room.canSpawnAt(st,hr,wr) then
+room.printRoom(st,gin.Entrance)
 else
-room.ClearLevel()
-room.printRoom(st, gin.EntranceDebag)
+room.printRoom(st,gin.EntranceDebag)
 end
+
+local function getRandomCellAround(cell)
+if cell then
+if room.canSpawnAt(cell+wr,wr-1,hr-1) and level:cellY(cell) == level:cellY(cell+wr) then
+return cell+wr
+end
+if room.canSpawnAt(cell-wr,wr-1,hr-1) and level:cellY(cell) == level:cellY(cell-wr) then
+return cell-wr
+end
+if room.canSpawnAt(cell-(w*hr),wr-1,hr-1) then
+return cell-(w*hr)
+end
+if room.canSpawnAt(cell+(w*hr),wr-1,hr-1) then
+return cell+(w*hr)
+end
+if room.canSpawnAt(cell+(w*hr)-wr,wr-1,hr-1) then
+return cell+(w*hr)-wr
+end
+if room.canSpawnAt(cell+(w*hr)+wr,wr-1,hr-1) then
+return cell+(w*hr)+wr
+end
+if room.canSpawnAt(cell-(w*hr)-wr,wr-1,hr-1) then
+return cell-(w*hr)-wr
+end
+if room.canSpawnAt(cell-(w*hr)+wr,wr-1,hr-1) then
+return cell-(w*hr)+wr
+end
+end
+return false
+end
+
+local function generate()
+if getRandomCellAround(st) then
+   old = st
+   st = getRandomCellAround(st)
+   if gin.Shop and RPD.Dungeon.depth == gin.LevelShop then
+   room.printRoom(st,gin.Shop)
+   gin.Shop = false
+   elseif gin.NPCRoom and gin.levelNPC == RPD.Dungeon.depth then
+   room.printRoom(st,gin.NPCRoom)
+   gin.NPCRoom = false
+   elseif gin.MiniBoss and gin.LevelMiniBoss == RPD.Dungeon.depth then
+   room.printRoom(st,gin.MiniBoss)
+   gin.MiniBoss = false
+   else
+   room.printRoom(st,gin.RandRooms[math.random(1,#gin.RandRooms)])
+   end
+   room.Tunel(st,old)
+	return generate()
 else
-if gin.Exit then
-if room.canSpawnAt(st,gin.RoomWidth,gin.RoomHeigth) then
-room.printRoom(st, gin.Entrance)
-else
-room.printRoom(st, gin.EntranceDebag)
+   if getRandomCellAround(l) then
+   st = l
+   return generate()
+   else
+   room.printRoom(st,gin.Exit)
+   room.Tunel(old,st)
+   level:setExit(st)
+   end
 end
 end
-end
-
-local Hr = gin.RoomHeigth+gin.GinFactor
-local Wr = gin.RoomWidth+gin.GinFactor
-
-while (true) do
-
-if enD then
-room.printRoom(st,gin.Exit)
---RPD.glog(tostring(st).." "..tostring(old))
-room.Tunel(old, st)
-level:setExit(st)
-break
-end
-
-
-z = false
-
-x = level:cellX(st)
-y = level:cellY(st)
-for i = x - math.ceil(Wr*2), x + math.ceil(Wr*2) do
-for j = y - math.ceil(Hr*2), y + math.ceil(Hr*2) do
-local pos = RPD.Dungeon.level:cell(i,j)
-
-if gin.NPCRoom and gin.levelNPC == RPD.Dungeon.depth and room.canSpawnAt(pos,gin.RoomWidth+gin.RoomFactor,gin.RoomHeigth+gin.RoomFactor) then
-z = 1
-enD = false
-room.printRoom(pos,gin.NPCRoom)
-room.Tunel(st, pos)
-old = st
-st = pos
-gin.NPCRoom = false
-end
-if gin.Shop ~= nil and gin.LevelShop == RPD.Dungeon.depth and room.canSpawnAt(pos,gin.RoomWidth+gin.RoomFactor,gin.RoomHeigth+gin.RoomFactor) then
-z = 1
-enD = false
-room.printRoom(pos,gin.Shop)
-room.Tunel(st, pos)
-old = st
-st = pos
-gin.Shop = false
-end
-if gin.MiniBoss and gin.LevelMiniBoss == RPD.Dungeon.depth and room.canSpawnAt(pos,gin.RoomWidth+gin.RoomFactor,gin.RoomHeigth+gin.RoomFactor) then
-z = 1
-enD = false
-room.printRoom(pos,gin.MiniBoss)
-room.Tunel(st, pos)
-old = st
-st = pos
-gin.MiniBoss = false
-end
-if room.canSpawnAt(pos,gin.RoomWidth+gin.RoomFactor,gin.RoomHeigth+gin.RoomFactor) then
-z = 1
-enD = false
-local rooms = gin.RandRooms
-s = rooms[math.random(1,#rooms)]
-room.printRoom(pos,s)
-room.Tunel(st, pos)
-old = st
-st = pos
-end
-if not z then
-
-enD = true
-end
-
-end
-end
-
-end
-
-room.Correct()
-room.MakeBorder()
-
-if gin.Water ~= nil then
-room.addWater(gin.WaterMin,gin.WaterMax, gin.WaterChanse)
-end
-if gin.Grass ~= nil then
-room.addGrass(gin.GrassMin,gin.GrassMax,gin.GrassChanse)
-end
-if gin.Traps ~= nil then
-room.addTraps(gin.Traps,gin.ChanseTrap)
-end
-if gin.Items ~= nil then
-for i = 1, #gin.Items do
-r = Spawner().getCell()
-if r ~= nil and r ~= -1 then
-RPD.Dungeon.level:drop(RPD.item(gin.Items[i]),r)
-end
-end
-end
-
-RPD.RemixedDungeon:resetScene()
-st = nil
-enD = false
-old = nil
-
-
-elseif gin.kind == "Womb" then
-
-dest = function()
-set = function(cell)
-local level = RPD.Dungeon.level
-local x = level:cellX(cell)
-local y = level:cellY(cell)
-local rr = gin.WombFactor
-for i = x - rr, x + rr do
-for j = y - rr, y + rr do
-local pos = RPD.Dungeon.level:cell(i,j)
-pcall(function() level:set(pos-1,1) RPD.GameScene:updateMap(pos-1) end)
-end
-end
-end
-a = RPD.Dungeon.hero:getPos()
-set(a)
-for i = 1, gin.WombSeed do
-W = RPD.Dungeon.level:getWidth()
-a = math.random(W*4,RPD.Dungeon.level:getLength()-W*4)
-set(a)
-for i = 1,gin.WombFactorChanse do
-a = math.random(W*4,RPD.Dungeon.level:getLength()-W*4)
-while (RPD.Dungeon.level.map[a] ~= 1) do
-a = math.random(W*4,RPD.Dungeon.level:getLength()-W*4)
-end
-set(a)
-end
-end
-end
-
-if not gin.HasBase then
-if room.canSpawnAt(RPD.Dungeon.hero:getPos(),gin.RoomWidth-1,gin.RoomHeigth-1) then
-room.ClearLevel()
-dest()
-st = RPD.Dungeon.hero:getPos()
-room.printRoom(RPD.Dungeon.hero:getPos(), gin.Entrance)
-else
-room.ClearLevel()
-dest()
-st = RPD.Dungeon.hero:getPos()
-room.printRoom(RPD.Dungeon.hero:getPos(), "EntranceDebag")
-end
-end
-st = RPD.Dungeon.hero:getPos()
-
-local level = RPD.Dungeon.level
-local l = level:getLength()
-local w = level:getWidth()
-
-r = math.random(1,l-2)
-while (true) do
-if room.canSpawnAt(r,gin.ExitWidth,gin.ExitHeigth) then
-break
-end
-r = math.random(1,l-2)
-end
-room.printRoom(r,gin.Exit)
-room.Tunel(st,r)
-level:setExit(r)
-st = r
-
-if gin.Shop ~= nil then
-if gin.LevelShop == RPD.Dungeon.depth then
-r = math.random(1,l-1)
-while (true) do
-if room.canSpawnAt(r,gin.RoomWidth,gin.RoomHeigth) then
-break
-end
-r = math.random(1,l-1)
-end
-room.printRoom(r,gin.Shop)
-room.Tunel(st,r)
-st = r
-end
-end
-
-
-if gin.MiniBoss ~= nil then
-if gin.LevelMiniBoss == RPD.Dungeon.depth then
-r = math.random(1,l-2)
-while (true) do
-if room.canSpawnAt(r,gin.RoomWidth,gin.RoomHeigth) then
-break
-end
-r = math.random(1,l-2)
-end
-room.printRoom(r,gin.MiniBoss)
-room.Tunel(st,r)
-st = r
-end
-end
-
-if gin.NPCRoom ~= nil then
-if gin.levelNPC == RPD.Dungeon.depth then
-r = math.random(1,l-2)
-while (true) do
-if room.canSpawnAt(r,gin.NPCRoomWidth,gin.NPCRoomHeigth) then
-break
-end
-r = math.random(1,l-2)
-end
-room.printRoom(r,gin.NPCRoom)
-room.Tunel(st,r)
-st = r
-end
-end
-
--- st
-
-for i = 1, l-1 do
-if room.canSpawnAt(i,gin.RoomWidth,gin.RoomHeigth) then
-local rooms = gin.RandRooms
-s = rooms[math.random(1,#rooms)]
-room.printRoom(i-1,s)
-room.Tunel(st, i-1)
---room.addDoors(s,i-1)
-st = i-1
-end
-end
-
+generate()
 room.Correct()
 room.MakeBorder()
 
@@ -411,14 +249,8 @@ end
 if gin.Traps ~= nil then
 room.addTraps(gin.Traps,gin.ChanseTrap)
 end
+
 RPD.RemixedDungeon:resetScene()
-
-st = nil
-r = nil
-s = nil
-n = nil
-
-
 elseif gin.kind == "Town" then
 local level = RPD.Dungeon.level
 local l = level:getLength()-1
@@ -443,13 +275,13 @@ local l = level:getLength()
 for t = x - math.floor(w/2),x + math.floor(w/2) do
 for j = y - math.floor(h/2), y + math.floor(h/2) do
 local pos = level:cell(t,j)
-if
+if 
 level.map[pos] == RPD.Terrain.WALL or
 level.map[pos] == RPD.Terrain.WALL_DECO
 or
 level.map[pos] == RPD.Terrain.EMPTY_SP
 or
-level.map[pos] == RPD.Terrain.STATUE
+level.map[pos] == RPD.Terrain.STATUE 
 or
 level.map[pos] == RPD.Terrain.BOOKSHELF
 or
@@ -702,10 +534,10 @@ end
 for i = 1, RPD.Dungeon.level:getLength() do
 if i ~= RPD.Dungeon.level:getLength() then
 if level.map[i] == RPD.Terrain.WALL or level.map[i] == RPD.Terrain.DOOR or level.map[i] == RPD.Terrain.LOCKEDDOOR or level.map[i] == RPD.Terrain.WALL_DECO then
-if
-level.map[i+W] == RPD.Terrain.WATER or
-level.map[i+W] == RPD.Terrain.WATER_TILES or
-level.water[W+i]
+if 
+level.map[i+W] == RPD.Terrain.WATER or 
+level.map[i+W] == RPD.Terrain.WATER_TILES or 
+level.water[W+i] 
 then
 RPD.createLevelObject({
     kind="Deco",

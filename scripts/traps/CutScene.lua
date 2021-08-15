@@ -4,7 +4,7 @@
 --- DateTime: 29.12.18 23:48
 ---
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local trap = require"scripts/lib/trap"
 

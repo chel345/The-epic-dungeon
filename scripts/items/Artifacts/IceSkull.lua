@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 8,
             imageFile = "items/ArtifactsMod.png",
-            name      = RPD.textById("IceSkull_Name"),
-            info      = RPD.textById("IceSkull_Info"),
+            name      = RPD.StringsManager:maybeId("IceSkull_Name"),
+            info      = RPD.StringsManager:maybeId("IceSkull_Info"),
             stackable = false,
             upgradable    = false,
             isArtifact    = true,

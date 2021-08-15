@@ -1,4 +1,4 @@
-local RPD  = require "scripts/lib/commonClasses"
+local RPD  = require "scripts/lib/epicClasses"
 
 local storage = require"scripts/lib/storage"
 
@@ -54,7 +54,7 @@ if cast then
 if mana > b then
 RPD.Dungeon.hero:spendSkillPoints(b)
 else
-RPD.glog(RPD.textById("No_Mana"))
+RPD.glog(RPD.StringsManager:maybeId("No_Mana"))
 return
 end
 end

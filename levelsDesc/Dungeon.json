@@ -17,7 +17,7 @@
       
 "Town":{"kind":"PredesignedLevel", "depth":1, "file":"levelsDesc/Town.json", "noFogOfWar":true, "isSafe":true, "isStatic":false, "music":"ost_town_1.ogg","script":"scripts/actors/town/Compass"},
       
-"TownShop":{"kind":"PredesignedLevel", "depth":1, "size":[14,14],"file":"levelsDesc/Shop_Town.json","noFogOfWar":true, "music":"Shop.ogg","script":"scripts/actors/town/TownShop"},
+"TownShop":{"kind":"PredesignedLevel", "depth":1, "size":[14,14],"file":"levelsDesc/Shop_Town.json","noFogOfWar":true, "music":"ShopLevel.ogg","script":"scripts/actors/town/TownShop"},
       
 "FortuneShop":{"kind":"PredesignedLevel", "depth":1, "file":"levelsDesc/Fortune.json", "noFogOfWar":true, "isSafe":true, "isStatic":true, "music":"ost_town_1.ogg","script":"scripts/actors/town/TownFortuneShop"},
       
@@ -47,7 +47,7 @@
       
 "Sewer4":{"kind":"SewerLevel", "depth":4,"size":[32,32],"script":"scripts/actors/Levels/SewerLevel", "music":"SewerLevel.ogg", "noBuild":true },
       
-"Sewer5":{"kind":"PredesignedLevel", "depth":5, "file":"LevelsDesc/BossLevel/SewerBossLevel.json", "music":"ost_boss_1_ambient.ogg","script":"scripts/actors/Levels/SewerLevel"},
+"Sewer5":{"kind":"PredesignedLevel", "depth":5, "file":"LevelsDesc/BossLevel/SewerBossLevel.json", "music":"ost_boss_ambient.ogg","script":"scripts/actors/Levels/SewerLevel"},
 
 
 
@@ -81,13 +81,13 @@
       
 "City3":{"kind":"CityLevel", "depth":18,       "size":[64,64], "music":"CityLevel.ogg","script":"scripts/actors/Levels/CityLevel", "noBuild":true},
       
-"City4":{"kind":"CityLevel", "depth":19, "music":"DworfLibrary.ogg", "script":"scripts/actors/Levels/CityLevel","tiles":"tiles_dworf_library.png", "noBuild":true},
+"City4":{"kind":"CityLevel", "depth":19, "music":"DworfLibraryLevel.mp3", "script":"scripts/actors/Levels/CityLevel","tiles":"tiles_dworf_library.png", "noBuild":true},
       
 "City5":{"kind":"CityBossLevel", "depth":20,   "size":[32,32], "music":"CityLevel.ogg","script":"scripts/actors/Levels/CityLevel"},
       
 
 
-"Imp":{"kind":"LastShopLevel", "depth":21,   "size":[32,32],"script":"scripts/actors/Levels/ImpLevel"},
+"Imp":{"kind":"LastShopLevel", "depth":21,   "size":[32,32],"script":"scripts/actors/Levels/ImpLevel", "music":"ShopLevel.ogg"},
       
 "Halls2":{"kind":"HallsLevel", "depth":22,      "size":[32,32],"music":"HallsLevel.ogg","script":"scripts/actors/Levels/HallsLevel", "noBuild":true},
       
@@ -105,15 +105,15 @@
 
 
 "Light1":{"kind":"RandomLevel", "depth":26, "file":"LevelsDesc/KindLevel/LightLevel.json", "script":"scripts/actors/Levels/LightLevel"
-, "music":"Light.ogg", "noBuild":true},
+, "music":"LightLevel.ogg", "noBuild":true},
       
-"Light2":{"kind":"RandomLevel", "depth":27, "file":"LevelsDesc/KindLevel/LightLevel.json",  "music":"Light.ogg", "script":"scripts/actors/Levels/LightLevel", "noBuild":true},
+"Light2":{"kind":"RandomLevel", "depth":27, "file":"LevelsDesc/KindLevel/LightLevel.json",  "music":"LightLevel.ogg", "script":"scripts/actors/Levels/LightLevel", "noBuild":true},
       
-"Light3":{"kind":"RandomLevel", "depth":28, "file":"LevelsDesc/KindLevel/LightLevel.json", "music":"Light.ogg","script":"scripts/actors/Levels/LightLevel", "noBuild":true},
+"Light3":{"kind":"RandomLevel", "depth":28, "file":"LevelsDesc/KindLevel/LightLevel.json", "music":"LightLevel.ogg","script":"scripts/actors/Levels/LightLevel", "noBuild":true},
       
-"Light4":{"kind":"RandomLevel", "depth":29, "file":"LevelsDesc/KindLevel/LightLevel.json", "music":"Light.ogg","script":"scripts/actors/Levels/LightLevel", "noBuild":true},
+"Light4":{"kind":"RandomLevel", "depth":29, "file":"LevelsDesc/KindLevel/LightLevel.json", "music":"LightLevel.ogg","script":"scripts/actors/Levels/LightLevel", "noBuild":true},
        
-"Light5":{"kind":"PredesignedLevel", "depth":30, "file":"LevelsDesc/BossLevel/LightBossLevel.json", "music":"Light.ogg","script":"scripts/actors/Levels/LightLevel"},
+"Light5":{"kind":"PredesignedLevel", "depth":30, "file":"LevelsDesc/BossLevel/LightBossLevel.json", "music":"LightLevel.ogg","script":"scripts/actors/Levels/LightLevel"},
       
 
 
@@ -159,7 +159,7 @@
       
 "Rat4":{"kind":"RandomLevel", "depth":9, "file":"levelsDesc/KindLevel/RatLevel.json", "music":"RatLevel.ogg","script":"scripts/actors/Levels/RatLevel", "noBuild":true},
       
-"Rat5":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/BossLevel/RatBossLevel.json", "music":"RatBossLevel.ogg", "noFogOfWar":true ,"script":"scripts/actors/Levels/RatLevel"},
+"Rat5":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/BossLevel/RatBossLevel.json", "music":"RatBossLevel.ogg", "noFogOfWar":true ,"script":"scripts/actors/Levels/RatLevel","music":"RatLevel.ogg"},
 
 
 
@@ -176,15 +176,15 @@
 
 
 
-"Water1":{"kind":"RandomLevel", "depth":16, "file":"levelsDesc/KindLevel/WaterCavesLevel.json", "feeling":"WATER", "music":"Water.ogg","script":"scripts/actors/Levels/WaterCavesLevel", "noBuild":true},
+"Water1":{"kind":"RandomLevel", "depth":16, "file":"levelsDesc/KindLevel/WaterCavesLevel.json", "feeling":"WATER", "music":"WaterLevel.ogg","script":"scripts/actors/Levels/WaterCavesLevel", "noBuild":true},
       
-"Water2":{"kind":"RandomLevel", "depth":17, "file":"levelsDesc/KindLevel/WaterCavesLevel.json", "feeling":"WATER", "music":"Water.ogg","script":"scripts/actors/Levels/WaterCavesLevel", "noBuild":true},
+"Water2":{"kind":"RandomLevel", "depth":17, "file":"levelsDesc/KindLevel/WaterCavesLevel.json", "feeling":"WATER", "music":"WaterLevel.ogg","script":"scripts/actors/Levels/WaterCavesLevel", "noBuild":true},
       
-"Water3":{"kind":"RandomLevel", "depth":18, "file":"levelsDesc/KindLevel/WaterCavesLevel.json", "feeling":"WATER", "music":"Water.ogg","script":"scripts/actors/Levels/WaterCavesLevel", "noBuild":true},
+"Water3":{"kind":"RandomLevel", "depth":18, "file":"levelsDesc/KindLevel/WaterCavesLevel.json", "feeling":"WATER", "music":"WaterLevel.ogg","script":"scripts/actors/Levels/WaterCavesLevel", "noBuild":true},
       
-"Water4":{"kind":"RandomLevel", "depth":19, "file":"levelsDesc/KindLevel/WaterCavesLevel.json", "feeling":"WATER", "music":"Water.ogg","script":"scripts/actors/Levels/WaterCavesLevel", "noBuild":true},
+"Water4":{"kind":"RandomLevel", "depth":19, "file":"levelsDesc/KindLevel/WaterCavesLevel.json", "feeling":"WATER", "music":"WaterLevel.ogg","script":"scripts/actors/Levels/WaterCavesLevel", "noBuild":true},
       
-"Water5":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/BossLevel/WaterCavesBossLevel.json", "music":"Water.ogg","script":"scripts/actors/Levels/WaterCavesLevel"},
+"Water5":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/BossLevel/WaterCavesBossLevel.json", "music":"WaterLevel.ogg","script":"scripts/actors/Levels/WaterCavesLevel"},
 
 
 
@@ -201,15 +201,15 @@
 
 
 
-"Spider1":{"kind":"RandomLevel", "depth":26, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCastelLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true},
+"Spider1":{"kind":"RandomLevel", "depth":26, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true},
       
-"Spider2":{"kind":"RandomLevel", "depth":27, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCastelLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true},
+"Spider2":{"kind":"RandomLevel", "depth":27, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true},
       
-"Spider3":{"kind":"RandomLevel", "depth":28, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCastelLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true},
+"Spider3":{"kind":"RandomLevel", "depth":28, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true},
       
-"Spider4":{"kind":"RandomLevel", "depth":29, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCastelLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true},
+"Spider4":{"kind":"RandomLevel", "depth":29, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true},
       
-"Spider5":{"kind":"PredesignedLevel", "depth":30, "file":"levelsDesc/BossLevel/SpiderCastelBossLevel.json", "music":"SpiderCastelLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel"},
+"Spider5":{"kind":"PredesignedLevel", "depth":30, "file":"levelsDesc/BossLevel/SpiderCastelBossLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel"},
 
 
 
@@ -226,15 +226,15 @@
       
 
 
-"Blue1":{"kind":"RandomLevel", "depth":36, "file":"levelsDesc/KindLevel/BlueWombLevel.json", "music":"BlueWomb.ogg","script":"scripts/actors/Levels/BlueWombLevel", "noBuild":true},
+"Blue1":{"kind":"RandomLevel", "depth":36, "file":"levelsDesc/KindLevel/BlueWombLevel.json", "music":"BlueLevel.ogg","script":"scripts/actors/Levels/BlueWombLevel", "noBuild":true},
       
-"Blue2":{"kind":"RandomLevel", "depth":37, "file":"levelsDesc/KindLevel/BlueWombLevel.json", "music":"BlueWomb.ogg","script":"scripts/actors/Levels/BlueWombLevel", "noBuild":true},
+"Blue2":{"kind":"RandomLevel", "depth":37, "file":"levelsDesc/KindLevel/BlueWombLevel.json", "music":"BlueLevel.ogg","script":"scripts/actors/Levels/BlueWombLevel", "noBuild":true},
       
-"Blue3":{"kind":"RandomLevel", "depth":38, "file":"levelsDesc/KindLevel/BlueWombLevel.json", "music":"BlueWomb.ogg","script":"scripts/actors/Levels/BlueWombLevel", "noBuild":true},
+"Blue3":{"kind":"RandomLevel", "depth":38, "file":"levelsDesc/KindLevel/BlueWombLevel.json", "music":"BlueLevel.ogg","script":"scripts/actors/Levels/BlueWombLevel", "noBuild":true},
       
-"Blue4":{"kind":"RandomLevel", "depth":39, "file":"levelsDesc/KindLevel/BlueWombLevel.json", "music":"BlueWomb.ogg","script":"scripts/actors/Levels/BlueWombLevel", "noBuild":true},
+"Blue4":{"kind":"RandomLevel", "depth":39, "file":"levelsDesc/KindLevel/BlueWombLevel.json", "music":"BlueLevel.ogg","script":"scripts/actors/Levels/BlueWombLevel", "noBuild":true},
       
-"Blue5":{"kind":"PredesignedLevel", "depth":40, "file":"levelsDesc/BossLevel/BlueWombBossLevel.json", "music":"BlueWombBossLevel.ogg","script":"scripts/actors/Levels/BlueWombLevel"},
+"Blue5":{"kind":"PredesignedLevel", "depth":40, "file":"levelsDesc/BossLevel/BlueWombBossLevel.json", "music":"BlueLevel.ogg","script":"scripts/actors/Levels/BlueWombLevel"},
 
 
 
@@ -243,42 +243,42 @@
 
 
 
-"portal_room_lvl10_u":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/LevelPortal.json", "isSafe":true},
+"portal_room_lvl10_u":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/LevelPortal.json", "isSafe":true, "music":"ost_portal_level"},
       
-"portal_room_lvl15_u":{"kind":"PredesignedLevel", "depth":15, "file":"levelsDesc/LevelPortal.json", "isSafe":true},
+"portal_room_lvl15_u":{"kind":"PredesignedLevel", "depth":15, "file":"levelsDesc/LevelPortal.json", "isSafe":true, "music":"ost_portal_level"},
 
-"portal_room_lvl20_u":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/LevelPortal.json", "isSafe":true},
+"portal_room_lvl20_u":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/LevelPortal.json", "isSafe":true, "music":"ost_portal_level"},
 
-"portal_room_lvl25_u":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/LevelPortal.json", "isSafe":true},
+"portal_room_lvl25_u":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/LevelPortal.json", "isSafe":true, "music":"ost_portal_level"},
 
-"portal_room_lvl30_u":{"kind":"PredesignedLevel", "depth":30, "file":"levelsDesc/LevelPortal.json", "isSafe":true},
+"portal_room_lvl30_u":{"kind":"PredesignedLevel", "depth":30, "file":"levelsDesc/LevelPortal.json", "isSafe":true, "music":"ost_portal_level"},
 
 
 
 "Necro1":{"kind":"NecroLevel", "depth":11,      "size":[32,32],
-"music":"Necro.ogg","script":"scripts/actors/Levels/NecroLevel"},
+"music":"NecroLevel.ogg","script":"scripts/actors/Levels/NecroLevel"},
       
 "Necro2":{"kind":"NecroLevel", "depth":12,      "size":[32,32],
-"music":"Necro.ogg","script":"scripts/actors/Levels/NecroLevel"},
+"music":"NecroLevel.ogg","script":"scripts/actors/Levels/NecroLevel"},
 
 "Necro3":{"kind":"NecroLevel", "depth":13,     "size":[32,32],
-"music":"Necro.ogg","script":"scripts/actors/Levels/NecroLevel"},
+"music":"NecroLevel.ogg","script":"scripts/actors/Levels/NecroLevel"},
 
-"Necro4":{"kind":"PredesignedLevel", "depth":14, "file":"levelsDesc/DarckShop.json","script":"scripts/actors/Levels/NecroLevel","noFogOfWar":true, "isSafe":true, "isStatic":true,"music":"Necro.ogg"},
+"Necro4":{"kind":"PredesignedLevel", "depth":14, "file":"levelsDesc/DarckShop.json","script":"scripts/actors/Levels/NecroLevel","noFogOfWar":true, "isSafe":true, "isStatic":true,"music":"ShopLevel.ogg"},
 
-"Necro5":{"kind":"NecroBossLevel", "depth":15, "size":[32,32],"script":"scripts/actors/Levels/NecroLevel"},
+"Necro5":{"kind":"NecroBossLevel", "depth":15, "size":[32,32],"script":"scripts/actors/Levels/NecroLevel","music":"NecroLevel.ogg"},
 
 
 
-"Shad1":{"kind":"RandomLevel", "depth":16, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"Shadow.ogg","script":"scripts/actors/Levels/ShadowLevel"},
+"Shad1":{"kind":"RandomLevel", "depth":16, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel"},
       
-"Shad2":{"kind":"RandomLevel", "depth":17, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"Shadow.ogg","script":"scripts/actors/Levels/ShadowLevel"},
+"Shad2":{"kind":"RandomLevel", "depth":17, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel"},
       
-"Shad3":{"kind":"RandomLevel", "depth":18, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"Shadow.ogg","script":"scripts/actors/Levels/ShadowLevel"},
+"Shad3":{"kind":"RandomLevel", "depth":18, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel"},
       
-"Shad4":{"kind":"RandomLevel", "depth":19, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"Shadow.ogg","script":"scripts/actors/Levels/ShadowLevel"},
+"Shad4":{"kind":"RandomLevel", "depth":19, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel"},
       
-"Shad5":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/BossLevel/ShadowBossLevel.json", "music":"Shadow.ogg","script":"scripts/actors/Levels/ShadowLevel"},
+"Shad5":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/BossLevel/ShadowBossLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel"},
 
 
 
@@ -352,15 +352,15 @@
       
 
 
-"Castle1":{"kind":"RandomLevel", "depth":26, "file":"LevelsDesc/KindLevel/IceCastleLevel.json", "music":"IceCastleLevel.ogg","script":"scripts/actors/Levels/IceCastleLevel", "noBuild":true},
+"Castle1":{"kind":"RandomLevel", "depth":26, "file":"LevelsDesc/KindLevel/IceCastleLevel.json", "music":"IceLevel.ogg","script":"scripts/actors/Levels/IceCastleLevel", "noBuild":true},
       
-"Castle2":{"kind":"RandomLevel", "depth":27, "file":"LevelsDesc/KindLevel/IceCastleLevel.json", "music":"IceCastleLevel.ogg" ,"script":"scripts/actors/Levels/IceCastleLevel", "noBuild":true},
+"Castle2":{"kind":"RandomLevel", "depth":27, "file":"LevelsDesc/KindLevel/IceCastleLevel.json", "music":"IceLevel.ogg" ,"script":"scripts/actors/Levels/IceCastleLevel", "noBuild":true},
       
-"Castle3":{"kind":"RandomLevel", "depth":28, "file":"LevelsDesc/KindLevel/IceCastleLevel.json", "music":"IceCastleLevel.ogg" ,"script":"scripts/actors/Levels/IceCastleLevel", "noBuild":true},
+"Castle3":{"kind":"RandomLevel", "depth":28, "file":"LevelsDesc/KindLevel/IceCastleLevel.json", "music":"IceLevel.ogg" ,"script":"scripts/actors/Levels/IceCastleLevel", "noBuild":true},
       
-"Castle4":{"kind":"RandomLevel", "depth":29, "file":"LevelsDesc/KindLevel/IceCastleLevel.json", "music":"IceCastleLevel.ogg","script":"scripts/actors/Levels/IceCastleLevel", "noBuild":true},
+"Castle4":{"kind":"RandomLevel", "depth":29, "file":"LevelsDesc/KindLevel/IceCastleLevel.json", "music":"IceLevel.ogg","script":"scripts/actors/Levels/IceCastleLevel", "noBuild":true},
       
-"Castle5":{"kind":"PredesignedLevel", "depth":30, "file":"levelsDesc/BossLevel/IceCastleBossLevel.json", "music":"IceCastleBossLevel.ogg","script":"scripts/actors/Levels/IceCastleLevel"},
+"Castle5":{"kind":"PredesignedLevel", "depth":30, "file":"levelsDesc/BossLevel/IceCastleBossLevel.json", "music":"IceBossLevel.ogg","script":"scripts/actors/Levels/IceCastleLevel"},
 
 
    
@@ -463,7 +463,7 @@
       
 "Magic4":{"kind":"RandomLevel", "depth":29, "file":"levelsDesc/KindLevel/MagicCavesLevel.json", "music":"MagicCavesLevel.ogg","script":"scripts/actors/Levels/MagicCavesLevel"},
       
-"Magic5":{"kind":"PredesignedLevel", "depth":30, "file":"levelsDesc/BossLevel/MagicCavesBossLevel.json", "music":"MagicCavesBossLevel.ogg","script":"scripts/actors/Levels/MagicCavesLevel"},
+"Magic5":{"kind":"PredesignedLevel", "depth":30, "file":"levelsDesc/BossLevel/MagicCavesBossLevel.json", "music":"MagicCavesLevel.ogg","script":"scripts/actors/Levels/MagicCavesLevel"},
 
 
 
@@ -473,18 +473,7 @@
 
 
       
-"Skvern":{"kind":"RandomLevel", "depth":11, "file":"levelsDesc/SkvernNecropolis.json", "music":"SkvernLevel.ogg","script":"scripts/actors/Levels/SkvernLevel"},
-
-
-"RandomTown":{"kind":"RandomLevel", "depth":0, "file":"levelsDesc/RandomTown.json"},
-
-
-"End":{"kind":"SpiderLevel", "depth":250, "size":[1000,1000], "script":"scripts/actors/End", "music":"End.ogg",   "tiles":"tiles_end.png","water":"water_portal.png"},
-
-
-"GooHash":{"kind":"PredesignedLevel", "depth":0, "file":"levelsDesc/BossLevel/GooHashBossLevel.json", "music":"GooHashLevel.ogg"}
-
-
+"Scvern":{"kind":"RandomLevel", "depth":11, "file":"levelsDesc/SkvernNecropolis.json", "music":"SkvernLevel.ogg","script":"scripts/actors/Levels/SkvernLevel"}
 },
 
    "Graph":{
@@ -685,8 +674,8 @@
 
 
 "Necro1":[["Necro2"],["portal_room_lvl10_u"]],
-"Necro2":[["Necro3"],["Necro1"]],
-"Necro3":[["Necro4"],["Necro2"]],
+"Necro2":[["Scvern"],["Necro1"]],
+"Scvern":[["Necro4"],["Necro2"]],
 "Necro4":[["Necro5"],["Necro3"]],
 "Necro5":[["portal_room_lvl15_u"],["Necro4"]],
 

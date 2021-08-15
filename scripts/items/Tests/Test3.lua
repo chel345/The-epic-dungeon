@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --0xFFFFFF
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local LightRay = require "scripts/effects/LightRay"
 
@@ -18,6 +18,8 @@ local room = require "scripts/lib/room"
 local gameScene = require "scripts/userServices/gameScene"
 
 local storage = require "scripts/lib/storage"
+
+local Process = require "scripts/lib/Process"
 
 --local Ginerator = require "scripts/lib/Ginerator"
 
@@ -50,7 +52,7 @@ end,
 local test = function()
 RPD.glog("F")
 end
-storage.put("functions",test)
+Process.f = test
 
 --[[
 local SClientLua = luajava.bindClass("com.nyrds.pixeldungeon.networking.SClientLua")

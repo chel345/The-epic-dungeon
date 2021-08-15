@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local EPD = require "scripts/lib/dopClasses"
 
@@ -22,7 +22,7 @@ mob:hp(mob:ht())
 mob:dr(dr_)
 --mob:attackSkill(def_)
 else
-EPD.showQuestWindow(cc,RPD.textById("DworfStatueMasterNPC_Phrase1"))
+EPD.showQuestWindow(cc,RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase1"))
 end
 end
 
@@ -37,12 +37,12 @@ cast = level*200
 
 RPD.chooseOption(
 dialogBuy,
-(RPD.textById("DworfStatueMasterNPC_Phrase2")),
-(RPD.textById("DworfStatueMasterNPC_Phrase3")..level..RPD.textById("DworfStatueMasterNPC_Phrase4")..hp..RPD.textById("DworfStatueMasterNPC_Phrase5")..dr..RPD.textById("DworfStatueMasterNPC_Phrase6")..cast..RPD.textById("DworfStatueMasterNPC_Phrase7")),
-RPD.textById("DworfStatueMasterNPC_Phrase8"),
-RPD.textById("DworfStatueMasterNPC_Phrase9"),
-RPD.textById("DworfStatueMasterNPC_Phrase10"),
-RPD.textById("DworfStatueMasterNPC_Phrase11")
+(RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase2")),
+(RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase3")..level..RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase4")..hp..RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase5")..dr..RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase6")..cast..RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase7")),
+RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase8"),
+RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase9"),
+RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase10"),
+RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase11")
         )
 end
 
@@ -53,17 +53,17 @@ hp = 70*level
 cast = level*200
 
 if level < 1 then
-RPD.glog(RPD.textById("DworfStatueMasterNPC_Phrase12"))
+RPD.glog(RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase12"))
 return
 end
 RPD.chooseOption(
 dialogBuy,
-(RPD.textById("DworfStatueMasterNPC_Phrase2")),
-(RPD.textById("DworfStatueMasterNPC_Phrase3")..level..RPD.textById("DworfStatueMasterNPC_Phrase4")..hp..RPD.textById("DworfStatueMasterNPC_Phrase5")..dr..RPD.textById("DworfStatueMasterNPC_Phrase6")..cast..RPD.textById("DworfStatueMasterNPC_Phrase7")),
-RPD.textById("DworfStatueMasterNPC_Phrase8"),
-RPD.textById("DworfStatueMasterNPC_Phrase9"),
-RPD.textById("DworfStatueMasterNPC_Phrase10"),
-RPD.textById("DworfStatueMasterNPC_Phrase11")
+(RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase2")),
+(RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase3")..level..RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase4")..hp..RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase5")..dr..RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase6")..cast..RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase7")),
+RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase8"),
+RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase9"),
+RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase10"),
+RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase11")
         )
 end
 if index == 2 then
@@ -82,12 +82,12 @@ cast = level*200
 self:getSprite():turnTo(self:getPos()+1)
 RPD.chooseOption(
 dialogBuy,
-(RPD.textById("DworfStatueMasterNPC_Phrase2")),
-(RPD.textById("DworfStatueMasterNPC_Phrase3")..level..RPD.textById("DworfStatueMasterNPC_Phrase4")..hp..RPD.textById("DworfStatueMasterNPC_Phrase5")..dr..RPD.textById("DworfStatueMasterNPC_Phrase6")..cast..RPD.textById("DworfStatueMasterNPC_Phrase7")),
-RPD.textById("DworfStatueMasterNPC_Phrase8"),
-RPD.textById("DworfStatueMasterNPC_Phrase9"),
-RPD.textById("DworfStatueMasterNPC_Phrase10"),
-RPD.textById("DworfStatueMasterNPC_Phrase11")
+(RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase2")),
+(RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase3")..level..RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase4")..hp..RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase5")..dr..RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase6")..cast..RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase7")),
+RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase8"),
+RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase9"),
+RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase10"),
+RPD.StringsManager:maybeId("DworfStatueMasterNPC_Phrase11")
         )
 end
 })

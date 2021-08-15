@@ -1,9 +1,13 @@
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 local DungeonTileMap = luajava.bindClass("com.watabou.pixeldungeon.DungeonTilemap")
+local storage = require "scripts/lib/storage"
+
+local image
+
 local LightRay = {
 ray = function(from,to)
 
-local image = RPD.new("com.watabou.noosa.Image","effects/LightRay.png")
+image = RPD.new("com.watabou.noosa.Image","effects/LightRay.png")
 
 local A = 180/math.pi
 
@@ -22,6 +26,12 @@ image.angle = math.atan2(dy,dx)*A
 image:setScale(math.sqrt(dx*dx+dy*dy)/image.width,1)
 
 RPD.GameScene:effect(image)
+return
+end,
+update = function()
+if image ~= nil then
+image:killAndErase()
+end
 end
 }
 return LightRay

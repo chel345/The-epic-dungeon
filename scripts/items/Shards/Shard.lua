@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -14,8 +14,8 @@ return item.init{
         return {
            image     = 0,
             imageFile = "items/Shards.png",
-            name      = RPD.textById("Shard_Name"),
-            info      = RPD.textById("Shard_Info"),
+            name      = RPD.StringsManager:maybeId("Shard_Name"),
+            info      = RPD.StringsManager:maybeId("Shard_Info"),
             stackable = false,
             upgradable    = false,
              price     = 50

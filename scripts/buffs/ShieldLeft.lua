@@ -4,7 +4,7 @@
 --- DateTime: 10/20/19 10:35 PM
 ---
 
-local RPD  = require "scripts/lib/commonClasses"
+local RPD  = require "scripts/lib/epicClasses"
 
 local buff = require "scripts/lib/buff"
 

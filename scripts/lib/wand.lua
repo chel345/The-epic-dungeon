@@ -6,7 +6,7 @@
 --
 
 local serpent = require "scripts/lib/serpent"
-local RPD     = require "scripts/lib/commonClasses"
+local RPD     = require "scripts/lib/epicClasses"
 local util    = require "scripts/lib/util"
 
 local wand    = {}
@@ -14,7 +14,7 @@ local wand    = {}
 wand.__index  = wand
 
 function wand.actions(self, wand, hero)
-    return { "ВЗМАХНУТЬ" }
+    return { RPD.StringsManager:maybeId("Wave") }
 end
 
 function wand.burn(self, wand, cell)
@@ -41,7 +41,7 @@ function wand.cast(self, wand, lvl)
 end
 
 function wand.cellSelected(self, wand, action, cell)
-    if cell ~= nil and action == RPD.textById("Wave") then
+    if cell ~= nil and action == RPD.StringsManager:maybeId("Wave") then
 
         wand:getUser():getSprite():zap(cell)
         local dst = RPD.Ballistica:cast(wand:getUser():getPos(), cell, true, true)
@@ -86,8 +86,8 @@ function wand.defaultDesc()
         stackable     = false,
         upgradable    = true,
         identified    = true,
-        defaultAction = RPD.textById("Wave"),
-        price         = 500,
+        defaultAction = RPD.StringsManager:maybeId("Wave"),
+        price         = 200,
         equipable     = "left_hand"
     }
 end
@@ -101,12 +101,12 @@ function wand.getMana()
 end
 
 function wand.getManaMes()
-    return RPD.textById("No_Mana")
+    return RPD.StringsManager:maybeId("No_Mana")
 end
 
 function wand.execute(self, wand, hero, action)
     local own = self:selectType()
-    if action == RPD.textById("Wave") then
+    if action == RPD.StringsManager:maybeId("Wave") then
         if own == "cell" then
             mana = self:getMana()
             if mana <= hero:getSkillPoints() then
@@ -115,7 +115,7 @@ function wand.execute(self, wand, hero, action)
                 RPD.glog(self:getManaMes())
                 return
             end
-            wand:selectCell(RPD.textById("Wave"), RPD.textById("SelectDirectionWave"))
+            wand:selectCell(RPD.StringsManager:maybeId("Wave"), RPD.StringsManager:maybeId("SelectDirectionWave"))
         else
             mana = self:getMana()
             if mana <= hero:getSkillPoints() then

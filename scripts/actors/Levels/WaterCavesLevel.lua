@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local actor = require "scripts/lib/actor"
 
@@ -20,7 +20,7 @@ Ginerator.CreateLevel("WaterCavesLevel",true)
 end
 if RPD.Dungeon.depth == 16 then
 if not storage.get("storywater") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("Water_Story"))
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Water_Story"))
        RPD.GameScene:show(wnd)
        storage.put("storywater",true)
 end

@@ -1,4 +1,4 @@
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local room = require "scripts/lib/room"
 

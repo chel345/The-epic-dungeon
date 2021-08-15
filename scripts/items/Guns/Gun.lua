@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -19,8 +19,8 @@ return item.init{
         return {
            image     = 2,
             imageFile = "items/Guns.png",
-            name       = RPD.textById("Gun_Name"),
-            info      = RPD.textById("Gun_Info"),
+            name       = RPD.StringsManager:maybeId("Gun_Name"),
+            info      = RPD.StringsManager:maybeId("Gun_Info"),
             stackable = false,
             upgradable    = true,
              price     = 250,
@@ -30,7 +30,7 @@ end,
 
 actions = function(self,item,hero)
 if item:isEquipped(RPD.Dungeon.hero) then
-return {RPD.textById("Fire"),("ЗАРЯДИТЬ("..now.."/"..get..")")} 
+return {RPD.StringsManager:maybeId("Fire"),("ЗАРЯДИТЬ("..now.."/"..get..")")} 
 else
 return {("ЗАРЯДИТЬ("..now.."/"..get..")")}
 end
@@ -59,7 +59,7 @@ end,
 
 cellSelected = function(self, thisItem, action, cell)
 
-if action == RPD.textById("Fire") and cell ~= nil then
+if action == RPD.StringsManager:maybeId("Fire") and cell ~= nil then
 thisItem:getUser():getSprite():zap(cell)
 if now <= get and now ~= 0 then
 now = now -1
@@ -80,7 +80,7 @@ if math.random(1,4) == 1 then
 RPD.Dungeon.level:drop(item,pos)
 end
 else
-RPD.glog(RPD.textById("NoCharge"))
+RPD.glog(RPD.StringsManager:maybeId("NoCharge"))
 
 end
 end
@@ -99,14 +99,14 @@ item:getUser():getBelongings()
 .backpack)
 now = now + 1
 else
-RPD.glog(RPD.textById("WeaponLoaded"))
+RPD.glog(RPD.StringsManager:maybeId("WeaponLoaded"))
 end
 else
-RPD.glog(RPD.textById("NoBullets"))
+RPD.glog(RPD.StringsManager:maybeId("NoBullets"))
 end
 end
-if action == RPD.textById("Fire") then
-item:selectCell( RPD.textById("Fire") ,RPD.textById("Select_A_Cage")")
+if action == RPD.StringsManager:maybeId("Fire") then
+item:selectCell( RPD.StringsManager:maybeId("Fire") ,RPD.StringsManager:maybeId("Select_A_Cage")")
 end
 end,
 

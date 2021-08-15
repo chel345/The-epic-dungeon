@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -14,22 +14,22 @@ return item.init{
         return {
            image     = 15,
             imageFile = "items/ArtifactsMod.png",
-            name      = RPD.textById("GnollHorn_Name"),
-            info      = RPD.textById("GnollHorn_Info"),
+            name      = RPD.StringsManager:maybeId("GnollHorn_Name"),
+            info      = RPD.StringsManager:maybeId("GnollHorn_Info"),
             stackable = false,
             upgradable    = false,
  
              price     = 50
         }
-    end, actions = function() return {RPD.textById("Blow")} end,
+    end, actions = function() return {RPD.StringsManager:maybeId("Blow")} end,
     execute = function(self, item, hero, action, cell, char, data) 
-    if action == RPD.textById("Blow") then  
+    if action == RPD.StringsManager:maybeId("Blow") then  
 
 mana = RPD.Dungeon.hero:getSkillPoints()
 if mana > 45 then
 RPD.Dungeon.hero:spendSkillPoints(45)
 else
-RPD.glog(RPD.textById("No_Mana"))
+RPD.glog(RPD.StringsManager:maybeId("No_Mana"))
 return
 end
 

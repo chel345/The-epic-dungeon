@@ -4,7 +4,7 @@
 --- DateTime: 04.08.18 18:14
 ---
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local actor = require "scripts/lib/actor"
 
@@ -19,7 +19,7 @@ RPD.removeBuff(RPD.Dungeon.hero, "ModBuff");
 RPD.permanentBuff(RPD.Dungeon.hero, "ModBuff");
 if RPD.Dungeon.depth == 1 then
 if not storage.get("storymod") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("Mod_Story"))
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Mod_Story"))
        RPD.GameScene:show(wnd)
        storage.put("storymod",true)
 end

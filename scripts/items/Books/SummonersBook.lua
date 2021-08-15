@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 local shields = require "scripts/lib/shields"
@@ -17,30 +17,30 @@ return item.init{
         return {
            image     = 6,
             imageFile = "items/BooksInCityLibrary.png",
-            name      = RPD.textById("SummonersBook_Name"),
-            info      = RPD.textById("SummonersBook_Info"),
+            name      = RPD.StringsManager:maybeId("SummonersBook_Name"),
+            info      = RPD.StringsManager:maybeId("SummonersBook_Info"),
             stackable = false,
             upgradable    = true,
          equipable     = "left_hand",
              price     = 200,
          --   isArtifact    = true,
-              defaultAction = RPD.textById("Action_Use")
+              defaultAction = RPD.StringsManager:maybeId("Action_Use")
         }
     end,   
     actions = function(self, item,  hero)
         if item:isEquipped(hero) then
-            return {RPD.textById("Action_Use")}
+            return {RPD.StringsManager:maybeId("Action_Use")}
         end
     end,
         cellSelected = function(self, thisItem, action, cell)
-        if action == RPD.textById("Action_Use") then
+        if action == RPD.StringsManager:maybeId("Action_Use") then
 thisItem:getUser():spend(2)
 EPD.Klak(cell,RPD.Dungeon.depth*(thisItem:level()+1),RPD.Dungeon.depth*(thisItem:level()+10),thisItem:getUser(),10-RPD.Dungeon.hero:magicLvl(),math.random(1,RPD.Dungeon.hero:lvl()),true)
 end
 end,
     execute = function(self, item, hero, action)
-        if action == RPD.textById("Action_Use") then
-            item:selectCell(RPD.textById("Action_Use"),RPD.textById("Select_A_Cage"))
+        if action == RPD.StringsManager:maybeId("Action_Use") then
+            item:selectCell(RPD.StringsManager:maybeId("Action_Use"),RPD.StringsManager:maybeId("Select_A_Cage"))
         end
     end
 

@@ -4,21 +4,15 @@
 --- DateTime: 5/2/20 12:57 AM
 ---
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
-local storage = require "scripts/lib/storage"
+local L = require "scripts/effects/LightRay" 
 
-local gameScene = {}
-
-local prevTime = 0.
-
-gameScene.onStep = function()
-if storage.get("functions") then
-storage.get("functions")()
+local gameScene = {
+onStep = function()
+L.update()
+end,
+selectCell = function()
 end
-end
-
-gameScene.selectCell = function()
-end
-
+}
 return gameScene

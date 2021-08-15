@@ -4,7 +4,7 @@
 --- DateTime: 29.12.18 23:48
 ---
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local trap = require"scripts/lib/trap"
 
@@ -23,8 +23,8 @@ return trap.init(
         function (cell, char, data)
 
             RPD.chooseOption( dialog1,
-                    RPD.textById("MagicBook_Name"),
-                    RPD.textById("MagicBook_Info"),
-                    RPD.textById("MagicBook_Spells"))
+                    RPD.StringsManager:maybeId("MagicBook_Name"),
+                    RPD.StringsManager:maybeId("MagicBook_Info"),
+                    RPD.StringsManager:maybeId("MagicBook_Spells"))
                 end
 )

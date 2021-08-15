@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local wand = require "scripts/lib/wand"
 
@@ -17,8 +17,8 @@ return wand.init{
     desc  = function()  
         return {
            image     = 11,
-            name      = RPD.textById("NefritWand_Name"),
-            info      = RPD.textById("NefritWand_Info")
+            name      = RPD.StringsManager:maybeId("NefritWand_Name"),
+            info      = RPD.StringsManager:maybeId("NefritWand_Info")
         }
 end, 
 
@@ -55,7 +55,7 @@ local cell = hero:getPos()
             mob:setPos(cell)
       level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
       else
-      RPD.glog(RPD.textById("NothingHasHappened"))
+      RPD.glog(RPD.StringsManager:maybeId("NothingHasHappened"))
 end  
 end
 thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack)
@@ -74,6 +74,6 @@ return 0
 end,
 
 getManaMes = function()
-return RPD.textById("No_Mana")
+return RPD.StringsManager:maybeId("No_Mana")
 end
 }

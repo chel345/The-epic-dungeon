@@ -7,7 +7,7 @@
 
 local LightRay = require "scripts/effects/LightRay"
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 

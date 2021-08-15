@@ -5,14 +5,14 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local helmet = require "scripts/lib/helmet"
 
 local EPD = require "scripts/lib/dopClasses"
 
 descript = function(dr,str)
-return (RPD.textById("ArmorPoints")..dr..RPD.textById("StrengthPoints_1")..str..RPD.textById("StrengthPoints_2"))
+return (RPD.StringsManager:maybeId("ArmorPoints")..dr..RPD.StringsManager:maybeId("StrengthPoints_1")..str..RPD.StringsManager:maybeId("StrengthPoints_2"))
 end
 
 return helmet.init{
@@ -20,8 +20,8 @@ return helmet.init{
 desc  = function ()
 return {
 image     = 0,
-name       = RPD.textById("LeatherHelmet_Name"),
-info      = (RPD.textById("LeatherHelmet_Info")..descript(5,12))
+name       = RPD.StringsManager:maybeId("LeatherHelmet_Name"),
+info      = (RPD.StringsManager:maybeId("LeatherHelmet_Info")..descript(5,12))
 }
 end,
 

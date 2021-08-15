@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -14,8 +14,8 @@ return item.init{
         return {
            image     = 2,
             imageFile = "items/RangedMod.png",
-            name      = RPD.textById("Guian_Name"),
-            info      = RPD.textById("Guian_Info"),
+            name      = RPD.StringsManager:maybeId("Guian_Name"),
+            info      = RPD.StringsManager:maybeId("Guian_Info"),
             stackable = true,
             upgradable    = true,
             price     = 10
@@ -52,7 +52,7 @@ if ver == chanse then
 RPD.playSound( "snd_hit.mp3")
         return dmg
 else
-soul:getSprite():showStatus(0xCCAA44,RPD.textById("Dodged"))
+soul:getSprite():showStatus(0xCCAA44,RPD.StringsManager:maybeId("Dodged"))
 item:dropTo(cell)
 end
 

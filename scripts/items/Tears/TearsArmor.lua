@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -15,8 +15,8 @@ return item.init{
 itt = item
         return {
             imageFile = "items/TearsArmor.png",
-            name      = RPD.textById("TearsArmor_Name"),
-            info      = RPD.textById("TearsArmor_Info"),
+            name      = RPD.StringsManager:maybeId("TearsArmor_Name"),
+            info      = RPD.StringsManager:maybeId("TearsArmor_Info"),
             stackable = false,
             price     = 10000,
             upgradable = true,

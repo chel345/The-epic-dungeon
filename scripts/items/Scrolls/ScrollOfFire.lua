@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 local TIME_TO_READ = 1
 local item = require "scripts/lib/item"
 
@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = math.random(0,11),
             imageFile = "items/Scrolls.png",
-            name      = RPD.textById("ScrollOfFire_Name"),
-            info      = RPD.textById("ScrollOfFire_Info"),
+            name      = RPD.StringsManager:maybeId("ScrollOfFire_Name"),
+            info      = RPD.StringsManager:maybeId("ScrollOfFire_Info"),
             stackable = true,
             upgradable    = false,
  defaultAction = RPD.Actions.read,

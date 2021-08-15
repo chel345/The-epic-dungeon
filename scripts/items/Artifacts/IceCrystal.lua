@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -14,10 +14,10 @@ return item.init{
         return {
             image         = 4,
             imageFile     = "items/ArtifactsMod.png",
-            name          = RPD.textById("IceCrystal_Name"),
-            info          = RPD.textById("IceCrystal_Info"),
+            name          = RPD.StringsManager:maybeId("IceCrystal_Name"),
+            info          = RPD.StringsManager:maybeId("IceCrystal_Info"),
             stackable     = false,
-            defaultAction = RPD.textById("Action_Use"),
+            defaultAction = RPD.StringsManager:maybeId("Action_Use"),
             price         = 700,
             isArtifact    = true,
             upgradable    = true
@@ -25,15 +25,15 @@ return item.init{
     end,
     actions = function(self, item,  hero)
         if item:isEquipped(hero) then
-            return {RPD.textById("Action_Use")}
+            return {RPD.StringsManager:maybeId("Action_Use")}
         end
     end,
 
     cellSelected = function(self, thisItem, action, cell)
-        if action == RPD.textById("Action_Use") then
+        if action == RPD.StringsManager:maybeId("Action_Use") then
         if math.random(1,8) == 1 then
 
-RPD.glog(RPD.textById("Сrystal_Broke"))
+RPD.glog(RPD.StringsManager:maybeId("Сrystal_Broke"))
 thisItem:removeItemFrom(RPD.Dungeon.hero)
 return
 end
@@ -53,8 +53,8 @@ end
     end,
 
     execute = function(self, item, hero, action)
-        if action == RPD.textById("Action_Use") then
-            item:selectCell(RPD.textById("Action_Use"),RPD.textById("Select_A_Cage"))
+        if action == RPD.StringsManager:maybeId("Action_Use") then
+            item:selectCell(RPD.StringsManager:maybeId("Action_Use"),RPD.StringsManager:maybeId("Select_A_Cage"))
         end
     end
 }

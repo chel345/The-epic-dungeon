@@ -4,7 +4,7 @@
 --- DateTime: 23.08.18 22:51
 ---
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local ai = require "scripts/lib/ai"
 
@@ -95,6 +95,6 @@ RPD.Wands.wandOfBlink:mobWandUse(me, RPD.Dungeon.level:randomRespawnCell())
     end,
 
     status = function(me, ai, me)
-        return RPD.textById("attack_on_you")
+        return RPD.StringsManager:maybeId("attack_on_you")
     end
 }

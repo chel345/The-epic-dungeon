@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local actor = require "scripts/lib/actor"
 
@@ -33,10 +33,9 @@ getCell = function()
 return getCell()
 end,
 activate = function()
-local level = RPD.Dungeon.level
-
-max = math.floor(level:getLength()/100)
 if not storage.get("level_spawner") then
+local level = RPD.Dungeon.level
+max = math.floor(level:getLength()/100)
 for i = 1,max  do
 local mob = Best:mob(level)
 mob:setPos(getCell())
@@ -46,6 +45,8 @@ storage.put("level_spawner",true)
 end
 end,
 act = function()
+local level = RPD.Dungeon.level
+max = math.floor(level:getLength()/100)
 now = 0
 local level = RPD.Dungeon.level
 for i = 0, level:getLength()-1 do
@@ -64,6 +65,6 @@ RPD.setAi(mob,"Wandering")
 return true
 end,
 actionTime = function()
-return math.random(1,(math.abs(RPD.Dungeon.hero:lvl()-RPD.Dungeon.depth)+1))*10/math.random(1,10)
+return 30
 end
 })

@@ -4,7 +4,7 @@
     This file is part of pixel-dungeon-remix
 ]]
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
@@ -24,7 +24,7 @@ local dialog = function(index)
 RPD.Dungeon.level:drop(Rune1, client:getPos())
             return
         end
-        npc:say(RPD.textById("TearsFutureTellerNPC_Phrase1"))
+        npc:say(RPD.StringsManager:maybeId("TearsFutureTellerNPC_Phrase1"))
     end
 
     if index == 1 then
@@ -33,7 +33,7 @@ RPD.Dungeon.level:drop(Rune1, client:getPos())
 RPD.Dungeon.level:drop(Rune2, client:getPos())
             return
         end
-        npc:say(RPD.textById("TearsFutureTellerNPC_Phrase1"))
+        npc:say(RPD.StringsManager:maybeId("TearsFutureTellerNPC_Phrase1"))
     end
 
     if index == 2 then
@@ -42,11 +42,11 @@ RPD.Dungeon.level:drop(Rune2, client:getPos())
 RPD.Dungeon.level:drop(Rune3, client:getPos())
             return
         end
-        npc:say(RPD.textById("TearsFutureTellerNPC_Phrase1"))
+        npc:say(RPD.StringsManager:maybeId("TearsFutureTellerNPC_Phrase1"))
     end
 
     if index == 3 then
-        npc:say(RPD.textById("TearsFutureTellerNPC_Phrase2"))
+        npc:say(RPD.StringsManager:maybeId("TearsFutureTellerNPC_Phrase2"))
     end
 end
 
@@ -56,12 +56,12 @@ return mob.init({
         client = chr
         npc = self
         RPD.chooseOption( dialog,
-                RPD.textById("TearsFutureTellerNPC_Phrase3"),
-                RPD.textById("TearsFutureTellerNPC_Phrase4"),
-    RPD.textById("TearsFutureTellerNPC_Phrase5"),
-    RPD.textById("TearsFutureTellerNPC_Phrase6"),
-    RPD.textById("TearsFutureTellerNPC_Phrase7"),
-                RPD.textById("TearsFutureTellerNPC_Phrase8")
+                RPD.StringsManager:maybeId("TearsFutureTellerNPC_Phrase3"),
+                RPD.StringsManager:maybeId("TearsFutureTellerNPC_Phrase4"),
+    RPD.StringsManager:maybeId("TearsFutureTellerNPC_Phrase5"),
+    RPD.StringsManager:maybeId("TearsFutureTellerNPC_Phrase6"),
+    RPD.StringsManager:maybeId("TearsFutureTellerNPC_Phrase7"),
+                RPD.StringsManager:maybeId("TearsFutureTellerNPC_Phrase8")
         )
     end,
 })

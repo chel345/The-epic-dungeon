@@ -4,7 +4,7 @@
 --- DateTime: 04.08.18 18:14
 ---
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local actor = require "scripts/lib/actor"
 

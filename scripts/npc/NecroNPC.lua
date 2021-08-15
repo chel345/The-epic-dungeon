@@ -5,14 +5,14 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local EPD = require "scripts/lib/dopClasses"
 local mob = require"scripts/lib/mob"
 
 local quest = require"scripts/lib/quest"
 
-local questName = RPD.textById("NecroNPC_QuestName")
+local questName = RPD.StringsManager:maybeId("NecroNPC_QuestName")
 
 local items = {
  "Skulls/RunicSkull1",
@@ -24,14 +24,14 @@ return mob.init({
     interact = function(self, chr)
 local level = RPD.Dungeon.level
         if not quest.isGiven(questName) then
-EPD.showQuestWindow(self,RPD.textById("NecroNPC_Phrase1"))
+EPD.showQuestWindow(self,RPD.StringsManager:maybeId("NecroNPC_Phrase1"))
 
             quest.give(questName, chr, {kills={"DeathKnight"}})
             return
         end
 
         if quest.isCompleted(questName) then
-EPD.showQuestWindow(self,RPD.textById("NecroNPC_Phrase2"))
+EPD.showQuestWindow(self,RPD.StringsManager:maybeId("NecroNPC_Phrase2"))
 
             return
         end
@@ -39,9 +39,9 @@ EPD.showQuestWindow(self,RPD.textById("NecroNPC_Phrase2"))
         local ratsKilled = quest.state(questName).kills.DeathKnight or 0
 
         if ratsKilled < 5 then
-EPD.showQuestWindow(self,RPD.textById("NecroNPC_Phrase3"))
+EPD.showQuestWindow(self,RPD.StringsManager:maybeId("NecroNPC_Phrase3"))
         else
-EPD.showQuestWindow(self,RPD.textById("NecroNPC_Phrase2"))
+EPD.showQuestWindow(self,RPD.StringsManager:maybeId("NecroNPC_Phrase2"))
             RPD.Dungeon.level:drop(RPD.ItemFactory:itemByName(items[math.random(1,4)]),chr:getPos())
         for i = 1,math.random(1,5) do
             local mob = RPD.MobFactory:mobByName("DeathKnight")

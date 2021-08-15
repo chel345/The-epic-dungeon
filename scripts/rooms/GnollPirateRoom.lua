@@ -1,4 +1,4 @@
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local EPD = require "scripts/lib/dopClasses"
 
@@ -33,9 +33,9 @@ local sp2 =
     kind = "Deco",
     object_desc = "BanditTile5"
 }
-RPD.createLevelObject(sp1,p-W)
 RPD.createLevelObject(sp2,p)
 RPD.Dungeon.level:set(p-W,RPD.Terrain.STATUE_SP)
+RPD.createLevelObject(sp1,p-W)
 end
 
 local level = RPD.Dungeon.level

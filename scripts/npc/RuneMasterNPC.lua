@@ -4,7 +4,7 @@
     This file is part of pixel-dungeon-remix
 ]]
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
@@ -24,7 +24,7 @@ local dialog = function(index)
 RPD.Dungeon.level:drop(Rune1, client:getPos())
             return
         end
-        npc:say(RPD.textById("RuneMasterNPC_Phrase1"))
+        npc:say(RPD.StringsManager:maybeId("RuneMasterNPC_Phrase1"))
     end
 
     if index == 1 then
@@ -33,7 +33,7 @@ RPD.Dungeon.level:drop(Rune1, client:getPos())
 RPD.Dungeon.level:drop(Rune2, client:getPos())
             return
         end
-        npc:say(RPD.textById("RuneMasterNPC_Phrase1"))
+        npc:say(RPD.StringsManager:maybeId("RuneMasterNPC_Phrase1"))
     end
 
     if index == 2 then
@@ -42,11 +42,11 @@ RPD.Dungeon.level:drop(Rune2, client:getPos())
 RPD.Dungeon.level:drop(Rune3, client:getPos())
             return
         end
-        npc:say(RPD.textById("RuneMasterNPC_Phrase1"))
+        npc:say(RPD.StringsManager:maybeId("RuneMasterNPC_Phrase1"))
     end
 
     if index == 3 then
-        npc:say(RPD.textById("RuneMasterNPC_Phrase2"))
+        npc:say(RPD.StringsManager:maybeId("RuneMasterNPC_Phrase2"))
     end
 end
 
@@ -56,12 +56,12 @@ return mob.init({
         client = chr
         npc = self
         RPD.chooseOption( dialog,
-                RPD.textById("RuneMasterNPC_Phrase3"),
-                RPD.textById("RuneMasterNPC_Phrase4"),
-    RPD.textById("RuneMasterNPC_Phrase5"),
-    RPD.textById("RuneMasterNPC_Phrase6"),
-    RPD.textById("RuneMasterNPC_Phrase7"),
-                RPD.textById("RuneMasterNPC_Phrase8")
+                RPD.StringsManager:maybeId("RuneMasterNPC_Phrase3"),
+                RPD.StringsManager:maybeId("RuneMasterNPC_Phrase4"),
+    RPD.StringsManager:maybeId("RuneMasterNPC_Phrase5"),
+    RPD.StringsManager:maybeId("RuneMasterNPC_Phrase6"),
+    RPD.StringsManager:maybeId("RuneMasterNPC_Phrase7"),
+                RPD.StringsManager:maybeId("RuneMasterNPC_Phrase8")
         )
     end,
     spawn = function(self, enemy, dmg) 

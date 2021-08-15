@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
@@ -24,13 +24,13 @@ local Wands = {
 "WandOfGoodMage",
 "WandOfLightbolt",
 "WandOfMagicbolt",
-"WandOfMirror",
 "WandOfPossess",
 "WandOfRock"
 }
+local a 
 return mob.init{
 stats = function(self)
-a = storage.get("Wand") or math.random(1,13)
+a = storage.get("Wand") or math.random(1,#Wands)
 storage.put("Wand",a)
 
 self:ht(RPD.Dungeon.depth*2)
@@ -38,7 +38,7 @@ self:hp(self:ht())
 self:dr(RPD.Dungeon.depth-2)
 RPD.permanentBuff(self, RPD.Buffs.Roots)
 if RPD.Dungeon.depth ~= 0 then
-s = RPD.Dungeon.depth/2
+s = math.floor(RPD.Dungeon.depth/3)
 else
 s = 0
 end

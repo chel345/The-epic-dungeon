@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -20,8 +20,8 @@ end
         return {
            image     = 0,
             imageFile = "items/Guns.png",
-            name       = RPD.textById("Muchket_Name"),
-            info      = RPD.textById("Muchket_Info"),
+            name       = RPD.StringsManager:maybeId("Muchket_Name"),
+            info      = RPD.StringsManager:maybeId("Muchket_Info"),
             stackable = false,
             upgradable    = true,
              price     = 100,
@@ -30,7 +30,7 @@ equipable     = "left_hand"
     end,
     actions = function(self,item,hero) 
 if item:isEquipped(RPD.Dungeon.hero) then
-return {RPD.textById("Fire"),("ЗАРЯДИТЬ("..present2.."/"..can2..")")} 
+return {RPD.StringsManager:maybeId("Fire"),("ЗАРЯДИТЬ("..present2.."/"..can2..")")} 
 else
 return {("ЗАРЯДИТЬ("..present2.."/"..can2..")")}
     end
@@ -63,7 +63,7 @@ hero:speed(p)
 
     cellSelected = function(self, thisItem, action, cell)
 
-if action == RPD.textById("Fire") and cell ~= nil then
+if action == RPD.StringsManager:maybeId("Fire") and cell ~= nil then
 thisItem:getUser():getSprite():zap(cell)
 if present2 <= can2 and present2 ~= 0 then
 present2 = present2 -1
@@ -84,7 +84,7 @@ if math.random(1,4) == 1 then
 RPD.Dungeon.level:drop(item,pos)
 end
 else
-RPD.glog(RPD.textById("NoCharge"))
+RPD.glog(RPD.StringsManager:maybeId("NoCharge"))
 
 end
 end
@@ -103,14 +103,14 @@ item:getUser():getBelongings()
 a = 1
 present2 = present2 + 1
 else
-RPD.glog(RPD.textById("WeaponLoaded"))
+RPD.glog(RPD.StringsManager:maybeId("WeaponLoaded"))
 end
 else
-RPD.glog(RPD.textById("NoBullets"))
+RPD.glog(RPD.StringsManager:maybeId("NoBullets"))
 end
 end
-if action == RPD.textById("Fire") then
-item:selectCell( RPD.textById("Fire") ,RPD.textById("Select_A_Cage")")
+if action == RPD.StringsManager:maybeId("Fire") then
+item:selectCell( RPD.StringsManager:maybeId("Fire") ,RPD.StringsManager:maybeId("Select_A_Cage")")
 end
 end
 }

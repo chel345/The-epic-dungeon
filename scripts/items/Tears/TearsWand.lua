@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local wand = require "scripts/lib/wand"
 
@@ -18,8 +18,8 @@ return wand.init{
 ittt = item
         return {
         imageFile = "items/TearsWand.png",
-        name      = RPD.textById("TearsWand_Name"),
-        info      = RPD.textById("TearsWand_Info")
+        name      = RPD.StringsManager:maybeId("TearsWand_Name"),
+        info      = RPD.StringsManager:maybeId("TearsWand_Info")
         }
 end, 
 
@@ -226,11 +226,11 @@ return "cell"
 end,
 
 getMana = function()
-return 20
+return 7
 end,
 
 getManaMes = function()
-return RPD.textById("No_Mana")
+return RPD.StringsManager:maybeId("No_Mana")
 end,
 
 UpdateSprite = function()

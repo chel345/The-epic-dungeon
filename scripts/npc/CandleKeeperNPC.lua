@@ -4,7 +4,7 @@
     This file is part of pixel-dungeon-remix
 ]]
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
@@ -17,7 +17,7 @@ client:spendGold(cast)
 client:collect(item)
 return
 else
-RPD.glog(RPD.textById("CandleKeeperNPC_Phrase1"))
+RPD.glog(RPD.StringsManager:maybeId("CandleKeeperNPC_Phrase1"))
 end
 end
 
@@ -50,15 +50,15 @@ return mob.init({
         client = chr
         npc = self
         RPD.chooseOption( dialog,
-                RPD.textById("CandleKeeperNPC_Phrase2"),
-                RPD.textById("CandleKeeperNPC_Phrase3"),
-    RPD.textById("CandleKeeperNPC_Phrase4"),
-    RPD.textById("CandleKeeperNPC_Phrase5"),
-    RPD.textById("CandleKeeperNPC_Phrase6"),
-    RPD.textById("CandleKeeperNPC_Phrase7"),
-    RPD.textById("CandleKeeperNPC_Phrase8"),
+                RPD.StringsManager:maybeId("CandleKeeperNPC_Phrase2"),
+                RPD.StringsManager:maybeId("CandleKeeperNPC_Phrase3"),
+    RPD.StringsManager:maybeId("CandleKeeperNPC_Phrase4"),
+    RPD.StringsManager:maybeId("CandleKeeperNPC_Phrase5"),
+    RPD.StringsManager:maybeId("CandleKeeperNPC_Phrase6"),
+    RPD.StringsManager:maybeId("CandleKeeperNPC_Phrase7"),
+    RPD.StringsManager:maybeId("CandleKeeperNPC_Phrase8"),
 
-                RPD.textById("CandleKeeperNPC_Phrase9")
+                RPD.StringsManager:maybeId("CandleKeeperNPC_Phrase9")
         )
     end,
 })

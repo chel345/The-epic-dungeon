@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local actor = require "scripts/lib/actor"
 
@@ -17,11 +17,9 @@ return actor.init({
     activate = function()
 if RPD.Dungeon.depth == 16 then
 if not storage.get("storydworf") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("DworfTown_Story"))
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("DworfTown_Story"))
        RPD.GameScene:show(wnd)
        storage.put("storydworf",true)
-end
-end
 local item = RPD.Dungeon.level:drop(RPD.item("PotionOfStrength"),55)
 item.type = RPD.Heap.Type.CRYSTAL_CHEST
 
@@ -33,6 +31,9 @@ item.type = RPD.Heap.Type.CRYSTAL_CHEST
 
 local item = RPD.Dungeon.level:drop(RPD.item("Ration"),58)
 item.type = RPD.Heap.Type.CRYSTAL_CHEST
+
+end
+end
 
 return true
 end,

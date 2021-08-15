@@ -5,7 +5,7 @@
 ---
 ---
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local spell = require "scripts/lib/spell"
 
@@ -14,8 +14,8 @@ return spell.init{
         return {
             image         = 7,
             imageFile     = "spellsIcons/necromancy.png",
-            name          = RPD.textById("SummonDarkSoul_Name"),
-            info          = RPD.textById("SummonDarkSoul_Info"),
+            name          = RPD.StringsManager:maybeId("SummonDarkSoul_Name"),
+            info          = RPD.StringsManager:maybeId("SummonDarkSoul_Info"),
             magicAffinity = "Combat",
             targetingType = "self",          level         = 4,
             spellCost     = 9,

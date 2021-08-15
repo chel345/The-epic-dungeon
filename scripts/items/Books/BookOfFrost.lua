@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -18,16 +18,16 @@ return item.init{
         return {
            image     = 1,
             imageFile = "items/BooksInCityLibrary.png",
-            name          = RPD.textById("BookOfFrost_Name"),
-            info          = RPD.textById("BookOfFrost_Info"),
+            name          = RPD.StringsManager:maybeId("BookOfFrost_Name"),
+            info          = RPD.StringsManager:maybeId("BookOfFrost_Info"),
             stackable     = true,
             defaultAction = "Scroll_ACRead",
             price         = 50
         }
     end,
-    actions = function() return {RPD.textById("IceArrow"),RPD.textById("CraftIceItem"),RPD.textById("SummonIcyEssence")} end,
+    actions = function() return {RPD.StringsManager:maybeId("IceArrow"),RPD.StringsManager:maybeId("CraftIceItem"),RPD.StringsManager:maybeId("SummonIcyEssence")} end,
 cellSelected = function(self, thisItem, action, cell)
-        if action == RPD.textById("IceArrow") then 
+        if action == RPD.StringsManager:maybeId("IceArrow") then 
                 local soul =  RPD.Actor:findChar(cell)
                 if soul then
         RPD.affectBuff(soul, RPD.Buffs.Slow , 10);
@@ -38,10 +38,10 @@ end
 end
   end,
     execute = function(self, item, hero, action)
-        if action == RPD.textById("IceArrow") then
-            item:selectCell( RPD.textById("IceArrow") , RPD.textById("Select_A_Cage"))
+        if action == RPD.StringsManager:maybeId("IceArrow") then
+            item:selectCell( RPD.StringsManager:maybeId("IceArrow") , RPD.StringsManager:maybeId("Select_A_Cage"))
 end
-        if action == RPD.textById("CraftIceItem") then
+        if action == RPD.StringsManager:maybeId("CraftIceItem") then
 local IceItems = {
 "IceWand",
 "NefritWand",
@@ -50,7 +50,7 @@ local IceItems = {
 }
 RPD.Dungeon.level:drop( RPD.ItemFactory:itemByName(IceItems[math.random(1,4)]), hero:getPos())
 end
-    if action == RPD.textById("SummonIcyEssence") then
+    if action == RPD.StringsManager:maybeId("SummonIcyEssence") then
  local mobs = {
 "IceElemental",
 "IceNefrit",

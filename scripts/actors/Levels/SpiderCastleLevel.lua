@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local actor = require "scripts/lib/actor"
 
@@ -17,7 +17,7 @@ return actor.init({
 activate = function()
 if RPD.Dungeon.depth == 26 then
 if not storage.get("storyspider") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("Spider_Story"))
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Spider_Story"))
        RPD.GameScene:show(wnd)
        storage.put("storyspider",true)
 end

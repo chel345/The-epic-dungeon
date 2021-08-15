@@ -4,7 +4,7 @@
 --- DateTime: 23.08.18 22:51
 ---
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local ai = require "scripts/lib/ai"
 
@@ -43,6 +43,6 @@ end,
 end,
 
     status = function(me, ai, me)
-        return RPD.textById("Mob_StaWanderingStatus",me)
+        return RPD.StringsManager:maybeId("Mob_StaWanderingStatus",me)
     end
 }

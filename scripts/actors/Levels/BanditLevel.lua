@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local actor = require "scripts/lib/actor"
 
@@ -17,13 +17,13 @@ return actor.init({
 activate = function()
 if RPD.Dungeon.depth == 21 then
 if not storage.get("storybandit") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("Bandit_Story"))
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Bandit_Story"))
        RPD.GameScene:show(wnd)
-       storage.get("storybandit",true)
+       storage.put("storybandit",true)
 end
 end
 if RPD.Dungeon.depth ~= 25 then
-Ginerator.CreateLevel("BanditLevel",true)
+Ginerator.CreateLevel("BanditLevel")
 if not storage.get("Deco") then
 storage.put("Deco")
 for i = 1, RPD.Dungeon.level:getLength()-1 do

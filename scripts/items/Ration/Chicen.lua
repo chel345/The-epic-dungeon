@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -15,8 +15,8 @@ return item.init{
         return {
             image         = 11,
             imageFile     = "items/food.png",
-            name          = RPD.textById("Chicen_Name"),
-            info          = RPD.textById("Chicen_Info"),
+            name          = RPD.StringsManager:maybeId("Chicen_Name"),
+            info          = RPD.StringsManager:maybeId("Chicen_Info"),
             stackable     = true,
             defaultAction = "Food_ACEat",
             price         = 10
@@ -25,7 +25,7 @@ return item.init{
     actions = function() return {RPD.Actions.eat} end,
     execute = function(self, item, hero, action)
         if action == RPD.Actions.eat then
-            hero:eat(item,RPD.Buffs.Hunger.STARVING, RPD.textById("Delicious"))
+            hero:eat(item,RPD.Buffs.Hunger.STARVING, RPD.StringsManager:maybeId("Delicious"))
         end
     end 
 }

@@ -4,7 +4,7 @@
 --- DateTime: 23.08.18 22:51
 ---
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local ai = require "scripts/lib/ai"
 
@@ -47,6 +47,6 @@ end,
 end,
 
     status = function(me, ai, me)
-        return (me:getName()..RPD.textById("ai_mob_attack")..f:getName())
+        return (me:getName()..RPD.StringsManager:maybeId("ai_mob_attack")..f:getName())
     end
 }

@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -28,7 +28,7 @@ end
 if index == 3 then
 RPD.removeBuff(selff,"FollowMe")
 RPD.removeBuff(selff,"Attacher")
-ctor:selectCell(selectMob,RPD.textById("Choose_A_Target"))
+ctor:selectCell(selectMob,RPD.StringsManager:maybeId("Choose_A_Target"))
 end
 end
 
@@ -38,14 +38,14 @@ return item.init{
         return {
            image     = 5,
             imageFile = "items/BooksInCityLibrary.png",
-            name      = RPD.textById("BookOfDragoman_Name"),
-            info      = RPD.textById("BookOfDragoman_Info"),
+            name      = RPD.StringsManager:maybeId("BookOfDragoman_Name"),
+            info      = RPD.StringsManager:maybeId("BookOfDragoman_Info"),
             stackable = false,
             upgradable    = false,
          equipable     = "left_hand",
              price     = 200,
          --   isArtifact    = true,
-defaultAction = RPD.textById("Action_Use")
+defaultAction = RPD.StringsManager:maybeId("Action_Use")
         }
     end,   
 activate = function(self, item, hero)
@@ -60,12 +60,12 @@ activate = function(self, item, hero)
 
     actions = function(self, item,  hero)
         if item:isEquipped(hero) then
-            return {RPD.textById("Action_Use")}
+            return {RPD.StringsManager:maybeId("Action_Use")}
         end
     end,
     
 cellSelected = function(self, thisItem, action, cell)
-if action == RPD.textById("Action_Use") then
+if action == RPD.StringsManager:maybeId("Action_Use") then
 ctor = thisItem
 --local dst = RPD.Ballistica:cast(thisItem:getUser():getPos(), cell, true, true, true)
 local char = RPD.Actor:findChar(cell)
@@ -74,17 +74,17 @@ if char:isPet() then
 selff = char
 RPD.chooseOption( dialog,
 selff:getName(),
-(RPD.textById("HealthPointsMobs_1")..selff:hp()..RPD.textById("HealthPointsMobs_2")..selff:ht()..RPD.textById("AgilityMobs_1")..selff:attackSkill()..RPD.textById("AgilityMobs_2")),
-RPD.textById("StandStill"),
-RPD.textById("MoveInMyDirection"),
-RPD.textById("ExploreTheLevel"),
-RPD.textById("ChoosePriorityTarget")
+(RPD.StringsManager:maybeId("HealthPointsMobs_1")..selff:hp()..RPD.StringsManager:maybeId("HealthPointsMobs_2")..selff:ht()..RPD.StringsManager:maybeId("AgilityMobs_1")..selff:attackSkill()..RPD.StringsManager:maybeId("AgilityMobs_2")),
+RPD.StringsManager:maybeId("StandStill"),
+RPD.StringsManager:maybeId("MoveInMyDirection"),
+RPD.StringsManager:maybeId("ExploreTheLevel"),
+RPD.StringsManager:maybeId("ChoosePriorityTarget")
         )
 else
-char:yell(RPD.textById("IAmStronger"))
+char:yell(RPD.StringsManager:maybeId("IAmStronger"))
 end
 else
-RPD.glog(RPD.textById("EmptyHere"))
+RPD.glog(RPD.StringsManager:maybeId("EmptyHere"))
 end
 end
 if action == selectMob then
@@ -92,14 +92,14 @@ if RPD.Actor:findChar(cell) then
 EPD.Char = RPD.Actor:findChar(cell)
 RPD.permanentBuff(selff,"Attacher")
 else
-RPD.glog(RPD.textById("EmptyHere"))
+RPD.glog(RPD.StringsManager:maybeId("EmptyHere"))
 end
 end
 
 end,
     execute = function(self, item, hero, action)
-        if action == RPD.textById("Action_Use") then
-            item:selectCell(RPD.textById("Action_Use"),RPD.textById("Select_A_Cage"))
+        if action == RPD.StringsManager:maybeId("Action_Use") then
+            item:selectCell(RPD.StringsManager:maybeId("Action_Use"),RPD.StringsManager:maybeId("Select_A_Cage"))
         end
     end
 

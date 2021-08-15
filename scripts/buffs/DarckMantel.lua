@@ -3,7 +3,7 @@
 --- Created by mike.
 --- DateTibuff.target: 25.03.19 0:06
 ---
-local RPD  = require "scripts/lib/commonClasses"
+local RPD  = require "scripts/lib/epicClasses"
 
 local buff = require "scripts/lib/buff"
 
@@ -11,7 +11,7 @@ return buff.init{
     desc  = function ()
         return {
             icon          = 51,
-            name         = RPD.textById("Darck_Mantel_Buff"),
+            name         = RPD.StringsManager:maybeId("Darck_Mantel_Buff"),
             info          = "DieHard_Info",
         }
     end,

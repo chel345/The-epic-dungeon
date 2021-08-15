@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local spell = require "scripts/lib/spell"
 
@@ -26,8 +26,8 @@ return spell.init{
         return {
             image         = 0,
             imageFile     = "mobs/enslavedsoul.png",
-            name          = RPD.textById("RaiseSoul_Name"),
-            info          = RPD.textById("RaiseSoul_Info"),
+            name          = RPD.StringsManager:maybeId("RaiseSoul_Name"),
+            info          = RPD.StringsManager:maybeId("RaiseSoul_Info"),
             magicAffinity = "Necromancy",
             targetingType = "none",
             spellCost     = 5,

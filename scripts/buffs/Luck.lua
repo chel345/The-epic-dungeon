@@ -1,6 +1,6 @@
 -- This is demo buff for charAct
 
-local RPD  = require "scripts/lib/commonClasses"
+local RPD  = require "scripts/lib/epicClasses"
 
 local buff = require "scripts/lib/buff"
 
@@ -8,7 +8,7 @@ return buff.init{
     desc  = function ()
         return {
             icon          = 55,
-            name          = RPD.textById("Luck_Buff"),
+            name          = RPD.StringsManager:maybeId("Luck_Buff"),
             info          = "CounterBuff_Info",
         }
     end,

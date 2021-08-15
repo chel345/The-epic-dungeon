@@ -7,7 +7,7 @@
 
 local serpent = require "scripts/lib/serpent"
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local util = require "scripts/lib/util"
 

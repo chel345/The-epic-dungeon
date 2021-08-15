@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local wand = require "scripts/lib/wand"
 
@@ -20,8 +20,8 @@ return wand.init{
 candle = item
         return {
         imageFile = "items/Candles.png",
-        name      = RPD.textById("Candle_Name"),
-        info      = RPD.textById("Candle_Info")
+        name      = RPD.StringsManager:maybeId("Candle_Name"),
+        info      = RPD.StringsManager:maybeId("Candle_Info")
         }
 end, 
 
@@ -52,7 +52,7 @@ end,
 
 activate = function(self, item, hero)
 if item:level() <= 0 then
-RPD.glog(RPD.textById("ExtinguishedCandle"))
+RPD.glog(RPD.StringsManager:maybeId("ExtinguishedCandle"))
 item:getUser():collect(RPD.item("Candles/Candle"))
 item:removeItemFrom(item:getUser())
 return
@@ -73,7 +73,7 @@ end
 if candle:level() <= 0 then
 candle:deactivate()
 
-RPD.glog(RPD.textById("ExtinguishedCandle"))
+RPD.glog(RPD.StringsManager:maybeId("ExtinguishedCandle"))
 candle:removeItemFrom(candle:getUser())
 RPD.Dungeon.hero:collect(RPD.item("Candles/Candle"))
 

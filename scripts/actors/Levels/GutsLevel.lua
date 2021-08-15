@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local actor = require "scripts/lib/actor"
 
@@ -42,31 +42,9 @@ end
 return true
 end,
     actionTime = function()
-        return math.random(1,RPD.Dungeon.level:getLength()-1)
+        return 1
     end,
 act = function()
-local level = RPD.Dungeon.level
-local mob1 = RPD.MobFactory:mobByName("SuspiciousRat")
-local mob2 = RPD.MobFactory:mobByName("ZombieGnoll")
-local mob3 = RPD.MobFactory:mobByName("Worm")
-local mob4 = RPD.MobFactory:mobByName("ShadowScorpio")
-d = math.random(1,RPD.Dungeon.level:getLength()-1)
-while RPD.Dungeon.level.map[d] ~= 1 do
-d = math.random(1,RPD.Dungeon.level:getLength()-1)
-end
-if math.random(2,20) == 2 then
-mob1:setPos(d)
-level:spawnMob(mob1)
-elseif math.random(2,15) == 2 then
-mob2:setPos(d)
-level:spawnMob(mob2)
-elseif math.random(2,30) == 2 then
-mob3:setPos(d)
-level:spawnMob(mob3)
-elseif math.random(1,20) == 1 then
-mob4:setPos(d)
-level:spawnMob(mob4)
-end
 return true
 end
 })

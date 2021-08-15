@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -25,7 +25,7 @@ return item.init{
         local level = RPD.Dungeon.level
      
         if level.map[cell] then
-            local mob = RPD.MobFactory:mobByName("CrystalMod")
+            local mob = RPD.MobFactory:mobByName("bosses/RatImperator")
     mob:setPos(cell)
       level:spawnMob(mob)     
         else

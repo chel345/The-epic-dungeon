@@ -1,4 +1,4 @@
-local RPD  = require "scripts/lib/commonClasses"
+local RPD  = require "scripts/lib/epicClasses"
 
 local EPD  = require "scripts/lib/dopClasses"
 
@@ -34,6 +34,9 @@ local room = {
         local x     = level:cellX(cell)
         local y     = level:cellY(cell)
         local l     = level:getLength()
+        if cell > l or cell < 1 then
+return false
+end
         if x >= math.ceil(w / 2) and x <= W - math.ceil(w / 2) then
             if cell >= W * (w / 2) + 1 and cell <= l - W * (w / 2) - 1 then
                 for t = x - math.ceil(w / 2), x + math.ceil(w / 2) do
@@ -240,7 +243,7 @@ local room = {
                 level:set(pos - 1, RPD.Terrain.EMPTY_SP)
             end
 
-            if level.map[pos] == RPD.Terrain.WALL then
+            if level.map[pos] == RPD.Terrain.WALL or level.map[pos] == 25 then
                 level:set(pos - 1, RPD.Terrain.EMPTY)
             end
 

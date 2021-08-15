@@ -5,14 +5,14 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
 return mob.init({
     interact = function(self, chr)
 local EPD = require "scripts/lib/dopClasses"
-EPD.showQuestWindow(self,RPD.textById("DworfWomenNPC_Phrase1"))
+EPD.showQuestWindow(self,RPD.StringsManager:maybeId("DworfWomenNPC_Phrase1"))
 end
 })
 

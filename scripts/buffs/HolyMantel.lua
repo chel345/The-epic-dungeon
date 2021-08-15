@@ -1,4 +1,4 @@
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local buff = require "scripts/lib/buff"
 
@@ -8,7 +8,7 @@ return buff.init{
 desc = function ()
 return {
 icon = 50,
-name = RPD.textById("Holy_Mantel_Buff"),
+name = RPD.StringsManager:maybeId("Holy_Mantel_Buff"),
 info = "DieHard_Info",
 }
 end,

@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -17,8 +17,8 @@ return item.init{
         return {
            image     = 0,
             imageFile = "items/Tears.png",
-            name      = RPD.textById("TearsRock_Name"),
-            info     = RPD.textById("TearsRock_Info"),
+            name      = RPD.StringsManager:maybeId("TearsRock_Name"),
+            info     = RPD.StringsManager:maybeId("TearsRock_Info"),
             stackable = false,
              price     = 200,
            isArtifact    = true
@@ -26,18 +26,18 @@ return item.init{
     end,   
     actions = function(self, item,  hero)
         if item:isEquipped(hero) then
-            return {RPD.textById("Action_Use")}
+            return {RPD.StringsManager:maybeId("Action_Use")}
         end
         return {}
     end,
         cellSelected = function(self, thisItem, action, cell)
-        if action == RPD.textById("Action_Use") then
+        if action == RPD.StringsManager:maybeId("Action_Use") then
 thisItem:getUser():spend(1)
 mana = RPD.Dungeon.hero:getSkillPoints()
 if mana > 20 then
 RPD.Dungeon.hero:spendSkillPoints(20)
 else
-RPD.glog(RPD.textById("No_Mana"))
+RPD.glog(RPD.StringsManager:maybeId("No_Mana"))
 return
 end
 
@@ -54,8 +54,8 @@ end
 end
 end,
     execute = function(self, item, hero, action)
-        if action == RPD.textById("Action_Use") then
-            item:selectCell(RPD.textById("Action_Use"),RPD.textById("Select_A_Cage"))
+        if action == RPD.StringsManager:maybeId("Action_Use") then
+            item:selectCell(RPD.StringsManager:maybeId("Action_Use"),RPD.StringsManager:maybeId("Select_A_Cage"))
         end
     end
 

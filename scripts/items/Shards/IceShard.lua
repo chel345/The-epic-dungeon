@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 3,
             imageFile = "items/Shards.png",
-            name      = RPD.textById("IceShard_Name"),
-            info      = RPD.textById("IceShard_Info"),
+            name      = RPD.StringsManager:maybeId("IceShard_Name"),
+            info      = RPD.StringsManager:maybeId("IceShard_Info"),
             stackable = false,
             upgradable    = false,
              price     = 50
@@ -37,7 +37,7 @@ thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack)
 end,
     execute = function(self, item, hero, action)
         if action == RPD.Actions.zap then
-            item:selectCell( RPD.Actions.zap ,RPD.textById("Select_A_Cage"))
+            item:selectCell( RPD.Actions.zap ,RPD.StringsManager:maybeId("Select_A_Cage"))
         end
 end
 }

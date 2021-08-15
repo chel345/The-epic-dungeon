@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -15,8 +15,8 @@ return item.init{
         return {
            image     = 5,
             imageFile = "items/RangedMod.png",
-            name      = RPD.textById("LightDanger_Name"),
-            info      = RPD.textById("LightDanger_Info"),
+            name      = RPD.StringsManager:maybeId("LightDanger_Name"),
+            info      = RPD.StringsManager:maybeId("LightDanger_Info"),
             stackable = true,
             price     = 10
         }
@@ -49,7 +49,7 @@ RPD.affectBuff(soul, RPD.Buffs.Light , 5+item:level());
 soul:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.UP, 8 )
 soul:damage(3*RPD.Dungeon.depth+item:level(),item:getUser())
 else
-soul:getSprite():showStatus(0xCCAA44,RPD.textById("Dodged"))
+soul:getSprite():showStatus(0xCCAA44,RPD.StringsManager:maybeId("Dodged"))
 item:dropTo(cell)
 end
 

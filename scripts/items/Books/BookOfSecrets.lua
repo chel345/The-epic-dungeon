@@ -5,7 +5,7 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
-local RPD  = require "scripts/lib/commonClasses"
+local RPD  = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
@@ -18,19 +18,19 @@ return item.init {
         return {
             image      = 4,
             imageFile  = "items/BooksInCityLibrary.png",
-            name       = RPD.textById("BookOfSecrets_Name"),
-            info       = RPD.textById("BookOfSecrets_Info"),
+            name       = RPD.StringsManager:maybeId("BookOfSecrets_Name"),
+            info       = RPD.StringsManager:maybeId("BookOfSecrets_Info"),
             stackable  = false,
             upgradable = false,
             equipable  = "left_hand",
             price      = 200,
             --   isArtifact    = true,
-defaultAction = RPD.textById("Action_Use")
+defaultAction = RPD.StringsManager:maybeId("Action_Use")
         }
     end,
     actions      = function(self, item, hero)
         if item:isEquipped(hero) then
-            return { RPD.textById("Action_Use") }
+            return { RPD.StringsManager:maybeId("Action_Use") }
         end
     end,
     activate     = function(self, item, hero)
@@ -39,7 +39,7 @@ defaultAction = RPD.textById("Action_Use")
     deactivate   = function(self, item, hero)
     end,
     cellSelected = function(self, thisItem, action, cell)
-        if action == RPD.textById("Action_Use") and cell ~= nil then
+        if action == RPD.StringsManager:maybeId("Action_Use") and cell ~= nil then
 thisItem:getUser():spend(2)
             local user         = thisItem:getUser()
             local level        = RPD.Dungeon.level
@@ -48,7 +48,7 @@ thisItem:getUser():spend(2)
             if user:getSkillPoints() >= 15 then
                 user:spendSkillPoints(15)
             else
-                RPD.glog(RPD.textById("No_Mana"))
+                RPD.glog(RPD.StringsManager:maybeId("No_Mana"))
                 return
             end
 
@@ -63,7 +63,7 @@ thisItem:getUser():spend(2)
                             neutralGhost:ht(RPD.Dungeon.depth * 15)
                             neutralGhost:hp(neutralGhost:ht())
                         end
-                        -- neutralGhost:yell(RPD.textById("RoomNotOpening"))
+                        -- neutralGhost:yell(RPD.StringsManager:maybeId("RoomNotOpening"))
                     end
 
                 else
@@ -87,13 +87,13 @@ thisItem:getUser():spend(2)
                 end
 
             else
-                RPD.glog(RPD.textById("HereAreNoSecrets"))
+                RPD.glog(RPD.StringsManager:maybeId("HereAreNoSecrets"))
             end
         end
     end,
     execute      = function(self, item, hero, action)
-        if action == RPD.textById("Action_Use") then
-            item:selectCell(RPD.textById("Action_Use"), RPD.textById("Select_A_Cage"))
+        if action == RPD.StringsManager:maybeId("Action_Use") then
+            item:selectCell(RPD.StringsManager:maybeId("Action_Use"), RPD.StringsManager:maybeId("Select_A_Cage"))
         end
     end
 

@@ -6,7 +6,7 @@
 
 
 
-local RPD = require "scripts/lib/commonClasses"
+local RPD = require "scripts/lib/epicClasses"
 
 local actor = require "scripts/lib/actor"
 
@@ -17,9 +17,9 @@ activate = function()
 local level = RPD.Dungeon.level
 if RPD.Dungeon.depth == 31 then
 if not storage.get("storytears") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.textById("CityOfTears_Story"))
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("CityOfTears_Story"))
        RPD.GameScene:show(wnd)
-       storage.get("storytears",true)
+       storage.put("storytears",true)
 end
 end
 if RPD.Dungeon.depth == 31 then

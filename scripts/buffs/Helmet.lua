@@ -3,7 +3,7 @@
 --- Created by mike.
 --- DateTime: 02.05.19 14:36
 ---
-local RPD  = require "scripts/lib/commonClasses"
+local RPD  = require "scripts/lib/epicClasses"
 
 local buff = require "scripts/lib/buff"
 
