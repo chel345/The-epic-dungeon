@@ -34,6 +34,7 @@ RPD.createLevelObject(candle,cell+W+2)
 
 local mob = RPD.MobFactory:mobByName("CastleKeeperNPC")
 local level = RPD.Dungeon.level
+mob:collect(RPD.item("TomeOfKnowledge"))
 mob:setPos(cell)
 level:spawnMob(mob);
 end,

@@ -23,13 +23,13 @@ return wand.init{
 end, 
 
     activate = function(self, item, hero)
-                RPD.removeBuff(item:getUser(), "Summoners")
+                RPD.removeBuff(item:getUser(), "SummonersW")
 
-        RPD.permanentBuff(item:getUser(), "Summoners")
+        RPD.permanentBuff(item:getUser(), "SummonersW")
     end,
 
     deactivate = function(self, item, hero)
-            RPD.removeBuff(item:getUser(), "Summoners")
+            RPD.removeBuff(item:getUser(), "SummonersW")
     end,
 
 cast = function(self,thisItem,lvl)

@@ -27,15 +27,9 @@ local zap =
 }
 
 return mob.init{
-
-    attackProc = function(self, enemy, dmg)
-        RPD.zapEffect(self:getPos(), enemy:getPos(), zap[math.random(1, 5)])
-            RPD.placeBlob( blob[math.random(1, 5)], enemy:getPos(), 50)
-        return dmg
-    end,
     zapProc = function(self, enemy, dmg)
         RPD.zapEffect(self:getPos(), enemy:getPos(), zap[math.random(1, 5)])
-            RPD.placeBlob( blob[math.random(1, 5)], enemy:getPos(), 50)
+            RPD.placeBlob( blob[math.random(1, 5)], enemy:getPos(), 10)
         return dmg
     end,
 die = function(self, enemy, dmg)

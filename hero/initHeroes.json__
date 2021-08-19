@@ -39,6 +39,7 @@
 {"kind":"Helmets/PlateHelmet"},
 {"kind":"Helmets/GoticHelmet"},
 */
+
 {"kind":"Tears/TearsWand"},
 {"kind": "PotionOfMindVision","level":100},
 {"kind": "ScrollOfMagicMapping",       "quantity": 10000000000000},
@@ -52,6 +53,7 @@
 {"kind": "PotionOfLevitation","level":100},
 {"kind": "ScrollOfTeleportation"},
 {"kind": "Gold",       "quantity": 10000000}
+
     ], 
     "str": 150000,
     "hp": 2000000,

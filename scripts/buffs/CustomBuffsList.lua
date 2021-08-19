@@ -28,13 +28,13 @@ local buffs = {
 "IceSkull",
 
 -- wands buffs
-"Summoners",
-"Poison",
-"Earth",
-"Lighting",
-"Mirror",
-"Posses",
-"Rock",
+"SummonersW",
+"PoisonW",
+"EarthW",
+"LightingW",
+"MirrorW",
+"PossesW",
+"RockW",
 
 -- ai buffs
 "FollowMe",

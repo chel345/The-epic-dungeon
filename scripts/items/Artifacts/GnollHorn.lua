@@ -26,8 +26,8 @@ return item.init{
     if action == RPD.StringsManager:maybeId("Blow") then  
 
 mana = RPD.Dungeon.hero:getSkillPoints()
-if mana > 45 then
-RPD.Dungeon.hero:spendSkillPoints(45)
+if mana > 15 then
+RPD.Dungeon.hero:spendSkillPoints(15)
 else
 RPD.glog(RPD.StringsManager:maybeId("No_Mana"))
 return

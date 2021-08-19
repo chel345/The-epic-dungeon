@@ -60,7 +60,6 @@ local Chest =
     kind="Deco",
     object_desc=kind
 }
-RPD.glog(kind)
 RPD.createLevelObject(Chest,pos)
 RPD.Sfx.CellEmitter:get(pos):burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.STEAM ), 2);
 if math.random(1,25) == 1 then

@@ -23,14 +23,14 @@ return wand.init{
 end, 
 
     activate = function(self, item, hero)
-                RPD.removeBuff(item:getUser(), "Mirror")
+                RPD.removeBuff(item:getUser(), "MirrorW")
 
-        RPD.permanentBuff(item:getUser(), "Mirror")
+        RPD.permanentBuff(item:getUser(), "MirrorW")
 
     end,
 
     deactivate = function(self, item, hero)
-                RPD.removeBuff(item:getUser(), "Mirror")
+                RPD.removeBuff(item:getUser(), "MirrorW")
     end,
 
 cast = function(self,thisItem,lvl)

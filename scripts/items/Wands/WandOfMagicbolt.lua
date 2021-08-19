@@ -27,19 +27,20 @@ return wand.init {
 
         RPD.permanentBuff(item:getUser(), RPD.Buffs.Light)
 
-        RPD.removeBuff(item:getUser(), "Lighting")
+        RPD.removeBuff(item:getUser(), "LightingW")
 
-        RPD.permanentBuff(item:getUser(), "Lighting")
+        RPD.permanentBuff(item:getUser(), "LightingW")
 
     end,
 
     deactivate = function(self, item, hero)
         RPD.removeBuff(item:getUser(), RPD.Buffs.Light)
-        RPD.removeBuff(item:getUser(), "Lighting")
+        RPD.removeBuff(item:getUser(), "LightingW")
     end,
 
     castOnCell = function(self, thisItem, cell, dst, lvl)
 thisItem:getUser():spend(TIME_TO_ZAP)
+local enemy = RPD.Actor:findChar(dst)
             if RPD.Dungeon.level.map[cell] == RPD.Terrain.STATUE or RPD.Dungeon.level.map[cell] == RPD.Terrain.STATUE_SP then
                 RPD.Dungeon.level:set(cell, RPD.Terrain.EMPTY)
                 EPD.SpawnMob("SumStatue", cell, true)
@@ -48,10 +49,10 @@ thisItem:getUser():spend(TIME_TO_ZAP)
 
         if enemy then
 
-            if math.random(1, 25 - lvl) == 1 then
+            if math.random(1, 5) == 1 then
                 RPD.affectBuff(enemy, RPD.Buffs.Paralysis, 10)
             end
-            enemy:damage(2 * RPD.Dungeon.depth, thisItem:getUser())
+            enemy:damage((lvl+1) * RPD.Dungeon.depth, thisItem:getUser())
             enemy:getSprite():emitter():start(RPD.Sfx.SparkParticle.FACTORY, 0.1, 1)
             RPD.zapEffect(thisItem:getUser():getPos(), enemy:getPos(), "Lightning")
         else

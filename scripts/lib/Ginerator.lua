@@ -148,6 +148,155 @@ r = nil
 s = nil
 n = nil
 
+elseif gin.kind == "Womb" then
+
+dest = function()
+set = function(cell)
+local level = RPD.Dungeon.level
+local x = level:cellX(cell)
+local y = level:cellY(cell)
+local rr = gin.WombFactor
+for i = x - rr, x + rr do
+for j = y - rr, y + rr do
+local pos = RPD.Dungeon.level:cell(i,j)
+pcall(function() level:set(pos-1,1) RPD.GameScene:updateMap(pos-1) end)
+end
+end
+end
+a = RPD.Dungeon.hero:getPos()
+set(a)
+for i = 1, gin.WombSeed do
+W = RPD.Dungeon.level:getWidth()
+a = math.random(W*4,RPD.Dungeon.level:getLength()-W*4)
+set(a)
+for i = 1,gin.WombFactorChanse do
+a = math.random(W*4,RPD.Dungeon.level:getLength()-W*4)
+while (RPD.Dungeon.level.map[a] ~= 1) do
+a = math.random(W*4,RPD.Dungeon.level:getLength()-W*4)
+end
+set(a)
+end
+end
+end
+
+if not gin.HasBase then
+if room.canSpawnAt(RPD.Dungeon.hero:getPos(),gin.RoomWidth-1,gin.RoomHeigth-1) then
+room.ClearLevel()
+dest()
+st = RPD.Dungeon.hero:getPos()
+room.printRoom(RPD.Dungeon.hero:getPos(), gin.Entrance)
+else
+room.ClearLevel()
+dest()
+st = RPD.Dungeon.hero:getPos()
+room.printRoom(RPD.Dungeon.hero:getPos(), "EntranceDebag")
+end
+end
+st = RPD.Dungeon.hero:getPos()
+
+local level = RPD.Dungeon.level
+local l = level:getLength()
+local w = level:getWidth()
+
+r = math.random(1,l-2)
+while (true) do
+if room.canSpawnAt(r,gin.ExitWidth,gin.ExitHeigth) then
+break
+end
+r = math.random(1,l-2)
+end
+room.printRoom(r,gin.Exit)
+room.Tunel(st,r)
+level:setExit(r)
+st = r
+
+if gin.Shop ~= nil then
+if gin.LevelShop == RPD.Dungeon.depth then
+r = math.random(1,l-1)
+while (true) do
+if room.canSpawnAt(r,gin.RoomWidth,gin.RoomHeigth) then
+break
+end
+r = math.random(1,l-1)
+end
+room.printRoom(r,gin.Shop)
+room.Tunel(st,r)
+st = r
+end
+end
+
+
+if gin.MiniBoss ~= nil then
+if gin.LevelMiniBoss == RPD.Dungeon.depth then
+r = math.random(1,l-2)
+while (true) do
+if room.canSpawnAt(r,gin.RoomWidth,gin.RoomHeigth) then
+break
+end
+r = math.random(1,l-2)
+end
+room.printRoom(r,gin.MiniBoss)
+room.Tunel(st,r)
+st = r
+end
+end
+
+if gin.NPCRoom ~= nil then
+if gin.levelNPC == RPD.Dungeon.depth then
+r = math.random(1,l-2)
+while (true) do
+if room.canSpawnAt(r,gin.NPCRoomWidth,gin.NPCRoomHeigth) then
+break
+end
+r = math.random(1,l-2)
+end
+room.printRoom(r,gin.NPCRoom)
+room.Tunel(st,r)
+st = r
+end
+end
+
+-- st
+
+for i = 1, l-1 do
+if room.canSpawnAt(i,gin.RoomWidth,gin.RoomHeigth) then
+local rooms = gin.RandRooms
+s = rooms[math.random(1,#rooms)]
+room.printRoom(i-1,s)
+room.Tunel(st, i-1)
+--room.addDoors(s,i-1)
+st = i-1
+end
+end
+
+room.Correct()
+room.MakeBorder()
+
+if gin.Items ~= nil then
+for i = 1, #gin.Items do
+r = RPD.Dungeon.level:randomRespawnCell()
+if r ~= nil and r ~= -1 then
+RPD.Dungeon.level:drop(RPD.item(gin.Items[i]),r)
+end
+end
+end
+
+if gin.Water ~= nil then
+room.addWater(gin.WaterMin,gin.WaterMax, gin.WaterChanse)
+end
+if gin.Grass ~= nil then
+room.addGrass(gin.GrassMin,gin.GrassMax,gin.GrassChanse)
+end
+if gin.Traps ~= nil then
+room.addTraps(gin.Traps,gin.ChanseTrap)
+end
+RPD.RemixedDungeon:resetScene()
+
+st = nil
+r = nil
+s = nil
+n = nil
+
 elseif gin.kind == "Castle" then
 
 local level = RPD.Dungeon.level

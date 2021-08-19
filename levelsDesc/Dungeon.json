@@ -256,13 +256,13 @@
 
 
 "Necro1":{"kind":"NecroLevel", "depth":11,      "size":[32,32],
-"music":"NecroLevel.ogg","script":"scripts/actors/Levels/NecroLevel"},
+"music":"NecroLevel.ogg","script":"scripts/actors/Levels/NecroLevel", "noBuild":true},
       
 "Necro2":{"kind":"NecroLevel", "depth":12,      "size":[32,32],
-"music":"NecroLevel.ogg","script":"scripts/actors/Levels/NecroLevel"},
+"music":"NecroLevel.ogg","script":"scripts/actors/Levels/NecroLevel", "noBuild":true},
 
 "Necro3":{"kind":"NecroLevel", "depth":13,     "size":[32,32],
-"music":"NecroLevel.ogg","script":"scripts/actors/Levels/NecroLevel"},
+"music":"NecroLevel.ogg","script":"scripts/actors/Levels/NecroLevel", "noBuild":true},
 
 "Necro4":{"kind":"PredesignedLevel", "depth":14, "file":"levelsDesc/DarckShop.json","script":"scripts/actors/Levels/NecroLevel","noFogOfWar":true, "isSafe":true, "isStatic":true,"music":"ShopLevel.ogg"},
 
@@ -270,15 +270,15 @@
 
 
 
-"Shad1":{"kind":"RandomLevel", "depth":16, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel"},
+"Shad1":{"kind":"RandomLevel", "depth":16, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel", "noBuild":true},
       
-"Shad2":{"kind":"RandomLevel", "depth":17, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel"},
+"Shad2":{"kind":"RandomLevel", "depth":17, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel", "noBuild":true},
       
-"Shad3":{"kind":"RandomLevel", "depth":18, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel"},
+"Shad3":{"kind":"RandomLevel", "depth":18, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel", "noBuild":true},
       
-"Shad4":{"kind":"RandomLevel", "depth":19, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel"},
+"Shad4":{"kind":"RandomLevel", "depth":19, "file":"levelsDesc/KindLevel/ShadowLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel", "noBuild":true},
       
-"Shad5":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/BossLevel/ShadowBossLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel"},
+"Shad5":{"kind":"PredesignedLevel", "depth":20, "file":"levelsDesc/BossLevel/ShadowBossLevel.json", "music":"ShadowLevel.ogg","script":"scripts/actors/Levels/ShadowLevel", "noBuild":true},
 
 
 
@@ -473,7 +473,7 @@
 
 
       
-"Scvern":{"kind":"RandomLevel", "depth":11, "file":"levelsDesc/SkvernNecropolis.json", "music":"SkvernLevel.ogg","script":"scripts/actors/Levels/SkvernLevel"}
+"Scvern":{"kind":"RandomLevel", "depth":13, "file":"levelsDesc/SkvernNecropolis.json", "music":"SkvernLevel.ogg","script":"scripts/actors/Levels/SkvernLevel", "noBuild":true}
 },
 
    "Graph":{

@@ -14,7 +14,7 @@ local room = {
             Ccell = cell + w * (i + 1)
             for j = Ccell - math.floor(Wr / 2), Ccell + math.floor(Wr / 2) do
                 if num > Hr * Wr then
-                    CustomRoom.objects(cell)
+                    if CustomRoom.objects ~= nil then CustomRoom.objects(cell) end
                     return
                 end
                 pcall(function()

@@ -39,6 +39,7 @@ local Paint =
 }
 RPD.createLevelObject(Paint,cell+W+3)
 local mob = RPD.MobFactory:mobByName("Shopkeeper")
+mob:collect(RPD.item("TomeOfKnowledge"))
 local level = RPD.Dungeon.level
 mob:setPos(cell+1)
 level:spawnMob(mob);

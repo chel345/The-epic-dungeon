@@ -15,6 +15,7 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
     activate = function()
+Ginerator.CreateLevel("NecroLevel",true)
 return true
 end,
     actionTime = function()

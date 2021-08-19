@@ -27,6 +27,7 @@ local candle =
 RPD.createLevelObject(candle,cell+W+1)
 
 local mob = RPD.MobFactory:mobByName("Shopkeeper")
+mob:collect(RPD.item("TomeOfKnowledge"))
 local level = RPD.Dungeon.level
 mob:setPos(cell)
 level:spawnMob(mob)

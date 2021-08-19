@@ -19,6 +19,7 @@ end,
 objects = function(cell)
 local mob = RPD.MobFactory:mobByName("Shopkeeper")
 local level = RPD.Dungeon.level
+mob:collect(RPD.item("TomeOfKnowledge"))
 mob:setPos(cell-1)
 level:spawnMob(mob);
 end,

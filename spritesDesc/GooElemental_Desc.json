@@ -5,22 +5,22 @@
    "idle" : {
       "fps" : 6,
       "looped" : true,
-      "frames" : [0, 1, 2, 3]
+      "frames" : [0, 1]
    },
    "run" : {
       "fps" : 6,
       "looped" : true,
-      "frames" : [0, 1, 2, 3]
+      "frames" : [0, 1]
    },
    "attack" : {
-      "fps" : 6,
+      "fps" : 10,
       "looped" : false,
-      "frames" : [0, 1, 2, 3]
+      "frames" : [2,3,2]
    },
    "die" : {
       "fps" : 6,
       "looped" : false,
-      "frames" : [0, 1, 2, 3]
+      "frames" : [4,5]
    },
    "bloodColor" : "0x33CCFF"
 }

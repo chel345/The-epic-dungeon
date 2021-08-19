@@ -23,13 +23,13 @@ return wand.init{
 end, 
 
     activate = function(self, item, hero)
-                RPD.removeBuff(item:getUser(), "Poison")
+                RPD.removeBuff(item:getUser(), "PoisonW")
 
-        RPD.permanentBuff(item:getUser(), "Poison")
+        RPD.permanentBuff(item:getUser(), "PoisonW")
     end,
  
     deactivate = function(self, item, hero)
-            RPD.removeBuff(item:getUser() ,"Poison")
+            RPD.removeBuff(item:getUser() ,"PoisonW")
     end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)

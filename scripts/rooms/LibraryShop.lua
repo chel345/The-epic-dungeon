@@ -39,6 +39,7 @@ local Tickets1 =
 RPD.createLevelObject(Tickets1,cell+W*2+2)
 
 local mob = RPD.MobFactory:mobByName("Shopkeeper")
+mob:collect(RPD.item("TomeOfKnowledge"))
 local level = RPD.Dungeon.level
 mob:setPos(cell+1)
 level:spawnMob(mob);

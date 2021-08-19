@@ -25,7 +25,7 @@ return item.init{
         local level = RPD.Dungeon.level
      
         if level.map[cell] then
-            local mob = RPD.MobFactory:mobByName("bosses/RatImperator")
+            local mob = RPD.MobFactory:mobByName("NightmareBall")
     mob:setPos(cell)
       level:spawnMob(mob)     
         else

@@ -134,9 +134,10 @@
     "Scrolls/ScrollOfRaiseDeat":10,
     "Scrolls/ScrollOfTime":10,
     "Scrolls/ScrollOfNightmare":10, 
-    "Books/SummonersBook":5,
-    "Books/BookOfDragoman":7,
-    "Books/BookOfSecrets":3
+    "Books/SummonersBook":4,
+    "Books/BookOfDragoman":6,
+    "Books/BookOfSecrets":4,
+    "Stylus":5
   },
   "POTION": {
     "PotionOfInvisibility": 10,

@@ -24,10 +24,10 @@ attackProc = function(self,buff,enemy,damage)
 Lightning = function(cell)
 local soul = RPD.Actor:findChar(cell)
 if RPD.Actor:findChar(cell) then
-if math.random(1,5) == 1 then
+if math.random(1,3) == 1 then
 RPD.zapEffect(buff.target:getPos(),cell,"Lightning")
-RPD.Actor:findChar(cell):damage(math.random(math.max(RPD.Dungeon.depth,buff.target:lvl()),buff.target:lvl()), RPD.Dungeon.hero)
-RPD.Actor:findChar(cell):getSprite():emitter():start( RPD.Sfx.SparkParticle.FACTORY,0.01,2)
+RPD.Actor:findChar(cell):damage(math.random(math.max(RPD.Dungeon.depth,buff.target:lvl()),math.max(RPD.Dungeon.depth,buff.target:lvl())+1), RPD.Dungeon.hero)
+--RPD.Actor:findChar(cell):getSprite():emitter():start( RPD.Sfx.SparkParticle.FACTORY,0.01,2)
 return damage
 end
 end

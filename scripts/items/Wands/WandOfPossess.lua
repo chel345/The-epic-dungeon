@@ -23,14 +23,14 @@ return wand.init{
 end, 
 
     activate = function(self, item, hero)
-                RPD.removeBuff(item:getUser(), "Posses")
+                RPD.removeBuff(item:getUser(), "PossesW")
 
-        RPD.permanentBuff(item:getUser(), "Posses")
+        RPD.permanentBuff(item:getUser(), "PossesW")
 
     end,
 
     deactivate = function(self, item, hero)
-                RPD.removeBuff(item:getUser(), "Posses")
+                RPD.removeBuff(item:getUser(), "PossesW")
     end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)

@@ -69,6 +69,7 @@ end
 
 local mob = RPD.MobFactory:mobByName("AzuterronNPC")
 local level = RPD.Dungeon.level
+mob:collect(RPD.item("TomeOfKnowledge"))
 mob:setPos(cell)
 level:spawnMob(mob)
 

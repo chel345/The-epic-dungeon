@@ -22,6 +22,9 @@ if not storage.get("storyshadow") then
        storage.put("storyshadow",true)
 end
 end
+if RPD.Dungeon.depth ~= 20 then
+Ginerator.CreateLevel("ShadowLevel",true)
+end
 return true
 end,
     actionTime = function()

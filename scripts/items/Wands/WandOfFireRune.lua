@@ -27,15 +27,15 @@ end,
 
         RPD.permanentBuff(item:getUser(), RPD.Buffs.Light)
 
-                RPD.removeBuff(item:getUser(), "Fire")
+                RPD.removeBuff(item:getUser(), "FireW")
 
-        RPD.permanentBuff(item:getUser(), "Fire")
+        RPD.permanentBuff(item:getUser(), "FireW")
 
     end,
 
     deactivate = function(self, item, hero)
             RPD.removeBuff(item:getUser(), RPD.Buffs.Light)
-                RPD.removeBuff(item:getUser(), "Fire")
+                RPD.removeBuff(item:getUser(), "FireW")
     end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)

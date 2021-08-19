@@ -35,7 +35,11 @@ end,
 activate = function()
 if not storage.get("level_spawner") then
 local level = RPD.Dungeon.level
+if level:getLength() > 64*64 then
+max = math.floor(level:getLength()/200)
+else
 max = math.floor(level:getLength()/100)
+end
 for i = 1,max  do
 local mob = Best:mob(level)
 mob:setPos(getCell())
@@ -46,7 +50,11 @@ end
 end,
 act = function()
 local level = RPD.Dungeon.level
+if level:getLength() > 64*64 then
+max = math.floor(level:getLength()/200)
+else
 max = math.floor(level:getLength()/100)
+end
 now = 0
 local level = RPD.Dungeon.level
 for i = 0, level:getLength()-1 do
@@ -65,6 +73,9 @@ RPD.setAi(mob,"Wandering")
 return true
 end,
 actionTime = function()
+if level:getLength() > 64*64 then
+return 60
+end
 return 30
 end
 })
