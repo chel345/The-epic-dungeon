@@ -19,7 +19,6 @@
   "maxLvl": 0,
   "name": "DarckShot_Name",
   "name_objective": "DarckShot_Object",
-  "scriptFile": "scripts/effects/DarckShot",
   "spriteDesc": "spritesDesc/DarckShot_Desc.json",
   "walkingType": "NORMAL"
 }

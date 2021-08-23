@@ -264,7 +264,7 @@
 "Necro3":{"kind":"NecroLevel", "depth":13,     "size":[32,32],
 "music":"NecroLevel.ogg","script":"scripts/actors/Levels/NecroLevel", "noBuild":true},
 
-"Necro4":{"kind":"PredesignedLevel", "depth":14, "file":"levelsDesc/DarckShop.json","script":"scripts/actors/Levels/NecroLevel","noFogOfWar":true, "isSafe":true, "isStatic":true,"music":"ShopLevel.ogg"},
+"Necro4":{"kind":"PredesignedLevel", "depth":14, "file":"levelsDesc/DarckShop.json","script":"scripts/actors/Levels/NecroLevel","music":"ShopLevel.ogg"},
 
 "Necro5":{"kind":"NecroBossLevel", "depth":15, "size":[32,32],"script":"scripts/actors/Levels/NecroLevel","music":"NecroLevel.ogg"},
 
@@ -487,7 +487,7 @@
 "ModRoom":[[],["TownLibrary"]],
 "Inn":[[],["Town"]],
 
-"Town":[["TownChurch", "TownMovieTheater", "Sewer1","TownLibrary", "TownShop","FortuneShop", "Inn"],[]],
+"Town":[["TownChurch", "TownMovieTheater", "Necro4","TownLibrary", "TownShop","FortuneShop", "Inn"],[]],
 
 
 "portal_room_lvl5":[["Prison1"],["Sewer5"]],
@@ -676,7 +676,7 @@
 "Necro1":[["Necro2"],["portal_room_lvl10_u"]],
 "Necro2":[["Scvern"],["Necro1"]],
 "Scvern":[["Necro4"],["Necro2"]],
-"Necro4":[["Necro5"],["Necro3"]],
+"Necro4":[["Necro5"],["Scvern"]],
 "Necro5":[["portal_room_lvl15_u"],["Necro4"]],
 
 

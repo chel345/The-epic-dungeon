@@ -8,6 +8,8 @@ local room = require "scripts/lib/room"
 
 local Treasury = luajava.bindClass("com.nyrds.pixeldungeon.items.Treasury")
 
+local mob
+
 local customRoom = {
 
 map = function()
@@ -30,9 +32,10 @@ for i = x - 3, x + 3 do
 local pos = RPD.Dungeon.level:cell(i,j)
 
 if math.random(1,6) == 1 and level.map[pos] == 0 then
-local mob = RPD.MobFactory:mobByName("EnslavedSoul")
 if RPD.Dungeon.depth == 13 then
-local mob = RPD.MobFactory:mobByName("SkvernSoul")
+mob = RPD.MobFactory:mobByName("SkvernSoul")
+else
+mob = RPD.MobFactory:mobByName("EnslavedSoul")
 end
 local level = RPD.Dungeon.level
 mob:setPos(pos-1)

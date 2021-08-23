@@ -2,7 +2,6 @@
    "texture" : "MagicEye.png",
    "width" : 16,
    "height" : 18,
-  "zapEffect" : "DeathRay",
    "idle" : {
       "fps" : 10,
       "looped" : true,

@@ -73,7 +73,7 @@ RPD.setAi(mob,"Wandering")
 return true
 end,
 actionTime = function()
-if level:getLength() > 64*64 then
+if RPD.Dungeon.level:getLength() > 64*64 then
 return 60
 end
 return 30

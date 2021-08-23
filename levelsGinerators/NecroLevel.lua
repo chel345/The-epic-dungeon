@@ -37,7 +37,7 @@ Traps = {
 "SecretParalyticTrap"
 },
 ChanseTrap = 0.1,
-Shop = "PrisonShop",
+Shop = "Necro/NecroShop",
 LevelShop = 11,
 ShopWidth = 7,
 ShopHeigth = 7,
@@ -49,7 +49,7 @@ NPCRoomHeigth = 7,
 Range = 10000,
 GinFactor = 20,
 RoomFactor = 0,
-MiniBoss = false,
+MiniBoss = "Necro/SkvernBlobRoom",
 LevelMiniBoss = 13
 }
 

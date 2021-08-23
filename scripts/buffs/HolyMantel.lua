@@ -7,7 +7,7 @@ local IceBlock = luajava.bindClass("com.watabou.pixeldungeon.effects.IceBlock")
 return buff.init{
 desc = function ()
 return {
-icon = 50,
+icon = 55,
 name = RPD.StringsManager:maybeId("Holy_Mantel_Buff"),
 info = "DieHard_Info",
 }

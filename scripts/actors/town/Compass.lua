@@ -24,8 +24,9 @@ if not storage.get("storymod") then
        storage.put("storymod",true)
 end
 end
-if not storage.gameGet("light_in_town") then
-storage.gamePut("light_in_town",true)
+if not storage.get("light_in_town") then
+storage.gamePut("snow_in_town",true)
+storage.put("light_in_town",true)
 RPD.createLevelObject({
     kind="Deco",
     object_desc="Light"

@@ -9,4 +9,5 @@ local RPD = require "scripts/lib/commonClasses"
 
 RPD.StringsManager = luajava.bindClass("com.watabou.noosa.StringsManager")
 
+RPD.functions = {}
 return RPD

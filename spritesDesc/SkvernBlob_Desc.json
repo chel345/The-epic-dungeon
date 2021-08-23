@@ -1,0 +1,9 @@
+{
+  "texture" : "SkvernBlob.png",
+  "width"  : 35,
+  "height" : 37,
+  "idle"   : { "fps" : 15,  "looped" : true,     "frames" : [0,1,2,3,4,5] },
+  "run"    : { "fps" : 15, "looped" : true,     "frames" : [6,7,8,9,10,11,12,13] },
+  "attack" : { "fps" : 13, "looped" : false,    "frames" : [14] },
+  "die"    : { "fps" : 9, "looped" : false,    "frames" : [15,16,17,18] }
+}

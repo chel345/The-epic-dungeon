@@ -7,7 +7,7 @@ local buff = require "scripts/lib/buff"
 return buff.init{
     desc  = function ()
         return {
-            icon          = 55,
+            icon          = 58,
             name          = RPD.StringsManager:maybeId("Luck_Buff"),
             info          = "CounterBuff_Info",
         }

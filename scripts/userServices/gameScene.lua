@@ -4,13 +4,20 @@
 --- DateTime: 5/2/20 12:57 AM
 ---
 
-local RPD = require "scripts/lib/epicClasses"
+local t = 0
 
-local L = require "scripts/effects/LightRay" 
+local RPD = require("scripts/lib/epicClasses")
 
 local gameScene = {
 onStep = function()
-L.update()
+t = t + 1
+for _,i in pairs(RPD.functions) do
+i(t)
+RPD.glog(i)
+end
+if t >= 100 then
+t = 0
+end
 end,
 selectCell = function()
 end

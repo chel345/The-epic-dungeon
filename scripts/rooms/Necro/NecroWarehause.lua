@@ -39,15 +39,12 @@ armor = {
 "effects/ArmorOnHanger_Gotic"
 }
 if math.random(1,4) == 1 and level.map[pos] == 14 then
-if math.random(1,3) == 1 then
-
-elseif math.random(1,3) == 3 then
+if math.random(1,3) == 3 then
 mob = RPD.MobFactory:mobByName(armor[math.random(1,#armor)])
 local level = RPD.Dungeon.level
 mob:setPos(pos-1)
 level:spawnMob(mob)
-
-elseif math.random(1,3) == 5 then
+elseif math.random(1,3) == 1 then
 RPD.createLevelObject({kind="Barrel"}, pos-1)
 end
 end

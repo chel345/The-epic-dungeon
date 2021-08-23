@@ -25,13 +25,23 @@ local dy = e.y-s.y
 image.angle = math.atan2(dy,dx)*A
 image:setScale(math.sqrt(dx*dx+dy*dy)/image.width,1)
 
+--[[
+local ball = RPD.MobFactory:mobByName("effects/Boll")
+ball:setPos(0)
+RPD.Dungeon.level:spawnMob(ball)
+RPD.setAi(ball,"update")
+--]]
+local function test(n)
+RPD.glog("DF")
+image:setScale(math.sqrt(dx*dx+dy*dy)/image.width,n/30)
+if n % 29 == 0 then
+image:killAndErase()
+table.remove(RPD.functions,#RPD.functions)
+end
+end
+RPD.functions[#RPD.functions+1] = test
 RPD.GameScene:effect(image)
 return
-end,
-update = function()
-if image ~= nil then
-image:killAndErase()
-end
 end
 }
 return LightRay

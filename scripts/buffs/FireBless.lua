@@ -11,7 +11,7 @@ local buff = require "scripts/lib/buff"
 return buff.init{
     desc  = function ()
         return {
-            icon          = 47,
+            icon          = 52,
             name          = "Огненное благословение",
             info          = "DieHard_Info",
         }

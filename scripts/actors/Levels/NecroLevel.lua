@@ -25,6 +25,17 @@ end
 if RPD.Dungeon.depth ~= 15 and RPD.Dungeon.depth ~= 14 then
 Ginerator.CreateLevel("NecroLevel",true)
 end
+if not storage.get("Deco") then
+storage.put("Deco")
+for i = 1, RPD.Dungeon.level:getLength()-1 do
+if RPD.Dungeon.level.map[i] == 4 then
+if math.random(1,50) == 1 then
+RPD.Dungeon.level:set(i-1,RPD.Terrain.WALL_DECO)
+RPD.GameScene:updateMap(i-1)
+end
+end
+end
+end
 for i = 1,15*15-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.WALL_DECO then
 RPD.GameScene:particleEffect("Torch", i-1)
@@ -32,9 +43,19 @@ end
 end
 for i = 1,RPD.Dungeon.level:getLength()-1 do           
 local maybeMob = RPD.Actor:findChar(i)          
-if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() ==  "Shopkeeper" then
+if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() ==  "Shopkeeper" and RPD.Dungeon.depth ~= 14 then
 RPD.topEffect(i,"DarckKeeper")
 maybeMob:getSprite():killAndErase()
+end
+end
+local keepers = {"DarckKeeper","DarkShopkeeper1","DarkShopkeeper2"}
+if RPD.Dungeon.depth == 14 then
+for i = 1,RPD.Dungeon.level:getLength()-1 do           
+local maybeMob = RPD.Actor:findChar(i)          
+if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() ==  "Shopkeeper" then
+RPD.topEffect(i,keepers[math.random(1,#keepers)])
+maybeMob:getSprite():killAndErase()
+end
 end
 end
 return true

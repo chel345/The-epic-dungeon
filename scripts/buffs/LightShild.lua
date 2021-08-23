@@ -9,8 +9,8 @@ local buff = require "scripts/lib/buff"
 return buff.init{
     desc  = function ()
         return {
-            icon          = 54,
-            name          = "Неуязвимость",
+            icon          = 57,
+            name          = RPD.StringsManager:maybeId("LightShild_Buff"),
             info          = "BodyArmorBuff_Info",
          }
     end,

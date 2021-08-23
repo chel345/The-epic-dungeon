@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 20,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 5,
+  "description": "SkvernGoo_Desc",
+  "dmgMax": 6,
+  "dmgMin": 3,
+  "dr": 0,
+  "exp": 1,
+  "flying": false,
+  "friendly": false,
+  "gender": "SkvernGoo_Gender",
+  "ht": 20,
+  "lootChance": 0,
+  "maxLvl": 1,
+  "name": "SkvernGoo_Name",
+  "name_objective": "SkvernGoo_Object",
+  "spriteDesc": "spritesDesc/SkvernGoo_Desc.json",
+  "walkingType": "NORMAL"
+}

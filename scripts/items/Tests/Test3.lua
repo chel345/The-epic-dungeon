@@ -46,14 +46,18 @@ end,
 
     execute = function(self, item, hero, action, cell, char, data) 
          if action == RPD.Actions.zap then
+--local t = RPD.new("com.watabou.pixeldungeon.windows.WndBlacksmith",hero)
+local s = RPD.item("Sword")
+local a = RPD.item("SpiderArmor")
+--local mob = RPD.new("com.watabou.pixeldungeon.actors.mobs.Statue")
+local mob = RPD.MobFactory:mobByName("EnslavedSoul")
+mob:setPos(hero:getPos())
+s:doEquip(mob)
+a:doEquip(mob)
+RPD.Dungeon.level:spawnMob(mob)
+
 --local image = RPD.new("com.watabou.noosa.Image","ui/title.png")
 --RPD.GameScene:effect(image)
-
-local test = function()
-RPD.glog("F")
-end
-Process.f = test
-
 --[[
 local SClientLua = luajava.bindClass("com.nyrds.pixeldungeon.networking.SClientLua")
 local client = SClientLua:createNew( "192.168.10.102" ,3002):connect()

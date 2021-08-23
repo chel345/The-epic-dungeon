@@ -11,7 +11,7 @@ local buff = require "scripts/lib/buff"
 return buff.init{
     desc  = function ()
         return {
-            icon          = 48,
+            icon          = 53,
             name          = RPD.StringsManager:maybeId("Water_Regeneration_Buff"),
             info          = "DieHard_Info",
         }
