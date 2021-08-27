@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 12,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 9,
+  "description": "NightmareDarkMaster_Desc",
+  "dmgMax": 70,
+  "dmgMin": 20,
+  "dr": 1,
+  "exp": 5,
+  "flying": true,
+  "friendly": false,
+  "gender": "NightmareDarkMaster_Gender",
+  "ht": 90,
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 1,
+  "maxLvl": 31,
+  "name": "NightmareDarkMaster_Name",
+  "name_objective": "NightmareDarkMaster_Object",
+  "spriteDesc": "spritesDesc/NightmareDarkMaster_Desc.json",
+  "viewDistance": 10,
+  "walkingType": "NORMAL"
+}

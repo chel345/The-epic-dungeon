@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 12,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 15,
+  "description": "GoldenGaurd_Desc",
+  "dmgMax": 40,
+  "dmgMin": 30,
+  "dr": 20,
+  "exp": 5,
+  "flying": false,
+  "friendly": false,
+  "gender": "GoldenGaurd_Gender",
+  "ht": 30,
+  "maxLvl": 32,
+  "name": "GoldenGaurd_Name",
+  "name_objective": "GoldenGaurd_Object",
+  "scriptFile": "scripts/mobs/GoldenGaurd",
+  "spriteDesc": "spritesDesc/GoldenGaurd_Desc.json",
+  "walkingType": "NORMAL"
+}

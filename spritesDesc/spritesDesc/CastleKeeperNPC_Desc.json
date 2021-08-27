@@ -1,0 +1,14 @@
+{
+  "texture" : "CastleKeeper.png",
+  "width"   : 16,
+  "height"  : 16,
+
+"idle"    : { "fps" : 1,  "looped" : true,     "frames" : [0, 1] },
+"run"     : { "fps" : 20, "looped" : true,     "frames" : [3] },
+"die"     : { "fps" : 20, "looped" : false,    "frames" : [3] },
+"attack"  : { "fps" : 15, "looped" : false,    "frames" : [3] },
+"zap"     : { "fps" : 15, "looped" : false,    "frames" : [3] },
+
+"operate" : { "fps" : 8,  "looped" : false,    "frames" : [1] },
+"fly"     : { "fps" : 1,  "looped" : true,     "frames" : [3] }
+}

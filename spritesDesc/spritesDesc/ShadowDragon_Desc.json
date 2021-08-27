@@ -1,0 +1,11 @@
+{
+  "texture" : "BloodDragon.png",
+  "width"  : 35,
+  "height" : 20,
+  "zapEffect":"Shadow",
+  "idle"   : { "fps" :1 ,  "looped" : true,     "frames" : [0, 0, 0, 1, 0, 0, 1, 1] },
+  "run"    : { "fps" : 3, "looped" : true,     "frames" : [1,0,2] },
+  "attack" : { "fps" : 8, "looped" : false,    "frames" : [3,4,3] },
+  "zap"    : { "fps" : 12, "looped" : false,    "frames" : [3,4,3] },
+  "die"    : { "fps" : 12, "looped" : true,    "frames" : [5,5] }
+}

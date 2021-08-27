@@ -1,0 +1,14 @@
+{
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "DworfTravelerNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "DworfTravelerNPC_Gender",
+  "ht": 5000000,
+  "name": "DworfTravelerNPC_Name",
+  "name_objective": "DworfTravelerNPC_Object",
+  "scriptFile": "scripts/npc/DworfTravelerNPC",
+  "spriteDesc": "spritesDesc/DworfTravelerNPC_Desc.json"
+}

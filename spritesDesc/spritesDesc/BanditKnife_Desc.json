@@ -1,0 +1,8 @@
+{ texture = "BanditKnife.png",
+width = 12, 
+height = 17,
+zapEffect = "Knife",
+ idle = { fps = 1, looped = true, frames = [0,0,1] },
+ run = { fps = 14, looped = true, frames = [2,3,4,5,6,7] }, attack = { fps = 11, looped = false, frames = [13,14,15] }, 
+die = { fps = 11, looped = false, frames = [8,9,10,11,12,11] }
+}

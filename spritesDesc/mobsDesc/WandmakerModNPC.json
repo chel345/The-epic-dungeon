@@ -1,0 +1,14 @@
+{
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "WandmakerModNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "WandmakerModNPC_Gender",
+  "ht": 5000000,
+  "name": "WandmakerModNPC_Name",
+  "name_objective": "WandmakerModNPC_Object",
+  "scriptFile": "scripts/npc/WandmakerNPC",
+  "spriteDesc": "spritesDesc/WandmakerModNPC_Desc.json"
+}

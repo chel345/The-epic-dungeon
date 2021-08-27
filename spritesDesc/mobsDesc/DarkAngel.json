@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1000,
+  "attackSkill": 25,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 20,
+  "description": "DarkAngel_Desc",
+  "dmgMax": 70,
+  "dmgMin": 30,
+  "dr": 3,
+  "exp": 20,
+  "flying": true,
+  "friendly": false,
+  "gender": "DarkAngel_Gender",
+  "ht": 300,
+  "lootChance": 0,
+  "maxLvl": 32,
+  "name": "DarkAngel_Name",
+  "name_objective": "DarkAngel_Object",
+  "spriteDesc": "spritesDesc/DarkAngel_Desc.json",
+  "walkingType": "NORMAL"
+}

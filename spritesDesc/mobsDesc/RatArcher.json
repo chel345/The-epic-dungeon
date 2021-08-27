@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1000,
+  "attackSkill": 8,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 4,
+  "description": "RatArcher_Desc",
+  "dmgMax": 13,
+  "dmgMin": 6,
+  "dr": 0,
+  "exp": 3,
+  "flying": false,
+  "friendly": false,
+  "gender": "RatArcher_Gender",
+  "ht": 20,
+  "lootChance": 1,
+  "maxLvl": 5,
+  "name": "RatArcher_Name",
+  "name_objective": "RatArcher_Object",
+  "spriteDesc": "spritesDesc/RatArcher_Desc.json",
+  "walkingType": "NORMAL"
+}

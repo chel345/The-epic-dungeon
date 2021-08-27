@@ -1,0 +1,31 @@
+{
+   "texture" : "GooCrystal.png",
+   "width" : 16,
+   "height" : 16,
+   "idle" : {
+      "fps" : 6,
+      "looped" : true,
+      "frames" : [0,1]
+   },
+   "run" : {
+      "fps" : 6,
+      "looped" : true,
+      "frames" : [0,1]
+   },
+   "attack" : {
+      "fps" : 13,
+      "looped" : false,
+      "frames" : [0,1,2,2,2]
+   },
+   "zap" : {
+      "fps" : 13,
+      "looped" : false,
+      "frames" : [0,1,2,2,2]
+   },
+   "die" : {
+      "fps" : 10,
+      "looped" : false,
+      "frames" : [2,3,4]
+   },
+   "bloodColor" : "0x33CCFF"
+}

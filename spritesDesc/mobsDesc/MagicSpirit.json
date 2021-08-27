@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 100,
+  "attackSkill": 100,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 0,
+  "description": "MagicSpirit_Desc",
+  "dmgMax": 10,
+  "dmgMin": 7,
+  "dr": 10,
+  "exp": 0,
+  "flying": true,
+  "friendly": false,
+  "gender": "MagicSpirit_Gender",
+  "ht": 20,
+  "maxLvl": 0,
+  "name": "MagicSpirit_Name",
+  "name_objective": "MagicSpirit_Object",
+  "scriptFile": "scripts/mobs/MagicSpirit",
+  "spriteDesc": "spritesDesc/MagicSpirit_Desc.json",
+  "walkingType": "NORMAL"
+}

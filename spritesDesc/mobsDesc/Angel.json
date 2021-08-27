@@ -1,0 +1,28 @@
+{
+  "attackDelay": 1,
+  "attackRange": 100,
+  "attackSkill": 12,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 9,
+  "description": "Angel_Desc",
+  "dmgMax": 70,
+  "dmgMin": 20,
+  "dr": 1,
+  "exp": 5,
+  "flying": true,
+  "friendly": false,
+  "gender": "Angel_Gender",
+  "ht": 90,
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 1,
+  "maxLvl": 31,
+  "name": "Angel_Name",
+  "name_objective": "Angel_Object",
+  "scriptFile": "scripts/mobs/MagicEye",
+  "spriteDesc": "spritesDesc/Angel_Desc.json",
+  "viewDistance": 10,
+  "walkingType": "NORMAL"
+}

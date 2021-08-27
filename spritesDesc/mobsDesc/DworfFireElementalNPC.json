@@ -1,0 +1,13 @@
+{
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "DworfFireElementalNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "DworfFireElementalNPC_Gender",
+  "ht": 100000000000,
+  "name": "DworfFireElementalNPC_Name",
+  "name_objective": "DworfFireElementalNPC_Object",
+  "scriptFile": "scripts/npc/DworfFireElementalNPC",
+  "spriteDesc": "spritesDesc/FireElemental.json"
+}

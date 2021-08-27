@@ -1,0 +1,38 @@
+{
+  "attackDelay": 1,
+  "attackRange": 10,
+  "attackSkill": 5000,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 5,
+  "description": "Lloyd_Desc",
+  "dmgMax": 40,
+  "dmgMin": 30,
+  "dr": 15,
+  "exp": 20,
+  "flying": false,
+  "friendly": false,
+  "gender": "Lloyd_Gender",
+  "ht": 100,
+  "immunities": [
+    "Paralysis",
+    "ToxicGas",
+    "Terror",
+    "Death",
+    "Amok",
+    "Blindness",
+    "Poison",
+    "Vertigo",
+    "Bleeding"
+  ],
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 1,
+  "maxLvl": 32,
+  "name": "Lloyd_Name",
+  "name_objective": "Lloyd_Object",
+  "scriptFile": "scripts/miniBosses/Lloyd",
+  "spriteDesc": "spritesDesc/Lloyd_Desc.json",
+  "walkingType": "NORMAL"
+}

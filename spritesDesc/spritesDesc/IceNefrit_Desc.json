@@ -1,0 +1,11 @@
+{
+  "texture" : "IceNefrit.png",
+  "width"  : 16,
+  "height" : 16,
+  "zapEffect" : "Ice",
+  "idle"   : { "fps" : 2,  "looped" : true,     "frames" : [0, 1, 2] },
+  "run"    : { "fps" : 4, "looped" : true,     "frames" : [0, 1, 2] },
+  "attack" : { "fps" : 12, "looped" : false,    "frames" : [ 2, 3, 2, 0] },
+  "zap"    : { "fps" : 12, "looped" : false,    "frames" : [ 2, 3, 2, 0] },
+  "die"    : { "fps" : 12, "looped" : false,    "frames" : [ 3, 4, 5] }
+}

@@ -1,0 +1,15 @@
+{
+  "appearance": {
+    "desc": {
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
+    },
+    "sprite": {
+      "imageIndex": 1,
+      "textureFile": "levelObjects/NecroTiles.png"
+    }
+  },
+  "kind": "Deco"
+}

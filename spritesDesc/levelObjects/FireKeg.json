@@ -1,0 +1,28 @@
+{
+  "appearance": {
+    "desc": {
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
+    },
+    "particles": "Candle",
+    "sprite": {
+      "animations": {
+        "basic": {
+          "fps": 10,
+          "frames": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "looped": true
+        }
+      },
+      "imageIndex": 0,
+      "textureFile": "levelObjects/FireKeg.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
+}

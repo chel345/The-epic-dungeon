@@ -1,0 +1,13 @@
+{
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "DworfStatueNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "DworfStatueNPC_Gender",
+  "ht": 100000000000,
+  "name": "DworfStatueNPC_Name",
+  "name_objective": "DworfStatueNPC_Object",
+  "scriptFile": "scripts/npc/DworfStatueNPC",
+  "spriteDesc": "spritesDesc/DworfStatueNPC_Desc.json"
+}

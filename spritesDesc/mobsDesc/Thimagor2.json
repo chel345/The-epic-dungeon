@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 32,
+  "attackSkill": 15,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 10,
+  "description": "Thimagor2_Desc",
+  "dmgMax": 20,
+  "dmgMin": 7,
+  "dr": 4,
+  "exp": 3,
+  "flying": false,
+  "friendly": false,
+  "gender": "Thimagor2_Gender",
+  "ht": 50,
+  "loot": {
+    "identified": true,
+    "kind": "CompoundBow"
+  },
+  "lootChance": 1,
+  "maxLvl": 20,
+  "name": "Thimagor2_Name",
+  "name_objective": "Thimagor2_Object",
+  "spriteDesc": "spritesDesc/Thimagor2_Desc.json",
+  "walkingType": "NORMAL"
+}

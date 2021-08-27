@@ -1,0 +1,24 @@
+{
+  "attackDelay": 1,
+  "baseSpeed": 1,
+  "description": "EnFireThrower_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "EnFireThrower_Gender",
+  "ht": 5000000,
+  "immunities": [
+    "Paralysis",
+    "ToxicGas",
+    "Terror",
+    "Death",
+    "Amok",
+    "Blindness",
+    "Poison",
+    "Vertigo",
+    "Bleeding"
+  ],
+  "name": "EnFireThrower_Name",
+  "name_objective": "EnFireThrower_Object",
+  "scriptFile": "scripts/npc/EnFireThrower",
+  "spriteDesc": "spritesDesc/EnFireThrower_Desc.json"
+}

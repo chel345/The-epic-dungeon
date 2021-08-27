@@ -1,0 +1,28 @@
+{
+  "aiState": "Passive",
+  "attackDelay": 2,
+  "attackRange": 10,
+  "attackSkill": 15,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 10,
+  "description": "KeyGuardia_Desc",
+  "dmgMax": 20,
+  "dmgMin": 1,
+  "dr": 20,
+  "exp": 5,
+  "flying": false,
+  "friendly": false,
+  "gender": "KeyGuardia_Gender",
+  "ht": 150,
+  "loot": {
+    "kind": "GoldenKey"
+  },
+  "lootChance": 1,
+  "maxLvl": 30,
+  "name": "KeyGuardia_Name",
+  "name_objective": "KeyGuardia_Object",
+  "scriptFile": "scripts/mobs/KeyGuardian",
+  "spriteDesc": "spritesDesc/KeyGuardian_Desc.json",
+  "walkingType": "NORMAL"
+}

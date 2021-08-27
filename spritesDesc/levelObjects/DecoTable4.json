@@ -1,0 +1,16 @@
+{
+  "appearance": {
+    "desc": {
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
+    },
+    "particles": "Candle",
+    "sprite": {
+      "imageIndex": 0,
+      "textureFile": "levelObjects/DecoTable4.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
+}

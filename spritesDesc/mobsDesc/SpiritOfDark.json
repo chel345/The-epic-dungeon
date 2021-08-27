@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 15,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 18,
+  "description": "SpiritOfDark_Desc",
+  "dmgMax": 70,
+  "dmgMin": 20,
+  "dr": 7,
+  "exp": 5,
+  "flying": true,
+  "friendly": false,
+  "gender": "SpiritOfDark_Gender",
+  "ht": 85,
+  "loot": {
+    "kind": "Potion/PoisonOfDarknes",
+    "level": 2
+  },
+  "lootChance": 0.1,
+  "maxLvl": 34,
+  "name": "SpiritOfDark_Name",
+  "name_objective": "SpiritOfDark_Object",
+  "spriteDesc": "spritesDesc/TreacherousSpirit.json",
+  "walkingType": "NORMAL"
+}

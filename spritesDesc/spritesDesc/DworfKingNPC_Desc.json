@@ -1,0 +1,25 @@
+{
+   "texture" : "DworfKingNPC.png",
+   "width" : 16,
+   "height" : 32,
+   "idle" : {
+      "fps" : 2,
+      "looped" : true,
+      "frames" : [0,1,2,3]
+   },
+   "run" : {
+      "fps" : 12,
+      "looped" : true,
+      "frames" : [0,1]
+   },
+   "attack" : {
+      "fps" : 12,
+      "looped" : false,
+      "frames" : [0]
+   },
+   "die" : {
+      "fps" : 15,
+      "looped" : false,
+      "frames" : [0]
+   }
+}

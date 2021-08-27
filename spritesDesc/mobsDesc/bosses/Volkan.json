@@ -1,0 +1,27 @@
+{
+  "attackDelay": 5,
+  "attackRange": 10000,
+  "attackSkill": 15,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 9,
+  "description": "Volka_Desc",
+  "dmgMax": 135,
+  "dmgMin": 80,
+  "dr": 5,
+  "exp": 4,
+  "flying": false,
+  "friendly": false,
+  "gender": "Volka_Gender",
+  "ht": 800,
+  "loot": {
+    "kind": "Wands/DragonWand"
+  },
+  "lootChance": 1,
+  "maxLvl": 31,
+  "name": "Volka_Name",
+  "name_objective": "Volka_Object",
+  "scriptFile": "scripts/bosses/Volkan",
+  "spriteDesc": "spritesDesc/Volkan_Desc.json",
+  "walkingType": "NORMAL"
+}

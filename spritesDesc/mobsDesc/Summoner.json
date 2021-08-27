@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 32,
+  "attackSkill": 7,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 2,
+  "description": "Summoner_Desc",
+  "dmgMax": 30,
+  "dmgMin": 10,
+  "dr": 1,
+  "exp": 4,
+  "flying": false,
+  "friendly": false,
+  "gender": "Summoner_Gender",
+  "ht": 20,
+  "loot": {
+    "kind": "Ankh"
+  },
+  "lootChance": 0.25,
+  "maxLvl": 10,
+  "name": "Summoner_Name",
+  "name_objective": "Summoner_Object",
+  "scriptFile": "scripts/mobs/Summoner",
+  "spriteDesc": "spritesDesc/Summoner_Desc.json",
+  "walkingType": "NORMAL"
+}

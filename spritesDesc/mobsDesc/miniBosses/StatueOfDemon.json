@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 100,
+  "attackSkill": 5000,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 10,
+  "description": "StatueOfDem_Desc",
+  "dmgMax": 55,
+  "dmgMin": 40,
+  "dr": 15,
+  "exp": 20,
+  "flying": false,
+  "friendly": false,
+  "gender": "StatueOfDem_Gender",
+  "ht": 160,
+  "loot": {
+    "kind": "Artifacts/IceHeart"
+  },
+  "lootChance": 1,
+  "maxLvl": 32,
+  "name": "StatueOfDem_Name",
+  "name_objective": "StatueOfDem_Object",
+  "scriptFile": "scripts/miniBosses/StatueOfDemon",
+  "spriteDesc": "spritesDesc/StatueOfDemon_Desc.json",
+  "walkingType": "NORMAL"
+}

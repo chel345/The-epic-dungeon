@@ -1,0 +1,15 @@
+{
+  "attackDelay": 1,
+  "baseSpeed": 2,
+  "description": "Spirit_Desc",
+  "friendly": false,
+  "gender": "Spirit_Gender",
+  "ht": 50,
+  "loot": {
+    "kind": "Artifacts/SpiritSoul"
+  },
+  "name": "Spirit_Name",
+  "name_objective": "Spirit_Object",
+  "scriptFile": "scripts/mobs/Spirit",
+  "spriteDesc": "spritesDesc/Spirit_Desc.json"
+}

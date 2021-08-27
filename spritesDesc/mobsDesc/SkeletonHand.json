@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 10000,
+  "attackSkill": 15,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 9,
+  "description": "SkeletonHand_Desc",
+  "dmgMax": 100,
+  "dmgMin": 80,
+  "dr": 5,
+  "exp": 4,
+  "flying": false,
+  "friendly": false,
+  "gender": "SkeletonHand_Gender",
+  "ht": 1000,
+  "lootChance": 0,
+  "maxLvl": 31,
+  "name": "SkeletonHand_Name",
+  "name_objective": "SkeletonHand_Object",
+  "spriteDesc": "spritesDesc/SkeletonHand_Desc.json",
+  "walkingType": "NORMAL"
+}

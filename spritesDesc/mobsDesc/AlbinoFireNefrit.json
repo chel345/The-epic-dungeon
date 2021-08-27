@@ -1,0 +1,32 @@
+{
+  "attackDelay": 1,
+  "attackRange": 100,
+  "attackSkill": 17,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 14,
+  "description": "AlbinoFireNefrit_Desc",
+  "dmgMax": 75,
+  "dmgMin": 25,
+  "dr": 5,
+  "exp": 6,
+  "flying": true,
+  "friendly": false,
+  "gender": "AlbinoFireNefrit_Gender",
+  "ht": 170,
+  "immunities": [
+    "Fire",
+    "LiquidFlame",
+    "Burning"
+  ],
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 0.5,
+  "maxLvl": 34,
+  "name": "AlbinoFireNefrit_Name",
+  "name_objective": "AlbinoFireNefrit_Object",
+  "scriptFile": "scripts/mobs/FireNefrit",
+  "spriteDesc": "spritesDesc/AlbinoFireNefrit_Desc.json",
+  "walkingType": "NORMAL"
+}

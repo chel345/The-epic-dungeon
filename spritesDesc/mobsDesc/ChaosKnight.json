@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 25,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 20,
+  "description": "ChaosKnight_Desc",
+  "dmgMax": 80,
+  "dmgMin": 30,
+  "dr": 3,
+  "exp": 20,
+  "flying": false,
+  "friendly": false,
+  "gender": "ChaosKnight_Gender",
+  "ht": 300,
+  "lootChance": 0,
+  "maxLvl": 32,
+  "name": "ChaosKnight_Name",
+  "name_objective": "ChaosKnight_Object",
+  "spriteDesc": "spritesDesc/ChaosKnight_Desc.json",
+  "walkingType": "NORMAL"
+}

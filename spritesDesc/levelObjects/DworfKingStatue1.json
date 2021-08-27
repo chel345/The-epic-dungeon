@@ -1,0 +1,15 @@
+{
+  "appearance": {
+    "desc": {
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
+    },
+    "sprite": {
+      "imageIndex": 0,
+      "textureFile": "levelObjects/DworfKingStatue.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
+}

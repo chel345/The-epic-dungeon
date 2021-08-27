@@ -1,0 +1,17 @@
+{
+  "appearance": {
+    "desc": {
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
+    },
+    "sprite": {
+      "imageIndex": 0,
+      "textureFile": "mobs/jar_of_souls.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
+}

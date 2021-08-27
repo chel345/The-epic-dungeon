@@ -1,0 +1,13 @@
+{
+  "texture" : "SkeletonHand.png",
+  "width"   : 16,
+  "height"  : 16,
+"zapEffect":"Shadow",
+"idle"    : { "fps" : 10,  "looped" : true,     "frames" : [0,1] },
+"run"     : { "fps" : 20, "looped" : true,     "frames" : [0,1] },
+"die"     : { "fps" : 20, "looped" : false,    "frames" : [6,7,8,9] },
+"attack"  : { "fps" : 15, "looped" : false,    "frames" : [0,1] },
+"zap"     : { "fps" : 15, "looped" : false,    "frames" : [2,3,4,5] },
+
+"operate" : { "fps" : 8,  "looped" : false,    "frames" : [0,1,2] }
+}

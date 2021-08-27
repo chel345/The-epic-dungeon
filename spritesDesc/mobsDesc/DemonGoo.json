@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 20,
+  "description": "DemonG_Desc",
+  "dmgMax": 50,
+  "dmgMin": 20,
+  "dr": 0,
+  "exp": 18,
+  "flying": false,
+  "friendly": false,
+  "gender": "DemonG_Gender",
+  "ht": 70,
+  "lootChance": 0,
+  "maxLvl": 32,
+  "name": "DemonG_Name",
+  "name_objective": "DemonG_Object",
+  "spriteDesc": "spritesDesc/DemonGoo_Desc.json",
+  "walkingType": "NORMAL"
+}

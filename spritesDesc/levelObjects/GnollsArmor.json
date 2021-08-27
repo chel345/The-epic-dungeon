@@ -1,0 +1,15 @@
+{
+  "appearance": {
+    "desc": {
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
+    },
+    "sprite": {
+      "imageIndex": 0,
+      "textureFile": "levelObjects/GnollsArmor.png"
+    }
+  },
+  "kind": "Deco"
+}

@@ -1,0 +1,13 @@
+{
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "ArmorOnHanger_Gotic_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "ArmorOnHanger_Gotic_Gender",
+  "ht": 100000000000,
+  "name": "ArmorOnHanger_Gotic_Name",
+  "name_objective": "ArmorOnHanger_Gotic_Object",
+  "scriptFile": "scripts/mobs/timed/ArmorOnHanger_Gotic",
+  "spriteDesc": "spritesDesc/ArmorOnHanger_Gotic_Desc.json"
+}

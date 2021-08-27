@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 32,
+  "attackSkill": 20,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 6,
+  "description": "ChaosAngel_Desc",
+  "dmgMax": 20,
+  "dmgMin": 10,
+  "dr": 6,
+  "exp": 0,
+  "flying": true,
+  "friendly": false,
+  "gender": "ChaosAngel_Gender",
+  "ht": 600,
+  "loot": {
+    "kind": "Scrolls/ChaosScroll"
+  },
+  "lootChance": 1,
+  "maxLvl": 0,
+  "name": "ChaosAngel_Name",
+  "name_objective": "ChaosAngel_Object",
+  "scriptFile": "scripts/mobs/LightCrystal",
+  "spriteDesc": "spritesDesc/ChaosAngel_Desc.json",
+  "walkingType": "NORMAL"
+}

@@ -1,0 +1,18 @@
+{
+  "appearance": {
+    "desc": {
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
+    },
+    "particles": "Smoke",
+    "sprite": {
+      "imageIndex": 3,
+      "textureFile": "levelObjects/GutsTiles.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
+}

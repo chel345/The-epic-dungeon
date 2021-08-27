@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 32,
+  "attackSkill": 20,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 10,
+  "description": "IceAngel_Desc",
+  "dmgMax": 100,
+  "dmgMin": 70,
+  "dr": 2,
+  "exp": 4,
+  "flying": true,
+  "friendly": false,
+  "gender": "IceAngel_Gender",
+  "ht": 500,
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 0.5,
+  "maxLvl": 20,
+  "name": "IceAngel_Name",
+  "name_objective": "IceAngel_Object",
+  "scriptFile": "scripts/mobs/IceNefrit",
+  "spriteDesc": "spritesDesc/IceAngel_Desc.json",
+  "walkingType": "NORMAL"
+}

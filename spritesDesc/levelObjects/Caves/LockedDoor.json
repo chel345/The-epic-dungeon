@@ -1,0 +1,13 @@
+{
+  "appearance": {
+    "desc": {
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
+    },
+    "sprite": {
+      "imageIndex": 7,
+      "textureFile": "levelObjects/Caves/CavesTiles.png"
+    }
+  },
+  "kind": "Deco"
+}

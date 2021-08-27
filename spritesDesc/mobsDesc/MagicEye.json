@@ -1,0 +1,28 @@
+{
+  "attackDelay": 1,
+  "attackRange": 100,
+  "attackSkill": 12,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 9,
+  "description": "MagicEye_Desc",
+  "dmgMax": 70,
+  "dmgMin": 20,
+  "dr": 1,
+  "exp": 5,
+  "flying": true,
+  "friendly": false,
+  "gender": "MagicEye_Gender",
+  "ht": 90,
+  "loot": {
+    "kind": "Ranged/LightDanger"
+  },
+  "lootChance": 1,
+  "maxLvl": 31,
+  "name": "MagicEye_Name",
+  "name_objective": "MagicEye_Object",
+  "scriptFile": "scripts/mobs/MagicEye",
+  "spriteDesc": "spritesDesc/MagicEye_Desc.json",
+  "viewDistance": 10,
+  "walkingType": "NORMAL"
+}

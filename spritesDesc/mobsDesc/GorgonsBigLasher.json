@@ -1,0 +1,38 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 35,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 6,
+  "description": "GorgonsBigLasher_Desc",
+  "dmgMax": 16,
+  "dmgMin": 10,
+  "dr": 10,
+  "exp": 10,
+  "flying": false,
+  "friendly": false,
+  "gender": "GorgonsBigLasher_Gender",
+  "ht": 50,
+  "immunities": [
+    "Paralysis",
+    "ToxicGas",
+    "Terror",
+    "Death",
+    "Amok",
+    "Blindness",
+    "Sleep",
+    "Poison",
+    "Vertigo",
+    "Bleeding"
+  ],
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 1,
+  "maxLvl": 32,
+  "name": "GorgonsBigLasher_Name",
+  "name_objective": "GorgonsBigLasher_Object",
+  "spriteDesc": "spritesDesc/GorgonsBigLasher_Desc.json",
+  "walkingType": "WATER"
+}

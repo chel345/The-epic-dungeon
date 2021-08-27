@@ -1,0 +1,31 @@
+{
+   "texture" : "DarkAngel.png",
+   "width" : 23,
+   "height" : 22,
+   "zapEffect":"Shadow",
+   "idle" : {
+      "fps" : 10,
+      "looped" : true,
+      "frames" : [0,1,3,1,0]
+   },
+   "run" : {
+      "fps" : 10,
+      "looped" : true,
+      "frames" : [0,1,3,1,0]
+   },
+   "attack" : {
+      "fps" : 3,
+      "looped" : false,
+      "frames" : [2]
+   },
+   "die" : {
+      "fps" : 10,
+      "looped" : true,
+      "frames" : [0,1,3,1,0]
+   },
+   "zap" : {
+      "fps" : 3,
+      "looped" : true,
+      "frames" : [3]
+   }
+}

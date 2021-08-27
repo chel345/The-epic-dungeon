@@ -1,0 +1,38 @@
+{
+  "attackDelay": 1,
+  "attackRange": 100,
+  "attackSkill": 100,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 12,
+  "description": "Goat_Desc",
+  "dmgMax": 40,
+  "dmgMin": 20,
+  "dr": 15,
+  "exp": 20,
+  "flying": false,
+  "friendly": false,
+  "gender": "Goat_Gender",
+  "ht": 120,
+  "immunities": [
+    "Paralysis",
+    "ToxicGas",
+    "Terror",
+    "Death",
+    "Amok",
+    "Blindness",
+    "Poison",
+    "Vertigo",
+    "Bleeding"
+  ],
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 1,
+  "maxLvl": 32,
+  "name": "Goat_Name",
+  "name_objective": "Goat_Object",
+  "scriptFile": "scripts/miniBosses/Goat",
+  "spriteDesc": "spritesDesc/Goat_Desc.json",
+  "walkingType": "NORMAL"
+}

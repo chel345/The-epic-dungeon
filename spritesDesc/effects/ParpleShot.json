@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/ParpleShot.png",
+  "width"  : 13,
+  "height" : 15,
+  "anim"   : { "fps" : 3,  "looped" : true,    "frames" : [0] }
+}

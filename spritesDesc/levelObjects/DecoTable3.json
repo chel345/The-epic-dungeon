@@ -1,0 +1,17 @@
+{
+  "appearance": {
+    "desc": {
+      "canStepOn": false,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall",
+      "nonPassable": false
+    },
+    "sprite": {
+      "imageIndex": 0,
+      "textureFile": "levelObjects/DecoTable3.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
+}

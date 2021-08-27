@@ -1,0 +1,15 @@
+{
+  "appearance": {
+    "desc": {
+      "canStepOn": false,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall",
+      "nonPassable": false
+    },
+    "sprite": {
+      "imageIndex": 2,
+      "textureFile": "levelObjects/BanditTiles.png"
+    }
+  },
+  "kind": "Deco"
+}

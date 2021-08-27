@@ -1,0 +1,30 @@
+{
+  "appearance": {
+    "desc": {
+      "canStepOn": true,
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileFloor",
+      "nonPassable": false
+    },
+    "particles": "Candle",
+    "sprite": {
+      "animations": {
+        "basic": {
+          "fps": 10,
+          "frames": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "looped": true
+        }
+      },
+      "imageIndex": 0,
+      "textureFile": "levelObjects/candle.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
+}

@@ -1,0 +1,13 @@
+{
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "ArmorOnHanger_Mail_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "ArmorOnHanger_Mail_Gender",
+  "ht": 100000000000,
+  "name": "ArmorOnHanger_Mail_Name",
+  "name_objective": "ArmorOnHanger_Mail_Object",
+  "scriptFile": "scripts/mobs/timed/ArmorOnHanger_Mail",
+  "spriteDesc": "spritesDesc/ArmorOnHanger_Mail_Desc.json"
+}

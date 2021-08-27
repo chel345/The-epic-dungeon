@@ -1,0 +1,13 @@
+{
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "ArmorOnHanger_Lether_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "ArmorOnHanger_Lether_Gender",
+  "ht": 100000000000,
+  "name": "ArmorOnHanger_Lether_Name",
+  "name_objective": "ArmorOnHanger_Lether_Object",
+  "scriptFile": "scripts/mobs/timed/ArmorOnHanger_Lether",
+  "spriteDesc": "spritesDesc/ArmorOnHanger_Lether_Desc.json"
+}

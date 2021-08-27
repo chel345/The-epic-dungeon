@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 32,
+  "attackSkill": 20,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 10,
+  "description": "IceNefrit_Desc",
+  "dmgMax": 10,
+  "dmgMin": 7,
+  "dr": 2,
+  "exp": 4,
+  "flying": true,
+  "friendly": false,
+  "gender": "IceNefrit_Gender",
+  "ht": 50,
+  "loot": {
+    "kind": "Wands/NefritWand"
+  },
+  "lootChance": 0.5,
+  "maxLvl": 20,
+  "name": "IceNefrit_Name",
+  "name_objective": "IceNefrit_Object",
+  "scriptFile": "scripts/mobs/IceNefrit",
+  "spriteDesc": "spritesDesc/IceNefrit_Desc.json",
+  "walkingType": "NORMAL"
+}

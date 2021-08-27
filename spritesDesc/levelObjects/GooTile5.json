@@ -1,0 +1,26 @@
+{
+  "appearance": {
+    "desc": {
+      "desc": "WndInfoCell_Nothing",
+      "name": "Level_TileWall"
+    },
+    "particles": "Candle",
+    "sprite": {
+      "animations": {
+        "basic": {
+          "fps": 5,
+          "frames": [
+            4,
+            5
+          ],
+          "looped": true
+        }
+      },
+      "imageIndex": 4,
+      "textureFile": "levelObjects/GooTiles.png"
+    }
+  },
+  "canStepOn": true,
+  "kind": "Deco",
+  "nonPassable": false
+}

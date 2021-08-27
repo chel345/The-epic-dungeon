@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/SkvernExplotion.png",
+  "width"  : 48,
+  "height" : 48,
+  "anim"   : { "fps" : 10, "looped" : false, "frames" : [0,1,2,3,4,5,6] }
+}

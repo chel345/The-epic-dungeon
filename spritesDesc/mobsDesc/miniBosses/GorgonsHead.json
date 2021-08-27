@@ -1,0 +1,38 @@
+{
+  "attackDelay": 10000,
+  "attackRange": 0,
+  "attackSkill": 0,
+  "baseSpeed": 0,
+  "canBePet": false,
+  "defenseSkill": 0,
+  "description": "GorgonsHead_Desc",
+  "dmgMax": 0,
+  "dmgMin": 0,
+  "dr": 10,
+  "exp": 10,
+  "flying": false,
+  "friendly": false,
+  "gender": "GorgonsHead_Gender",
+  "ht": 150,
+  "immunities": [
+    "Paralysis",
+    "ToxicGas",
+    "Terror",
+    "Death",
+    "Amok",
+    "Blindness",
+    "Sleep",
+    "Poison",
+    "Vertigo",
+    "Bleeding"
+  ],
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 1,
+  "maxLvl": 32,
+  "name": "GorgonsHead_Name",
+  "name_objective": "GorgonsHead_Object",
+  "spriteDesc": "spritesDesc/GorgonsHead_Desc.json",
+  "walkingType": "WATER"
+}
