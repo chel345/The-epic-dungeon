@@ -37,7 +37,7 @@ die = function(self)
         print(self, cause)
 
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("Wraith")
+            local mob = RPD.mob("Wraith")
             local pos = level:getEmptyCellNextTo(self:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

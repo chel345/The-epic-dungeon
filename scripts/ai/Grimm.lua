@@ -15,7 +15,7 @@ if math.random(1,2) == 2 then
 me:spend(2)
 RPD.Wands.wandOfBlink:mobWandUse(me, RPD.Dungeon.level:randomRespawnCell())
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("NightmareBall")
+            local mob = RPD.mob("NightmareBall")
             local pos = RPD.Dungeon.level:getEmptyCellNextTo(me:getPos())
             if (RPD.Dungeon.level:cellValid(pos)) then
                 mob:setPos(pos)
@@ -45,7 +45,7 @@ else if math.random(1,2) == 2 then
 me:spend(2)
 RPD.Wands.wandOfBlink:mobWandUse(me, RPD.Dungeon.level:randomRespawnCell())
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("MirorGrimm")
+            local mob = RPD.mob("MirorGrimm")
             local pos = RPD.Dungeon.level:getEmptyCellNextTo(me:getPos())
             if (RPD.Dungeon.level:cellValid(pos)) then
                 mob:setPos(pos)
@@ -74,7 +74,7 @@ else
 for i=1, RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.EMPTY then
 if math.random(1,200) == 1 then
-local mob = RPD.MobFactory:mobByName("NightmareAngel") 
+local mob = RPD.mob("NightmareAngel") 
 mob:setPos(i-1)
 RPD.Dungeon.level:spawnMob(mob)
 end

@@ -18,7 +18,7 @@ damage = function(self, cause)
         print(self, cause)
 
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("Larva")
+            local mob = RPD.mob("Larva")
             local pos = level:getEmptyCellNextTo(self:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

@@ -19,7 +19,7 @@ elseif math.random(1,2) == 1 then
 
 local level = RPD.Dungeon.level
 for i = 1,2 do
-local mob = RPD.MobFactory:mobByName("BlueGooLasher")
+local mob = RPD.mob("BlueGooLasher")
 local pos = level:getEmptyCellNextTo(self:getPos())
 if (level:cellValid(pos)) then
 mob:setPos(pos)

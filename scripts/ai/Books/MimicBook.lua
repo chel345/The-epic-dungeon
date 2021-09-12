@@ -16,7 +16,7 @@ me:getSprite():idle()
 if RPD.Dungeon.level:distance(RPD.Dungeon.hero:getPos(),me:getPos()) < 6 then
 me:getSprite():attack(1)
 RPD.playSound( "snd_zap.mp3" )
-local mob = RPD.MobFactory:mobByName("effects/Boll") 
+local mob = RPD.mob("effects/Boll") 
 mob:setPos(me:getPos())
 RPD.Dungeon.level:spawnMob(mob)
 
@@ -30,7 +30,7 @@ mob:getSprite():emitter():start(RPD.Sfx.ShadowParticle.UP, 0.01,factor*10)
 
 mob:destroy()
 
-local mob = RPD.MobFactory:mobByName("effects/Boll") 
+local mob = RPD.mob("effects/Boll") 
 mob:setPos(me:getPos())
 RPD.Dungeon.level:spawnMob(mob)
 

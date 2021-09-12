@@ -13,7 +13,7 @@ return mob.init{
     zapProc = function(self, enemy, dmg)
 local level = RPD.Dungeon.level
 local hero = RPD.Dungeon.hero
-            local mob = RPD.MobFactory:mobByName("Skeleton")
+            local mob = RPD.mob("Skeleton")
    local x = level:cellX(cell)
         local y = level:cellY(cell)
         for i = x - 1, x + 3 do

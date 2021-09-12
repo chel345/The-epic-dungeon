@@ -21,7 +21,7 @@ local level = RPD.Dungeon.level
 local item = RPD.ItemFactory:itemByName("LloydsBeacon")
 level:drop(item,self:getPos())
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("Hydra")
+            local mob = RPD.mob("Hydra")
             local pos = level:getEmptyCellNextTo(self:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

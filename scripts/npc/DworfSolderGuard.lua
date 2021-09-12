@@ -16,7 +16,7 @@ end,
 die = function(self)
 if self:hp() >= self:ht() then
 local level = RPD.Dungeon.level
-local mob = RPD.MobFactory:mobByName(self:getMobClassName())
+local mob = RPD.mob(self:getMobClassName())
 mob:setPos(self:getPos())
 level:spawnMob(mob)
 end

@@ -15,7 +15,7 @@ me:getSprite():idle()
 if RPD.Dungeon.level:distance(RPD.Dungeon.hero:getPos(),me:getPos()) < 5 then
 
 top = function(from,to)
-local mob = RPD.MobFactory:mobByName("effects/Boll") 
+local mob = RPD.mob("effects/Boll") 
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 local factor = RPD.Dungeon.level:distance(from,to)
@@ -25,7 +25,7 @@ mob:destroy()
 end
 
 bottom = function(from,to)
-local mob = RPD.MobFactory:mobByName("effects/Boll") 
+local mob = RPD.mob("effects/Boll") 
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 local factor = RPD.Dungeon.level:distance(from,to)
@@ -61,7 +61,7 @@ end
 end
 
 addStatue = function(cell)
-local maybeMob = RPD.MobFactory:mobByName("SumStatue")
+local maybeMob = RPD.mob("SumStatue")
 maybeMob:setPos(cell)
 RPD.Dungeon.level:spawnMob(maybeMob)
 maybeMob:getSprite():emitter():burst( RPD.Sfx.ElmoParticle.FACTORY, 5)

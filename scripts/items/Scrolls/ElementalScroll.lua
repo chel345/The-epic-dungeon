@@ -38,7 +38,7 @@ local mobs = {
 
  item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
         local level = RPD.Dungeon.level
-            local mob = RPD.MobFactory:mobByName(mobs[math.random(1,4)])
+            local mob = RPD.mob(mobs[math.random(1,4)])
             local pos = level:getEmptyCellNextTo(hero:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

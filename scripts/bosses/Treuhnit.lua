@@ -14,7 +14,7 @@ return mob.init({
 local level = RPD.Dungeon.level
 RPD.topEffect(RPD.Dungeon.hero:getPos(),"TreuhnitsStup")
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("GooElemental")
+            local mob = RPD.mob("GooElemental")
             local pos = level:getEmptyCellNextTo(enemy:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)
@@ -26,7 +26,7 @@ RPD.topEffect(RPD.Dungeon.hero:getPos(),"TreuhnitsStup")
 local level = RPD.Dungeon.level
 RPD.topEffect(RPD.Dungeon.hero:getPos(),"TreuhnitsStup")
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("GooElemental")
+            local mob = RPD.mob("GooElemental")
             local pos = level:getEmptyCellNextTo(enemy:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

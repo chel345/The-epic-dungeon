@@ -34,7 +34,7 @@ end
 end,
     zapProc = function(self, cause) 
         local level = RPD.Dungeon.level
-            local mob = RPD.MobFactory:mobByName(mobs[math.random(1,7)])
+            local mob = RPD.mob(mobs[math.random(1,7)])
             local pos = level:getEmptyCellNextTo(self:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

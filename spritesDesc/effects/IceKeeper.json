@@ -1,6 +1,0 @@
-{
-  "texture" : "effects/IceKeeper.png",
-  "width"  : 12,
-  "height" : 15,
-  "anim"   : { "fps" : 2,  "looped" : true,     "frames" : [0,0,0,1,0,0,1,1]}
-}

@@ -46,7 +46,7 @@ if cell then
 if level.fieldOfView[cell] then
 RPD.playSound( "TearsRock.ogg" )
 RPD.topEffect(cell,"BlueMagicCould")
-local mob = RPD.MobFactory:mobByName("TearsGuard")
+local mob = RPD.mob("TearsGuard")
 mob:setPos(cell)
 level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero)) 
 end

@@ -42,7 +42,7 @@ local level = RPD.Dungeon.level
      for j = y - 1, y + 1 do
             local pos = level:cell(i,j)
  local soul =  RPD.Actor:findChar(pos)
-            if soul and soul ~= RPD.Dungeon.hero then 
+            if soul and soul ~= thisItem:getUser() then 
  RPD.affectBuff(soul, RPD.Buffs.Slow , 30*(l+1));
 RPD.affectBuff(soul, RPD.Buffs.Poison , 30*(l+1));
 RPD.affectBuff(soul, RPD.Buffs.Vertigo , 25*(l+1));

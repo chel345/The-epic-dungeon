@@ -29,7 +29,7 @@ for j = y - 4, y + 4 do
 local pos = RPD.Dungeon.level:cell(i,j)
 local mob = RPD.Actor:findChar(pos)  
 if mob ~= RPD.Dungeon.hero then
-if mob and mob:getMobClassName() == "EnRotLasher" then
+if mob and mob:getMobClassName() == "City/EnRotLasher" then
 mob:damage(100,self)
 end
 end

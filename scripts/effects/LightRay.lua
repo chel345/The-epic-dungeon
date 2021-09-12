@@ -26,7 +26,7 @@ image.angle = math.atan2(dy,dx)*A
 image:setScale(math.sqrt(dx*dx+dy*dy)/image.width,1)
 
 --[[
-local ball = RPD.MobFactory:mobByName("effects/Boll")
+local ball = RPD.mob("effects/Boll")
 ball:setPos(0)
 RPD.Dungeon.level:spawnMob(ball)
 RPD.setAi(ball,"update")

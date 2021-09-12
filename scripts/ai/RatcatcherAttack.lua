@@ -28,7 +28,7 @@ end
 local level = RPD.Dungeon.level
 local hero = RPD.Dungeon.hero
 for i = 1,math.random(1,4) do
-local mob = RPD.MobFactory:mobByName(rats[math.random(1,#rats)])
+local mob = RPD.mob(rats[math.random(1,#rats)])
 local pos = level:getEmptyCellNextTo(me:getPos())
 if (level:cellValid(pos)) then
 mob:setPos(pos)

@@ -24,12 +24,12 @@ level:drop(RPD.item("Artifacts/SpiderEye"),cell).type = RPD.Heap.Type.SKELETON
 end,
 interact = function(self, chr)
 if not storage.get("interact") then
-EPD.showQuestWindow(self, RPD.StringsManager:maybeId("AlhimicNPC_Phrase_"))
+EPD.showQuestWindow(self, RPD.StringsManager:maybeId("AlhimicNPC_Phrase1"))
 storage.put("interact",true)
 return
 end
 if RPD.Dungeon.hero:getBelongings():getItem("Artifacts/SpiderEye") then
-EPD.showQuestWindow(self, RPD.StringsManager:maybeId("AlhimicNPC_Phrase_"))
+EPD.showQuestWindow(self, RPD.StringsManager:maybeId("AlhimicNPC_Phrase2"))
 local hero = RPD.Dungeon.hero
 hero:getBelongings():getItem("Artifacts/SpiderEye"):detach(hero:getBelongings().backpack)
 RPD.Dungeon.level:drop(RPD.item("Potion/Test8"),self:getPos())
@@ -38,7 +38,7 @@ self:destroy()
 self:getSprite():killAndErase()
 storage.put("complete",true)
 elseif not storage.get("complete") then
-EPD.showQuestWindow(self, RPD.StringsManager:maybeId("AlhimicNPC_Phrase_"))
+EPD.showQuestWindow(self, RPD.StringsManager:maybeId("AlhimicNPC_Phrase3"))
 end
 end
 })

@@ -8,87 +8,87 @@
  "map":[4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1, 1, 4, 4, 4, 1, 4, 4, 4, 1, 1, 1, 4, 1, 1, 1, 4, 4, 4, 4, 1, 1, 4, 4, 1, 1, 4, 4, 4, 1, 1, 1, 5, 1, 1, 1, 1, 4, 4, 4, 1, 1, 4, 4, 1, 1, 4, 4, 4, 1, 1, 1, 4, 1, 1, 4, 4, 4, 4, 4, 4, 5, 4, 4, 1, 1, 4, 8, 4, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 4, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 5, 4, 4, 4, 4, 4, 1, 1, 1, 4, 1, 1, 1, 1, 1, 4, 1, 1, 4, 1, 1, 1, 1, 4, 4, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 4, 4, 4, 1, 1, 1, 4, 1, 1, 1, 7, 1, 1, 1, 1, 4, 1, 1, 1, 1, 4, 4, 4, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
  "mobs":[
         {
-         "kind":"DworfNPC",
+         "kind":"DworfTown/DworfNPC",
          "x":3,
          "y":2
         }, 
         {
-         "kind":"DworfNPC",
+         "kind":"DworfTown/DworfNPC",
          "x":17,
          "y":2
         }, 
         {
-         "kind":"DworfGuard",
+         "kind":"DworfTown/DworfGuard",
          "x":8,
          "y":5
         }, 
         {
-         "kind":"DworfGuard",
+         "kind":"DworfTown/DworfGuard",
          "x":10,
          "y":5
         }, 
         {
-         "kind":"DworfMonkNPC",
+         "kind":"DworfTown/DworfMonkNPC",
          "x":1,
          "y":6
         }, 
         {
-         "kind":"DworfMonkNPC",
+         "kind":"DworfTown/DworfMonkNPC",
          "x":2,
          "y":6
         }, 
         {
-         "kind":"DworfMonkNPC",
+         "kind":"DworfTown/DworfMonkNPC",
          "x":3,
          "y":6
         }, 
         {
-         "kind":"DworfMonkNPC",
+         "kind":"DworfTown/DworfMonkNPC",
          "x":1,
          "y":8
         }, 
         {
-         "kind":"DworfMonkNPC",
+         "kind":"DworfTown/DworfMonkNPC",
          "x":2,
          "y":8
         }, 
         {
-         "kind":"DworfMonkNPC",
+         "kind":"DworfTown/DworfMonkNPC",
          "x":3,
          "y":8
         }, 
         {
-         "kind":"UpDworfMonkNPC",
+         "kind":"DworfTown/UpDworfMonkNPC",
          "x":5,
          "y":8
         }, 
         {
-         "kind":"DworfNPC",
+         "kind":"DworfTown/DworfNPC",
          "x":17,
          "y":9
         }, 
         {
-         "kind":"DworfMonkNPC",
+         "kind":"DworfTown/DworfMonkNPC",
          "x":1,
          "y":10
         }, 
         {
-         "kind":"DworfMonkNPC",
+         "kind":"DworfTown/DworfMonkNPC",
          "x":2,
          "y":10
         }, 
         {
-         "kind":"DworfMonkNPC",
+         "kind":"DworfTown/DworfMonkNPC",
          "x":3,
          "y":10
         }, 
         {
-         "kind":"DworfWomenNPC",
+         "kind":"DworfTown/DworfWomenNPC",
          "x":12,
          "y":12
         }, 
         {
-         "kind":"UpWarlokNPC",
+         "kind":"DworfTown/UpWarlokNPC",
          "x":3,
          "y":16
         }],

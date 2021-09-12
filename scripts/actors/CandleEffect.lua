@@ -16,7 +16,7 @@ if RPD.Dungeon.level.map[i] == RPD.Terrain.WALL_DECO then
  RPD.Sfx.CellEmitter:center(i-1):pour(RPD.Sfx.FlameParticle.FACTORY, 0.08);
 end
 end
-local mob = RPD.MobFactory:mobByName("TownShopkeeper")
+local mob = RPD.mob("TownShopkeeper")
 for i = 1,RPD.Dungeon.level:getLength()-1 do           
 local maybeMob = RPD.Actor:findChar(i)          
 if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() ==  "TownShopkeeper" then

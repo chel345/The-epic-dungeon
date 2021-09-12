@@ -38,7 +38,7 @@ if not storage.get("ttt") then
 storage.put("ttt",true) 
     for i = 1, RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.PEDESTAL then
-local mob = RPD.MobFactory:mobByName("EpicIceRunicSkull")
+local mob = RPD.mob("EpicIceRunicSkull")
 mob:setPos(i-1)
 RPD.Dungeon.level:spawnMob(mob)
 mob:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
@@ -61,7 +61,7 @@ if i == RPD.Dungeon.level:getLength()-2 then
 for i = 1, RPD.Dungeon.level:getLength()-1 do
 
 if RPD.Dungeon.level.map[i] == RPD.Terrain.PEDESTAL then
-local mob = RPD.MobFactory:mobByName("ColdSpirit")
+local mob = RPD.mob("ColdSpirit")
 mob:setPos(i-1)
 RPD.Dungeon.level:spawnMob(mob)
 mob:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )

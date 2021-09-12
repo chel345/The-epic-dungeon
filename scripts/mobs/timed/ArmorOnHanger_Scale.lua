@@ -13,7 +13,7 @@ return mob.init({
 interact = function(self, chr)
 item = "ScaleArmor"
 RPD.Dungeon.level:drop(RPD.item(item),chr:getPos())
-local Hanger = RPD.MobFactory:mobByName("effects/ArmorOnHanger")
+local Hanger = RPD.mob("effects/ArmorOnHanger")
 Hanger:setPos(self:getPos())
 RPD.Dungeon.level:spawnMob(Hanger)
 self:destroy()

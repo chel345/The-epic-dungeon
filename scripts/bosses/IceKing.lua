@@ -12,10 +12,10 @@ local mob = require"scripts/lib/mob"
 return mob.init({ 
 zapProc = function(self, enemy,dmg)
 RPD.affectBuff(enemy, RPD.Buffs.Frost,4)
-local mob = RPD.MobFactory:mobByName("IceGaurd") 
+local mob = RPD.mob("IceGaurd") 
 mob:setPos(self:getPos()-2)
 RPD.Dungeon.level:spawnMob(mob)
-local mob = RPD.MobFactory:mobByName("IceGaurd")
+local mob = RPD.mob("IceGaurd")
 mob:setPos(self:getPos()+2)
 RPD.Dungeon.level:spawnMob(mob)
 

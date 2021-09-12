@@ -20,7 +20,7 @@ return trap.init(
             item:upgrade()
             level:drop(item,cell)
         else
-            local mob = RPD.MobFactory:mobByName(mobs[math.random(1,#mobs)])
+            local mob = RPD.mob(mobs[math.random(1,#mobs)])
             local mobPos = level:getEmptyCellNextTo(cell)
             if level:cellValid(mobPos) then
                 mob:setPos(mobPos)

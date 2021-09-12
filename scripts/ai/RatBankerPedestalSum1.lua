@@ -15,7 +15,7 @@ me:getSprite():idle()
 if RPD.Dungeon.level:distance(RPD.Dungeon.hero:getPos(),me:getPos()) < 3 then
 
 addStatue = function(cell,statue)
-local mob = RPD.MobFactory:mobByName(statue)
+local mob = RPD.mob(statue)
 mob:setPos(RPD.Dungeon.level:cellX(cell))
 RPD.Dungeon.level:spawnMob(mob)
 mob:getSprite():emitter():burst( RPD.Sfx.ElmoParticle.FACTORY, 5)
@@ -27,8 +27,8 @@ mob:move(cell)
 end
 
 local W = RPD.Dungeon.level:getWidth()
-addStatue(me:getPos()+W*5+2,"miniBosses/RatStatue")
-addStatue(me:getPos()+W*5-2,"miniBosses/RatStatue")
+addStatue(me:getPos()+W*5+2,"RatStatue")
+addStatue(me:getPos()+W*5-2,"RatStatue")
 me:beckon(RPD.Dungeon.hero:getPos())
 end
 me:spend(1)

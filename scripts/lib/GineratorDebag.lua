@@ -99,7 +99,7 @@ end
 end
 level:set(cell, RPD.Terrain.PEDESTAL) 
 RPD.GameScene:updateMap(cell)
-local mob = RPD.MobFactory:mobByName("CrystalGuard")
+local mob = RPD.mob("CrystalGuard")
 mob:setPos(cell)
 RPD.Dungeon.level:spawnMob(mob)
 
@@ -419,7 +419,7 @@ level:set(pos, RPD.Terrain.EMPTY )
 RPD.GameScene:updateMap(pos)
 end
 end
-local mob = RPD.MobFactory:mobByName("BlueHeart")            mob:setPos(cell)
+local mob = RPD.mob("BlueHeart")            mob:setPos(cell)
 RPD.Dungeon.level:spawnMob(mob)
 level:set(cell, RPD.Terrain.PEDESTAL )
 end

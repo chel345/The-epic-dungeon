@@ -35,7 +35,7 @@ missile:pour( RPD.Sfx.ElmoParticle.FACTORY, 0.01f);
     end,
 die = function(self, cause)
 local level = RPD.Dungeon.level
-local mob = RPD.MobFactory:mobByName("BlueGoo")
+local mob = RPD.mob("BlueGoo")
 mob:setPos(self:getPos())
 level:spawnMob(mob)
 end,

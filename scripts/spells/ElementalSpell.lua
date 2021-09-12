@@ -36,7 +36,7 @@ local mobs = {
        local level = RPD.Dungeon.level
 
         local hero = RPD.Dungeon.hero
-            local mob = RPD.MobFactory:mobByName(mobs[math.random(1,6)])
+            local mob = RPD.mob(mobs[math.random(1,6)])
             local pos = level:getEmptyCellNextTo(hero:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

@@ -24,7 +24,7 @@ local level = RPD.Dungeon.level
 self:getSprite():emitter():burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.BONE ), 7);
 if math.random(1,5) == 5 then
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("Wraith")
+            local mob = RPD.mob("Wraith")
             local pos = level:getEmptyCellNextTo(self:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos) level:spawnMob(mob)     

@@ -1,9 +1,0 @@
-{
-  "texture" : "DworfStatue.png",
-  "width"   : 16,
-  "height"  : 16,
-"idle"    : { "fps" : 10,  "looped" : true,     "frames" : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0] },
-"run"     : { "fps" : 20, "looped" : true,     "frames" : [0] },
-"die"     : { "fps" : 20, "looped" : false,    "frames" : [0] },
-"attack"  : { "fps" : 15, "looped" : false,    "frames" : [0,2,3,3,2,0,0,2,3,4,5,4,5] }
-}

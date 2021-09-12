@@ -46,15 +46,6 @@ end,
 
     execute = function(self, item, hero, action, cell, char, data) 
          if action == RPD.Actions.zap then
---local t = RPD.new("com.watabou.pixeldungeon.windows.WndBlacksmith",hero)
-local s = RPD.item("Sword")
-local a = RPD.item("SpiderArmor")
---local mob = RPD.new("com.watabou.pixeldungeon.actors.mobs.Statue")
-local mob = RPD.MobFactory:mobByName("EnslavedSoul")
-mob:setPos(hero:getPos())
-s:doEquip(mob)
-a:doEquip(mob)
-RPD.Dungeon.level:spawnMob(mob)
 
 --local image = RPD.new("com.watabou.noosa.Image","ui/title.png")
 --RPD.GameScene:effect(image)
@@ -67,6 +58,9 @@ end
 RPD.glog(client:receiveMessage())
 client:stop()
 --]]
+local mob = RPD.mob("WaterZombie")
+mob:setPos(RPD.Dungeon.hero:getPos())
+RPD.Dungeon.level:spawnMob(mob)
 end 
 end 
 }

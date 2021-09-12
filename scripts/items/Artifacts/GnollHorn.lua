@@ -5,6 +5,8 @@
 -- This file is part of Remixed Pixel Dungeon.
 --
 
+local mana
+
 local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
@@ -26,7 +28,7 @@ return item.init{
     if action == RPD.StringsManager:maybeId("Blow") then  
 
 mana = RPD.Dungeon.hero:getSkillPoints()
-if mana > 15 then
+if mana >= 15 then
 RPD.Dungeon.hero:spendSkillPoints(15)
 else
 RPD.glog(RPD.StringsManager:maybeId("No_Mana"))
@@ -44,7 +46,7 @@ gnolls = {
 for i=1,RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.EMPTY then
 if math.random(1,100) == 1 then
-local mob = RPD.MobFactory:mobByName(gnolls[math.random(1,#gnolls)]) 
+local mob = RPD.mob(gnolls[math.random(1,#gnolls)]) 
 mob:setPos(i-1)
 RPD.Dungeon.level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
 end

@@ -37,7 +37,7 @@ RPD.createLevelObject({
     object_desc="GnollsArmor"
 }
 ,53)
-local mob = RPD.MobFactory:mobByName("SleepingGnollNPC")
+local mob = RPD.mob("SleepingGnollNPC")
 mob:setPos(102)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.createLevelObject({

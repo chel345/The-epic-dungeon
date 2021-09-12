@@ -118,7 +118,7 @@ if maybeMob and maybeMob  ~= RPD.Dungeon.hero and maybeMob:getMobClassName() == 
 maybeMob:destroy() 
 maybeMob:getSprite():killAndErase()
 CrystalMod:setPos(i)
-local CrystalMod = RPD.MobFactory:mobByName("CrystalMod")
+local CrystalMod = RPD.mob("CrystalMod")
 
 RPD.Dungeon.level:spawnMob(CrystalMod)
 end

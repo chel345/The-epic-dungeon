@@ -17,7 +17,7 @@ act       = function(me, ai, me)
 summonBee = function()
 local level = RPD.Dungeon.level
 local hero = RPD.Dungeon.hero
-local mob = RPD.MobFactory:mobByName("ShadowSpider")
+local mob = RPD.mob("ShadowSpider")
 local pos = level:getEmptyCellNextTo(me:getPos())
 if (level:cellValid(pos)) then
 mob:setPos(pos)

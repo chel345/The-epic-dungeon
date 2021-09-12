@@ -11,7 +11,7 @@ local mob = require"scripts/lib/mob"
 
 return mob.init{
 zapProc = function(me,enemy,dmg)
-local mob = RPD.MobFactory:mobByName("effects/Boll") 
+local mob = RPD.mob("effects/Boll") 
 mob:setPos(me:getPos())
 RPD.Dungeon.level:spawnMob(mob)
 

@@ -23,7 +23,7 @@ local l = level:getLength()
 
 for i = 3, l do
 if level.map[i] == RPD.Terrain.WALL_DECO then
-local effect = RPD.MobFactory:mobByName("effects/LightMagic")
+local effect = RPD.mob("effects/LightMagic")
 effect:setPos(i-1)
 RPD.Dungeon.level:spawnMob(effect)
 effect:move(0) 
@@ -203,7 +203,7 @@ Ginerator.CreateDeco(50,100)
 -- создание мобов
 for i=0,10 do
 local level = RPD.Dungeon.level
-local mob1 = RPD.MobFactory:mobByName("SewerGuard")
+local mob1 = RPD.mob("SewerGuard")
 
 if math.random(2,20) == 2 then
 mob1:setPos(RPD.Dungeon.level:randomRespawnCell())
@@ -213,7 +213,7 @@ end
 storage.put("key",true)
 for i = 1, 32*32-1 do
 if level.map[i] == RPD.Terrain.CHASM and math.random(1,40) == 1 then
-local mob = RPD.MobFactory:mobByName("Rat")
+local mob = RPD.mob("Rat")
 mob:setPos(i-1)
 level:spawnMob(mob)
 end
@@ -230,7 +230,7 @@ maybeMob:move(0)
 end
 end
 local level = RPD.Dungeon.level
-local mob1 = RPD.MobFactory:mobByName("Rat")
+local mob1 = RPD.mob("Rat")
 
 mob1:setPos(RPD.Dungeon.level:randomRespawnCell())
 level:spawnMob(mob1);

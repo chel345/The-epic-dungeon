@@ -68,7 +68,7 @@ end,
 DefenseProc = function()
 if math.random(1,3) == 1 then
 addStatue = function(cell,statue)
-local mob = RPD.MobFactory:mobByName(statue)
+local mob = RPD.mob(statue)
 mob:setPos(RPD.Dungeon.level:cellX(cell))
 RPD.Dungeon.level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
 mob:getSprite():emitter():burst( RPD.Sfx.ElmoParticle.FACTORY, 5)

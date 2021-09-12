@@ -41,7 +41,7 @@ if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:ht() == 180 then
 for i = 1,math.random(1,3) do
 local pos = RPD.Dungeon.level:getEmptyCellNextTo(maybeMob:getPos())
 if (RPD.Dungeon.level:cellValid(pos)) then
-local mob = RPD.MobFactory:mobByName("IceSkeleton") 
+local mob = RPD.mob("IceSkeleton") 
 mob:setPos(pos)
 RPD.Dungeon.level:spawnMob(mob)
 mob:getSprite():emitter():burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.BONE ), 7);

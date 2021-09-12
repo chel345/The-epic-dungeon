@@ -64,7 +64,7 @@ RPD.createLevelObject(candle, i-1)
 lvl:set(i-1,1)
 elseif math.random(1,2) == 1 then
 lvl:set(i-1,1)
-local mob = RPD.MobFactory:mobByName("SpiderStatue")
+local mob = RPD.mob("SpiderStatue")
 mob:setPos(i-1)
 lvl:spawnMob(mob)
 elseif math.random(1,3) == 1 then
@@ -83,7 +83,7 @@ local web =
 RPD.createLevelObject(web, i-1)
 else
 lvl:set(i-1,1)
-local mob = RPD.MobFactory:mobByName("EnFireThrower")
+local mob = RPD.mob("EnFireThrower")
 mob:setPos(i-1)
 lvl:spawnMob(mob)
 end

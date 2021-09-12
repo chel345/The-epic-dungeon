@@ -11,7 +11,7 @@ local mob = require"scripts/lib/mob"
 
 return mob.init({
     move = function(self, cell)
-            local mob = RPD.MobFactory:mobByName("CrystalCrab")                mob:setPos(self:getPos())
+            local mob = RPD.mob("CrystalCrab")                mob:setPos(self:getPos())
             RPD.Dungeon.level:spawnMob(mob)
     end,
     zapProc = function(self, enemy, dmg) -- ranged attack

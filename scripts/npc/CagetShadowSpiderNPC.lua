@@ -26,7 +26,7 @@ local hero = RPD.Dungeon.hero
 hero:getBelongings():getItem("IronKey"):detach(hero:getBelongings().backpack)
 
 
-local mob = RPD.MobFactory:mobByName("ShadowSpider")
+local mob = RPD.mob("ShadowSpider")
 mob:setPos(self:getPos())
 RPD.Dungeon.level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
 

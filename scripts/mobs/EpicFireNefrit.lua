@@ -19,7 +19,7 @@ end,
 zapProc = function(self, enemy, dmg)
 local from = self:getPos()
 local to = enemy:getPos()
-local mob = RPD.MobFactory:mobByName("effects/Boll") 
+local mob = RPD.mob("effects/Boll") 
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)

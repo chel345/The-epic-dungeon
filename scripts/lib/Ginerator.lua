@@ -25,11 +25,22 @@ gin = script()
 for i = 1, RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.ENTRANCE then
 RPD.Dungeon.hero:move(i-1)
-Process.cell_s = i-1
 break
 end
 end
 
+if gin.Shop then
+	gin.Shop = (file.."/"..gin.Shop)
+end
+if gin.NPCRoom then
+	gin.NPCRoom = (file.."/"..gin.NPCRoom)
+end
+if gin.MiniBoss then
+	gin.MiniBoss = (file.."/"..gin.MiniBoss)
+end
+for i = 1, #gin.RandRooms do
+	gin.RandRooms[i] = (file.."/"..gin.RandRooms[i])
+end
 if gin.kind == "Caves" then
 
 if not gin.HasBase then

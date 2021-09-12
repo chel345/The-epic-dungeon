@@ -81,7 +81,7 @@
       
 "City3":{"kind":"CityLevel", "depth":18,       "size":[64,64], "music":"CityLevel.ogg","script":"scripts/actors/Levels/CityLevel", "noBuild":true},
       
-"City4":{"kind":"CityLevel", "depth":19, "music":"DworfLibraryLevel.mp3", "script":"scripts/actors/Levels/CityLevel","tiles":"tiles_dworf_library.png", "noBuild":true},
+"City4":{"kind":"CityLevel", "depth":19, "music":"DworfLibraryLevel.ogg", "script":"scripts/actors/Levels/CityLevel","tiles":"tiles_dworf_library.png", "noBuild":true},
       
 "City5":{"kind":"CityBossLevel", "depth":20,   "size":[32,32], "music":"CityLevel.ogg","script":"scripts/actors/Levels/CityLevel"},
       
@@ -194,7 +194,7 @@
 "Goo2":{"kind":"RandomLevel", "depth":22, "file":"levelsDesc/KindLevel/GooLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "noBuild":true},
       
 "Goo3":{"kind":"RandomLevel", "depth":23, "file":"levelsDesc/KindLevel/GooLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "noBuild":true},
-      
+
 "Goo4":{"kind":"RandomLevel", "depth":24, "file":"levelsDesc/KindLevel/GooLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "noBuild":true},
       
 "Goo5":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/BossLevel/GooBossLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel"},
@@ -360,7 +360,7 @@
       
 "Castle4":{"kind":"RandomLevel", "depth":29, "file":"LevelsDesc/KindLevel/IceCastleLevel.json", "music":"IceLevel.ogg","script":"scripts/actors/Levels/IceCastleLevel", "noBuild":true},
       
-"Castle5":{"kind":"PredesignedLevel", "depth":30, "file":"levelsDesc/BossLevel/IceCastleBossLevel.json", "music":"IceBossLevel.ogg","script":"scripts/actors/Levels/IceCastleLevel"},
+"Castle5":{"kind":"PredesignedLevel", "depth":30, "file":"levelsDesc/BossLevel/IceCastleBossLevel.json", "music":"IceLevel.ogg","script":"scripts/actors/Levels/IceCastleLevel"},
 
 
    
@@ -487,7 +487,7 @@
 "ModRoom":[[],["TownLibrary"]],
 "Inn":[[],["Town"]],
 
-"Town":[["TownChurch", "TownMovieTheater", "Necro4","TownLibrary", "TownShop","FortuneShop", "Inn"],[]],
+"Town":[["TownChurch", "TownMovieTheater", "Sewer1","TownLibrary", "TownShop","FortuneShop", "Inn"],[]],
 
 
 "portal_room_lvl5":[["Prison1"],["Sewer5"]],
@@ -743,7 +743,7 @@
 "Library5":[["portal_room_lvl35_r"],["Library4"]],
 
 "FakeLastLevel":[["Guts2"],["portal_room_lvl35_r"]],
-"Guts2":[["Guts3"],["Guts1"]],
+"Guts2":[["Guts3"],["FakeLastLevel"]],
 "Guts3":[["Guts4"],["Guts2"]],
 "Guts4":[["Guts5"],["Guts3"]], 
 "Guts5":[["portal_room_lvl40_r"],["Guts4"]],       

@@ -21,52 +21,52 @@
 ],
  "mobs":[
         {
-         "kind":"DworfNPC",
+         "kind":"DworfTown/DworfNPC",
          "x":11,
          "y":2
         }, 
         {
-         "kind":"DworfKeeperNPC",
+         "kind":"DworfTown/DworfKeeperNPC",
          "x":17,
          "y":2
         }, 
         {
-         "kind":"BrokenDM300NPC",
+         "kind":"DworfTown/BrokenDM300NPC",
          "x":3,
          "y":3
         }, 
         {
-         "kind":"DworfMihanicNPC",
+         "kind":"DworfTown/DworfMihanicNPC",
          "x":4,
          "y":4
         }, 
         {
-         "kind":"WorkingDM300NPC",
+         "kind":"DworfTown/WorkingDM300NPC",
          "x":1,
          "y":5
         }, 
         {
-         "kind":"DworfSolder",
+         "kind":"DworfTown/DworfSolder",
          "x":17,
          "y":10
         }, 
         {
-         "kind":"DworfSolder",
+         "kind":"DworfTown/DworfSolder",
          "x":8,
          "y":12
         }, 
         {
-         "kind":"DworfSolder",
+         "kind":"DworfTown/DworfSolder",
          "x":10,
          "y":12
         }, 
         {
-         "kind":"DworfNPC",
+         "kind":"DworfTown/DworfNPC",
          "x":1,
          "y":16
         }, 
         {
-         "kind":"DworfStatueMasterNPC",
+         "kind":"DworfTown/DworfStatueMasterNPC",
          "x":13,
          "y":17
         }],

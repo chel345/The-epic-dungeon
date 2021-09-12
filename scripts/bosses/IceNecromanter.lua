@@ -48,7 +48,7 @@ end,
     spawn = function(self,me, level)
     for i = 1, RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.PEDISTAL then
-local mob = RPD.MobFactory:mobByName("EpicIceRunicSkull")
+local mob = RPD.mob("EpicIceRunicSkull")
 mob:setPos(i-1)
 RPD.Dungeon.level:spawnMob(mob)
 end

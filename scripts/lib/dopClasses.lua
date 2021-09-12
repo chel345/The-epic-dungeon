@@ -19,7 +19,7 @@ Wand:mobWandUse(user,cell)
 
 end,
 SpawnMob = function(mob,pos,pet)
-local maybeMob = RPD.MobFactory:mobByName(mob)
+local maybeMob = RPD.mob(mob)
 maybeMob:setPos(pos)
 if pet then
 RPD.Dungeon.level:spawnMob(RPD.Mob:makePet(maybeMob,RPD.Dungeon.hero));
@@ -266,7 +266,7 @@ elseif wand == "NefritWand" then
 
 local mobPos = RPD.Dungeon.level:getEmptyCellNextTo(mob:getPos())
     if RPD.Dungeon.level:cellValid(mobPos) then
-        local mobm = RPD.MobFactory:mobByName("IceNefrit")
+        local mobm = RPD.mob("IceNefrit")
         mobm:setPos(mobPos)
         RPD.Dungeon.level:spawnMob(mobm)
     end
@@ -275,7 +275,7 @@ elseif wand == "SummonerWand" then
 RPD.playSound( "snd_meld.mp3" )
 local levele = RPD.Dungeon.level
 for i = 1,2+level do
-local mobb = RPD.MobFactory:mobByName("Bee")
+local mobb = RPD.mob("Bee")
 local pos = levele:getEmptyCellNextTo(mob:getPos())
 if (levele:cellValid(pos)) then
 mobb:setPos(pos)
@@ -299,7 +299,7 @@ local Wand = RPD.creteItem("WandOfRegrowth", {level = level})
 Wand:mobWandUse(mob,dst)
 
 if math.random(1,4) == 1 then
-local maybeMob = RPD.MobFactory:mobByName("EarthElemental")
+local maybeMob = RPD.mob("EarthElemental")
 maybeMob:setPos(dst)
 RPD.Dungeon.level:spawnMob(maybeMob)
 end

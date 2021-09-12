@@ -32,13 +32,13 @@ RPD.Dungeon.level:set(i-1,RPD.Terrain.EMPTY_DECO)
 end
 if level.map[i] == RPD.Terrain.STATUE and math.random(1, 10) == 1 then
 level:set(i-1,1)
-local mob = RPD.MobFactory:mobByName("DworfStatueNPC")
+local mob = RPD.mob("DworfStatueNPC")
 local level = RPD.Dungeon.level
 mob:setPos(i-1)
 level:spawnMob(mob)
 elseif level.map[i] == RPD.Terrain.STATUE_SP and math.random(1,10) == 1 then
 level:set(i-1,RPD.Terrain.EMPTY_SP)
-local mob = RPD.MobFactory:mobByName("DworfStatueNPC")
+local mob = RPD.mob("DworfStatueNPC")
 local level = RPD.Dungeon.level
 mob:setPos(i-1)
 level:spawnMob(mob)

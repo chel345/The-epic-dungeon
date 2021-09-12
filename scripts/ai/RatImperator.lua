@@ -34,7 +34,7 @@ elseif math.random(1,3) == 1 then
 for i=1,RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.EMPTY then
 if math.random(1,120) == 1 then
-local mob = RPD.MobFactory:mobByName("Rat") 
+local mob = RPD.mob("Rat") 
 mob:setPos(me:getPos())
 RPD.Dungeon.level:spawnMob(mob)
 me:getSprite():zap(i-1)

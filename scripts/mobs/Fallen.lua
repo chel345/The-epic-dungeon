@@ -35,7 +35,7 @@ end,
         print(self, cause)
 
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("Skeleton")
+            local mob = RPD.mob("Skeleton")
             local pos = level:getEmptyCellNextTo(self:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

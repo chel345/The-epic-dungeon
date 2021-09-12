@@ -47,15 +47,19 @@
          "y":8
         },
         {
-         "kind":"MeatKeeperNPC",
+         "kind":"Necro/MeatKeeperNPC",
          "x":8,
          "y":15
         },
         {
-         "kind":"RunicSkullMasterNPC",
+         "kind":"Necro/RunicSkullMasterNPC",
          "x":16,
          "y":15
+        },
+       {
+         "kind":"Necro/NecromanterNPC",
+         "x":4,
+         "y":15
         }
-
 ]
 }

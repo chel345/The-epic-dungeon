@@ -18,6 +18,39 @@ local pos
 return actor.init({
     activate = function()
 if RPD.Dungeon.depth ~= 5 then
+--[[
+local room = require"scripts/lib/room"
+local levels = {
+	"BanditLevel",
+	"BlueLevel",
+	"CavesLevel",
+	"CityLevel",
+	"CityLibraryLevel",
+	"GooLevel",
+	"GutsLevel",
+	"HallCastleLevel",
+	"HallsLevel",
+	"IceCastleLevel",
+	"IceLevel",
+	"LibraryLevel",
+	"LightLevel",
+	"NecroLevel",
+	"NestLevel",
+	"PrisonLevel",
+	"RatLevel",
+	"SewerLevel",
+	"ShadowLevel",
+	"SpiderCastleLevel",
+	"WaterCavesLevel"
+	}
+for g = 0,3 do
+for _,i in pairs(levels) do
+	storage.put("key",false)
+	room.ClearLevel()
+	Ginerator.CreateLevel(i)
+end
+end
+--]]
 Ginerator.CreateLevel("SewerLevel",true)
 end
 --Ginerator.CreateNewWalls("Sewer/Wall","Sewer/Wall_Deco","Sewer/Wall_Sp","Sewer/Wall_Deco_Sp","Sewer/Door","Sewer/Door_Sp","Sewer/LockedDoor","Sewer/LockedDoor_Sp","Sewer/Barricade","Sewer/Barricade_Sp","Sewer/Water","Sewer/Bookshelf","Sewer/Bookshelf_empty","Sewer/Bookshelf_sp")

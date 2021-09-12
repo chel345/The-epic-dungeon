@@ -41,7 +41,7 @@ RPD.playSound( "snd_meld.mp3" )
         local hero = RPD.Dungeon.hero
 
         for i = 1,1+thisItem:level() do
-            local mob = RPD.MobFactory:mobByName("BeeBad")
+            local mob = RPD.mob("BeeBad")
             local pos = level:getEmptyCellNextTo(hero:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

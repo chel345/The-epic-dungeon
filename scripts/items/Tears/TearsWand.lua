@@ -67,7 +67,7 @@ local to = cell
 
 
 top = function()
-local mob = RPD.MobFactory:mobByName("effects/Boll") 
+local mob = RPD.mob("effects/Boll") 
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)
@@ -84,7 +84,7 @@ mob:destroy()
 end
 
 top_both = function()
-local mob = RPD.MobFactory:mobByName("effects/Boll") 
+local mob = RPD.mob("effects/Boll") 
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)
@@ -101,7 +101,7 @@ mob:destroy()
 end
 
 bottom_both = function()
-local mob = RPD.MobFactory:mobByName("effects/Boll") 
+local mob = RPD.mob("effects/Boll") 
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)
@@ -118,7 +118,7 @@ mob:destroy()
 end
 
 bottom = function()
-local mob = RPD.MobFactory:mobByName("effects/Boll") 
+local mob = RPD.mob("effects/Boll") 
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)
@@ -153,7 +153,7 @@ end
 if l > 3 then
 local from = user:getPos()
 local to = dst
-local mob = RPD.MobFactory:mobByName("effects/Boll") 
+local mob = RPD.mob("effects/Boll") 
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)
@@ -165,7 +165,7 @@ mob:destroy()
 dam = math.random(40,60)
 if enemy then
 if enemy:hp() <= dam and math.random(1,2) == 1 then
-local mob = RPD.MobFactory:mobByName("EpicFireNefrit")
+local mob = RPD.mob("EpicFireNefrit")
 mob:setPos(dst)
 RPD.Dungeon.level:spawnMob(RPD.Mob:makePet(mob,user))
 end
@@ -179,7 +179,7 @@ end
 if l > 1 then
 local from = user:getPos()
 local to = dst
-local mob = RPD.MobFactory:mobByName("effects/Boll") 
+local mob = RPD.mob("effects/Boll") 
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)
@@ -190,7 +190,7 @@ mob:destroy()
 dam = math.random(30,50)
 if enemy then
 if enemy:hp() <= dam and math.random(1,3) == 1 then
-local mob = RPD.MobFactory:mobByName("TearsGuard")
+local mob = RPD.mob("TearsGuard")
 mob:setPos(dst)
 RPD.Dungeon.level:spawnMob(RPD.Mob:makePet(mob,user))
 RPD.topEffect(dst,"BlueMagicCould")

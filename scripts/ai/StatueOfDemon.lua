@@ -21,7 +21,7 @@ for j = y - 4, y + 4 do
 local pos = RPD.Dungeon.level:cell(i,j)
 if level.map[pos] == RPD.Terrain.EMPTY_SP then
 if math.random(1,11) == 1 then
-local mob = RPD.MobFactory:mobByName("IceSkeleton")
+local mob = RPD.mob("IceSkeleton")
 local level = RPD.Dungeon.level
 mob:setPos(pos-1)
 mob:ht(150)
@@ -82,4 +82,5 @@ end,
 
     status = function(self, ai, me)
         return RPD.StringsManager:maybeId("attack_on_you")
+end
 }

@@ -21,7 +21,7 @@ cell = math.random(1,level:getLength()-1)
 while level.map[cell] ~= RPD.Terrain.EMPTY and cell ~= self:getPos() do
 cell = math.random(1,level:getLength()-1)
 end
-local mob = RPD.MobFactory:mobByName("Spirit")
+local mob = RPD.mob("Spirit")
 local level = RPD.Dungeon.level
 mob:setPos(cell)
 level:spawnMob(mob)

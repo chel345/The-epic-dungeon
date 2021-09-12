@@ -43,7 +43,7 @@ return item.init{
         local latestDeadMob = storage.get(latest_kill_index) or {}
 
         if latestDeadMob.class ~= nil then
-            local mob = RPD.MobFactory:mobByName(latestDeadMob.class)
+            local mob = RPD.mob(latestDeadMob.class)
             storage.put(latest_kill_index, {})
            
             local level = RPD.Dungeon.level

@@ -8,7 +8,7 @@ ExitHeigth = 4,
 ExitWidth = 4,
 RoomHeigth = 7,
 RoomWidth = 7,
-RandRooms = {'Necro/NecroWarehause', 'Necro/NecroShasm', 'Necro/NecroStatue', 'Necro/NecroBigWarehause', 'Necro/NecroHorizontalRoom', 'Necro/NecroTomb', 'Necro/NecroBigPlatform', 'Necro/NecroBigLibrary', 'Necro/NecroShasmColumns', 'Necro/NecroFishbowl', 'Necro/NecroRiches', 'Necro/NecroRiches', 'Necro/NecroRiches', 'Necro/NecroPlatform', 'Necro/NecroBigGarden', 'Necro/NecroBigAlchimy'},
+RandRooms = {'NecroWarehause', 'NecroShasm', 'NecroStatue', 'NecroBigWarehause', 'NecroHorizontalRoom', 'NecroTomb', 'NecroBigPlatform', 'NecroBigLibrary', 'NecroShasmColumns', 'NecroFishbowl', 'NecroRiches', 'NecroRiches', 'NecroRiches', 'NecroPlatform', 'NecroBigGarden', 'NecroBigAlchimy'},
 -- RandRooms = {"PrisonArmory"},
 HasBase = false,
 Items = {"Ration"},
@@ -37,7 +37,7 @@ Traps = {
 "SecretParalyticTrap"
 },
 ChanseTrap = 0.1,
-Shop = "Necro/NecroShop",
+Shop = "NecroShop",
 LevelShop = 11,
 ShopWidth = 7,
 ShopHeigth = 7,
@@ -49,7 +49,7 @@ NPCRoomHeigth = 7,
 Range = 10000,
 GinFactor = 20,
 RoomFactor = 0,
-MiniBoss = "Necro/SkvernBlobRoom",
+MiniBoss = "SkvernBlobRoom",
 LevelMiniBoss = 13
 }
 

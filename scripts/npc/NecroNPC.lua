@@ -44,7 +44,7 @@ EPD.showQuestWindow(self,RPD.StringsManager:maybeId("NecroNPC_Phrase3"))
 EPD.showQuestWindow(self,RPD.StringsManager:maybeId("NecroNPC_Phrase2"))
             RPD.Dungeon.level:drop(RPD.ItemFactory:itemByName(items[math.random(1,4)]),chr:getPos())
         for i = 1,math.random(1,5) do
-            local mob = RPD.MobFactory:mobByName("DeathKnight")
+            local mob = RPD.mob("DeathKnight")
             local pos = level:getEmptyCellNextTo(self:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

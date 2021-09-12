@@ -30,7 +30,7 @@ RPD.playSound( "snd_read.mp3")
         local level = RPD.Dungeon.level
 item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
 for i=1,2 do 
-            local mob = RPD.MobFactory:mobByName("Mirror")
+            local mob = RPD.mob("Mirror")
             local pos = level:getEmptyCellNextTo(hero:getPos())
             if (level:cellValid(pos)) then
 local image  = item:getUser():makeClone();

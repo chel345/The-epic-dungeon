@@ -24,7 +24,7 @@ for i = x - 4, x + 4 do
 for j = y - 4, y + 4 do
 local pos = RPD.Dungeon.level:cell(i,j)
 if level.map[pos] == RPD.Terrain.EMPTY_SP and math.random(1,24) == 1 then
-mob = RPD.MobFactory:mobByName("BlueBee")
+mob = RPD.mob("BlueBee")
 mob:setPos(pos-1)
 level:spawnMob(mob)
 RPD.zapEffect(self:getPos(),pos-1,"BeeInVial")

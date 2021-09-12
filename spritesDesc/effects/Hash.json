@@ -1,6 +1,0 @@
-{
-  "texture" : "effects/Hash.png",
-  "width"  : 11,
-  "height" : 10,
-  "anim"   : { "fps" : 3,  "looped" : false,    "frames" : [0,1,2] }
-}

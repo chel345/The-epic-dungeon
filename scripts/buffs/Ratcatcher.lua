@@ -34,7 +34,7 @@ for i = x - 4, x + 4 do
 for j = y - 4, y + 4 do
 local pos = RPD.Dungeon.level:cell(i,j)
 if level.map[pos] == RPD.Terrain.EMPTY then
-local mob = RPD.MobFactory:mobByName("RatcatcherAttack")
+local mob = RPD.mob("RatcatcherAttack")
 mob:setPos(pos)
 level:spawnMob(mob)
 return

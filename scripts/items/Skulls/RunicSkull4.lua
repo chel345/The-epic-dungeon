@@ -25,7 +25,7 @@ return item.init{
         local level = RPD.Dungeon.level
 
         if level.map[cell] then
-            local mob = RPD.MobFactory:mobByName("RunicSkull4")
+            local mob = RPD.mob("RunicSkull4")
             mob:setPos(cell)
       level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))     
         else

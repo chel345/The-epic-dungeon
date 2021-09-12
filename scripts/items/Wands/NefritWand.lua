@@ -40,7 +40,7 @@ end
 local level = RPD.Dungeon.level
         local hero = RPD.Dungeon.hero
   
-            local mob = RPD.MobFactory:mobByName("IceNefrit")
+            local mob = RPD.mob("IceNefrit")
 local cell = hero:getPos()
             mob:setPos(cell)
       level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
@@ -50,7 +50,7 @@ if math.random(1,2) == 1   then
 local level = RPD.Dungeon.level
         local hero = RPD.Dungeon.hero
   
-            local mob = RPD.MobFactory:mobByName("IceNefrit")
+            local mob = RPD.mob("IceNefrit")
 local cell = hero:getPos()
             mob:setPos(cell)
       level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))

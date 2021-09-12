@@ -18,7 +18,7 @@ return mob.init({
         print(self, cause)
 
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("MiniGoo")
+            local mob = RPD.mob("MiniGoo")
             local pos = level:getEmptyCellNextTo(self:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

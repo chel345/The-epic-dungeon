@@ -1,0 +1,13 @@
+{
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "DworfMasterNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "DworfMaster2NPC_Gender",
+  "ht": 100000000000,
+  "name": "DworfMaster2NPC_Name",
+  "name_objective": "DworfMaster2NPC_Object",
+  "scriptFile": "scripts/npc/DworfMaster2NPC",
+  "spriteDesc": "spritesDesc/DworfMaster2NPC_Desc.json"
+}

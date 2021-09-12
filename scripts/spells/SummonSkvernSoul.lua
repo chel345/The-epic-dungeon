@@ -27,7 +27,7 @@ return spell.init{
         local level = RPD.Dungeon.level
 
         local hero = RPD.Dungeon.hero
-            local mob = RPD.MobFactory:mobByName("SkvernSoul")
+            local mob = RPD.mob("SkvernSoul")
             local pos = level:getEmptyCellNextTo(hero:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

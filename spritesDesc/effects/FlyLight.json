@@ -1,6 +1,0 @@
-{
-  "texture" : "effects/FlyLight.png",
-  "width"  : 16,
-  "height" : 16,
-  "anim"   : { "fps" : 2,  "looped" : true,    "frames" : [0,1,2,3,2,1] }
-}

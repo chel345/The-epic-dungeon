@@ -25,7 +25,7 @@ RPD.Dungeon.hero:getSprite():jump(30)
 RPD.Dungeon.hero:damage(100, self)
 end
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("BlueZombie")
+            local mob = RPD.mob("BlueZombie")
             local pos = RPD.Dungeon.level:getEmptyCellNextTo(enemy:getPos())
             if (RPD.Dungeon.level:cellValid(pos)) then
                 mob:setPos(pos)
@@ -49,7 +49,7 @@ level:drop(item,self:getPos())
 end,
     move = function(enemy, self, cell, dmg)
         for i = 1,2 do
-            local mob = RPD.MobFactory:mobByName("BlueFly")
+            local mob = RPD.mob("BlueFly")
             local pos = RPD.Dungeon.level:getEmptyCellNextTo(enemy:getPos())
             if (RPD.Dungeon.level:cellValid(pos)) then
                 mob:setPos(pos)

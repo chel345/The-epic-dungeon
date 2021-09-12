@@ -107,10 +107,10 @@ Ginerator.CreateDeco(100,200)
 -- создание мобов
 for i=0,5 do
 local level = RPD.Dungeon.level
-local mob1 = RPD.MobFactory:mobByName("BlueAngel")
-local mob2 = RPD.MobFactory:mobByName("BlueBall")
-local mob3 = RPD.MobFactory:mobByName("BlueHeart")
-local mob4 = RPD.MobFactory:mobByName("BlueZombie")
+local mob1 = RPD.mob("BlueAngel")
+local mob2 = RPD.mob("BlueBall")
+local mob3 = RPD.mob("BlueHeart")
+local mob4 = RPD.mob("BlueZombie")
 if math.random(2,20) == 2 then
 mob1:setPos(RPD.Dungeon.level:randomRespawnCell())
 level:spawnMob(mob1);
@@ -131,10 +131,10 @@ storage.put("key",true)
 end,
 act = function()
 local level = RPD.Dungeon.level
-local mob1 = RPD.MobFactory:mobByName("BlueAngel")
-local mob2 = RPD.MobFactory:mobByName("BlueBall")
-local mob3 = RPD.MobFactory:mobByName("BlueHeart")
-local mob4 = RPD.MobFactory:mobByName("BlueZombie")
+local mob1 = RPD.mob("BlueAngel")
+local mob2 = RPD.mob("BlueBall")
+local mob3 = RPD.mob("BlueHeart")
+local mob4 = RPD.mob("BlueZombie")
 if math.random(2,20) == 2 then
 mob1:setPos(RPD.Dungeon.level:randomRespawnCell())
 level:spawnMob(mob1);

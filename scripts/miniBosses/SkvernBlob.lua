@@ -17,7 +17,7 @@ die = function(self)
 local mobs = {"Skeleton","SkvernGoo","SkvernGoo"}
 local level = RPD.Dungeon.level
 for i = 1,3 do
-local mob = RPD.MobFactory:mobByName(mobs[i])
+local mob = RPD.mob(mobs[i])
 local pos = level:getEmptyCellNextTo(self:getPos())
 if (level:cellValid(pos)) then
 mob:setPos(pos)

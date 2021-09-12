@@ -17,7 +17,7 @@ stats = function(self)
 RPD.permanentBuff(self, RPD.Buffs.Roots)
 end,
 zapProc = function(self,enemy,dmg)
-local mob = RPD.MobFactory:mobByName("effects/DarckSkull") 
+local mob = RPD.mob("effects/DarckSkull") 
 mob:setPos(self:getPos())
 RPD.Dungeon.level:spawnMob(mob)
 
@@ -40,7 +40,7 @@ for i = x - 4, x + 4 do
 for j = y - 4, y + 4 do
 local pos = RPD.Dungeon.level:cell(i,j)
 if level.map[pos] == RPD.Terrain.PEDESTAL then
-mob = RPD.MobFactory:mobByName("WitherSkeleton")
+mob = RPD.mob("WitherSkeleton")
 local level = RPD.Dungeon.level
 mob:setPos(pos-1)
 level:spawnMob(mob)

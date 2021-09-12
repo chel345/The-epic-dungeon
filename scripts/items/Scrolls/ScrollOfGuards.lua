@@ -34,7 +34,7 @@ local mobs = {
         local level = RPD.Dungeon.level
 
 item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
-            local mob = RPD.MobFactory:mobByName(mobs[math.random(1,2)])
+            local mob = RPD.mob(mobs[math.random(1,2)])
 
         local x = level:cellX(cell)
         local y = level:cellY(cell)

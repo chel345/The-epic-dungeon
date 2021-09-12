@@ -124,7 +124,7 @@ end
 end
 if i == RPD.Dungeon.level:getLength()-1 then
 if t[5] == tostring(RPD.Dungeon.depth) then
-local mob = RPD.MobFactory:mobByName("Heroes/Player")
+local mob = RPD.mob("Heroes/Player")
 mob:setPos(t[3])
 RPD.Dungeon.level:spawnMob(mob);
 end
@@ -411,7 +411,7 @@ end
 -- мобы
 for i = 1, length-1 do
 if mobs[i] ~= "nil" then
-local mob = RPD.MobFactory:mobByName(mobs[i])
+local mob = RPD.mob(mobs[i])
 mob:setPos(i)
 RPD.Dungeon.level:spawnMob(mob);
 end

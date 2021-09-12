@@ -43,7 +43,7 @@ defaultAction = RPD.StringsManager:maybeId("Action_Use")
 thisItem:getUser():spend(2)
             local user         = thisItem:getUser()
             local level        = RPD.Dungeon.level
-            local neutralGhost = RPD.MobFactory:mobByName("SumGhost")
+            local neutralGhost = RPD.mob("SumGhost")
 
             if user:getSkillPoints() >= 15 then
                 user:spendSkillPoints(15)

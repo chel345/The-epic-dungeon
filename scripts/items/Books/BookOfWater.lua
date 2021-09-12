@@ -47,7 +47,7 @@ end
 "WaterElemental"
 }
         local level = RPD.Dungeon.level
-            local mob = RPD.MobFactory:mobByName(mobs[1])
+            local mob = RPD.mob(mobs[1])
             local pos = level:getEmptyCellNextTo(hero:getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

@@ -28,12 +28,12 @@
  "height":10,
  "mobs":[
         {
-         "kind":"TearsFutureTellerNPC",
+         "kind":"TearsTown/TearsFutureTellerNPC",
          "x":2,
          "y":5
         },
         {
-         "kind":"WhiteCat",
+         "kind":"TearsTown/WhiteCat",
          "x":5,
          "y":2
         }

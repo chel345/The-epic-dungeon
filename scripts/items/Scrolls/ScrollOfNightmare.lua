@@ -30,7 +30,7 @@ RPD.playSound( "snd_read.mp3")
  item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
         local level = RPD.Dungeon.level
         for i = 1,4 do
-            local mob = RPD.MobFactory:mobByName("NightmareBall")
+            local mob = RPD.mob("NightmareBall")
             local pos = level:getEmptyCellNextTo(item:getUser():getPos())
             if (level:cellValid(pos)) then
                 mob:setPos(pos)

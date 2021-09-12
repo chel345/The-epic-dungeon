@@ -22,7 +22,7 @@ if math.random(1,10) == 1 then
 buff:spend(1)
             local pos = RPD.Dungeon.level:getEmptyCellNextTo(buff.target:getPos())
 if (RPD.Dungeon.level:cellValid(pos)) then
-            local mob = RPD.MobFactory:mobByName("IceSkeletonPet") 
+            local mob = RPD.mob("IceSkeletonPet") 
             mob:setPos(pos)
 RPD.Dungeon.level:spawnMob(mob) 
 --RPD.setAi(mob,"IceSkeletonPet")

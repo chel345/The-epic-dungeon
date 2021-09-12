@@ -29,7 +29,7 @@ me:spend(4)
 for i=1,RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.CHASM_WATER then
 if math.random(1,100) == 1 then
-local mob = RPD.MobFactory:mobByName("Tentacle") 
+local mob = RPD.mob("Tentacle") 
 mob:setPos(i-1)
 RPD.Dungeon.level:spawnMob(mob)
 end
@@ -44,7 +44,7 @@ pos = i-1
 break
 end
 end
-local mob = RPD.MobFactory:mobByName("effects/DarckShot") 
+local mob = RPD.mob("effects/DarckShot") 
 mob:setPos(me:getPos())
 RPD.Dungeon.level:spawnMob(mob)
 local distance = RPD.Dungeon.level:distance(me:getPos(),pos)
@@ -70,7 +70,7 @@ Music.INSTANCE:play("Help.ogg",true)
 for i=1,RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.EMPTY then
 RPD.topEffect(i-1,"Portal")
-local mob = RPD.MobFactory:mobByName("BattleWarlok") 
+local mob = RPD.mob("BattleWarlok") 
 mob:setPos(i-1)
 RPD.Dungeon.level:spawnMob(mob)
 
@@ -80,22 +80,22 @@ break
 end
 end
 RPD.topEffect(40,"Portal")
-local mob = RPD.MobFactory:mobByName("DworfSolder") 
+local mob = RPD.mob("DworfSolder") 
 mob:setPos(40)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.topEffect(51,"Portal")
 RPD.setAi(mob,"Wandering")
-local mob = RPD.MobFactory:mobByName("DworfSolder") 
+local mob = RPD.mob("DworfSolder") 
 mob:setPos(51)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.setAi(mob,"Wandering")
 RPD.topEffect(274,"Portal")
-local mob = RPD.MobFactory:mobByName("DworfSolder") 
+local mob = RPD.mob("DworfSolder") 
 mob:setPos(274)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.setAi(mob,"Wandering")
 RPD.topEffect(285,"Portal")
-local mob = RPD.MobFactory:mobByName("DworfSolder") 
+local mob = RPD.mob("DworfSolder") 
 mob:setPos(285)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.setAi(mob,"Wandering")

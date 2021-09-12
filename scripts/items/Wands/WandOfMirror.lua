@@ -39,7 +39,7 @@ thisItem:getUser():spend(TIME_TO_ZAP)
         local hero = RPD.Dungeon.hero
         print(self, cause)
 
-            local mob = RPD.MobFactory:mobByName("Bee")
+            local mob = RPD.mob("Bee")
             local pos = level:getEmptyCellNextTo(hero:getPos())
             if (level:cellValid(pos)) then
 --                mob:setPos(pos)

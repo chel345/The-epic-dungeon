@@ -36,7 +36,7 @@ for i = x - 3, x + 3 do
 for j = y - 3, y + 3 do
 local pos = RPD.Dungeon.level:cell(i,j)
 if level.map[pos] == RPD.Terrain.EMPTY_SP and math.random(1,16) == 1 and pos ~= enemy:getPos() and pos ~= self:getPos() then
-local mob = RPD.MobFactory:mobByName("TimeKnight")
+local mob = RPD.mob("TimeKnight")
 local level = RPD.Dungeon.level
 mob:setPos(pos-1)
 level:spawnMob(mob)

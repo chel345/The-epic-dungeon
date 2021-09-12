@@ -14,7 +14,7 @@ local mob = require"scripts/lib/mob"
 Buy = function(hp_,dr_,cast_)
 if RPD.Dungeon.hero:gold() >= cast_ then
 RPD.Dungeon.hero:spendGold(cast_)
-local mob = RPD.MobFactory:mobByName("DworfSolderGuard")
+local mob = RPD.mob("DworfSolderGuard")
 mob:setPos(RPD.Dungeon.hero:getPos()-1)
 RPD.Dungeon.level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
 mob:ht(hp_)
