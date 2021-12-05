@@ -33,19 +33,16 @@ end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)
 thisItem:getUser():spend(TIME_TO_ZAP)
-for i = 1,RPD.Dungeon.level:getLength()-1 do                local maybeMob = RPD.Actor:findChar(dst)          
-if maybeMob and RPD.Dungeon.level.fieldOfView[i] and maybeMob ~= RPD.Dungeon.hero then 
+local maybeMob = RPD.Actor:findChar(dst)          
+if maybeMob and maybeMob ~= RPD.Dungeon.hero then 
 RPD.playSound( "snd_degrade.ogg" )
 RPD.topEffect(dst,"smash_blast")
 maybeMob:damage(RPD.Dungeon.depth*(lvl+1), thisItem:getUser())
-break
 end
-end
-
 end,
 
 bag = function(self, item)
-        return "WandHolster"
+return "WandHolster"
 end,
 
 selectType = function()

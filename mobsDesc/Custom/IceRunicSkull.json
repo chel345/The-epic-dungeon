@@ -1,13 +1,13 @@
 {
   "attackDelay": 6,
   "attackRange": 32,
-  "attackSkill": 100000,
+  "attackSkill": 10,
   "baseSpeed": 1,
   "canBePet": true,
   "defenseSkill": 5,
   "description": "IceRunicSkull_Desc",
-  "dmgMax": 40,
-  "dmgMin": 30,
+  "dmgMax": 30,
+  "dmgMin": 10,
   "dr": 2,
   "exp": 0,
   "flying": false,
@@ -19,5 +19,5 @@
   "name_objective": "IceRunicSkull_Object",
   "scriptFile": "scripts/mobs/IceRunicSkull",
   "spriteDesc": "spritesDesc/IceRunicSkull_Desc.json",
-  "walkingType": "NORMAL"
+  "movable"       :false
 }

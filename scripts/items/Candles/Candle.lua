@@ -13,12 +13,11 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 
-local data_candle
-
+local candle
 return wand.init{ 
     desc  = function(self, item)
-candle = item
-        return {
+		candle = item
+    return {
         imageFile = "items/Candles.png",
         name      = RPD.StringsManager:maybeId("Candle_Name"),
         info      = RPD.StringsManager:maybeId("Candle_Info")
@@ -53,8 +52,7 @@ end,
 activate = function(self, item, hero)
 if item:level() <= 0 then
 RPD.glog(RPD.StringsManager:maybeId("ExtinguishedCandle"))
-item:getUser():collect(RPD.item("Candles/Candle"))
-item:removeItemFrom(item:getUser())
+item:doUnequip(item:getUser(),true)
 return
 end
 RPD.removeBuff(item:getUser(), RPD.Buffs.Light)
@@ -65,22 +63,14 @@ deactivate = function(self, item, hero)
 RPD.removeBuff(item:getUser(), RPD.Buffs.Light)
 end,
 
-CharAct = function()
-if candle:isEquipped(RPD.Dungeon.hero) then
-if EPD.time % 50 == 0 and candle:level() > 0 then
-candle:level(candle:level()-1)
+act = function(self,item)
+item:spend(1)
+if item:isEquipped(RPD.Dungeon.hero) then
+if EPD.time % 50 == 0 and item:level() > 0 then
+item:level(item:level()-1)
 end
-if candle:level() <= 0 then
-candle:deactivate()
-
-RPD.glog(RPD.StringsManager:maybeId("ExtinguishedCandle"))
-candle:removeItemFrom(candle:getUser())
-RPD.Dungeon.hero:collect(RPD.item("Candles/Candle"))
-
-data_candle = nil
-elseif data_candle == nil then
-candle:activate(RPD.Dungeon.hero)
-data_candle = true
+if item:level() <= 0 then
+item:activate(RPD.Dungeon.hero)
 end
 end
 end

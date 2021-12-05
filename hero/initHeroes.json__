@@ -39,6 +39,7 @@
 {"kind":"Helmets/PlateHelmet"},
 {"kind":"Helmets/GoticHelmet"},
 */
+/*
 {"kind":"Materials/DarkSperal"},
 {"kind":"Materials/YellowSperal"},
 {"kind":"Materials/TombPiece"},
@@ -47,8 +48,11 @@
 {"kind":"Materials/SpiderHelmet"},
 {"kind":"Materials/DworfSkull"},
 {"kind":"Materials/HandmadeCrystal"},
-
-{"kind":"Skulls/RunicSkull2"},
+*/
+/*
+{"kind":"Ration"},
+*/
+{"kind":"Vials/Vial"},
 {"kind": "PotionOfMindVision","level":100},
 {"kind": "ScrollOfMagicMapping",       "quantity": 10000000000000},
 {"kind": "PotionOfMindVision",       "quantity": 10000000000000},

@@ -6,9 +6,10 @@
   "fraction": "NEUTRAL",
   "friendly": true,
   "gender": "CagetShadowSpiderNPC_Gender",
-  "ht": 5000000,
   "name": "CagetShadowSpiderNPC_Name",
   "name_objective": "CagetShadowSpiderNPC_Object",
   "scriptFile": "scripts/npc/CagetShadowSpiderNPC",
-  "spriteDesc": "spritesDesc/CagetShadowSpider_Desc.json"
+  "spriteDesc": "spritesDesc/CagetShadowSpider_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
 }

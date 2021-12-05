@@ -8,17 +8,18 @@
   "description": "MimicBook_Desc",
   "dmgMax": 0,
   "dmgMin": 0,
-  "dr": 10,
-  "exp": 5,
+  "dr": 6,
+  "exp": 26,
   "flying": false,
   "friendly": false,
   "gender": "MimicBook_Gender",
   "ht": 100,
   "lootChance": 0,
-  "maxLvl": 35,
+  "maxLvl": 36,
   "name": "MimicBook_Name",
   "name_objective": "MimicBook_Object",
   "scriptFile": "scripts/mobs/MimicBook",
   "spriteDesc": "spritesDesc/MimicBook_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "movable"       :false
 }

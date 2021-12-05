@@ -1,10 +1,10 @@
 {
   "attackDelay": 100000,
-  "attackRange": 32,
-  "attackSkill": 35,
+  "attackRange": 0,
+  "attackSkill": 0,
   "baseSpeed": 1,
   "canBePet": false,
-  "defenseSkill": 6,
+  "defenseSkill": 0,
   "description": "RotHeart_Desc",
   "dmgMax": 0,
   "dmgMin": 0,
@@ -35,5 +35,5 @@
   "name_objective": "RotHeart_Object",
   "scriptFile": "scripts/miniBosses/RotHeart",
   "spriteDesc": "spritesDesc/RotHeart_Desc.json",
-  "walkingType": "CHASM"
+  "movable"       :false
 }

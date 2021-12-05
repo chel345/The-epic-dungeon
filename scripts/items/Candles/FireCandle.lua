@@ -13,7 +13,7 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 
-local data_firecandle
+local firecandle
 
 return wand.init{ 
     desc  = function(self, item)
@@ -53,8 +53,7 @@ end,
 activate = function(self, item, hero)
 if item:level() <= 0 then
 RPD.glog(RPD.StringsManager:maybeId("ExtinguishedCandle"))
-item:getUser():collect(RPD.item("Candles/firecandle"))
-item:removeItemFrom(item:getUser())
+item:doUnequip(item:getUser(),true)
 return
 end
 RPD.removeBuff(item:getUser(), "FireCandle")
@@ -65,22 +64,14 @@ deactivate = function(self, item, hero)
 RPD.removeBuff(item:getUser(), "FireCandle")
 end,
 
-CharAct = function()
-if firecandle:isEquipped(RPD.Dungeon.hero) then
-if EPD.time % 50 == 0 and firecandle:level() > 0 then
-firecandle:level(firecandle:level()-1)
+act = function(self,item)
+item:spend(1)
+if item:isEquipped(RPD.Dungeon.hero) then
+if EPD.time % 50 == 0 and item:level() > 0 then
+item:level(item:level()-1)
 end
-if firecandle:level() <= 0 then
-firecandle:deactivate()
-
-RPD.glog(RPD.StringsManager:maybeId("ExtinguishedCandle"))
-firecandle:removeItemFrom(firecandle:getUser())
-RPD.Dungeon.hero:collect(RPD.item("Candles/FireCandle"))
-
-data_firecandle = nil
-elseif data_firecandle == nil then
-firecandle:activate(RPD.Dungeon.hero)
-data_firecandle = true
+if item:level() <= 0 then
+item:activate(RPD.Dungeon.hero)
 end
 end
 end

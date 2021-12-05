@@ -10,8 +10,8 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-stats = function(self)
-RPD.permanentBuff(self, RPD.Buffs.Roots)
+interact = function(self, chr)
+    RPD.resetPos(self,chr)
 end,
 spawn = function(self)
 RPD.setAi(self,"Books/MimicBook2")

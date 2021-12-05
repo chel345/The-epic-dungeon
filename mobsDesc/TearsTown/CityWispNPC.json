@@ -6,9 +6,10 @@
   "fraction": "NEUTRAL",
   "friendly": true,
   "gender": "CityWispNPC_Gender",
-  "ht": 500,
   "name": "CityWispNPC_Name",
   "name_objective": "CityWispNPC_Object",
   "scriptFile": "scripts/npc/CityWispNPC",
-  "spriteDesc": "spritesDesc/CityWispNPC_Desc.json"
+  "spriteDesc": "spritesDesc/CityWispNPC_Desc.json",
+   "immortal"      :true,
+  "movable"       :false
 }

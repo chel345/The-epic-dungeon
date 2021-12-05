@@ -11,10 +11,16 @@ local buff = require "scripts/lib/buff"
 return buff.init{
     desc  = function ()
         return {
-            icon          = 52,
+            icon          = -1,
             name          = "Огненное благословение",
             info          = "DieHard_Info",
         }
+    end,
+    textureLarge = function()
+    return "ui/CustomBuffsLarge.png"
+    end,
+    textureSmall = function()
+    return "ui/CustomBuffs.png"
     end,
 attachTo = function(self, buff, target)
 return true

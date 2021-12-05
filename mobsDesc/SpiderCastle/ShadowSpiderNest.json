@@ -1,19 +1,19 @@
 {
-  "attackDelay": 10000,
+  "attackDelay": 10,
   "attackRange": 0,
-  "attackSkill": 15,
+  "attackSkill": 32,
   "baseSpeed": 1,
   "canBePet": false,
-  "defenseSkill": 9,
+  "defenseSkill": 30,
   "description": "ShadowSpiderNest_Desc",
   "dmgMax": 0,
   "dmgMin": 0,
   "dr": 5,
-  "exp": 4,
+  "exp": 23,
   "flying": false,
   "friendly": false,
   "gender": "ShadowSpiderNest_Gender",
-  "ht": 200,
+  "ht": 140,
   "immunities": [
     "Terror"
   ],
@@ -23,5 +23,7 @@
   "name_objective": "ShadowSpiderNest_Object",
   "scriptFile": "scripts/mobs/ShadowSpiderNest",
   "spriteDesc": "spritesDesc/ShadowSpiderNest_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "movable"       :false
+
 }

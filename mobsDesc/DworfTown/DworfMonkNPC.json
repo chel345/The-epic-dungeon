@@ -5,9 +5,10 @@
   "fraction": "NEUTRAL",
   "friendly": true,
   "gender": "DworfMonkNPC_Gender",
-  "ht": 100000000000,
   "name": "DworfMonkNPC_Name",
   "name_objective": "DworfMonkNPC_Object",
   "scriptFile": "scripts/npc/DworfMonkNPC",
-  "spriteDesc": "spritesDesc/DworfMonkNPC_Desc.json"
+  "spriteDesc": "spritesDesc/DworfMonkNPC_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
 }

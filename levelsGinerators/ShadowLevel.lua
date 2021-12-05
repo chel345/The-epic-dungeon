@@ -38,19 +38,19 @@ Traps = {
 },
 ChanseTrap = 0.1,
 Shop = "PrisonShop",
-LevelShop = 21,
+LevelShop = 16,
 ShopWidth = 7,
 ShopHeigth = 7,
 NPC = nil,
-levelNPC = 12,
-NPCRoom = false,
+levelNPC = 17,
+NPCRoom = "ElderShamanRoom",
 NPCRoomWidth = 7,
 NPCRoomHeigth = 7,
 Range = 10000,
 GinFactor = 20,
 RoomFactor = 0,
-MiniBoss = false,
-LevelMiniBoss = 13
+MiniBoss = "NightBroneRoom",
+LevelMiniBoss = 16
 }
 
 return table

@@ -9,6 +9,9 @@ local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
+local sword
+local stats
+local it
 
 return item.init{
     desc  = function (self,item)
@@ -71,10 +74,12 @@ end,
 getAttackAnimationClass = function()
 return "sword"
 end,
-UpdateSprite = function()
+
+act = function(self,item)
+item:spend(1)
 local hero = RPD.Dungeon.hero
 local weapon = hero:getBelongings().weapon
-local it = RPD.Dungeon.hero:getBelongings():getItem("Tears/TearsSword")
+local it = item
 sword = "hero_modern/items/Tears/TearsSword"
 if it:level() > 7 then
 sword = (sword.."_lvl4.png")

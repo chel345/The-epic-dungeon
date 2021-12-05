@@ -1,10 +1,10 @@
 {
   "attackDelay": 1,
   "attackRange": 10,
-  "attackSkill": 10,
+  "attackSkill": 11,
   "baseSpeed": 1,
   "canBePet": true,
-  "defenseSkill": 2,
+  "defenseSkill": 8,
   "description": "RotLasher_Desc",
   "dmgMax": 5,
   "dmgMin": 2,
@@ -13,11 +13,11 @@
   "flying": false,
   "friendly": false,
   "gender": "RotLasher_Gender",
-  "ht": 20,
+  "ht": 15,
   "lootChance": 0,
-  "maxLvl": 1,
+  "maxLvl": 10,
   "name": "RotLasher_Name",
   "name_objective": "RotLasher_Object",
   "spriteDesc": "spritesDesc/RotLasher_Desc.json",
-  "walkingType": "CHASM"
+  "movable"       :false
 }

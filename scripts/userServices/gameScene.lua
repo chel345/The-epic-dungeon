@@ -13,7 +13,6 @@ onStep = function()
 t = t + 1
 for _,i in pairs(RPD.functions) do
 i(t)
-RPD.glog(i)
 end
 if t >= 100 then
 t = 0

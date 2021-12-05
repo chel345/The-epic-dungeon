@@ -11,9 +11,9 @@ local mob = require"scripts/lib/mob"
 
 
 return mob.init{
-    stats = function(self)
-                RPD.permanentBuff(self, RPD.Buffs.Roots)
-end,
+    interact = function(self, chr)
+    	RPD.resetPos(self,chr)
+    end,
     zapProc = function(self, enemy, dmg) -- ranged attack
         RPD.affectBuff(enemy, RPD.Buffs.Frost,4)
         return dmg

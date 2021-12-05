@@ -30,13 +30,13 @@ end
 if RPD.Dungeon.level.map[i] == RPD.Terrain.EMPTY and math.random(1,20) == 1 then
 RPD.Dungeon.level:set(i-1,RPD.Terrain.EMPTY_DECO)
 end
-if level.map[i] == RPD.Terrain.STATUE and math.random(1, 10) == 1 then
+if level.map[i] == RPD.Terrain.STATUE and math.random(1, 10) == 1 and not level:getTopLevelObject(i) then
 level:set(i-1,1)
 local mob = RPD.mob("DworfStatueNPC")
 local level = RPD.Dungeon.level
 mob:setPos(i-1)
 level:spawnMob(mob)
-elseif level.map[i] == RPD.Terrain.STATUE_SP and math.random(1,10) == 1 then
+elseif level.map[i] == RPD.Terrain.STATUE_SP and math.random(1,10) == 1 and not  level:getTopLevelObject(i) then
 level:set(i-1,RPD.Terrain.EMPTY_SP)
 local mob = RPD.mob("DworfStatueNPC")
 local level = RPD.Dungeon.level

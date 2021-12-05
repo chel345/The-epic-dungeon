@@ -12,19 +12,9 @@ local mob = require"scripts/lib/mob"
 return mob.init{
     zapProc = function(self, enemy, dmg)
 local hero = RPD.Dungeon.hero
-hero:heal(2,hero)
+hero:heal(RPD.Dungeon.depth,hero)
   end,
     interact = function(self, chr)
-        local ownPos  = self:getPos()
-        local newPos  = chr:getPos()
-
-        self:move(newPos)
-        self:getSprite():move(ownPos, newPos)
-
-        chr:move(ownPos)
-        chr:getSprite():move(newPos, ownPos)
-    end,
-    stats = function(self)
-        RPD.permanentBuff(self, RPD.Buffs.Roots)
-    end 
+    	RPD.resetPos(self,chr)
+    end
 }

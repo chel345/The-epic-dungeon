@@ -29,10 +29,16 @@ local Candle = require("scripts/items/Candles/Candle")
 return buff.init{
     desc  = function ()
         return {
-            icon          = -1,
+            icon          = 3,
             name          = "CounterBuff_Name",
-            info          = "CounterBuff_Info",
+            info          = "CounterBuff_Info"
         }
+    end,
+    textureLarge = function()
+    return "ui/CustomBuffsLarge.png"
+    end,
+    textureSmall = function()
+    return "ui/CustomBuffs.png"
     end,
     attachTo = function(self, buff, target)
 cry = nil
@@ -54,62 +60,6 @@ cry = nil
 end, 
 
     charAct = function(self,buff)
--- TearsSword
-if RPD.Dungeon.hero ~= nil then
-if RPD.Dungeon.hero:getBelongings():getItem("Tears/TearsSword") then
-TearsSword.UpdateSprite()
-end
-end
-
--- TearsArmor
-if RPD.Dungeon.hero ~= nil then
-if RPD.Dungeon.hero:getBelongings():getItem("Tears/TearsArmor") then
-TearsArmor.UpdateSprite()
-end
-end
-
--- TearsWand
-if RPD.Dungeon.hero ~= nil then
-if RPD.Dungeon.hero:getBelongings():getItem("Tears/TearsWand") then
-TearsWand.UpdateSprite()
-end
-end
-
--- TearsCandle
-if RPD.Dungeon.hero ~= nil then
-if RPD.Dungeon.hero:getBelongings():getItem("Candles/TearsCandle") then
-TearsCandle.CharAct()
-end
-end
-
--- RatCandle
-if RPD.Dungeon.hero ~= nil then
-if RPD.Dungeon.hero:getBelongings():getItem("Candles/RatCandle") then
-RatCandle.CharAct()
-end
-end
-
--- CaretakersCandle
-if RPD.Dungeon.hero ~= nil then
-if RPD.Dungeon.hero:getBelongings():getItem("Candles/CaretakersCandle") then
-CaretakersCandle.CharAct()
-end
-end
-
--- FireCandle
-if RPD.Dungeon.hero ~= nil then
-if RPD.Dungeon.hero:getBelongings():getItem("Candles/FireCandle") then
-FireCandle.CharAct()
-end
-end
-
--- Candle
-if RPD.Dungeon.hero ~= nil then
-if RPD.Dungeon.hero:getBelongings():getItem("Candles/Candle") then
-Candle.CharAct()
-end
-end
-
 if not storage.get("Crystal") then
 storage.put("Crystal",true)
 for i = 1,RPD.Dungeon.level:getLength()-1 do  
@@ -129,14 +79,5 @@ EPD.time = EPD.time + 1
 if EPD.time % 8 == 0 then
 RPD.Dungeon.hero:spendSkillPoints(-1)
 end
-end,
-defenceProc = function(self,buff,enemy,damage)
--- RatCandle
-if RPD.Dungeon.hero ~= nil then
-if RPD.Dungeon.hero:getBelongings():getItem("Candles/RatCandle") then
-RatCandle.DefenseProc()
-end
-end
-return damage
 end
 }

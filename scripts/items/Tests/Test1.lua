@@ -25,7 +25,7 @@ return item.init{
         local level = RPD.Dungeon.level
 
         if level.map[cell] then
-            local mob = RPD.mob("CrystalGuard")
+            local mob = RPD.mob("Piranha")
             mob:setPos(cell)
       level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero)) 
 

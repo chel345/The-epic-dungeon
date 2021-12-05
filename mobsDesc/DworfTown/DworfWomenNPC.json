@@ -5,9 +5,10 @@
   "fraction": "NEUTRAL",
   "friendly": true,
   "gender": "DworfWomenNPC_Gender",
-  "ht": 100000000000,
   "name": "DworfWomenNPC_Name",
   "name_objective": "DworfWomenNPC_Object",
   "scriptFile": "scripts/npc/DworfWomenNPC",
-  "spriteDesc": "spritesDesc/DworfWomenNPC_Desc.json"
+  "spriteDesc": "spritesDesc/DworfWomenNPC_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
 }

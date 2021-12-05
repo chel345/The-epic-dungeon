@@ -8,5 +8,7 @@
   "name": "WhiteCat_Name",
   "name_objective": "WhiteCat_Object",
   "scriptFile": "scripts/npc/BlackCat",
-  "spriteDesc": "spritesDesc/WhiteCat_Desc.json"
+  "spriteDesc": "spritesDesc/WhiteCat_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
 }

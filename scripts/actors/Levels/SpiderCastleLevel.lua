@@ -15,13 +15,7 @@ local Ginerator = require "scripts/lib/Ginerator"
 
 return actor.init({
 activate = function()
-if RPD.Dungeon.depth == 26 then
-if not storage.get("storyspider") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Spider_Story"))
-       RPD.GameScene:show(wnd)
-       storage.put("storyspider",true)
-end
-end
+
 if RPD.Dungeon.depth ~= 30 then
 
 local level = RPD.Dungeon.level
@@ -116,6 +110,13 @@ end
 return true
 end,
     act = function()
+    if RPD.Dungeon.depth == 26 then
+if not storage.get("storyspider") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Spider_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storyspider",true)
+end
+end
     return true
     end,
     actionTime = function()

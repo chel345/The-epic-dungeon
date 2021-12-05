@@ -1,7 +1,7 @@
 {
   "attackDelay": 1,
   "attackRange": 1,
-  "attackSkill": 1000,
+  "attackSkill": 10,
   "baseSpeed": 1,
   "canBePet": true,
   "defenseSkill": 3,

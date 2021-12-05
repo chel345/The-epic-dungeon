@@ -6,12 +6,11 @@
   "canBePet": false,
   "defenseSkill": 2,
   "description": "IceSkeletonPet_Desc",
-  "dmgMax": 70,
-  "dmgMin": 30,
+  "dmgMax": 30,
+  "dmgMin": 20,
   "dr": 15,
-  "exp": 7,
+  "exp": 0,
   "flying": false,
-  "fraction": "HEROES",
   "friendly": false,
   "gender": "IceSkeletonPet_Gender",
   "ht": 35,
@@ -31,5 +30,6 @@
   "name": "IceSkeletonPet_Name",
   "name_objective": "IceSkeletonPet_Object",
   "spriteDesc": "spritesDesc/IceSkeleton_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "scriptFile": "scripts/mobs/IceSkeletonPet"
 }

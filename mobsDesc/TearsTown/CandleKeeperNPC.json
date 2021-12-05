@@ -6,9 +6,10 @@
   "fraction": "NEUTRAL",
   "friendly": true,
   "gender": "CandleKeeperNPC_Gender",
-  "ht": 5000000,
   "name": "CandleKeeperNPC_Name",
   "name_objective": "CandleKeeperNPC_Object",
   "scriptFile": "scripts/npc/CandleKeeperNPC",
-  "spriteDesc": "spritesDesc/CandleKeeperNPC_Desc.json"
+  "spriteDesc": "spritesDesc/CandleKeeperNPC_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
 }

@@ -1,19 +1,19 @@
 {
-  "attackDelay": 10000,
+  "attackDelay": 10,
   "attackRange": 0,
-  "attackSkill": 15,
+  "attackSkill": 0,
   "baseSpeed": 1,
   "canBePet": false,
-  "defenseSkill": 9,
+  "defenseSkill": 0,
   "description": "ShadowSpiderEgg_Desc",
   "dmgMax": 0,
   "dmgMin": 0,
   "dr": 5,
-  "exp": 4,
+  "exp": 24,
   "flying": false,
   "friendly": false,
   "gender": "ShadowSpiderEgg_Gender",
-  "ht": 200,
+  "ht": 120,
   "immunities": [
     "Terror"
   ],
@@ -23,5 +23,6 @@
   "name_objective": "ShadowSpiderEgg_Object",
   "scriptFile": "scripts/mobs/ShadowSpiderEgg",
   "spriteDesc": "spritesDesc/ShadowSpiderEgg_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "movable"       :false
 }

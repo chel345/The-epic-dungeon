@@ -10,14 +10,11 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-spawn = function(me, level)
-RPD.setAi(me,"KeyGuardian")
-end,
-stats = function(self)
-RPD.permanentBuff(self, RPD.Buffs.Roots)
+interact = function(self, chr)
+    RPD.resetPos(self,chr)
 end,
 zapProc = function(self,enemy,dmg)
-local mob = RPD.mob("effects/DarckSkull") 
+local mob = RPD.mob("effects/DarckSkull")
 mob:setPos(self:getPos())
 RPD.Dungeon.level:spawnMob(mob)
 

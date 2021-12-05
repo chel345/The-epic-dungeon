@@ -14,6 +14,7 @@ local buffs = {
 "Greed",
 "Counter",
 "MagicFire",
+"RatCandle",
 
 -- mehanic
 "ModBuff",

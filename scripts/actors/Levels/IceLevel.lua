@@ -15,13 +15,7 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
 activate = function()
-if RPD.Dungeon.depth == 16 then
-if not storage.get("storyice") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Ice_Story"))
-       RPD.GameScene:show(wnd)
-       storage.put("storyice",true)
-end
-end
+
 if RPD.Dungeon.depth ~= 20 then
 Ginerator.CreateLevel("IceLevel",true)
 
@@ -78,6 +72,13 @@ end,
     end,
 act = function()
 storage.put("jkjkjk",true)
+if RPD.Dungeon.depth == 16 then
+if not storage.get("storyice") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Ice_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storyice",true)
+end
+end
 return true
 end
 })

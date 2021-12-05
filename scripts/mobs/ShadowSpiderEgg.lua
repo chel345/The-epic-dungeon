@@ -10,10 +10,25 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-    stats = function(self)
-                RPD.permanentBuff(self, RPD.Buffs.Roots)
+interact = function(self, chr)
+	RPD.resetPos(self,chr)
 end,
-damage = function(me, level)
-RPD.setAi(me,"ShadowSpiderEgg")
+act       = function(me, ai, me)
+
+summonBee = function()
+local level = RPD.Dungeon.level
+local hero = RPD.Dungeon.hero
+local mob = RPD.mob("ShadowSpider")
+local pos = level:getEmptyCellNextTo(me:getPos())
+if (level:cellValid(pos)) then
+mob:setPos(pos)
+level:spawnMob(mob,0,me:getPos())
+me:damage(100,me)
+end
+end
+
+me:spend(math.random(10,20))
+summonBee()
+
 end
 }

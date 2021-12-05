@@ -15,13 +15,7 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
 activate = function()
-if RPD.Dungeon.depth == 11 then
-if not storage.get("storynecro") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Necro_Story"))
-       RPD.GameScene:show(wnd)
-       storage.put("storynecro",true)
-end
-end
+
 if RPD.Dungeon.depth ~= 15 and RPD.Dungeon.depth ~= 14 then
 Ginerator.CreateLevel("NecroLevel",true)
 end
@@ -64,6 +58,13 @@ end,
         return 1
     end,
 act = function()
+if RPD.Dungeon.depth == 11 then
+if not storage.get("storynecro") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Necro_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storynecro",true)
+end
+end
 return true
 end
 })

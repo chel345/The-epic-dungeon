@@ -10,9 +10,10 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init({ 
-    spawn = function(me, level)
-     RPD.setAi(me,"MirorGrimm")
-    end
+act       = function(me, ai, me)
+RPD.Wands.wandOfBlink:mobWandUse(me, RPD.Dungeon.level:randomRespawnCell())
+me:spend(3)
+end
 })
 
 

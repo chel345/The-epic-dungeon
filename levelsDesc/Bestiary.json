@@ -84,7 +84,7 @@
 "CavesLevel":{
 "Caves1":{"Bat":1,"Brute":0.2},
 "Caves2":{"Bat":1,"Brute":1,"Spinner":0.2,"Shielded":0.03},
-"Caves3":{"Bat":1,"Brute":3,"Spinner":1,"Shaman":1,"FireElemental":0.02,"Shielded":0.1},
+"Caves3":{"Bat":1,"Brute":3,"Spinner":1, "ShamanElder":1 ,"FireElemental":0.02,"Shielded":0.1},
 "Caves4":{"Bat":1,"Brute":3,"Caves/Mirrorer":4,"Shaman":1,"Monk":0.01,"Shielded":0.1}
 },
 "CavesBossLevel":{

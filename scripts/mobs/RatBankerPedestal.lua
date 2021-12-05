@@ -18,8 +18,8 @@ zapProc = function(self,enemy,dmg, cause)
 EPD.Klak(enemy:getPos(),4,15,self,10,math.random(1,5),false)
 return nil
 end,
-stats = function(self)
-RPD.permanentBuff(self, RPD.Buffs.Roots)
+interact = function(self, chr)
+    RPD.resetPos(self,chr)
 end,
 die = function(self, enemy, dmg)
 RPD.topEffect(self:getPos(),"CouldExplotion")

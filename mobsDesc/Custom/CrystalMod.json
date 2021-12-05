@@ -1,7 +1,7 @@
 {
   "attackDelay": 1,
   "attackRange": 32,
-  "attackSkill": 100000,
+  "attackSkill": 10,
   "baseSpeed": 1,
   "canBePet": false,
   "defenseSkill": 0,
@@ -20,5 +20,5 @@
   "name_objective": "CrystalMod_Object",
   "scriptFile": "scripts/mobs/CrystalMod",
   "spriteDesc": "spritesDesc/CrystalMod_Desc.json",
-  "walkingType": "NORMAL"
+  "movable"       :false
 }

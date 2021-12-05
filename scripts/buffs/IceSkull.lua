@@ -7,12 +7,18 @@ local buff = require "scripts/lib/buff"
 return buff.init{
     desc  = function ()
         return {
-            icon          = 59,
+            icon          = 8,
             name          = RPD.StringsManager:maybeId("Ice_Skull_Buff"),
             info          = "CounterBuff_Info",
         }
     end,
 
+    textureLarge = function()
+    return "ui/CustomBuffsLarge.png"
+    end,
+    textureSmall = function()
+    return "ui/CustomBuffs.png"
+    end,
     attachTo = function(self, buff, target)
         return true
     end,

@@ -12,13 +12,23 @@ local mob     = require "scripts/lib/mob"
 local Process = require "scripts/lib/Process"
 
 return mob.init({
-                    spawn = function(me, level)
-                        Process.golden_gaurd_pos = me:getPos()
-                        RPD.setAi(me, "GoldenGaurd")
-                    end,
-                    move  = function(me)
-                        RPD.setAi(me, "GoldenGaurd")
-                    end
-                })
+    act       = function(me, ai, s)
 
+        local hPos  = RPD.Dungeon.hero:getPos()
+        local myPos = me:getPos()
 
+        if RPD.Dungeon.level:distance(hPos, myPos) < 4 then
+            me:beckon(hPos)
+        else
+            local mySprite = me:getSprite()
+            if Process.golden_gaurd_pos then
+                if mySprite then
+                    mySprite:move(myPos, Process.golden_gaurd_pos)
+                    mySprite:idle()
+                end
+                me:move(Process.golden_gaurd_pos)
+                me:spend(1)
+            end
+        end
+    end
+})

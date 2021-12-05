@@ -10,16 +10,8 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-stats = function(self)
-RPD.permanentBuff(self, RPD.Buffs.Roots)
-end,
 interact = function(self, chr)
-local ownPos  = self:getPos()
-local newPos  = chr:getPos()
-self:move(newPos)
-self:getSprite():move(ownPos, newPos)
-chr:move(ownPos)
-chr:getSprite():move(newPos, ownPos)
+    RPD.resetPos(self,chr)
 end,
 zapProc = function(self,enemy,dmg)
 Splash = luajava.bindClass("com.watabou.pixeldungeon.effects.Splash")

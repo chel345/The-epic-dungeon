@@ -15,13 +15,6 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
 activate = function()
-if RPD.Dungeon.depth == 31 then
-if not storage.get("storybluewomb") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("BlueWomb_Story"))
-       RPD.GameScene:show(wnd)
-       storage.put("storybluewomb",true)
-end
-end
 if RPD.Dungeon.depth ~= 40 then
 Ginerator.CreateLevel("BlueLevel",true)
 end
@@ -63,6 +56,13 @@ end
 return true
 end,
 act = function()
+if RPD.Dungeon.depth == 31 then
+if not storage.get("storybluewomb") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("BlueWomb_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storybluewomb",true)
+end
+end
 return true
 end,
 actionTime = function()

@@ -15,6 +15,13 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
     activate = function()
+
+return true
+end,
+    actionTime = function()
+        return 1
+    end,
+act = function()
 if RPD.Dungeon.depth == 26 then
 if not storage.get("storymagic") then
        local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("MagicCaves_Story"))
@@ -22,12 +29,6 @@ if not storage.get("storymagic") then
        storage.put("storymagic",true)
 end
 end
-return true
-end,
-    actionTime = function()
-        return 1
-    end,
-act = function()
 return true
 end
 })

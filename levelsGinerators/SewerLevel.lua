@@ -55,11 +55,11 @@ MiniBoss = "HugeCrabRoom",
 LevelMiniBoss = 4
 }
 if RPD.Dungeon.depth > 3 then
-table.RandRooms = {"Gold","Fishbowl","Sewer","Alhimy","Chasm","StatueRoom","Warehouse","Workshop","ArmorWarehouse","Library","BigLibrary","RatPost","LostRoom","LooserRoom","BestRoom","LowerRoom","BestRoom","BestRoom"}
+table.RandRooms = {"Gold","Fishbowl","Sewer","Alhimy","Chasm","StatueRoom","Warehouse","Workshop","ArmorWarehouse","Library","BigLibrary","RatPost","LostRoom","LooserRoom","BestRoom","LowerRoom","BestRoom"}
 elseif RPD.Dungeon.depth > 2 then
-table.RandRooms = {"Gold","Fishbowl","Sewer","Alhimy","Chasm","StatueRoom","Warehouse","Workshop","ArmorWarehouse","Library","BigLibrary","LostRoom","LooserRoom","BestRoom","LowerRoom","BestRoom","BestRoom"}
+table.RandRooms = {"Gold","Fishbowl","Sewer","Alhimy","Chasm","StatueRoom","Warehouse","Workshop","ArmorWarehouse","Library","BigLibrary","LostRoom","LooserRoom","BestRoom","LowerRoom","BestRoom"}
 else
-table.RandRooms = {"Gold","Fishbowl","Alhimy","Chasm","StatueRoom","Warehouse","Workshop","ArmorWarehouse","Library","BigLibrary","LostRoom","LooserRoom","BestRoom","LowerRoom","BestRoom","BestRoom"}
+table.RandRooms = {"Gold","Fishbowl","Alhimy","Chasm","StatueRoom","Warehouse","Workshop","ArmorWarehouse","Library","BigLibrary","LostRoom","LooserRoom","BestRoom","LowerRoom","BestRoom"}
 end
 
 return table

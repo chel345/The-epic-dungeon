@@ -14,9 +14,6 @@ local EPD = require "scripts/lib/dopClasses"
 local storage = require "scripts/lib/storage"
 
 return mob.init{
-spawn = function(self)
-RPD.permanentBuff(self, RPD.Buffs.Roots)
-end,
 damage = function(self, level)
 RPD.placeBlob(RPD.Blobs.ConfusionGas, self:getPos(), 50);
 end,

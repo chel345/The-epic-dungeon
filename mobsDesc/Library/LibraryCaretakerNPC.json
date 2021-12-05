@@ -6,9 +6,10 @@
   "fraction": "NEUTRAL",
   "friendly": true,
   "gender": "LibraryCaretakerNPC_Gender",
-  "ht": 5000000,
   "name": "LibraryCaretakerNPC_Name",
   "name_objective": "LibraryCaretakerNPC_Object",
   "scriptFile": "scripts/npc/LibraryCaretakerNPC",
-  "spriteDesc": "spritesDesc/LibraryCaretakerNPC_Desc.json"
+  "spriteDesc": "spritesDesc/LibraryCaretakerNPC_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
 }

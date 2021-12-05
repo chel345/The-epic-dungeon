@@ -9,7 +9,7 @@
   "dmgMax": 0,
   "dmgMin": 0,
   "dr": 10,
-  "exp": 10,
+  "exp": 13,
   "flying": false,
   "friendly": false,
   "gender": "GorgonsHead_Gender",
@@ -30,7 +30,7 @@
     "kind": "Gold"
   },
   "lootChance": 1,
-  "maxLvl": 32,
+  "maxLvl": 16,
   "name": "GorgonsHead_Name",
   "name_objective": "GorgonsHead_Object",
   "spriteDesc": "spritesDesc/GorgonsHead_Desc.json",

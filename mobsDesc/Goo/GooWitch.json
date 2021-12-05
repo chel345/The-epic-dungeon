@@ -6,9 +6,11 @@
   "fraction": "NEUTRAL",
   "friendly": true,
   "gender": "GooWitch_Gender",
-  "ht": 5000000,
   "name": "GooWitch_Name",
   "name_objective": "GooWitch_Object",
   "scriptFile": "scripts/npc/GooWitch",
-  "spriteDesc": "spritesDesc/GooWitch_Desc.json"
+  "spriteDesc": "spritesDesc/GooWitch_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
+
 }

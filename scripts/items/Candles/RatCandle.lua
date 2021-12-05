@@ -7,13 +7,13 @@
 
 local RPD = require "scripts/lib/epicClasses"
 
-local wand = require "scripts/lib/wand"
+local wand = require "scripts/lib/item"
 
 local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 
-local data_ratcandle
+local ratcandle
 
 return wand.init{ 
     desc  = function(self, item)
@@ -21,7 +21,9 @@ ratcandle = item
         return {
         imageFile = "items/Candles.png",
         name      = RPD.StringsManager:maybeId("RatCandle_Name"),
-        info      = RPD.StringsManager:maybeId("RatCandle_Info")
+        info      = RPD.StringsManager:maybeId("RatCandle_Info"),
+        equipable     = "left_hand",
+        upgradable    = true
         }
 end, 
 
@@ -53,61 +55,28 @@ end,
 activate = function(self, item, hero)
 if item:level() <= 0 then
 RPD.glog(RPD.StringsManager:maybeId("ExtinguishedCandle"))
-item:getUser():collect(RPD.item("Candles/RatCandle"))
-item:removeItemFrom(item:getUser())
+item:doUnequip(item:getUser(),true)
 return
 end
+RPD.removeBuff(item:getUser(), "RatCandle")
+RPD.permanentBuff(item:getUser(), "RatCandle" )
 RPD.removeBuff(item:getUser(), RPD.Buffs.Light)
 RPD.permanentBuff(item:getUser(), RPD.Buffs.Light)
 end,
 
 deactivate = function(self, item, hero)
+RPD.removeBuff(item:getUser(), "RatCandle" )
 RPD.removeBuff(item:getUser(), RPD.Buffs.Light)
 end,
 
-DefenseProc = function()
-if math.random(1,3) == 1 then
-addStatue = function(cell,statue)
-local mob = RPD.mob(statue)
-mob:setPos(RPD.Dungeon.level:cellX(cell))
-RPD.Dungeon.level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
-mob:getSprite():emitter():burst( RPD.Sfx.ElmoParticle.FACTORY, 5)
-RPD.playSound( "RatImperator.ogg" )
-local Camera = luajava.bindClass("com.watabou.noosa.Camera")
-Camera.main:shake(4,0.8f)
-RPD.Tweeners.JumpTweener:attachTo(mob:getSprite(),cell,3,0.5f)
-mob:move(cell)
+act = function(self,item)
+item:spend(1)
+if item:isEquipped(RPD.Dungeon.hero) then
+if EPD.time % 50 == 0 and item:level() > 0 then
+item:level(item:level()-1)
 end
-end
-
-if ratcandle:isEquipped(RPD.Dungeon.hero) then
-local hero = RPD.Dungeon.hero
-local level = RPD.Dungeon.level
-if math.random(1,3) == 1 then
-local pos = level:getEmptyCellNextTo(hero:getPos())
-if (level:cellValid(pos)) then
-addStatue(pos,"RatStatuePet")
-end
-end
-end
-end,
-
-CharAct = function()
-if ratcandle:isEquipped(RPD.Dungeon.hero) then
-if EPD.time % 50 == 0 and ratcandle:level() > 0 then
-ratcandle:level(ratcandle:level()-1)
-end
-if ratcandle:level() <= 0 then
-ratcandle:deactivate()
-
-RPD.glog(RPD.StringsManager:maybeId("ExtinguishedCandle"))
-ratcandle:removeItemFrom(ratcandle:getUser())
-RPD.Dungeon.hero:collect(RPD.item("Candles/RatCandle"))
-
-data_ratcandle = nil
-elseif data_ratcandle == nil then
-ratcandle:activate(RPD.Dungeon.hero)
-data_ratcandle = true
+if item:level() <= 0 then
+item:activate(RPD.Dungeon.hero)
 end
 end
 end

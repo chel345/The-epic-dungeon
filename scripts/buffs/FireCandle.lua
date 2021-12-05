@@ -8,19 +8,19 @@ local RPD  = require "scripts/lib/epicClasses"
 
 local buff = require "scripts/lib/buff"
 
-local gases = {"Fire", "LiquidFlame","Burning"}
+local flame = {"Fire", "LiquidFlame","Burning"}
 
 return buff.init{
     desc  = function ()
         return {
-            icon          = 25,
+            icon          = -1,
             name          = "GasesImmunity_Info",
             info          = "GasesImmunity_Info",
         }
     end,
 
     immunities = function(self, buff)
-        return gases
+        return flame
     end
 
 }

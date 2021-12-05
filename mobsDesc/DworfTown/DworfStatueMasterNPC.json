@@ -5,9 +5,10 @@
   "fraction": "NEUTRAL",
   "friendly": true,
   "gender": "DworfStatueMasterNPC_Gender",
-  "ht": 100000000000,
   "name": "DworfStatueMasterNPC_Name",
   "name_objective": "DworfStatueMasterNPC_Object",
   "scriptFile": "scripts/npc/DworfStatueMasterNPC",
-  "spriteDesc": "spritesDesc/DworfStatueMasterNPC_Desc.json"
+  "spriteDesc": "spritesDesc/DworfStatueMasterNPC_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
 }

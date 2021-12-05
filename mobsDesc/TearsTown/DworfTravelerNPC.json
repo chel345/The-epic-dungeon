@@ -10,5 +10,8 @@
   "name": "DworfTravelerNPC_Name",
   "name_objective": "DworfTravelerNPC_Object",
   "scriptFile": "scripts/npc/DworfTravelerNPC",
-  "spriteDesc": "spritesDesc/DworfTravelerNPC_Desc.json"
+  "spriteDesc": "spritesDesc/DworfTravelerNPC_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
+
 }

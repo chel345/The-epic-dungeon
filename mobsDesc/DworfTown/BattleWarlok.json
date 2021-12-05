@@ -15,12 +15,12 @@
   "fraction": "NEUTRAL",
   "friendly": true,
   "gender": "BattleWarlok_Gender",
-  "ht": 100000000000,
   "lootChance": 0,
   "maxLvl": 1,
   "name": "BattleWarlok_Name",
   "name_objective": "BattleWarlok_Object",
   "scriptFile": "scripts/npc/BattleWarlok",
   "spriteDesc": "spritesDesc/UpWarlok_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "immortal"      :true
 }

@@ -6,9 +6,10 @@
   "fraction": "NEUTRAL",
   "friendly": true,
   "gender": "TearsFutureTellerNPC_Gender",
-  "ht": 5000000,
   "name": "TearsFutureTellerNPC_Name",
   "name_objective": "TearsFutureTellerNPC_Object",
   "scriptFile": "scripts/npc/TearsFutureTellerNPC",
-  "spriteDesc": "spritesDesc/TearsFutureTellerNPC_Desc.json"
+  "spriteDesc": "spritesDesc/TearsFutureTellerNPC_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
 }

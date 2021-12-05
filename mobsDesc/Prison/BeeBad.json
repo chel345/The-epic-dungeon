@@ -9,7 +9,7 @@
   "dmgMax": 5,
   "dmgMin": 2,
   "dr": 0,
-  "exp": 1,
+  "exp": 0,
   "flying": true,
   "friendly": false,
   "gender": "Bee_Gender",

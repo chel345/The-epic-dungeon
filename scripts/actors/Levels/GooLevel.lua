@@ -15,13 +15,6 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
 activate = function()
-if RPD.Dungeon.depth == 21 then
-if not storage.get("storygoo") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Goo_Story"))
-       RPD.GameScene:show(wnd)
-       storage.put("storygoo",true)
-end
-end
 if RPD.Dungeon.depth ~= 25 then
 Ginerator.CreateLevel("GooLevel",true)
 end
@@ -66,6 +59,13 @@ end
 return true
 end,
 act = function()
+if RPD.Dungeon.depth == 21 then
+if not storage.get("storygoo") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Goo_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storygoo",true)
+end
+end
   if RPD.Dungeon.level.water[RPD.Dungeon.hero:getPos()+1] then
         RPD.affectBuff(RPD.Dungeon.hero, RPD.Buffs.Slow , 1)
     end

@@ -13,7 +13,7 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 
-local data_caretakerscandle
+local caretakerscandle
 
 return wand.init{ 
     desc  = function(self, item)
@@ -53,41 +53,25 @@ end,
 activate = function(self, item, hero)
 if item:level() <= 0 then
 RPD.glog(RPD.StringsManager:maybeId("ExtinguishedCandle"))
-item:getUser():collect(RPD.item("Candles/CaretakersCandle"))
-item:removeItemFrom(item:getUser())
+item:doUnequip(item:getUser(),true)
 return
 end
---RPD.removeBuff(item:getUser(), RPD.Buffs.Light)
---RPD.permanentBuff(item:getUser(), RPD.Buffs.Light)
 end,
 
-deactivate = function(self, item, hero)
---RPD.removeBuff(item:getUser(), RPD.Buffs.Light)
-end,
-
-CharAct = function()
-if caretakerscandle:isEquipped(RPD.Dungeon.hero) then
-if EPD.time % 50 == 0 and caretakerscandle:level() > 0 then
-caretakerscandle:level(caretakerscandle:level()-1)
+act = function(self,item)
+item:spend(1)
+if item:isEquipped(RPD.Dungeon.hero) then
+if EPD.time % 50 == 0 and item:level() > 0 then
+item:level(item:level()-1)
 end
-if caretakerscandle:level() <= 0 then
-caretakerscandle:deactivate()
-
-RPD.glog(RPD.StringsManager:maybeId("ExtinguishedCandle"))
-caretakerscandle:removeItemFrom(caretakerscandle:getUser())
-RPD.Dungeon.hero:collect(RPD.item("Candles/CaretakersCandle"))
-
-data_caretakerscandle = nil
-elseif data_caretakerscandle == nil then
-caretakerscandle:activate(RPD.Dungeon.hero)
-data_caretakerscandle = true
+if item:level() <= 0 then
+item:activate(RPD.Dungeon.hero)
 end
-end
-if caretakerscandle:isEquipped(RPD.Dungeon.hero) then
 local Terror = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Terror")
 local Flare = luajava.bindClass("com.watabou.pixeldungeon.effects.Flare")
 if math.random(1,10) == 1 then
-for i = 1,RPD.Dungeon.level:getLength()-1 do                local maybeMob = RPD.Actor:findChar(i)          
+for i = 1,RPD.Dungeon.level:getLength()-1 do
+local maybeMob = RPD.Actor:findChar(i)          
 if maybeMob and RPD.Dungeon.level.fieldOfView[i] and maybeMob ~= RPD.Dungeon.hero then 
 RPD.affectBuff(maybeMob, Terror,RPD.Dungeon.hero:magicLvl()+10)
 --test = Flare(5,32)
@@ -99,4 +83,5 @@ end
 end
 end
 end
+
 }

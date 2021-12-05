@@ -1,7 +1,7 @@
 {
   "attackDelay": 1,
   "attackRange": 10,
-  "attackSkill": 200,
+  "attackSkill": 20,
   "baseSpeed": 1,
   "canBePet": true,
   "defenseSkill": 15,
@@ -9,16 +9,17 @@
   "dmgMax": 20,
   "dmgMin": 15,
   "dr": 2,
-  "exp": 2,
+  "exp": 9,
   "flying": false,
   "friendly": false,
   "gender": "ToxicRotLasher_Gender",
-  "ht": 70,
+  "ht": 40,
   "lootChance": 0,
-  "maxLvl": 32,
+  "maxLvl": 21,
   "name": "ToxicRotLasher_Name",
   "name_objective": "ToxicRotLasher_Object",
   "scriptFile": "scripts/mobs/ToxicRotLasher",
   "spriteDesc": "spritesDesc/ToxicRotLasher_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "movable"       :false
 }

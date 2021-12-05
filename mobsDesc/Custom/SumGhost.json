@@ -1,8 +1,8 @@
 {
   "aiState": "Wandering",
   "attackDelay": 1,
-  "attackRange": 100,
-  "attackSkill": 10000,
+  "attackRange": 10,
+  "attackSkill": 10,
   "baseSpeed": 1,
   "canBePet": false,
   "defenseSkill": 0,

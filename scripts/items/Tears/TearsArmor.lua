@@ -9,6 +9,9 @@ local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
+local armor
+local stat
+local itt
 
 return item.init{
     desc  = function (self,item)
@@ -61,10 +64,11 @@ return dmg
 end,
 
 
-UpdateSprite = function()
+act = function(self,item)
+item:spend(1)
 local hero = RPD.Dungeon.hero
 local dr = hero:getBelongings().armor
-local itt = RPD.Dungeon.hero:getBelongings():getItem("Tears/TearsArmor")
+local itt = item
 armor = "hero_modern/armor/Tears/TearsArmor"
 if itt:level() > 7 then
 armor = (armor.."_lvl4.png")

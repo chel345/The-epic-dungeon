@@ -29,6 +29,9 @@ local Wands = {
 }
 local a 
 return mob.init{
+interact = function(self, chr)
+RPD.resetPos(self,chr)
+end,
 stats = function(self)
 a = storage.get("Wand") or math.random(1,#Wands)
 storage.put("Wand",a)

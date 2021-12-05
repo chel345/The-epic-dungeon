@@ -10,9 +10,9 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-    stats = function(self)
-                RPD.permanentBuff(self, RPD.Buffs.Roots)
-end,
+    interact = function(self, chr)
+    	RPD.resetPos(self,chr)
+    end,
     damage = function(self)
 RPD.bottomEffect(self:getPos(), "GooFantain")
         for i = 1,8 do
@@ -23,7 +23,9 @@ RPD.GameScene:updateMap(pos)
         end
         end,
     zapProc = function(self, enemy, dmg)
-        RPD.affectBuff(enemy, RPD.Buffs.Slow , 10)
+    	if math.random(0,1) == 0 then
+        RPD.affectBuff(enemy, RPD.Buffs.Slow , 3)
+        end
        return dmg
     end
 }

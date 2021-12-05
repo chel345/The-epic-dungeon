@@ -44,7 +44,7 @@ function wand.cellSelected(self, wand, action, cell)
     if cell ~= nil and action == RPD.StringsManager:maybeId("Wave") then
 
         wand:getUser():getSprite():zap(cell)
-        local dst = RPD.Ballistica:cast(wand:getUser():getPos(), cell, true, true,false)
+        local dst = RPD.Ballistica:cast(wand:getUser():getPos(), cell, true, false,false)
         local lvl = wand:level()
 
         self.castOnCell(self, wand, cell, dst, lvl)

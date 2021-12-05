@@ -10,9 +10,6 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-    stats = function(self)
-                RPD.permanentBuff(self, RPD.Buffs.Roots)
-end,
     attackProc = function(me, level)
         RPD.playSound( "TentacleAttack.ogg" )
     end,

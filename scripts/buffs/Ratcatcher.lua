@@ -9,11 +9,17 @@ local IceBlock = luajava.bindClass("com.watabou.pixeldungeon.effects.IceBlock")
 return buff.init{
 desc = function ()
 return {
-icon = 59,
+icon = 9,
 name = RPD.StringsManager:maybeId("Ratcatcher_Buff"),
 info = "DieHard_Info",
 }
 end,
+    textureLarge = function()
+    return "ui/CustomBuffsLarge.png"
+    end,
+    textureSmall = function()
+    return "ui/CustomBuffs.png"
+    end,
 attachTo = function(self, buff, target)
 return true
 end,

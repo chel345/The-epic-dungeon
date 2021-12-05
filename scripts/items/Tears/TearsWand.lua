@@ -7,13 +7,17 @@
 
 local RPD = require "scripts/lib/epicClasses"
 
-local wand = require "scripts/lib/wand"
+local wandlib = require "scripts/lib/wand"
 
 local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 
-return wand.init{ 
+local wand
+local st
+local ittt
+
+return wandlib.init{ 
     desc  = function(self, item)
 ittt = item
         return {
@@ -233,10 +237,11 @@ getManaMes = function()
 return RPD.StringsManager:maybeId("No_Mana")
 end,
 
-UpdateSprite = function()
+act = function(self,item)
+item:spend(1)
 local hero = RPD.Dungeon.hero
 local left = hero:getBelongings().left_hand
-local ittt = RPD.Dungeon.hero:getBelongings():getItem("Tears/TearsWand")
+local ittt = item
 wand = "hero_modern/items/Tears/TearsWand"
 if ittt:level() > 5 then
 wand = (wand.."_lvl3.png")

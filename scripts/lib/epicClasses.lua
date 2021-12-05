@@ -23,4 +23,28 @@ RPD.mob = function(strMob)
 	return RPD.MobFactory:mobByName(strMob)
 end
 
+RPD.resetPos = function(mob,chr)
+	local ownPos  = mob:getPos()
+    local newPos  = chr:getPos()
+    mob:move(newPos)
+    mob:getSprite():move(ownPos, newPos)
+    chr:move(ownPos)
+    chr:getSprite():move(newPos, ownPos)
+end
+
+RPD.neutralMob = function()
+	return require "scripts/lib/MobAi"
+end
+
+RPD.getMobs = function(level)
+	local mobs = {}
+	for i = 1, level:getLength() do
+		local maybe = RPD.Actor:findChar(i)
+		if maybe then
+			mobs[#mobs+1] = maybe
+		end
+	end
+	return mobs
+end
+
 return RPD

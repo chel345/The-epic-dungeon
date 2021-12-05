@@ -10,10 +10,16 @@ local buff = require "scripts/lib/buff"
 return buff.init{
     desc  = function ()
         return {
-            icon          = 56,
+            icon          = 4,
             name         = RPD.StringsManager:maybeId("Darck_Mantel_Buff"),
-            info          = "DieHard_Info",
+            info          = "DieHard_Info"
         }
+    end,
+    textureLarge = function()
+    return "ui/CustomBuffsLarge.png"
+    end,
+    textureSmall = function()
+    return "ui/CustomBuffs.png"
     end,
 attachTo = function(self, buff, target)
 return true

@@ -5,7 +5,6 @@
   "fraction": "NEUTRAL",
   "friendly": true,
   "gender": "EnFireThrower_Gender",
-  "ht": 5000000,
   "immunities": [
     "Paralysis",
     "ToxicGas",
@@ -20,5 +19,7 @@
   "name": "EnFireThrower_Name",
   "name_objective": "EnFireThrower_Object",
   "scriptFile": "scripts/npc/EnFireThrower",
-  "spriteDesc": "spritesDesc/EnFireThrower_Desc.json"
+  "spriteDesc": "spritesDesc/EnFireThrower_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
 }

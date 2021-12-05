@@ -15,13 +15,7 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
 activate = function()
-if RPD.Dungeon.depth == 31 then
-if not storage.get("storylib") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Library_Story"))
-       RPD.GameScene:show(wnd)
-       storage.put("storylib",true)
-end
-end
+
 if RPD.Dungeon.depth ~= 35 then
 Ginerator.CreateLevel("LibraryLevel")
 end
@@ -149,6 +143,13 @@ end,
         return 1
     end,
 act = function()
+if RPD.Dungeon.depth == 31 then
+if not storage.get("storylib") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Library_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storylib",true)
+end
+end
 return true
 end
 })

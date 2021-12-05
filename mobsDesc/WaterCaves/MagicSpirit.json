@@ -1,7 +1,7 @@
 {
   "attackDelay": 1,
   "attackRange": 100,
-  "attackSkill": 100,
+  "attackSkill": 20,
   "baseSpeed": 1,
   "canBePet": false,
   "defenseSkill": 0,
@@ -9,7 +9,7 @@
   "dmgMax": 10,
   "dmgMin": 7,
   "dr": 10,
-  "exp": 0,
+  "exp": 7,
   "flying": true,
   "friendly": false,
   "gender": "MagicSpirit_Gender",

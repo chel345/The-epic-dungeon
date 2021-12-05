@@ -666,7 +666,7 @@
 
 
 
-"portal_room_lvl10_u":[["Necro1"],["Prison4"]],
+"portal_room_lvl10_u":[["Necro1"],["Prison5"]],
 "portal_room_lvl15_u":[["Shad1"],["Necro5"]],
 "portal_room_lvl20_u":[["Night1"],["Shad5"]],
 "portal_room_lvl25_u":[["Skeleton1"],["Night5"]],
@@ -707,7 +707,7 @@
 
 
 
-"portal_room_lvl15_r":[["Ice1"],["Caves4"]],
+"portal_room_lvl15_r":[["Ice1"],["Caves5"]],
 "portal_room_lvl20_r":[["Bandit1"],["Ice5"]],
 "portal_room_lvl25_r":[["Castle1"],["Bandit5"]],
 "portal_room_lvl30_r":[["Library1"],["Castle5"]],

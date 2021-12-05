@@ -6,8 +6,10 @@
   "fraction": "NEUTRAL",
   "friendly": true,
   "gender": "SleepingGnollNPC_Gender",
-  "ht": 5000000,
+  "ht": 5,
   "name": "SleepingGnollNPC_Name",
   "name_objective": "SleepingGnollNPC_Object",
-  "spriteDesc": "spritesDesc/SleepingGnollNPC_Desc.json"
+  "spriteDesc": "spritesDesc/SleepingGnollNPC_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
 }

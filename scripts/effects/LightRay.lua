@@ -31,17 +31,15 @@ ball:setPos(0)
 RPD.Dungeon.level:spawnMob(ball)
 RPD.setAi(ball,"update")
 --]]
-local function test(n)
-RPD.glog("DF")
+local function update(n)
 image:setScale(math.sqrt(dx*dx+dy*dy)/image.width,n/30)
-if n % 29 == 0 then
+if n % 29 then
 image:killAndErase()
 table.remove(RPD.functions,#RPD.functions)
 end
 end
-RPD.functions[#RPD.functions+1] = test
+RPD.functions[#RPD.functions+1] = update
 RPD.GameScene:effect(image)
-return
 end
 }
 return LightRay

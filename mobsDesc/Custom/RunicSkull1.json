@@ -19,5 +19,5 @@
   "name_objective": "RunicSkull_Objective",
   "scriptFile": "scripts/mobs/RunicSkull1",
   "spriteDesc": "spritesDesc/RunicSkull1_Desc.json",
-  "walkingType": "NORMAL"
+  "movable"       :false
 }

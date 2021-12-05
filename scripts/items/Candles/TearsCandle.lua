@@ -13,7 +13,7 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 
-local data_tearscandle
+local tearscandle
 
 return wand.init{ 
     desc  = function(self, item)
@@ -53,8 +53,7 @@ end,
 activate = function(self, item, hero)
 if item:level() <= 0 then
 RPD.glog(RPD.StringsManager:maybeId("ExtinguishedCandle"))
-item:getUser():collect(RPD.item("Candles/TearsCandle"))
-item:removeItemFrom(item:getUser())
+item:doUnequip(item:getUser(),true)
 return
 end
 RPD.removeBuff(item:getUser(), RPD.Buffs.MindVision)
@@ -65,22 +64,14 @@ deactivate = function(self, item, hero)
 RPD.removeBuff(item:getUser(), RPD.Buffs.MindVision)
 end,
 
-CharAct = function()
-if tearscandle:isEquipped(RPD.Dungeon.hero) then
-if EPD.time % 50 == 0 and tearscandle:level() > 0 then
-tearscandle:level(tearscandle:level()-1)
+act = function(self,item)
+item:spend(1)
+if item:isEquipped(RPD.Dungeon.hero) then
+if EPD.time % 50 == 0 and item:level() > 0 then
+item:level(item:level()-1)
 end
-if tearscandle:level() <= 0 then
-tearscandle:deactivate()
-
-RPD.glog(RPD.StringsManager:maybeId("ExtinguishedCandle"))
-tearscandle:removeItemFrom(tearscandle:getUser())
-RPD.Dungeon.hero:collect(RPD.item("Candles/TearsCandle"))
-
-data_tearscandle = nil
-elseif data_tearscandle == nil then
-tearscandle:activate(RPD.Dungeon.hero)
-data_tearscandle = true
+if item:level() <= 0 then
+item:activate(RPD.Dungeon.hero)
 end
 end
 end

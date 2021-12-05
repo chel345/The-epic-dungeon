@@ -9,10 +9,16 @@ local buff = require "scripts/lib/buff"
 return buff.init{
     desc  = function ()
         return {
-            icon          = 57,
+            icon          = 6,
             name          = RPD.StringsManager:maybeId("LightShild_Buff"),
             info          = "BodyArmorBuff_Info",
          }
+    end,
+    textureLarge = function()
+    return "ui/CustomBuffsLarge.png"
+    end,
+    textureSmall = function()
+    return "ui/CustomBuffs.png"
     end,
     act = function(self,buff)
         buff:detach()

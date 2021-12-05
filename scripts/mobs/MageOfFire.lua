@@ -40,7 +40,7 @@ end
 end
 end
 end,
-stats = function(self)
-RPD.permanentBuff(self, RPD.Buffs.Roots)
+interact = function(self, chr)
+    RPD.resetPos(self,chr)
 end
 }

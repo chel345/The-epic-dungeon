@@ -15,13 +15,7 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
 activate = function()
-if RPD.Dungeon.depth == 6 then
-if not storage.get("storyrat") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Rat_Story"))
-       RPD.GameScene:show(wnd)
-       storage.put("storyrat",true)
-end
-end
+
 if RPD.Dungeon.depth ~= 10 then
 Ginerator.CreateLevel("RatLevel",true)
 end
@@ -43,6 +37,13 @@ actionTime = function()
 return 1
 end,
 act = function()
+if RPD.Dungeon.depth == 6 then
+if not storage.get("storyrat") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Rat_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storyrat",true)
+end
+end
 return true
 end
 })

@@ -30,7 +30,7 @@
     "kind": "SkeletonKey"
   },
   "lootChance": 1,
-  "maxLvl": 20,
+  "maxLvl": 21,
   "name": "IceNecromanter_Name",
   "name_objective": "IceNecromanter_Object",
   "scriptFile": "scripts/bosses/IceNecromanter",

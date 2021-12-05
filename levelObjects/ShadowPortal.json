@@ -1,0 +1,23 @@
+{
+  "kind":"Deco",
+  "script": "ShadowPortal",
+  "appearance": {
+    "desc": {
+      "desc": "PortalGate_Desc",
+      "name": "PortalGate_Name"
+    },
+    "sprite":{
+      "textureFile": "levelObjects/ShadowPortal.png",
+      "imageIndex" : 0,
+      "width":32,
+      "height":32,
+      "animations": {
+        "basic": {
+          "fps": 1,
+          "frames": [ 0, 1, 2, 3, 4 ],
+          "looped": true
+        }
+      }
+    }
+  }
+}

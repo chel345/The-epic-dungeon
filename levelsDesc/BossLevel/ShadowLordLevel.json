@@ -9,42 +9,42 @@
          "y":15
         },
         {
-         "kind":"CrystalMod",
+         "kind":"Custom/CrystalMod",
          "x":25,
          "y":15
         },
         {
-         "kind":"CrystalMod",
+         "kind":"Custom/CrystalMod",
          "x":25,
          "y":25
         },
         {
-         "kind":"CrystalMod",
+         "kind":"Custom/CrystalMod",
          "x":5,
          "y":25
         },
         {
-         "kind":"CrystalMod",
+         "kind":"Custom/CrystalMod",
          "x":5,
          "y":15
         },
         {
-         "kind":"CrystalMod",
+         "kind":"Custom/CrystalMod",
          "x":5,
          "y":5
         },
         {
-         "kind":"CrystalMod",
+         "kind":"Custom/CrystalMod",
          "x":25,
          "y":5
         },
         {
-         "kind":"CrystalMod",
+         "kind":"Custom/CrystalMod",
          "x":15,
          "y":5
         },
         {
-         "kind":"CrystalMod",
+         "kind":"Custom/CrystalMod",
          "x":15,
          "y":25
         }

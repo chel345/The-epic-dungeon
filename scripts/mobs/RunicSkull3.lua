@@ -15,16 +15,6 @@ local hero = RPD.Dungeon.hero
 RPD.placeBlob(RPD.Blobs.ToxicGas, hero:getPos(), 30);
 end,
     interact = function(self, chr)
-        local ownPos  = self:getPos()
-        local newPos  = chr:getPos()
-
-        self:move(newPos)
-        self:getSprite():move(ownPos, newPos)
-
-        chr:move(ownPos)
-        chr:getSprite():move(newPos, ownPos)
+    	RPD.resetPos(self,chr)
     end,
-    stats = function(self)
-        RPD.permanentBuff(self, RPD.Buffs.Roots)
-    end 
 }

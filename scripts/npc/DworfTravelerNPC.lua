@@ -25,7 +25,7 @@ EPD.showQuestWindow(self, RPD.StringsManager:maybeId("DworfTravelerNPC_Phrase2")
 local hero = RPD.Dungeon.hero
 hero:getBelongings():getItem("Ration"):detach(hero:getBelongings().backpack)
 RPD.Sfx.SpellSprite:show(self, RPD.Sfx.SpellSprite.FOOD)
-local wand = RPD.creteItem("GoldenKey", {levelId="TempleOfTears"})
+local wand = RPD.creteItem("GoldenKey", {levelId="TearsHell"})
 RPD.Dungeon.hero:collect(wand)
 RPD.glog(RPD.StringsManager:maybeId("DworfTravelerNPC_Phrase3")..wand:name())
 storage.put("complete",true)

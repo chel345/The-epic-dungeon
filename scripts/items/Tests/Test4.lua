@@ -62,6 +62,12 @@ RPD.glog(RPD.Dungeon.level:cellY(cell))
 --RPD.new("com.watabou.noosa.particles.Emitter")
 --RPD.new("com.watabou.noosa.particles.PixelParticle")
 
+Splash = luajava.bindClass("com.watabou.pixeldungeon.effects.Splash")
+missile = thisItem:getUser():getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
+missile:reset( thisItem:getUser():getPos(),cell,nil)
+missile:size(4);
+--missile:pour( RPD.Sfx.ElmoParticle.FACTORY, 0.01f);
+Splash.at(missile, cell,-3,3, 0x81ff2f, 1)
 LightRay.ray(RPD.Dungeon.hero:getPos(),cell)
         end
 if action == "action2" then

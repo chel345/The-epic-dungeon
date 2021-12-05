@@ -48,11 +48,12 @@ end
 local level = RPD.Dungeon.level
 local x = level:cellX(cell)
 local y = level:cellY(cell)
+local W = level:getWidth()
 for i = x - 3, x + 1 do
 for j = y - 3, y + 1 do
 local pos = RPD.Dungeon.level:cell(i,j)
 local object = RPD.Dungeon.level:getTopLevelObject(pos)
-if object and pos ~= cell then
+if object and pos ~= cell and pos ~= cell-W+1 then
 object.sprite:kill()
 level:remove(object)
 local Chest =

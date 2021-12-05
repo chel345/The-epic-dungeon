@@ -16,13 +16,6 @@ local Ginerator = require "scripts/lib/Ginerator"
 return actor.init({
 activate = function()
 
-if RPD.Dungeon.depth == 31 then
-if not storage.get("storycastle") then
-       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("HellCastle_Story"))
-       RPD.GameScene:show(wnd)
-       storage.put("storycastle",true)
-end
-end
 if RPD.Dungeon.depth ~= 33 then
 
 local level = RPD.Dungeon.level
@@ -74,6 +67,13 @@ end
 return true
 end,
     act = function()
+    if RPD.Dungeon.depth == 31 then
+if not storage.get("storycastle") then
+       local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("HellCastle_Story"))
+       RPD.GameScene:show(wnd)
+       storage.put("storycastle",true)
+end
+end
     return true
     end,
     actionTime = function()

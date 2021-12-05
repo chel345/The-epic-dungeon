@@ -15,16 +15,16 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
     activate = function()
-if not storage.get("key") then
-    Ginerator.CreateLevel("SewerLevel")
-end
-storage.put("key",true)
 return true
 end,
     actionTime = function()
         return 1
     end,
 act = function()
+if not storage.get("key") then
+    Ginerator.CreateLevel("SewerLevel")
+end
+storage.put("key",true)
 return true
 end
 })
