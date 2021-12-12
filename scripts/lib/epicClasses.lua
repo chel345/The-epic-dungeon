@@ -12,7 +12,20 @@ RPD.StringsManager = luajava.bindClass("com.watabou.noosa.StringsManager")
 
 RPD.ModdingMode = luajava.bindClass("com.nyrds.util.ModdingMode")
 
-RPD.functions = {}
+local functions = {}
+
+RPD.addFunction = function(f)
+	table.insert(functions, {f = f, n = 1})
+end
+
+RPD.runFunctions = function()
+	for k, entry in pairs(functions) do
+		if not entry.f(entry.n) then
+			functions[k] = nil
+		end
+		entry.n = entry.n + 1
+	end
+end
 
 RPD.mob = function(strMob)
 	for _,i in pairs(Indicator()) do
