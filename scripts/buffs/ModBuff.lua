@@ -29,7 +29,7 @@ local Candle = require("scripts/items/Candles/Candle")
 return buff.init{
     desc  = function ()
         return {
-            icon          = 3,
+            icon          = -1,
             name          = "CounterBuff_Name",
             info          = "CounterBuff_Info"
         }
