@@ -1,15 +1,16 @@
 {
-  "kind":"CustomObject",
+    "kind": "CustomObject",
+    "script": "CustomObject",
+    "appearance": {
+        "desc": {
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileWall"
 
-  "script": "ShadowSkull",
-  "appearance": {
-    "desc": {
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileWall"
-    },
-    "sprite":{
-      "textureFile": "levelObjects/ShadowTiles.png",
-      "imageIndex" : 1
+
+        },
+        "sprite": {
+            "textureFile": "levelObjects/ShadowTiles.png",
+            "imageIndex": 1
+        }
     }
-  }
 }

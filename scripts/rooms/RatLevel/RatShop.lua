@@ -26,13 +26,13 @@ local level = RPD.Dungeon.level
 
 local tile1 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="RatTile1"
 }
 
 local tile2 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="RatTile2"
 }
 
@@ -53,14 +53,14 @@ end
 
 local tile3 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("RatTile"..math.random(3,4))
 }
 RPD.createLevelObject(tile3,cell-W*2)
 
 local light =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="RatTile7"
 }
 RPD.createLevelObject(light,cell-W-1)

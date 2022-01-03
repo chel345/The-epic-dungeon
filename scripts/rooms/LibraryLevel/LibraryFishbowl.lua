@@ -26,7 +26,7 @@ level:spawnMob(mob)
 
 local candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="LibCandle"
 }
 RPD.createLevelObject(candle, cell+2-W*3)

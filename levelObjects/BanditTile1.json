@@ -1,16 +1,17 @@
 {
-  "appearance": {
-    "desc": {
-      "canStepOn": false,
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileWall",
-      "nonPassable": false
+    "appearance": {
+        "desc": {
+
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileWall"
+
+        },
+        "particles": "Torch",
+        "sprite": {
+            "imageIndex": 0,
+            "textureFile": "levelObjects/BanditTiles.png"
+        }
     },
-    "particles": "Torch",
-    "sprite": {
-      "imageIndex": 0,
-      "textureFile": "levelObjects/BanditTiles.png"
-    }
-  },
-  "kind": "Deco"
+    "kind": "CustomObject",
+    "script": "CustomObject"
 }

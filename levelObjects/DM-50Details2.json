@@ -1,15 +1,18 @@
 {
-  "appearance": {
-    "desc": {
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileWall"
+    "appearance": {
+        "desc": {
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileWall"
+
+
+        },
+        "sprite": {
+            "imageIndex": 1,
+            "textureFile": "levelObjects/DM-50Details.png"
+        }
     },
-    "sprite": {
-      "imageIndex": 1,
-      "textureFile": "levelObjects/DM-50Details.png"
-    }
-  },
-  "canStepOn": true,
-  "kind": "Deco",
-  "nonPassable": false
+    "canStepOn": true,
+    "kind": "CustomObject",
+    "nonPassable": false,
+    "script": "CustomObject"
 }

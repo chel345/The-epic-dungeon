@@ -23,14 +23,14 @@ h = cell-W*i
 if h == cell then
 local LockedLattice =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="LockedLattice"
 }
 RPD.createLevelObject(LockedLattice,h)
 else
 local Lattice =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Lattice"
 }
 RPD.createLevelObject(Lattice,h)

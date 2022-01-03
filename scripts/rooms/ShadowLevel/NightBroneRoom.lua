@@ -23,12 +23,12 @@ objects = function(cell)
 local w = RPD.Dungeon.level:getWidth()
 local candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="ShadowTile1"
 }
 local candle2 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="ShadowTile2"
 }
 RPD.createLevelObject(candle, cell-2-w*2)

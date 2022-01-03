@@ -20,7 +20,7 @@ objects = function(cell)
 local W = RPD.Dungeon.level:getWidth()
 local RatBanner =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="RatImperiaBanner"
 }
 RPD.createLevelObject(RatBanner, cell-W*2+1)

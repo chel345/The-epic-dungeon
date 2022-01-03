@@ -21,19 +21,19 @@ local W = RPD.Dungeon.level:getWidth()
 
 local Paint =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="LibCandle"
 }
 RPD.createLevelObject(Paint,cell-W-2)
 local Camera =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Book"..math.random(1,4))
 }
 RPD.createLevelObject(Camera,cell-W+2)
 local Tickets1 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="BoxOfPaper"
 }
 RPD.createLevelObject(Tickets1,cell+W*2+2)

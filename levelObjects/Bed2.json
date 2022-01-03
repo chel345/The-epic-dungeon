@@ -1,15 +1,16 @@
 {
-  "appearance": {
-    "desc": {
-      "canStepOn": true,
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileFloor",
-      "nonPassable": false
+    "appearance": {
+        "desc": {
+
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileFloor"
+
+        },
+        "sprite": {
+            "imageIndex": 1,
+            "textureFile": "levelObjects/Beds.png"
+        }
     },
-    "sprite": {
-      "imageIndex": 1,
-      "textureFile": "levelObjects/Beds.png"
-    }
-  },
-  "kind": "Deco"
+    "kind": "CustomObject",
+    "script": "CustomObject"
 }

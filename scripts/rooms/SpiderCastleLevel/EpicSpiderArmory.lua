@@ -39,7 +39,7 @@ local pos = RPD.Dungeon.level:cell(i,j)
 if level.map[pos] == 9 then
 local barrel =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpiderTile9"
 }
 RPD.createLevelObject(barrel, pos-1)
@@ -73,7 +73,7 @@ spawnObjectWall = function(k)
 if math.random(1,2) == 1 then
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("SpiderTile"..math.random(2,4))
 }
 RPD.createLevelObject(tile,k)

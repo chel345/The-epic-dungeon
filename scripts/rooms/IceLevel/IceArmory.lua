@@ -24,12 +24,12 @@ local W = RPD.Dungeon.level:getWidth()
 
 local tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="IceTile1"
 }
 local tile2 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="IceTile2"
 }
 
@@ -73,7 +73,7 @@ level:spawnMob(mob);
 elseif math.random(1,12) == 1 then
 local barrel =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="FireKeg_sp"
 }
 RPD.createLevelObject(barrel, pos-1)

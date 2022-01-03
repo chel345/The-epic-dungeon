@@ -10,7 +10,7 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init({ 
-act       = function(me, ai, me)
+act       = function(me, ai, mee)
 if math.random(1,2) == 2 then
 me:spend(2)
 RPD.Wands.wandOfBlink:mobWandUse(me, RPD.Dungeon.level:randomRespawnCell())

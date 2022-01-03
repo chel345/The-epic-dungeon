@@ -23,12 +23,12 @@ local w = level:getWidth()
 add = function(to)
 local tile1 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="NestTile3"
 }
 local tile2 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="NestTile4"
 }
 RPD.createLevelObject(tile1, to-w)

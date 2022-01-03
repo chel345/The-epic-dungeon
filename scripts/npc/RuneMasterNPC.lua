@@ -71,7 +71,7 @@ self:getSprite():emitter():start( RPD.Sfx.FlowParticle.FACTORY, 0.8 )
 for c = self:getPos()-5, self:getPos()+5 do
 if RPD.Dungeon.level.map[c] == RPD.Terrain.EMPTY_SP and c ~= self:getPos() then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="DummyMagicGaurd"
 }
 ,c)
@@ -84,7 +84,7 @@ for i = 1,5 do
 a = a+RPD.Dungeon.level:getWidth()
 if RPD.Dungeon.level.map[a] == RPD.Terrain.EMPTY_SP and a ~= self:getPos() then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="OfftenMagicGaurd"
 }
 ,a

@@ -1,17 +1,17 @@
 {
-  "appearance": {
-    "desc": {
-      "canStepOn": true,
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileFloor",
-      "nonPassable": false
+    "appearance": {
+        "desc": {
+
+            "desc": "Orgalorg_info",
+            "name": "Orgalorg_name"
+        },
+        "sprite": {
+            "imageIndex": 0,
+            "textureFile": "levelObjects/Orgalorg.png"
+        }
     },
-    "sprite": {
-      "imageIndex": 0,
-      "textureFile": "levelObjects/Orgalorg.png"
-    }
-  },
-  "canStepOn": true,
-  "kind": "Deco",
-  "nonPassable": false
+    "canStepOn": true,
+    "kind": "CustomObject",
+    "nonPassable": false,
+    "script": "CustomObject"
 }

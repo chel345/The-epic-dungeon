@@ -64,7 +64,7 @@ RPD.GameScene:updateMap(pos-1)
 elseif math.random(1,10) == 1 then
 local candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="candle"
 }
 RPD.createLevelObject(candle, pos-1)

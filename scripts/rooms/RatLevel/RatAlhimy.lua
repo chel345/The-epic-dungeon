@@ -34,7 +34,7 @@ end
 end
 local RatBanner =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="RatImperiaBanner"
 }
 RPD.createLevelObject(RatBanner, cell-W*3+1)

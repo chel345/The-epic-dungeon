@@ -21,7 +21,7 @@ local W = RPD.Dungeon.level:getWidth()
 local W = RPD.Dungeon.level:getWidth()
 local Paint =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Paint1"
 }
 RPD.createLevelObject(Paint,cell-W-4)

@@ -32,7 +32,7 @@ RPD.Dungeon.level:set(pos-1,RPD.Terrain.BARRICADE)
 elseif math.random(1,2) == 1 then
 local Candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpinnerNest"
 }
 RPD.createLevelObject(Candle,pos-1)

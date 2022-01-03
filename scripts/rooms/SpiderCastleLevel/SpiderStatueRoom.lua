@@ -27,14 +27,14 @@ mob:setPos(cell)
 level:spawnMob(mob)
 local candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpiderTile6"
 }
 RPD.createLevelObject(candle, cell-W*2-2)
 RPD.createLevelObject(candle, cell+W*2-2)
 local candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpiderTile7"
 }
 RPD.createLevelObject(candle, cell-W*2+2)

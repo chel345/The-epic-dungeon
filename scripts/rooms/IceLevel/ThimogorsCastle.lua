@@ -38,7 +38,7 @@ RPD.Dungeon.level:set(pos-1,RPD.Terrain.BARRICADE)
 elseif math.random(1,6) == 1 then
 local Candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="IceTile5"
 }
 RPD.createLevelObject(Candle,pos-1)

@@ -62,7 +62,7 @@ armor = {
 spawnObject = function(t)
 local barrel =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="RatTile6"
 }
 RPD.createLevelObject(barrel,t)
@@ -74,7 +74,7 @@ level:spawnMob(mob)
 elseif math.random(1,4) == 1 then
 local barrel =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="RatTile9"
 }
 RPD.createLevelObject(barrel,t)
@@ -93,13 +93,13 @@ spawnObjectWall = function(k)
 if math.random(1,2) == 1 then
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("RatTile"..math.random(3,4))
 }
 else
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="RatTile1"
 }
 end

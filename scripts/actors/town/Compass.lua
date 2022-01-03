@@ -28,27 +28,27 @@ if not storage.get("light_in_town") then
 storage.gamePut("snow_in_town",true)
 storage.put("light_in_town",true)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Light"
 }
 ,335)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Light"
 }
 ,596)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Light"
 }
 ,358)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Light"
 }
 ,250)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Light"
 }
 ,787)

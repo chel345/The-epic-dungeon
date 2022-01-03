@@ -42,13 +42,13 @@ end
 
 local tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="GutsTile6"
 }
 
 local tile3 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="GutsTile11"
 }
 
@@ -64,7 +64,7 @@ end
 if level.map[pos] == RPD.Terrain.EMBERS then
 local tile2 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("GutsTile"..math.random(7,10))
 }
 RPD.createLevelObject(tile2,pos-1)

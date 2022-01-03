@@ -21,7 +21,7 @@ objects = function(cell)
 local W = RPD.Dungeon.level:getWidth()
 local Column_1 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SewerColumn_2"
 }
 RPD.createLevelObject(Column_1,cell-W*2-2)
@@ -42,7 +42,7 @@ RPD.createLevelObject(Column_1,cell+2)
 RPD.createLevelObject(Column_1,cell+W+2)
 local Column_2 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SewerColumn_1"
 }
 RPD.createLevelObject(Column_2,cell-W*2-2-W)

@@ -601,21 +601,21 @@ for i = 1, RPD.Dungeon.level:getLength() do
 if i ~= RPD.Dungeon.level:getLength() then
 if level.map[i] == RPD.Terrain.BOOKSHELF then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=bookshelf
 }
 ,i-1)
 end
 if                               level.map[i+W] == RPD.Terrain.EMPTY and level.map[i] == RPD.Terrain.WALL or level.map[i+W] == RPD.Terrain.PEDESTAL and level.map[i] == RPD.Terrain.WALL               or level.water[i+W] and level.map[i] == RPD.Terrain.WALL                             or level.map[i+W] == RPD.Terrain.EMPTY_DECO and level.map[i] == RPD.Terrain.WALL        or level.map[i+W] == RPD.Terrain.WATER and level.map[i] == RPD.Terrain.WALL               or level.map[i+W] == RPD.Terrain.HIGH_GRASS and level.map[i] == RPD.Terrain.WALL        or level.map[i+W] == RPD.Terrain.GRASS and level.map[i] == RPD.Terrain.WALL               or level.map[i+W] == RPD.Terrain.EMPTY_WELL and level.map[i] == RPD.Terrain.WALL       or level.map[i+W] == RPD.Terrain.EMBERS and level.map[i] == RPD.Terrain.WALL                or level.map[i+W] == RPD.Terrain.STATUE and level.map[i] == RPD.Terrain.WALL                or level.map[i+W] == RPD.Terrain.SIGN and level.map[i] == RPD.Terrain.WALL                or level.map[i+W] == RPD.Terrain.TOXIC_TRAP and level.map[i] == RPD.Terrain.WALL         or level.map[i+W] == RPD.Terrain.SECRET_TOXIC_TRAP and level.map[i] == RPD.Terrain.WALL                              or level.map[i+W] == RPD.Terrain.FIRE_TRAP and level.map[i] == RPD.Terrain.WALL        or level.map[i+W] == RPD.Terrain.SECRET_FIRE_TRAP and level.map[i] == RPD.Terrain.WALL  or level.map[i+W] == RPD.Terrain.PARALYTIC_TRAP and level.map[i] == RPD.Terrain.WALL   or level.map[i+W] == RPD.Terrain.SECRET_PARALYTIC_TRAP and level.map[i] == RPD.Terrain.WALL                             or level.map[i+W] == RPD.Terrain.INACTIVE_TRAP and level.map[i] == RPD.Terrain.WALL        or level.map[i+W] == RPD.Terrain.POISON_TRAP and level.map[i] == RPD.Terrain.WALL        or level.map[i+W] == RPD.Terrain.SECRET_POISON_TRAP and level.map[i] == RPD.Terrain.WALL   or level.map[i+W] == RPD.Terrain.ALARM_TRAP and level.map[i] == RPD.Terrain.WALL       or level.map[i+W] == RPD.Terrain.SECRET_ALARM_TRAP and level.map[i] == RPD.Terrain.WALL  or level.map[i+W] == RPD.Terrain.LIGHTNING_TRAP and level.map[i] == RPD.Terrain.WALL  or level.map[i+W] == RPD.Terrain.SECRET_LIGHTNING_TRAP and level.map[i] == RPD.Terrain.WALL                              or level.map[i+W] == RPD.Terrain.GRIPPING_TRAP and level.map[i] == RPD.Terrain.WALL         or level.map[i+W] == RPD.Terrain.SECRET_GRIPPING_TRAP and level.map[i] == RPD.Terrain.WALL                              or level.map[i+W] == RPD.Terrain.SUMMONING_TRAP and level.map[i] == RPD.Terrain.WALL  or level.map[i+W] == RPD.Terrain.SECRET_SUMMONING_TRAP and level.map[i] == RPD.Terrain.WALL                             or level.map[i+W] == RPD.Terrain.WATER_TILES and level.map[i] == RPD.Terrain.WALL then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Wall
 }
 ,i-1)
 end
 if                               level.map[i+W] == RPD.Terrain.EMPTY and level.map[i] == RPD.Terrain.WALL_DECO or level.map[i+W] == RPD.Terrain.PEDESTAL and level.map[i] == RPD.Terrain.WALL_DECO             or level.water[i+W] and level.map[i] == RPD.Terrain.WALL_DECO                       or level.map[i+W] == RPD.Terrain.EMPTY_DECO and level.map[i] == RPD.Terrain.WALL_DECO        or level.map[i+W] == RPD.Terrain.WATER and level.map[i] == RPD.Terrain.WALL_DECO               or level.map[i+W] == RPD.Terrain.HIGH_GRASS and level.map[i] == RPD.Terrain.WALL_DECO        or level.map[i+W] == RPD.Terrain.GRASS and level.map[i] == RPD.Terrain.WALL_DECO               or level.map[i+W] == RPD.Terrain.EMPTY_WELL and level.map[i] == RPD.Terrain.WALL_DECO       or level.map[i+W] == RPD.Terrain.EMBERS and level.map[i] == RPD.Terrain.WALL_DECO                or level.map[i+W] == RPD.Terrain.STATUE and level.map[i] == RPD.Terrain.WALL_DECO                or level.map[i+W] == RPD.Terrain.SIGN and level.map[i] == RPD.Terrain.WALL_DECO                or level.map[i+W] == RPD.Terrain.TOXIC_TRAP and level.map[i] == RPD.Terrain.WALL_DECO         or level.map[i+W] == RPD.Terrain.SECRET_TOXIC_TRAP and level.map[i] == RPD.Terrain.WALL_DECO                              or level.map[i+W] == RPD.Terrain.FIRE_TRAP and level.map[i] == RPD.Terrain.WALL_DECO        or level.map[i+W] == RPD.Terrain.SECRET_FIRE_TRAP and level.map[i] == RPD.Terrain.WALL_DECO  or level.map[i+W] == RPD.Terrain.PARALYTIC_TRAP and level.map[i] == RPD.Terrain.WALL_DECO   or level.map[i+W] == RPD.Terrain.SECRET_PARALYTIC_TRAP and level.map[i] == RPD.Terrain.WALL_DECO                             or level.map[i+W] == RPD.Terrain.INACTIVE_TRAP and level.map[i] == RPD.Terrain.WALL_DECO        or level.map[i+W] == RPD.Terrain.POISON_TRAP and level.map[i] == RPD.Terrain.WALL_DECO        or level.map[i+W] == RPD.Terrain.SECRET_POISON_TRAP and level.map[i] == RPD.Terrain.WALL_DECO   or level.map[i+W] == RPD.Terrain.ALARM_TRAP and level.map[i] == RPD.Terrain.WALL_DECO       or level.map[i+W] == RPD.Terrain.SECRET_ALARM_TRAP and level.map[i] == RPD.Terrain.WALL_DECO  or level.map[i+W] == RPD.Terrain.LIGHTNING_TRAP and level.map[i] == RPD.Terrain.WALL_DECO  or level.map[i+W] == RPD.Terrain.SECRET_LIGHTNING_TRAP and level.map[i] == RPD.Terrain.WALL_DECO                              or level.map[i+W] == RPD.Terrain.GRIPPING_TRAP and level.map[i] == RPD.Terrain.WALL_DECO         or level.map[i+W] == RPD.Terrain.SECRET_GRIPPING_TRAP and level.map[i] == RPD.Terrain.WALL_DECO                              or level.map[i+W] == RPD.Terrain.SUMMONING_TRAP and level.map[i] == RPD.Terrain.WALL_DECO  or level.map[i+W] == RPD.Terrain.SECRET_SUMMONING_TRAP and level.map[i] == RPD.Terrain.WALL_DECO                             or level.map[i+W] == RPD.Terrain.WATER_TILES and level.map[i] == RPD.Terrain.WALL_DECO then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Wall_Deco
 }
 ,i-1)
@@ -624,7 +624,7 @@ if level.map[i+W] == RPD.Terrain.EMPTY_SP and level.map[i] == RPD.Terrain.WALL o
 level.map[i+W] == RPD.Terrain.STATUE_SP and level.map[i] == RPD.Terrain.WALL or
 level.map[i+W] == RPD.Terrain.ALCHEMY and level.map[i] == RPD.Terrain.WALL then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Wall_Sp
 }, i-1)
 end
@@ -632,14 +632,14 @@ if level.map[i+W] == RPD.Terrain.EMPTY_SP and level.map[i] == RPD.Terrain.WALL_D
 level.map[i+W] == RPD.Terrain.STATUE_SP and level.map[i] == RPD.Terrain.WALL_DECO or
 level.map[i+W] == RPD.Terrain.ALCHEMY and level.map[i] == RPD.Terrain.WALL_DECO then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Wall_Deco_Sp
 }, i-1)
 end
 
 if                               level.map[i+W] == RPD.Terrain.EMPTY and level.map[i] == RPD.Terrain.DOOR               or level.water[i+W] and level.map[i] == RPD.Terrain.DOOR                             or level.map[i+W] == RPD.Terrain.EMPTY_DECO and level.map[i] == RPD.Terrain.DOOR        or level.map[i+W] == RPD.Terrain.WATER and level.map[i] == RPD.Terrain.DOOR               or level.map[i+W] == RPD.Terrain.HIGH_GRASS and level.map[i] == RPD.Terrain.DOOR        or level.map[i+W] == RPD.Terrain.GRASS and level.map[i] == RPD.Terrain.DOOR               or level.map[i+W] == RPD.Terrain.EMPTY_WELL and level.map[i] == RPD.Terrain.DOOR       or level.map[i+W] == RPD.Terrain.EMBERS and level.map[i] == RPD.Terrain.DOOR                or level.map[i+W] == RPD.Terrain.STATUE and level.map[i] == RPD.Terrain.DOOR                or level.map[i+W] == RPD.Terrain.SIGN and level.map[i] == RPD.Terrain.DOOR                or level.map[i+W] == RPD.Terrain.TOXIC_TRAP and level.map[i] == RPD.Terrain.DOOR         or level.map[i+W] == RPD.Terrain.SECRET_TOXIC_TRAP and level.map[i] == RPD.Terrain.DOOR                              or level.map[i+W] == RPD.Terrain.FIRE_TRAP and level.map[i] == RPD.Terrain.DOOR        or level.map[i+W] == RPD.Terrain.SECRET_FIRE_TRAP and level.map[i] == RPD.Terrain.DOOR  or level.map[i+W] == RPD.Terrain.PARALYTIC_TRAP and level.map[i] == RPD.Terrain.DOOR   or level.map[i+W] == RPD.Terrain.SECRET_PARALYTIC_TRAP and level.map[i] == RPD.Terrain.DOOR                             or level.map[i+W] == RPD.Terrain.INACTIVE_TRAP and level.map[i] == RPD.Terrain.DOOR        or level.map[i+W] == RPD.Terrain.POISON_TRAP and level.map[i] == RPD.Terrain.DOOR        or level.map[i+W] == RPD.Terrain.SECRET_POISON_TRAP and level.map[i] == RPD.Terrain.DOOR   or level.map[i+W] == RPD.Terrain.ALARM_TRAP and level.map[i] == RPD.Terrain.DOOR       or level.map[i+W] == RPD.Terrain.SECRET_ALARM_TRAP and level.map[i] == RPD.Terrain.DOOR  or level.map[i+W] == RPD.Terrain.LIGHTNING_TRAP and level.map[i] == RPD.Terrain.DOOR  or level.map[i+W] == RPD.Terrain.SECRET_LIGHTNING_TRAP and level.map[i] == RPD.Terrain.DOOR                              or level.map[i+W] == RPD.Terrain.GRIPPING_TRAP and level.map[i] == RPD.Terrain.DOOR         or level.map[i+W] == RPD.Terrain.SECRET_GRIPPING_TRAP and level.map[i] == RPD.Terrain.DOOR                              or level.map[i+W] == RPD.Terrain.SUMMONING_TRAP and level.map[i] == RPD.Terrain.DOOR  or level.map[i+W] == RPD.Terrain.SECRET_SUMMONING_TRAP and level.map[i] == RPD.Terrain.DOOR                             or level.map[i+W] == RPD.Terrain.WATER_TILES and level.map[i] == RPD.Terrain.DOOR then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Door
 }
 ,i-1)
@@ -649,7 +649,7 @@ if level.map[i+W] == RPD.Terrain.EMPTY_SP and level.map[i] == RPD.Terrain.DOOR o
 level.map[i+W] == RPD.Terrain.STATUE_SP and level.map[i] == RPD.Terrain.DOOR or
 level.map[i+W] == RPD.Terrain.ALCHEMY and level.map[i] == RPD.Terrain.DOOR then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Door_Sp
 }
 ,i-1)
@@ -657,7 +657,7 @@ end
 
 if                               level.map[i+W] == RPD.Terrain.EMPTY and level.map[i] == RPD.Terrain.LOCKED_DOOR               or level.water[i+W] and level.map[i] == RPD.Terrain.LOCKED_DOOR                             or level.map[i+W] == RPD.Terrain.EMPTY_DECO and level.map[i] == RPD.Terrain.LOCKED_DOOR        or level.map[i+W] == RPD.Terrain.WATER and level.map[i] == RPD.Terrain.LOCKED_DOOR               or level.map[i+W] == RPD.Terrain.HIGH_GRASS and level.map[i] == RPD.Terrain.LOCKED_DOOR        or level.map[i+W] == RPD.Terrain.GRASS and level.map[i] == RPD.Terrain.LOCKED_DOOR               or level.map[i+W] == RPD.Terrain.EMPTY_WELL and level.map[i] == RPD.Terrain.LOCKED_DOOR       or level.map[i+W] == RPD.Terrain.EMBERS and level.map[i] == RPD.Terrain.LOCKED_DOOR                or level.map[i+W] == RPD.Terrain.STATUE and level.map[i] == RPD.Terrain.LOCKED_DOOR                or level.map[i+W] == RPD.Terrain.SIGN and level.map[i] == RPD.Terrain.LOCKED_DOOR                or level.map[i+W] == RPD.Terrain.TOXIC_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR         or level.map[i+W] == RPD.Terrain.SECRET_TOXIC_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR                              or level.map[i+W] == RPD.Terrain.FIRE_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR        or level.map[i+W] == RPD.Terrain.SECRET_FIRE_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR  or level.map[i+W] == RPD.Terrain.PARALYTIC_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR   or level.map[i+W] == RPD.Terrain.SECRET_PARALYTIC_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR                             or level.map[i+W] == RPD.Terrain.INACTIVE_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR        or level.map[i+W] == RPD.Terrain.POISON_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR        or level.map[i+W] == RPD.Terrain.SECRET_POISON_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR   or level.map[i+W] == RPD.Terrain.ALARM_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR       or level.map[i+W] == RPD.Terrain.SECRET_ALARM_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR  or level.map[i+W] == RPD.Terrain.LIGHTNING_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR  or level.map[i+W] == RPD.Terrain.SECRET_LIGHTNING_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR                              or level.map[i+W] == RPD.Terrain.GRIPPING_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR         or level.map[i+W] == RPD.Terrain.SECRET_GRIPPING_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR                              or level.map[i+W] == RPD.Terrain.SUMMONING_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR  or level.map[i+W] == RPD.Terrain.SECRET_SUMMONING_TRAP and level.map[i] == RPD.Terrain.LOCKED_DOOR                             or level.map[i+W] == RPD.Terrain.WATER_TILES and level.map[i] == RPD.Terrain.LOCKED_DOOR then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Locked_Door
 }
 ,i-1)
@@ -667,7 +667,7 @@ if level.map[i+W] == RPD.Terrain.EMPTY_SP and level.map[i] == RPD.Terrain.LOCKED
 level.map[i+W] == RPD.Terrain.STATUE_SP and level.map[i] == RPD.Terrain.LOCKED_DOOR or
 level.map[i+W] == RPD.Terrain.ALCHEMY and level.map[i] == RPD.Terrain.LOCKED_DOOR then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Locked_Door_Sp
 }
 ,i-1)
@@ -676,7 +676,7 @@ end
 
 if                               level.map[i+W] == RPD.Terrain.EMPTY and level.map[i] == RPD.Terrain.BARRICADE               or level.water[i+W] and level.map[i] == RPD.Terrain.BARRICADE                             or level.map[i+W] == RPD.Terrain.EMPTY_DECO and level.map[i] == RPD.Terrain.BARRICADE        or level.map[i+W] == RPD.Terrain.WATER and level.map[i] == RPD.Terrain.BARRICADE               or level.map[i+W] == RPD.Terrain.HIGH_GRASS and level.map[i] == RPD.Terrain.BARRICADE        or level.map[i+W] == RPD.Terrain.GRASS and level.map[i] == RPD.Terrain.BARRICADE               or level.map[i+W] == RPD.Terrain.EMPTY_WELL and level.map[i] == RPD.Terrain.BARRICADE       or level.map[i+W] == RPD.Terrain.EMBERS and level.map[i] == RPD.Terrain.BARRICADE                or level.map[i+W] == RPD.Terrain.STATUE and level.map[i] == RPD.Terrain.BARRICADE                or level.map[i+W] == RPD.Terrain.SIGN and level.map[i] == RPD.Terrain.BARRICADE                or level.map[i+W] == RPD.Terrain.TOXIC_TRAP and level.map[i] == RPD.Terrain.BARRICADE         or level.map[i+W] == RPD.Terrain.SECRET_TOXIC_TRAP and level.map[i] == RPD.Terrain.BARRICADE                              or level.map[i+W] == RPD.Terrain.FIRE_TRAP and level.map[i] == RPD.Terrain.BARRICADE        or level.map[i+W] == RPD.Terrain.SECRET_FIRE_TRAP and level.map[i] == RPD.Terrain.BARRICADE  or level.map[i+W] == RPD.Terrain.PARALYTIC_TRAP and level.map[i] == RPD.Terrain.BARRICADE   or level.map[i+W] == RPD.Terrain.SECRET_PARALYTIC_TRAP and level.map[i] == RPD.Terrain.BARRICADE                             or level.map[i+W] == RPD.Terrain.INACTIVE_TRAP and level.map[i] == RPD.Terrain.BARRICADE        or level.map[i+W] == RPD.Terrain.POISON_TRAP and level.map[i] == RPD.Terrain.BARRICADE        or level.map[i+W] == RPD.Terrain.SECRET_POISON_TRAP and level.map[i] == RPD.Terrain.BARRICADE   or level.map[i+W] == RPD.Terrain.ALARM_TRAP and level.map[i] == RPD.Terrain.BARRICADE       or level.map[i+W] == RPD.Terrain.SECRET_ALARM_TRAP and level.map[i] == RPD.Terrain.BARRICADE  or level.map[i+W] == RPD.Terrain.LIGHTNING_TRAP and level.map[i] == RPD.Terrain.BARRICADE  or level.map[i+W] == RPD.Terrain.SECRET_LIGHTNING_TRAP and level.map[i] == RPD.Terrain.BARRICADE                              or level.map[i+W] == RPD.Terrain.GRIPPING_TRAP and level.map[i] == RPD.Terrain.BARRICADE         or level.map[i+W] == RPD.Terrain.SECRET_GRIPPING_TRAP and level.map[i] == RPD.Terrain.BARRICADE                              or level.map[i+W] == RPD.Terrain.SUMMONING_TRAP and level.map[i] == RPD.Terrain.BARRICADE  or level.map[i+W] == RPD.Terrain.SECRET_SUMMONING_TRAP and level.map[i] == RPD.Terrain.BARRICADE                             or level.map[i+W] == RPD.Terrain.WATER_TILES and level.map[i] == RPD.Terrain.BARRICADE then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Barricade
 }
 ,i-1)
@@ -686,7 +686,7 @@ if level.map[i+W] == RPD.Terrain.EMPTY_SP and level.map[i] == RPD.Terrain.BARRIC
 level.map[i+W] == RPD.Terrain.STATUE_SP and level.map[i] == RPD.Terrain.BARRICADE or
 level.map[i+W] == RPD.Terrain.ALCHEMY and level.map[i] == RPD.Terrain.BARRICADE then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Barricade_Sp
 }
 ,i-1)
@@ -694,7 +694,7 @@ end
 
 if                               level.map[i+W] == RPD.Terrain.EMPTY and level.map[i] == RPD.Terrain.SECRET_DOOR               or level.water[i+W] and level.map[i] == RPD.Terrain.SECRET_DOOR                             or level.map[i+W] == RPD.Terrain.EMPTY_DECO and level.map[i] == RPD.Terrain.SECRET_DOOR        or level.map[i+W] == RPD.Terrain.WATER and level.map[i] == RPD.Terrain.SECRET_DOOR               or level.map[i+W] == RPD.Terrain.HIGH_GRASS and level.map[i] == RPD.Terrain.SECRET_DOOR        or level.map[i+W] == RPD.Terrain.GRASS and level.map[i] == RPD.Terrain.SECRET_DOOR               or level.map[i+W] == RPD.Terrain.EMPTY_WELL and level.map[i] == RPD.Terrain.SECRET_DOOR       or level.map[i+W] == RPD.Terrain.EMBERS and level.map[i] == RPD.Terrain.SECRET_DOOR                or level.map[i+W] == RPD.Terrain.STATUE and level.map[i] == RPD.Terrain.SECRET_DOOR                or level.map[i+W] == RPD.Terrain.SIGN and level.map[i] == RPD.Terrain.SECRET_DOOR                or level.map[i+W] == RPD.Terrain.TOXIC_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR         or level.map[i+W] == RPD.Terrain.SECRET_TOXIC_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR                              or level.map[i+W] == RPD.Terrain.FIRE_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR        or level.map[i+W] == RPD.Terrain.SECRET_FIRE_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR  or level.map[i+W] == RPD.Terrain.PARALYTIC_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR   or level.map[i+W] == RPD.Terrain.SECRET_PARALYTIC_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR                             or level.map[i+W] == RPD.Terrain.INACTIVE_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR        or level.map[i+W] == RPD.Terrain.POISON_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR        or level.map[i+W] == RPD.Terrain.SECRET_POISON_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR   or level.map[i+W] == RPD.Terrain.ALARM_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR       or level.map[i+W] == RPD.Terrain.SECRET_ALARM_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR  or level.map[i+W] == RPD.Terrain.LIGHTNING_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR  or level.map[i+W] == RPD.Terrain.SECRET_LIGHTNING_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR                              or level.map[i+W] == RPD.Terrain.GRIPPING_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR         or level.map[i+W] == RPD.Terrain.SECRET_GRIPPING_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR                              or level.map[i+W] == RPD.Terrain.SUMMONING_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR  or level.map[i+W] == RPD.Terrain.SECRET_SUMMONING_TRAP and level.map[i] == RPD.Terrain.SECRET_DOOR                             or level.map[i+W] == RPD.Terrain.WATER_TILES and level.map[i] == RPD.Terrain.SECRET_DOOR then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Wall
 }
 ,i-1)
@@ -704,14 +704,14 @@ if level.map[i+W] == RPD.Terrain.EMPTY_SP and level.map[i] == RPD.Terrain.SECRET
 level.map[i+W] == RPD.Terrain.STATUE_SP and level.map[i] == RPD.Terrain.SECRET_DOOR or
 level.map[i+W] == RPD.Terrain.ALCHEMY and level.map[i] == RPD.Terrain.SECRET_DOOR then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Wall_Sp
 }
 ,i-1)
 end
 if                               level.map[i+W] == RPD.Terrain.EMPTY and level.map[i] == RPD.Terrain.BOOKSHELF               or level.water[i+W] and level.map[i] == RPD.Terrain.BOOKSHELF                             or level.map[i+W] == RPD.Terrain.EMPTY_DECO and level.map[i] == RPD.Terrain.BOOKSHELF        or level.map[i+W] == RPD.Terrain.WATER and level.map[i] == RPD.Terrain.BOOKSHELF               or level.map[i+W] == RPD.Terrain.HIGH_GRASS and level.map[i] == RPD.Terrain.BOOKSHELF        or level.map[i+W] == RPD.Terrain.GRASS and level.map[i] == RPD.Terrain.BOOKSHELF               or level.map[i+W] == RPD.Terrain.EMPTY_WELL and level.map[i] == RPD.Terrain.BOOKSHELF       or level.map[i+W] == RPD.Terrain.EMBERS and level.map[i] == RPD.Terrain.BOOKSHELF                or level.map[i+W] == RPD.Terrain.STATUE and level.map[i] == RPD.Terrain.BOOKSHELF                or level.map[i+W] == RPD.Terrain.SIGN and level.map[i] == RPD.Terrain.BOOKSHELF                or level.map[i+W] == RPD.Terrain.TOXIC_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF         or level.map[i+W] == RPD.Terrain.SECRET_TOXIC_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF                              or level.map[i+W] == RPD.Terrain.FIRE_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF        or level.map[i+W] == RPD.Terrain.SECRET_FIRE_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF  or level.map[i+W] == RPD.Terrain.PARALYTIC_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF   or level.map[i+W] == RPD.Terrain.SECRET_PARALYTIC_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF                             or level.map[i+W] == RPD.Terrain.INACTIVE_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF        or level.map[i+W] == RPD.Terrain.POISON_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF        or level.map[i+W] == RPD.Terrain.SECRET_POISON_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF   or level.map[i+W] == RPD.Terrain.ALARM_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF       or level.map[i+W] == RPD.Terrain.SECRET_ALARM_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF  or level.map[i+W] == RPD.Terrain.LIGHTNING_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF  or level.map[i+W] == RPD.Terrain.SECRET_LIGHTNING_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF                              or level.map[i+W] == RPD.Terrain.GRIPPING_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF         or level.map[i+W] == RPD.Terrain.SECRET_GRIPPING_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF                              or level.map[i+W] == RPD.Terrain.SUMMONING_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF  or level.map[i+W] == RPD.Terrain.SECRET_SUMMONING_TRAP and level.map[i] == RPD.Terrain.BOOKSHELF                             or level.map[i+W] == RPD.Terrain.WATER_TILES and level.map[i] == RPD.Terrain.BOOKSHELF then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=bookshelf_
 }
 ,i-1)
@@ -721,7 +721,7 @@ if level.map[i+W] == RPD.Terrain.EMPTY_SP and level.map[i] == RPD.Terrain.BOOKSH
 level.map[i+W] == RPD.Terrain.STATUE_SP and level.map[i] == RPD.Terrain.BOOKSHELF or
 level.map[i+W] == RPD.Terrain.ALCHEMY and level.map[i] == RPD.Terrain.BOOKSHELF then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=bookshelf_sp
 }
 ,i-1)
@@ -739,7 +739,7 @@ level.map[i+W] == RPD.Terrain.WATER_TILES or
 level.water[W+i] 
 then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc=Water
 }
 ,i-1)

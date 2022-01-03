@@ -24,7 +24,7 @@ local W = RPD.Dungeon.level:getWidth()
 
 local CavesCastle1 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="CavesCastle1"
 }
 

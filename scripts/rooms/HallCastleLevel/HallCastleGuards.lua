@@ -46,13 +46,13 @@ level:spawnMob(mob)
 
 local tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="HallCastleTile4"
 }
 
 local tile2 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="HallCastleTile3"
 }
 

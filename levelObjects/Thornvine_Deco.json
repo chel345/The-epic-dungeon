@@ -1,26 +1,29 @@
 {
-  "appearance": {
-    "desc": {
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileWall"
-    },
-    "sprite": {
-      "animations": {
-        "basic": {
-          "fps": 15,
-          "frames": [
-            3,
-            4,
-            5
-          ],
-          "looped": true
+    "appearance": {
+        "desc": {
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileWall"
+
+
+        },
+        "sprite": {
+            "animations": {
+                "basic": {
+                    "fps": 15,
+                    "frames": [
+                        3,
+                        4,
+                        5
+                    ],
+                    "looped": true
+                }
+            },
+            "imageIndex": 0,
+            "textureFile": "Thornvine.png"
         }
-      },
-      "imageIndex": 0,
-      "textureFile": "Thornvine.png"
-    }
-  },
-  "canStepOn": true,
-  "kind": "Deco",
-  "nonPassable": false
+    },
+    "canStepOn": true,
+    "kind": "CustomObject",
+    "nonPassable": false,
+    "script": "CustomObject"
 }

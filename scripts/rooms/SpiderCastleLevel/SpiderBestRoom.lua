@@ -39,7 +39,7 @@ spawnObjectWall = function(k)
 if math.random(1,2) == 1 then
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("SpiderTile"..math.random(2,4))
 }
 RPD.createLevelObject(tile,k)
@@ -63,7 +63,7 @@ end
 
 local candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpiderTile5"
 }
 RPD.createLevelObject(candle, cell-1)

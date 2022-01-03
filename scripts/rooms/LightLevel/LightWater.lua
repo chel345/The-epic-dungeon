@@ -23,7 +23,7 @@ local W = level:getWidth()
 pos = cell-W*2-3
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("MagicAura")
 }
 RPD.createLevelObject(tile,pos)
@@ -31,7 +31,7 @@ RPD.createLevelObject(tile,pos)
 pos = cell-W*2+3
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("MagicAura")
 }
 RPD.createLevelObject(tile,pos)
@@ -39,7 +39,7 @@ RPD.createLevelObject(tile,pos)
 pos = cell+W*2-3
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("MagicAura")
 }
 RPD.createLevelObject(tile,pos)
@@ -47,7 +47,7 @@ RPD.createLevelObject(tile,pos)
 pos = cell+W*2+3
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("MagicAura")
 }
 RPD.createLevelObject(tile,pos)

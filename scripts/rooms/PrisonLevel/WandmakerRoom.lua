@@ -26,17 +26,17 @@ local npc = RPD.mob("WandmakerModNPC")
 npc:setPos(cell)
 local Thornvine =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Thornvine_Deco"
 }
 local candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="MagicCandle"
 }
 local table =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="DecoTable1"
 }
 local Wand1 =

@@ -1,27 +1,28 @@
 {
-  "appearance": {
-    "desc": {
-      "canStepOn": true,
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileFloor",
-      "nonPassable": false
-    },
-    "particles": "Smoke",
-    "sprite": {
-      "animations": {
-        "basic": {
-          "fps": 1,
-          "frames": [
-            1
-          ],
-          "looped": true
+    "appearance": {
+        "desc": {
+
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileFloor"
+
+        },
+        "particles": "Smoke",
+        "sprite": {
+            "animations": {
+                "basic": {
+                    "fps": 1,
+                    "frames": [
+                        1
+                    ],
+                    "looped": true
+                }
+            },
+            "imageIndex": 1,
+            "textureFile": "levelObjects/LibraryColumn.png"
         }
-      },
-      "imageIndex": 1,
-      "textureFile": "levelObjects/LibraryColumn.png"
-    }
-  },
-  "canStepOn": true,
-  "kind": "Deco",
-  "nonPassable": false
+    },
+    "canStepOn": true,
+    "kind": "CustomObject",
+    "nonPassable": false,
+    "script": "CustomObject"
 }

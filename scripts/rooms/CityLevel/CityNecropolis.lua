@@ -33,7 +33,7 @@ RPD.Dungeon.level:drop(item,pos-1).type = RPD.Heap.Type.TOMB
 elseif math.random(1,8) == 1 then
 local light =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="CityLight"
 }
 RPD.createLevelObject(light, pos-1)

@@ -36,7 +36,7 @@ end
 pos = cell-W*3-3
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("MagicCandle")
 }
 RPD.createLevelObject(tile,pos)
@@ -44,7 +44,7 @@ RPD.createLevelObject(tile,pos)
 pos = cell-W*3+3
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("MagicCandle")
 }
 RPD.createLevelObject(tile,pos)
@@ -52,7 +52,7 @@ RPD.createLevelObject(tile,pos)
 pos = cell+W*3-3
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("MagicCandle")
 }
 RPD.createLevelObject(tile,pos)
@@ -60,7 +60,7 @@ RPD.createLevelObject(tile,pos)
 pos = cell+W*3+3
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("MagicCandle")
 }
 RPD.createLevelObject(tile,pos)

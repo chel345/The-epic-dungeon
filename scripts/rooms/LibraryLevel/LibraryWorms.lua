@@ -22,7 +22,7 @@ local W = RPD.Dungeon.level:getWidth()
 for i = -3,3 do
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Book"..tostring(math.random(1,4)))
 }
 RPD.createLevelObject(detail, cell-W*3-i)
@@ -30,7 +30,7 @@ end
 for i = -3,3 do
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Book"..tostring(math.random(1,4)))
 }
 RPD.createLevelObject(detail, cell+W*3-i)
@@ -39,7 +39,7 @@ for i = -3,3 do
 if i ~= -2 then
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Book"..tostring(math.random(1,4)))
 }
 RPD.createLevelObject(detail, cell-i*W-3)
@@ -48,7 +48,7 @@ end
 for i = -3,3 do
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Book"..tostring(math.random(1,4)))
 }
 RPD.createLevelObject(detail, cell-i*W+3)

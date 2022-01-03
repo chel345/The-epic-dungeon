@@ -30,19 +30,19 @@ RPD.createLevelObject(barrel, cell+2)
 RPD.createLevelObject(barrel, cell+W+2)
 local Anvil =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Anvil"
 }
 RPD.createLevelObject(Anvil, cell-W*2+2)
 local Keg =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Keg"
 }
 RPD.createLevelObject(Keg, cell-W*2-2)
 local Shest =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Shest1"
 }
 RPD.createLevelObject(Shest, cell-W*2-1)

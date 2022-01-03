@@ -34,14 +34,14 @@ if RPD.Dungeon.level.map[i] == RPD.Terrain.WALL and math.random(1,20) == 1 then
 if math.random(1,2) == 1 then
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallCastleTile1")
 }
 RPD.createLevelObject(tile,i-1)
 elseif math.random(1,2) == 1 then
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallCastleTile6")
 }
 RPD.createLevelObject(tile,i-1)
@@ -49,7 +49,7 @@ RPD.Dungeon.level:set(i-1,RPD.Terrain.STATUE)
 else
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallCastleTile5")
 }
 RPD.createLevelObject(tile,i-1)

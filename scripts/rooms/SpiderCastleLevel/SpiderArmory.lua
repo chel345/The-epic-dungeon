@@ -39,7 +39,7 @@ local pos = RPD.Dungeon.level:cell(i,j)
 if level.map[pos] == 9 then
 local barrel =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpiderTile8"
 }
 RPD.createLevelObject(barrel, pos-1)
@@ -62,7 +62,7 @@ level:spawnMob(mob)
 elseif math.random(1,12) == 1 then
 local barrel =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpiderTile5"
 }
 RPD.createLevelObject(barrel, pos-1)

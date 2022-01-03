@@ -60,4 +60,35 @@ RPD.getMobs = function(level)
 	return mobs
 end
 
+RPD.roomsInstruments = {
+spawnObj = function(tile,obj,radius,cell)
+local level = RPD.Dungeon.level
+local x = level:cellX(cell)
+local y = level:cellY(cell)
+for o = x - radius, x + radius do
+for k = y - radius, y + radius do
+local pos = RPD.Dungeon.level:cell(o,k)
+if level.map[pos] == tile then
+RPD.createLevelObject(obj,pos-1)
+end
+end
+end
+end,
+spawnIt = function(tile,item,radius,cell)
+local level = RPD.Dungeon.level
+local cells = {0}
+local x = level:cellX(cell)
+local y = level:cellY(cell)
+for o = x - radius, x + radius do
+for k = y - radius, y + radius do
+local pos = RPD.Dungeon.level:cell(o,k)
+if level.map[pos] == tile then
+cells[#cells+1]=pos
+end
+end
+end
+level:drop(item,cells[math.random(1,#cells)])
+end
+}
+
 return RPD

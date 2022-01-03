@@ -24,7 +24,7 @@ local W = RPD.Dungeon.level:getWidth()
 
 local keg =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="FireKeg"
 }
 RPD.createLevelObject(keg, cell-2+W*2)

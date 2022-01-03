@@ -1,28 +1,29 @@
 {
-  "appearance": {
-    "desc": {
-      "canStepOn": true,
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileFloor",
-      "nonPassable": false
-    },
-    "sprite": {
-      "animations": {
-        "basic": {
-          "fps": 10,
-          "frames": [
-            0,
-            1,
-            2
-          ],
-          "looped": true
+    "appearance": {
+        "desc": {
+
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileFloor"
+
+        },
+        "sprite": {
+            "animations": {
+                "basic": {
+                    "fps": 10,
+                    "frames": [
+                        0,
+                        1,
+                        2
+                    ],
+                    "looped": true
+                }
+            },
+            "imageIndex": 0,
+            "textureFile": "levelObjects/CandleOnTable.png"
         }
-      },
-      "imageIndex": 0,
-      "textureFile": "levelObjects/CandleOnTable.png"
-    }
-  },
-  "canStepOn": true,
-  "kind": "Deco",
-  "nonPassable": false
+    },
+    "canStepOn": true,
+    "kind": "CustomObject",
+    "nonPassable": false,
+    "script": "CustomObject"
 }

@@ -23,7 +23,7 @@ local W = level:getWidth()
 pos = cell+W*2-2
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("MagicCandle")
 }
 RPD.createLevelObject(tile,pos)

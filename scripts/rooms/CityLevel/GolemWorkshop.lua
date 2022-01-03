@@ -21,7 +21,7 @@ local W = RPD.Dungeon.level:getWidth()
 for i = -1,1 do
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("GolemsDetails"..tostring(math.random(1,2)))
 }
 RPD.createLevelObject(detail, cell-W-i-1)
