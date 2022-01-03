@@ -25,13 +25,13 @@ local W = level:getWidth()
 
 local sp1 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="IceTile4"
 }
 
 local sp2 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="IceTile7"
 }
 

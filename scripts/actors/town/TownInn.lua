@@ -18,22 +18,22 @@ return actor.init({
 if not storage.get("light_in_inn") then
 storage.put("light_in_inn",true)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="LibCandle"
 }
 ,316)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="LibCandle"
 }
 ,245)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="LibCandle"
 }
 ,111)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="GnollsArmor"
 }
 ,53)
@@ -41,7 +41,7 @@ local mob = RPD.mob("SleepingGnollNPC")
 mob:setPos(102)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SmokingCandle"
 }
 ,128)

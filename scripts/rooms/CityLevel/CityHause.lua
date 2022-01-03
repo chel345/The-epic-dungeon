@@ -23,13 +23,13 @@ for i = -1,1 do
 a = math.random(1,5)
 local bookshelf =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Bookshelf"..tostring(a))
 }
 RPD.createLevelObject(bookshelf, cell-W*2+1+i)
 local bookshelf =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Bookshelf"..tostring(a+5))
 }
 RPD.createLevelObject(bookshelf, cell-W+1+i)
@@ -37,33 +37,33 @@ end
 
 local box =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="BoxOfPaper"
 }
 RPD.createLevelObject(box, cell+2)
 
 local table =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="DecoTable2_1"
 }
 RPD.createLevelObject(table, cell+W*2)
 local table =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="DecoTable2_2"
 }
 RPD.createLevelObject(table, cell+W*2+1)
 
 local bed =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Bed1"
 }
 RPD.createLevelObject(bed, cell-2+W)
 local bed =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Bed3"
 }
 RPD.createLevelObject(bed, cell-2+W*2)

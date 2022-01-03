@@ -1,16 +1,19 @@
 {
-  "appearance": {
-    "desc": {
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileWall"
+    "appearance": {
+        "desc": {
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileWall"
+
+
+        },
+        "particles": "WaterSink",
+        "sprite": {
+            "imageIndex": 1,
+            "textureFile": "levelObjects/GooTiles.png"
+        }
     },
-    "particles": "WaterSink",
-    "sprite": {
-      "imageIndex": 1,
-      "textureFile": "levelObjects/GooTiles.png"
-    }
-  },
-  "canStepOn": true,
-  "kind": "Deco",
-  "nonPassable": false
+    "canStepOn": true,
+    "kind": "CustomObject",
+    "nonPassable": false,
+    "script": "CustomObject"
 }

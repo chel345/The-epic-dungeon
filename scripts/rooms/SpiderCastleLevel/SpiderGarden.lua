@@ -28,7 +28,7 @@ level:spawnMob(mob)
 else
 local light =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpiderTile1"
 }
 RPD.createLevelObject(light, cell)

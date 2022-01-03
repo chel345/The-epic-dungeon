@@ -34,7 +34,7 @@ RPD.Dungeon.level:set(pos-1,RPD.Terrain.EMPTY)
 if math.random(1,2) == 1 then
 local Candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Candle"
 }
 RPD.createLevelObject(Candle,pos-1)

@@ -25,12 +25,12 @@ local level = RPD.Dungeon.level
 
 local bigFungus =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="NestTile6"
 }
 local smallFungus = 
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="NestTile5"
 }
 

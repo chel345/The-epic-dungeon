@@ -34,7 +34,7 @@ end
 
 local tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="HallCastleTile1"
 }
 

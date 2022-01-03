@@ -24,7 +24,7 @@ local W = RPD.Dungeon.level:getWidth()
 
 local Candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="MagicCandle"
 }
 

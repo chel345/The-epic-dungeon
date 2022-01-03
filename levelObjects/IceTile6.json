@@ -1,17 +1,18 @@
 {
-  "appearance": {
-    "desc": {
-      "canStepOn": true,
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileFloor",
-      "nonPassable": false
+    "appearance": {
+        "desc": {
+
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileFloor"
+
+        },
+        "sprite": {
+            "imageIndex": 5,
+            "textureFile": "levelObjects/IceTiles.png"
+        }
     },
-    "sprite": {
-      "imageIndex": 5,
-      "textureFile": "levelObjects/IceTiles.png"
-    }
-  },
-  "canStepOn": true,
-  "kind": "Deco",
-  "nonPassable": false
+    "canStepOn": true,
+    "kind": "CustomObject",
+    "nonPassable": false,
+    "script": "CustomObject"
 }

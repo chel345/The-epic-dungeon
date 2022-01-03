@@ -23,7 +23,7 @@ for i = -2,2 do
 if math.random(1,2) == 1 then
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Book"..tostring(math.random(1,4)))
 }
 RPD.createLevelObject(detail, cell-W*3-i)
@@ -33,7 +33,7 @@ for i = -2,2 do
 if math.random(1,2) == 1 then
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Book"..tostring(math.random(1,4)))
 }
 RPD.createLevelObject(detail, cell+W*3-i)
@@ -43,7 +43,7 @@ for i = -2,2 do
 if math.random(1,2) == 1 then
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Book"..tostring(math.random(1,4)))
 }
 RPD.createLevelObject(detail, cell-i*W-3)
@@ -53,7 +53,7 @@ for i = -2,2 do
 if math.random(1,2) == 1 then
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Book"..tostring(math.random(1,4)))
 }
 RPD.createLevelObject(detail, cell-i*W+3)

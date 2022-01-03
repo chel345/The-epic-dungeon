@@ -21,7 +21,7 @@ local W = RPD.Dungeon.level:getWidth()
 
 local tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="HallCastleTile3"
 }
 

@@ -45,21 +45,21 @@ end
 
 if level.map[i+1] == RPD.Terrain.EMPTY and level.map[i+level:getWidth()] == RPD.Terrain.EMPTY and math.random(1,60) == 1 then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Shest1"
 }
 ,i)
 end
 if level.map[i+1] == RPD.Terrain.EMPTY and level.map[i+level:getWidth()] == RPD.Terrain.EMPTY and math.random(1,60) == 1 then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Fireplace"
 }
 ,i-1)
 end
 if level.map[i+1] == RPD.Terrain.WALL and math.random(1,300) == 2 then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Orgalorg"
 }
 ,i)

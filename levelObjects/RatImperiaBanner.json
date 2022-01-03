@@ -1,17 +1,17 @@
 {
-  "appearance": {
-    "desc": {
-      "canStepOn": true,
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileFloor",
-      "nonPassable": false
+    "appearance": {
+        "desc": {
+
+            "desc": "RatImperiaBanner_info",
+            "name": "RatImperiaBanner_name"
+        },
+        "sprite": {
+            "imageIndex": 0,
+            "textureFile": "levelObjects/RatImperiaBanner.png"
+        }
     },
-    "sprite": {
-      "imageIndex": 0,
-      "textureFile": "levelObjects/RatImperiaBanner.png"
-    }
-  },
-  "canStepOn": true,
-  "kind": "Deco",
-  "nonPassable": false
+    "canStepOn": true,
+    "kind": "CustomObject",
+    "nonPassable": false,
+    "script": "CustomObject"
 }

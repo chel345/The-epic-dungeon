@@ -28,7 +28,7 @@ d = d + 1
 RPD.Dungeon.level:set(i-1,RPD.Terrain.STATUE)
 local Lattice =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Lattice"
 }
 RPD.createLevelObject(Lattice,i-1)

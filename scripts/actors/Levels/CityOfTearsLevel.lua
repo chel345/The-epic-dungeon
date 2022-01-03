@@ -23,12 +23,12 @@ RPD.GameScene:particleEffect("Torch", 158)
 RPD.GameScene:particleEffect("WaterSink", 242)
 if not storage.get("g") then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="TearLight1"
 }
 ,147)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="TearLight2"
 }
 ,148)
@@ -43,7 +43,7 @@ end
 if RPD.Dungeon.depth == 32 then
 if not storage.get("gg") then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="FireCandle"
 }
 ,50)
@@ -74,32 +74,32 @@ end
 if RPD.Dungeon.depth == 35 then
 if not storage.get("ggg") then
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SmokingCandle"
 }
 ,30)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="FireCandle"
 }
 ,23)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="candle"
 }
 ,38)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="MagicCandle"
 }
 ,46)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="RatCandle"
 }
 ,19)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="LibCandle"
 }
 ,34)

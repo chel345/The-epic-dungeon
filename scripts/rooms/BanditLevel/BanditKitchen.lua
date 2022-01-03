@@ -39,7 +39,7 @@ RPD.Dungeon.level:drop(item,pos-1)
 else
 local Candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Candle"
 }
 RPD.createLevelObject(Candle,pos-1)

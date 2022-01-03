@@ -26,7 +26,7 @@ local level = RPD.Dungeon.level
 
 local wall =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="WaterCavesTile4"
 }
 
@@ -42,7 +42,7 @@ end
 if level.map[pos] == 9 then
 local empty =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="WaterCavesTile6"
 }
 RPD.createLevelObject(empty,pos-1)
@@ -54,7 +54,7 @@ mob:setPos(pos-1)
 level:spawnMob(mob)
 local pedestal =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="WaterCavesTile3"
 }
 RPD.createLevelObject(pedestal,pos-1)

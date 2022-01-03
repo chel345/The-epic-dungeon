@@ -1,27 +1,28 @@
 {
-  "appearance": {
-    "desc": {
-      "canStepOn": true,
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileFloor",
-      "nonPassable": false
-    },
-    "sprite": {
-      "animations": {
-        "basic": {
-          "fps": 10,
-          "frames": [
-            2,
-            3
-          ],
-          "looped": true
+    "appearance": {
+        "desc": {
+
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileFloor"
+
+        },
+        "sprite": {
+            "animations": {
+                "basic": {
+                    "fps": 10,
+                    "frames": [
+                        2,
+                        3
+                    ],
+                    "looped": true
+                }
+            },
+            "imageIndex": 2,
+            "textureFile": "levelObjects/CollectorsCagets.png"
         }
-      },
-      "imageIndex": 2,
-      "textureFile": "levelObjects/CollectorsCagets.png"
-    }
-  },
-  "canStepOn": true,
-  "kind": "Deco",
-  "nonPassable": false
+    },
+    "canStepOn": true,
+    "kind": "CustomObject",
+    "nonPassable": false,
+    "script": "CustomObject"
 }

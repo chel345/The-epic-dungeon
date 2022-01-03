@@ -24,7 +24,7 @@ level:spawnMob(mob)
 local w = level:getWidth()
 local candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpiderTile1"
 }
 RPD.createLevelObject(candle,cell-w*2-2)

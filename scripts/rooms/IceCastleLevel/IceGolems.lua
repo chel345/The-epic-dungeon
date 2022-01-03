@@ -22,7 +22,7 @@ local W = level:getWidth()
 
 local tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="IceCastleTile1"
 }
 

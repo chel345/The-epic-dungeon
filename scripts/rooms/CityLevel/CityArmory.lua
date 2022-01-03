@@ -22,12 +22,12 @@ local W = RPD.Dungeon.level:getWidth()
 a = 1
 local weapon1 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Weapon"..a)
 }
 local weapon2 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("Weapon"..a+1)
 }
 

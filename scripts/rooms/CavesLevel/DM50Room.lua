@@ -30,7 +30,7 @@ level:spawnMob(mob);
 for i = -2,2 do
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("DM-50Details"..tostring(math.random(1,4)))
 }
 RPD.createLevelObject(detail, cell-W*3-i)
@@ -38,7 +38,7 @@ end
 for i = -2,2 do
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("DM-50Details"..tostring(math.random(1,4)))
 }
 RPD.createLevelObject(detail, cell+W*3-i)
@@ -46,7 +46,7 @@ end
 for i = -2,2 do
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("DM-50Details"..tostring(math.random(1,4)))
 }
 RPD.createLevelObject(detail, cell-i*W-3)
@@ -54,7 +54,7 @@ end
 for i = -2,2 do
 local detail =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("DM-50Details"..tostring(math.random(1,4)))
 }
 RPD.createLevelObject(detail, cell-i*W+3)

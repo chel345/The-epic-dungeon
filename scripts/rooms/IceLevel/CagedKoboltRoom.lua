@@ -20,7 +20,7 @@ objects = function(cell)
 local W = RPD.Dungeon.level:getWidth()
 local Box =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="FireKeg"
 }
 RPD.createLevelObject(Box,cell+W*2+1)

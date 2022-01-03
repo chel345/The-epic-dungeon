@@ -26,7 +26,7 @@ RPD.Dungeon.level:drop(item,cell)
 else
 local light =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="CityLight"
 }
 RPD.createLevelObject(light, cell)

@@ -16,7 +16,7 @@ local W = RPD.Dungeon.level:getWidth()
 cell = celll - W -1
 local Chest =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Shest1"
 }
 RPD.createLevelObject(Chest,cell-W*2-2)
@@ -58,7 +58,7 @@ object.sprite:kill()
 level:remove(object)
 local Chest =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=kind
 }
 RPD.createLevelObject(Chest,pos)

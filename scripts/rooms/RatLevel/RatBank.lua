@@ -24,14 +24,14 @@ objects = function(cell)
 local W = RPD.Dungeon.level:getWidth()
 local Lamp =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="RatTile10"
 }
 RPD.createLevelObject(Lamp,cell+W+1)
 RPD.createLevelObject(Lamp,cell+W-1)
 local Box =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Pedestal2"
 }
 RPD.createLevelObject(Box,cell-W)

@@ -36,7 +36,7 @@ end
 end
 local candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("NestTile"..math.random(1,2))
 }
 RPD.createLevelObject(candle, cell)

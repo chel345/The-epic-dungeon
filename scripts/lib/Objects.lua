@@ -5,13 +5,13 @@ addObject(top,bottom,cell)
 local W = RPD.Dungeon.level:getWidth()
 local top =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=top
 }
 RPD.createLevelObject(top,cell-W)
 local bottom =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=bottom
 }
 RPD.createLevelObject(bottom,cell)
@@ -21,7 +21,7 @@ if empty ~= nil then
 
 Object =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=empty
 }
 local level = RPD.Dungeon.level
@@ -41,7 +41,7 @@ if wall ~= nil then
 
 Object =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=wall
 }
 for i = x - x_, x + x_ do
@@ -58,7 +58,7 @@ if wall_deco ~= nil then
 
 Object =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=wall_deco
 }
 for i = x - x_, x + x_ do

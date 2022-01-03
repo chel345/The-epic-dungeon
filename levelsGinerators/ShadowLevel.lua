@@ -50,7 +50,7 @@ Range = 10000,
 GinFactor = 20,
 RoomFactor = 0,
 MiniBoss = "NightBroneRoom",
-LevelMiniBoss = 16
+LevelMiniBoss = 19
 }
 
 return table

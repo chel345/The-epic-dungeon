@@ -27,19 +27,19 @@ local W = RPD.Dungeon.level:getWidth()
 pos = cell-W*3-3
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile1")
 }
 RPD.createLevelObject(tile,pos-W*2)
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile3")
 }
 RPD.createLevelObject(tile,pos-W)
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile5")
 }
 RPD.createLevelObject(tile,pos)
@@ -47,19 +47,19 @@ RPD.createLevelObject(tile,pos)
 pos = cell-W*3+3
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile1")
 }
 RPD.createLevelObject(tile,pos-W*2)
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile3")
 }
 RPD.createLevelObject(tile,pos-W)
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile5")
 }
 RPD.createLevelObject(tile,pos)
@@ -67,19 +67,19 @@ RPD.createLevelObject(tile,pos)
 pos = cell+W*3-3
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile1")
 }
 RPD.createLevelObject(tile,pos-W*2)
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile3")
 }
 RPD.createLevelObject(tile,pos-W)
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile5")
 }
 RPD.createLevelObject(tile,pos)
@@ -87,19 +87,19 @@ RPD.createLevelObject(tile,pos)
 pos = cell+W*3+3
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile1")
 }
 RPD.createLevelObject(tile,pos-W*2)
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile3")
 }
 RPD.createLevelObject(tile,pos-W)
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile5")
 }
 RPD.createLevelObject(tile,pos)

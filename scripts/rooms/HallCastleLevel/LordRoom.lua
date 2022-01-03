@@ -21,7 +21,7 @@ local W = RPD.Dungeon.level:getWidth()
 
 local candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="FireCandle"
 }
 RPD.createLevelObject(candle,cell+W*3+1)

@@ -21,7 +21,7 @@ local W = RPD.Dungeon.level:getWidth()
 
 local touch =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="HallCastleTile1"
 }
 RPD.createLevelObject(touch, cell-W*3-1)

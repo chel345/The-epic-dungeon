@@ -23,12 +23,12 @@ emitter:pos(151,127,2,2)
 emitter:pour(RPD.Sfx.FlameParticle.FACTORY, 0.16)
 --RPD.GameScene:particleEffect("Candle", 137);
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="CandleOnTable"
 }
 ,137)
 RPD.createLevelObject({
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Table2"
 }
 ,138) 

@@ -21,27 +21,27 @@ local W = RPD.Dungeon.level:getWidth()
 
 local touch =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="CityTiles1"
 }
 local bench1 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Bench1"
 }
 local bench2 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Bench2"
 }
 local light =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="CityLight"
 }
 local pedestal =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Pedestal1"
 }
 

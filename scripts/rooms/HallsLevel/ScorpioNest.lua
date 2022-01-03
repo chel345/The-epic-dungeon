@@ -33,7 +33,7 @@ RPD.Dungeon.level:set(pos-1,RPD.Terrain.BARRICADE)
 elseif math.random(1,2) == 1 then
 local Candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="HallTile6"
 }
 RPD.createLevelObject(Candle,pos-1)
@@ -52,19 +52,19 @@ else
 
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile1")
 }
 RPD.createLevelObject(tile,pos-1-W*2)
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile3")
 }
 RPD.createLevelObject(tile,pos-1-W)
 tile =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc=("HallTile5")
 }
 RPD.createLevelObject(tile,pos-1)

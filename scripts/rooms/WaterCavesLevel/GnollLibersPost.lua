@@ -38,7 +38,7 @@ end
 end
 local Candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="WaterCavesTile1"
 }
 RPD.createLevelObject(Candle,cell)

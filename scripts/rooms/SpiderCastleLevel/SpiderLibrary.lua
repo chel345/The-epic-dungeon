@@ -34,7 +34,7 @@ end
 local w = level:getWidth()
 local candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpiderTile1"
 }
 RPD.createLevelObject(candle,cell-w*4-4)

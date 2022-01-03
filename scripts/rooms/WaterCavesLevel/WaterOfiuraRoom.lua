@@ -26,7 +26,7 @@ local level = RPD.Dungeon.level
 
 local wall =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="WaterCavesTile5"
 }
 
@@ -42,7 +42,7 @@ end
 if level.map[pos] == 9 then
 local empty =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="WaterCavesTile7"
 }
 RPD.createLevelObject(empty,pos-1)

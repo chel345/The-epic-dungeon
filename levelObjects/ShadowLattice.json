@@ -1,17 +1,17 @@
 {
-  "appearance": {
-    "desc": {
-      "canStepOn": false,
-      "desc": "WndInfoCell_Nothing",
-      "name": "Level_TileWell",
-      "nonPassable": false
+    "appearance": {
+        "desc": {
+
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileWall"
+        },
+        "sprite": {
+            "imageIndex": 0,
+            "textureFile": "levelObjects/ShadowLattice.png"
+        }
     },
-    "sprite": {
-      "imageIndex": 0,
-      "textureFile": "levelObjects/ShadowLattice.png"
-    }
-  },
-  "canStepOn": true,
-  "kind": "Deco",
-  "nonPassable": false
+    "canStepOn": false,
+    "kind": "CustomObject",
+    "nonPassable": true,
+    "script": "CustomObject"
 }

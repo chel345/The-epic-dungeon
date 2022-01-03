@@ -125,7 +125,7 @@
 
 
 
-"LastLevel":{"kind":"LastLevel", "depth":45,       "size":[32,32], "music":"theme.ogg","script":"scripts/actors/Levels/LastLevel"},
+"LastLevel":{"kind":"LastLevel", "depth":45, "size":[32,32], "music":"theme.ogg","script":"scripts/actors/Levels/LastLevel"},
 
 
 
@@ -159,7 +159,7 @@
       
 "Rat4":{"kind":"RandomLevel", "depth":9, "file":"levelsDesc/KindLevel/RatLevel.json", "music":"RatLevel.ogg","script":"scripts/actors/Levels/RatLevel", "noBuild":true},
       
-"Rat5":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/BossLevel/RatBossLevel.json", "music":"RatBossLevel.ogg", "noFogOfWar":true ,"script":"scripts/actors/Levels/RatLevel","music":"RatLevel.ogg"},
+"Rat5":{"kind":"PredesignedLevel", "depth":10, "file":"levelsDesc/BossLevel/RatBossLevel.json", "noFogOfWar":true ,"script":"scripts/actors/Levels/RatLevel","music":"RatLevel.ogg"},
 
 
 
@@ -283,13 +283,13 @@
 
 
 
-"Night1":{"kind":"RandomLevel", "depth":21, "file":"LevelsDesc/KindLevel/NightmareLevel.json", "music":"NightmareLevel.ogg","script":"scripts/actors/Levels/NightmareLevel"},
+"Night1":{"kind":"RandomLevel", "depth":21, "file":"LevelsDesc/KindLevel/NightmareLevel.json", "music":"NightmareLevel.ogg","script":"scripts/actors/Levels/NightmareLevel","size":[32,32], "noBuild":true}, 
     
-"Night2":{"kind":"RandomLevel", "depth":22, "file":"LevelsDesc/KindLevel/NightmareLevel.json", "music":"NightmareLevel.ogg","script":"scripts/actors/Levels/NightmareLevel"},
+"Night2":{"kind":"RandomLevel", "depth":22, "file":"LevelsDesc/KindLevel/NightmareLevel.json", "music":"NightmareLevel.ogg","script":"scripts/actors/Levels/NightmareLevel","size":[48,48], "noBuild":true},
       
-"Night3":{"kind":"RandomLevel", "depth":23, "file":"LevelsDesc/KindLevel/NightmareLevel.json", "music":"NightmareLevel.ogg","script":"scripts/actors/Levels/NightmareLevel"},
+"Night3":{"kind":"RandomLevel", "depth":23, "file":"LevelsDesc/KindLevel/NightmareLevel.json", "music":"NightmareLevel.ogg","script":"scripts/actors/Levels/NightmareLevel","size":[64,64], "noBuild":true},
       
-"Night4":{"kind":"RandomLevel", "depth":24, "file":"LevelsDesc/KindLevel/NightmareLevel.json", "music":"NightmareLevel.ogg","script":"scripts/actors/Levels/NightmareLevel"},
+"Night4":{"kind":"RandomLevel", "depth":24, "file":"LevelsDesc/KindLevel/NightmareLevel.json", "music":"NightmareLevel.ogg","script":"scripts/actors/Levels/NightmareLevel","size":[80,80], "noBuild":true},
       
 "Night5":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/BossLevel/NightmareBossLevel.json", "music":"NightmareBossLevel.ogg","script":"scripts/actors/Levels/NightmareLevel"},
 
@@ -487,7 +487,7 @@
 "ModRoom":[[],["TownLibrary"]],
 "Inn":[[],["Town"]],
 
-"Town":[["TownChurch", "TownMovieTheater", "Sewer1","TownLibrary", "TownShop","FortuneShop", "Inn"],[]],
+"Town":[["TownChurch", "TownMovieTheater", "Night1","TownLibrary", "TownShop","FortuneShop", "Inn"],[]],
 
 
 "portal_room_lvl5":[["Prison1"],["Sewer5"]],

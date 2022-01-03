@@ -35,28 +35,28 @@ end
 
 local Candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="IceLight"
 }
 RPD.createLevelObject(Candle,cell-W-1)
 
 local Candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="IceLight"
 }
 RPD.createLevelObject(Candle,cell-W+1)
 
 local Candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="IceLight"
 }
 RPD.createLevelObject(Candle,cell+W+1)
 
 local Candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="IceLight"
 }
 RPD.createLevelObject(Candle,cell+W-1)

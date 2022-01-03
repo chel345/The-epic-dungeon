@@ -51,7 +51,7 @@ if canSpawn(i) and math.random(1,35) == 1 then
 if math.random(1,3) == 1 then
 local candle =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpiderTile1"
 }
 RPD.createLevelObject(candle, i-1)
@@ -65,13 +65,13 @@ elseif math.random(1,3) == 1 then
 local W = RPD.Dungeon.level:getWidth()
 local web =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpiderTile10"
 }
 RPD.createLevelObject(web, i-W-1)
 local web =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="SpiderTile11"
 }
 RPD.createLevelObject(web, i-1)

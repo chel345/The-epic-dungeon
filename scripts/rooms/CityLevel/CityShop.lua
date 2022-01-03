@@ -20,25 +20,25 @@ objects = function(cell)
 local W = RPD.Dungeon.level:getWidth()
 local Paint =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Paint2"
 }
 RPD.createLevelObject(Paint,cell-W-3)
 local Camera =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Camera"
 }
 RPD.createLevelObject(Camera,cell+W*2-2)
 local Tickets1 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Tickets1"
 }
 RPD.createLevelObject(Tickets1,cell-2)
 local Tickets2 =
 {
-    kind="Deco",
+    kind="CustomObject",
     object_desc="Tickets2"
 }
 RPD.createLevelObject(Tickets2,cell+W-2)
