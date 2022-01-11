@@ -15,7 +15,6 @@ return object.init{
         return true
     end,
     addedToScene = function(self, object)
-    		RPD.glog("c")
     		local p = DungeonTileMap:tileCenterToWorld(object:getPos())
     		
     		local Halo = RPD.new("com.watabou.pixeldungeon.effects.Halo",5,0xffffff,0.1)
@@ -26,12 +25,12 @@ return object.init{
 			RPD.GameScene:effect(Halo)
 			
 			local emitter = RPD.Sfx.CellEmitter:get(object:getPos())
-			emitter:pos(p.x-2,p.y-2,2,2)
-			emitter:pour(RPD.Sfx.ElmoParticle.FACTORY, 0.16)
+			emitter:pos(p.x-2,p.y-2,0.01,0.01)
+			emitter:pour(RPD.Sfx.ElmoParticle.FACTORY, 0.2)
 			
 			local emitter = RPD.Sfx.CellEmitter:get(object:getPos())
-			emitter:pos(p.x-2,p.y-2,2,2)
-			emitter:pour(RPD.Sfx.ElmoParticle.FACTORY, 0.16)
+			emitter:pos(p.x+2,p.y-2,0.01,0.01)
+			emitter:pour(RPD.Sfx.ElmoParticle.FACTORY, 0.2)
 
     end
 }

@@ -9,11 +9,21 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
+local function getCell()
+local level = RPD.Dungeon.level
+local cell = math.random(1,level:getLength())
+if (not level.passable[cell]) or RPD.Actor:findChar(cell) or level:getTopLevelObject(cell) then
+return getCell()
+end
+return cell
+end
+
 return mob.init({ 
 act       = function(me, ai, mee)
 if math.random(1,2) == 2 then
 me:spend(2)
-RPD.Wands.wandOfBlink:mobWandUse(me, RPD.Dungeon.level:randomRespawnCell())
+me:setPos(getCell())
+me:getSprite():update()
         for i = 1,2 do
             local mob = RPD.mob("NightmareBall")
             local pos = RPD.Dungeon.level:getEmptyCellNextTo(me:getPos())
@@ -40,10 +50,12 @@ end
 end
 end
 me:spend(1)
-RPD.Wands.wandOfBlink:mobWandUse(me, RPD.Dungeon.level:randomRespawnCell())
+me:setPos(getCell())
+me:getSprite():update()
 else if math.random(1,2) == 2 then
 me:spend(2)
-RPD.Wands.wandOfBlink:mobWandUse(me, RPD.Dungeon.level:randomRespawnCell())
+me:setPos(getCell())
+me:getSprite():update()
         for i = 1,2 do
             local mob = RPD.mob("MirorGrimm")
             local pos = RPD.Dungeon.level:getEmptyCellNextTo(me:getPos())
@@ -90,7 +102,8 @@ end
 end,
 damage = function(me, ai, me, src, dmg)
 RPD.GameScene:flash(0x370C0C)
-RPD.Wands.wandOfBlink:mobWandUse(me, RPD.Dungeon.level:randomRespawnCell())
+me:setPos(getCell())
+me:getSprite():update()
 end,
 die = function(self)
 RPD.GameScene:bossSlain()

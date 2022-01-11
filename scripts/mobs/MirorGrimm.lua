@@ -9,9 +9,19 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
+local function getCell()
+local level = RPD.Dungeon.level
+local cell = math.random(1,level:getLength())
+if (not level.passable[cell]) or RPD.Actor:findChar(cell) or level:getTopLevelObject(cell) then
+return getCell()
+end
+return cell
+end
+
 return mob.init({ 
-act       = function(me, ai, me)
-RPD.Wands.wandOfBlink:mobWandUse(me, RPD.Dungeon.level:randomRespawnCell())
+act       = function(me, ai, mee)
+me:setPos(getCell())
+me:getSprite():update()
 me:spend(3)
 end
 })

@@ -51,7 +51,6 @@ return item.init{
 
             if level:cellValid(mobPos) then
                 mob:setPos(mobPos)
-item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
 mob:loot(RPD.ItemFactory:itemByName("Gold"))
                 RPD.Mob:makePet(mob, hero)
                 level:spawnMob(mob)
@@ -70,6 +69,7 @@ RPD.playSound( "snd_read.mp3")
         RPD.glog("RaiseDead_NoKill")
         return false
     end
+    item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
   end,
   bag = function(self, item)
         return "ScrollHolder"

@@ -8,8 +8,6 @@ local RPD = require "scripts/lib/commonClasses"
 
 local object = require "scripts/lib/object"
 
-local DungeonTileMap = luajava.bindClass("com.watabou.pixeldungeon.DungeonTilemap")
-
 return object.init{
     stepOn = function(self, object, hero)
         return true

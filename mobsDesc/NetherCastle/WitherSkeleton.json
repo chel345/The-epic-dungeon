@@ -17,7 +17,7 @@
   "loot": {
     "kind": "Wands/BlackWand"
   },
-  "lootChance": 0.5,
+  "lootChance": 0.1,
   "maxLvl": 35,
   "name": "WitherSkelet_Name",
   "name_objective": "WitherSkelet_Object",

@@ -1,10 +1,11 @@
 {
     "appearance": {
         "desc": {
-
             "desc": "WndInfoCell_Nothing",
-            "name": "Level_TileWall"
-
+            "name": "Level_TileWall",
+            "clearCells": false,
+            "nonPassable": true,
+            "losBlocker": true
         },
         "particles": "Torch",
         "sprite": {
@@ -12,8 +13,6 @@
             "textureFile": "levelObjects/CavesCastle.png"
         }
     },
-    "canStepOn": true,
-    "kind": "CustomObject",
-    "nonPassable": false,
+    "kind": "Deco",
     "script": "CustomObject"
 }

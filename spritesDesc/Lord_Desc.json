@@ -2,7 +2,6 @@
    "texture" : "Lord.png",
    "width" : 25,
    "height" : 32,
-   "zapEffect":"Fire",
    "idle" : {
       "fps" : 5,
       "looped" : true,
@@ -28,5 +27,5 @@
       "looped" : false,
       "frames" : [0,4,5,5,4,0]
    },
-   "bloodColor" : "0xF7F27"
+   "bloodColor" : "0xffff7002"
 }

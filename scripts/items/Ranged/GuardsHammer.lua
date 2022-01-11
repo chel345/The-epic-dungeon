@@ -9,6 +9,8 @@ local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
+local ver
+
 return item.init{
     desc  = function ()
         return {
@@ -36,18 +38,13 @@ end,
 
     onThrow = function(self, item, cell,enemy,soul,thisItem)
 if RPD.Dungeon.hero:effectiveSTR() >= 16-item:level() then
-ver = 16-item:level()
+ver = math.max(16-item:level())
 chanse = math.random(16-1,ver)
 else
-ver = 16-item:level()-item:getUser():effectiveSTR()
+ver = math.max(0,16-item:level()-item:getUser():effectiveSTR())
 chanse = math.random(ver,16-1)
 end
 local soul =  RPD.Actor:findChar(cell)
-local Callback = luajava.bindClass("com.watabou.utils.Callback")
-missile = item:getUser():getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset( item:getUser():getPos(),cell,Callback.callback)
-missile:size(1); 
-missile:pour(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.DUST), 0.08)
                 if soul then
 if ver == chanse then
         RPD.affectBuff(soul, RPD.Buffs.Paralysis , 5+item:level())

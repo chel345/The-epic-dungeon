@@ -1,18 +1,17 @@
 {
     "appearance": {
         "desc": {
-
             "desc": "WndInfoCell_Nothing",
-            "name": "Level_TileFloor"
-
+            "name": "Level_TileFloor",
+            "clearCells": false,
+            "nonPassable": true,
+            "losBlocker": true
         },
         "sprite": {
             "imageIndex": 4,
             "textureFile": "levelObjects/BlueTiles.png"
         }
     },
-    "canStepOn": true,
-    "kind": "CustomObject",
-    "nonPassable": false,
+    "kind": "Deco",
     "script": "CustomObject"
 }

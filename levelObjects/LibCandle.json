@@ -1,9 +1,11 @@
 {
     "appearance": {
         "desc": {
-
             "desc": "LibCandle_info",
-            "name": "LibCandle_name"
+            "name": "LibCandle_name",
+            "clearCells": false,
+            "nonPassable": false,
+            "canStepOn": true
         },
         "particles": "Candle",
         "sprite": {
@@ -20,8 +22,6 @@
             "textureFile": "levelObjects/LibCandle.png"
         }
     },
-    "canStepOn": true,
-    "kind": "CustomObject",
-    "nonPassable": false,
+    "kind": "Deco",
     "script": "CustomObject"
 }

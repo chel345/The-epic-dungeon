@@ -52,7 +52,7 @@
 /*
 {"kind":"Ration"},
 */
-{"kind":"Vials/Vial"},
+{"kind":"Ranged/GuardsHammer"},
 {"kind": "PotionOfMindVision","level":100},
 {"kind": "ScrollOfMagicMapping",       "quantity": 10000000000000},
 {"kind": "PotionOfMindVision",       "quantity": 10000000000000},

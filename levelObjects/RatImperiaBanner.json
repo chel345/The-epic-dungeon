@@ -1,17 +1,17 @@
 {
     "appearance": {
         "desc": {
-
             "desc": "RatImperiaBanner_info",
-            "name": "RatImperiaBanner_name"
+            "name": "RatImperiaBanner_name",
+            "clearCells": false,
+            "nonPassable": false,
+            "canStepOn": true
         },
         "sprite": {
             "imageIndex": 0,
             "textureFile": "levelObjects/RatImperiaBanner.png"
         }
     },
-    "canStepOn": true,
-    "kind": "CustomObject",
-    "nonPassable": false,
+    "kind": "Deco",
     "script": "CustomObject"
 }

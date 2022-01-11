@@ -6,10 +6,12 @@
 
 local buff = require "scripts/lib/buff"
 
+local RPD = require "scripts/lib/epicClasses"
+
 return buff.init{
     desc  = function ()
         return {
-            icon          = 6,
+            icon          = 5,
             name          = RPD.StringsManager:maybeId("LightShild_Buff"),
             info          = "BodyArmorBuff_Info",
          }

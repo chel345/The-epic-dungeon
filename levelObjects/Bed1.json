@@ -1,16 +1,17 @@
 {
     "appearance": {
         "desc": {
-
             "desc": "WndInfoCell_Nothing",
-            "name": "Level_TileFloor"
-
+            "name": "Level_TileFloor",
+            "clearCells": false,
+            "nonPassable": true,
+            "losBlocker": true
         },
         "sprite": {
             "imageIndex": 0,
             "textureFile": "levelObjects/Beds.png"
         }
     },
-    "kind": "CustomObject",
+    "kind": "Deco",
     "script": "CustomObject"
 }

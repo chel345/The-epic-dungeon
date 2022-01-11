@@ -27,7 +27,7 @@ return item.init{
 RPD.Dungeon.hero:spend(TIME_TO_READ)
 RPD.playSound( "snd_read.mp3")
         if action == RPD.Actions.read then
- item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
+ 
         local level = RPD.Dungeon.level
         for i = 1,4 do
             local mob = RPD.mob("NightmareBall")
@@ -38,6 +38,7 @@ level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero));
            end
         end
  end 
+ item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
 end,
 bag = function(self, item)
         return "ScrollHolder"
