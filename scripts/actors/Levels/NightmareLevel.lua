@@ -24,6 +24,23 @@ RPD.topEffect(i,"NightmareKeeper")
 maybeMob:getSprite():killAndErase()
 end
 end
+
+if not storage.get("deco") then
+storage.put("deco",true)
+for i = 1, RPD.Dungeon.level:getLength()-1 do
+if RPD.Dungeon.level.map[i] == 1 and (not level:getTopLevelObject(i)) then
+if math.random(1,70) == 1 then
+local Chest =
+{
+    kind="CustomObject",
+    object_desc= ("NightTile"..tostring(math.random(3,4)))
+}
+RPD.createLevelObject(Chest,i)
+end
+end
+end
+end
+
 end
 
 if RPD.Dungeon.depth == 25 and (not storage.get("obj")) then

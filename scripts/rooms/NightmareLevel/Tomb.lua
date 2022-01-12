@@ -49,7 +49,7 @@ RPD.roomsInstruments.spawnObj(4,tile1,4,cell)
 local tile =
 {
     kind="CustomObject",
-    object_desc="NightTile11"
+    object_desc="NightTile13"
 }
 RPD.roomsInstruments.spawnObj(2,tile,4,cell)
 local mob = RPD.mob("CursedTree")

@@ -50,7 +50,7 @@ Range = 10000,
 GinFactor = 20,
 RoomFactor = 0,
 MiniBoss = "LargeLaserSolderRoom",
-LevelMiniBoss = 21
+LevelMiniBoss = 24
 }
 
 return table
