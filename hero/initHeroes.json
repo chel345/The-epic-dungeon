@@ -1,75 +1,28 @@
-{ 
-  "common": { 
- "forbiddenActions": ["CharAction_Taunt","CharAction_Push"],
+{
+  "common": {
+    "forbiddenActions": ["CharAction_Taunt","CharAction_Push"],
     "armor": {
-      "kind": "WarriorArmor",
+      "kind": "ClothArmor",
       "identified": true
     },
-    "ring2":{
-    "kind":"RingOfAccuracy","level":10000,"identified":true},
-    "items": [ 
-/*
-{"kind":"Candles/TearsCandle"},
-{"kind":"Candles/RatCandle"},
-{"kind":"Candles/CaretakersCandle"},
-{"kind":"Candles/FireCandle"},
-{"kind":"Candles/Candle"},
-*/
-/*
-{"kind":"Wands/NefritWand"},
-{"kind":"Wands/BlackWand"},
-{"kind":"Wands/DragonWand"},
-{"kind":"Wands/WandOfMirror"},
-{"kind":"Wands/SummonerWand"},
-{"kind":"Wands/BlessWand"},
-{"kind":"Wands/WandOfPossess"},
-{"kind":"Wands/WandOfFireRune"},
-{"kind":"Wands/WandOfBlast"},
-{"kind":"Wands/WandOfGoodMage"},
-{"kind":"Wands/WandOfMagicbolt"},
-{"kind":"Wands/WandOfRock"},
-{"kind":"Wands/WandOfLightbolt"}, 
-{"kind": "Wands/WandOfCrystalion"},
-{"kind":"Wands/LordWand"},
-*/
-{"kind":"PotionOfHealing","quantity":10000},
-/*
-{"kind":"Helmets/LeatherHelmet"},
-{"kind":"Helmets/ScaleHelmet"},
-{"kind":"Helmets/PlateHelmet"},
-{"kind":"Helmets/GoticHelmet"},
-*/
-/*
-{"kind":"Materials/DarkSperal"},
-{"kind":"Materials/YellowSperal"},
-{"kind":"Materials/TombPiece"},
-{"kind":"Materials/BluePitch"},
-{"kind":"Materials/Quartz"},
-{"kind":"Materials/SpiderHelmet"},
-{"kind":"Materials/DworfSkull"},
-{"kind":"Materials/HandmadeCrystal"},
-*/
-/*
-{"kind":"Ration"},
-*/
-{"kind":"Vials/Vial"},
-{"kind": "PotionOfMindVision","level":100},
-{"kind": "ScrollOfMagicMapping",       "quantity": 10000000000000},
-{"kind": "PotionOfMindVision",       "quantity": 10000000000000},
-{"kind": "PotionOfInvisibility",     "quantity": 1000000000},
-{"kind":"Tests/Test2","quantity": 10},
-{"kind":"Tests/Test1","quantity": 10},
-{"kind":"Tests/Test3"},
-{"kind":"Tests/Test4"},
-{"kind": "ScrollOfUpgrade",       "quantity": 10000000000000000},
-{"kind": "PotionOfLevitation","level":100},
-{"kind": "ScrollOfTeleportation"},
-{"kind": "Gold",       "quantity": 10000000}
-
-    ], 
-    "str": 150000,
-    "hp": 2000000,
-    "magicAffinity": "Common"
+    "items": [
+      {
+        "kind": "Gold",
+        "quantity": 100
+      }
+    ],
+    "str": 10,
+    "hp": 20,
+    "magicAffinity": "Common",
+    "sp": 10,
+    "maxSp": 10
+  },
+  "non_expert": {
+    "items": [
+      {
+        "kind": "Ration"
+      }
+    ]
   },
   "WARRIOR": {
     "weapon": {
@@ -83,27 +36,42 @@
       }
     ],
     "isSpellUser": true,
-    "magicAffinity": "Combat",
-    "startingSp": 10000,
-    "maxSp": 10000
+    "magicAffinity": "Combat"
   },
   "MAGE": {
+    "items": [
+      {
+        "kind": "WandOfMagicMissile",
+        "identified": true
+      }
+    ],
+    "quickslot": [
+      {
+        "kind": "WandOfMagicMissile"
+      }
+    ],
     "knownItems": [
       {
         "kind": "ScrollOfIdentify"
       }
     ],
+    "maxSp":15,
+    "sp":15,
     "isSpellUser": true,
-    "magicAffinity": "Elemental",
-    "startingSp": 10000,
-    "maxSp": 10000
+    "magicAffinity": "Elemental"
   },
   "ROGUE": {
+    "ring1": {
+      "kind": "RingOfShadows",
+      "identified": true,
+      "level": 1
+    },
     "knownItems": [
       {
         "kind": "ScrollOfMagicMapping"
       }
-    ]
+    ],
+    "magicAffinity": "Rogue"
   },
   "HUNTRESS": {
     "items": [
@@ -117,7 +85,8 @@
         "kind": "Boomerang"
       }
     ],
-    "hp": 15
+    "hp": 15,
+    "magicAffinity": "Huntress"
   },
   "ELF": {
     "weapon": {
@@ -141,13 +110,17 @@
         "kind": "CommonArrow"
       }
     ],
+
+    "immunities": [
+      "Roots"
+    ],
+    "magicAffinity": "Elf",
     "str": 9,
     "hp": 15
   },
   "NECROMANCER": {
-    "str": 9,
     "armor": {
-      "kind": "NecromancerArmor",
+      "kind": "NecromancerRobe",
       "identified": true
     },
     "items": [
@@ -157,15 +130,12 @@
         "depth": "7"
       }
     ],
-    "hp": 100,
+    "hp": 15,
     "knownItems": [
       {
         "kind": "PotionOfHealing"
       }
     ],
-    "startingSp": 100000,
-    "maxSp": 100000,
-    "isSpellUser": true,
     "magicAffinity": "Necromancy"
   },
   "GNOLL": {
@@ -181,22 +151,42 @@
         "kind": "Dart",
         "identified": true,
         "quantity": 8
-      },
-      {
-        "kind":"Codex"
-      },
-      {
-        "kind":"TomeOfKnowledge"
       }
     ],
+    "magicAffinity": "Witchcraft",
     "quickslot": [
       {
         "kind": "Dart"
       }
     ],
-    "forbiddenActions":["Scroll_ACRead","TomeOfMastery_ACRead","Stylus_ACInscribe"],
-    "friendlyMobs":["Gnoll","Shaman","Brute","Shielded"],
+    "forbiddenActions": [
+      "Scroll_ACRead",
+      "TomeOfMastery_ACRead",
+      "Stylus_ACInscribe",
+      "CharAction_Taunt",
+      "CharAction_Push"
+    ],
+    "friendlyMobs": [
+      "Gnoll",
+      "Shaman",
+      "Brute",
+      "Shielded"
+    ],
     "str": 15,
     "hp": 5
+  },
+  "LICH": {
+    "immunities": [
+      "Paralysis",
+      "ToxicGas",
+      "Terror",
+      "Death",
+      "Amok",
+      "Blindness",
+      "Sleep",
+      "Poison",
+      "Vertigo",
+      "Bleeding"
+    ]
   }
 }

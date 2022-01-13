@@ -32,7 +32,7 @@ RPD.removeBuff(item:getUser(), RPD.Buffs.Light)
 end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)
-thisItem:getUser():spend(TIME_TO_ZAP)
+thisItem:getUser():spend(1)
 local maybeMob = RPD.Actor:findChar(dst)          
 if maybeMob and maybeMob ~= RPD.Dungeon.hero then 
 RPD.playSound( "snd_degrade.ogg" )

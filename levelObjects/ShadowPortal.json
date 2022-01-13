@@ -1,10 +1,14 @@
 {
     "kind": "CustomObject",
-    "script": "CustomObject",
+    "script": "ShadowPortal",
+    "layer": 2,
     "appearance": {
         "desc": {
             "desc": "PortalGate_Desc",
-            "name": "PortalGate_Name"
+            "name": "PortalGate_Name",
+            "clearCells": false,
+            "nonPassable": false,
+            "canStepOn": true
         },
         "sprite": {
             "textureFile": "levelObjects/ShadowPortal.png",

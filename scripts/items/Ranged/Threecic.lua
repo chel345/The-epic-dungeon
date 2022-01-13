@@ -9,6 +9,7 @@ local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
+local ver
 
 return item.init{
     desc  = function ()
@@ -33,10 +34,10 @@ return item.init{
 
     onThrow = function(self, item, cell,enemy,soul)
 if RPD.Dungeon.hero:effectiveSTR() >= 18-item:level() then
-ver = 18-item:level()
+ver = math.max(18-item:level())
 chanse = math.random(18-1,ver)
 else
-ver = 18-item:level()-item:getUser():effectiveSTR()
+ver = math.max(18-item:level()-item:getUser():effectiveSTR())
 chanse = math.random(ver,18-1)
 end
 local soul =  RPD.Actor:findChar(cell)

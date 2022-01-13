@@ -1,0 +1,15 @@
+{
+  "canBePet": false,
+  "description": "Grimm_Desc",
+  "gender": "Grimm_Gender",
+  "name": "Grimm_Name",
+  "name_objective": "Grimm_Object",
+  "scriptFile": "scripts/bosses/NightmareKingOnThrone",
+  "spriteDesc": "spritesDesc/NightmareKingOnThrone_Desc.json",
+  "walkingType": "NORMAL",
+  "aiState": "Passive",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "immortal"      :true,
+  "movable"       :false
+}

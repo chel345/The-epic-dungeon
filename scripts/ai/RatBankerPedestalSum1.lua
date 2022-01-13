@@ -29,7 +29,7 @@ end
 local W = RPD.Dungeon.level:getWidth()
 addStatue(me:getPos()+W*5+2,"RatStatue")
 addStatue(me:getPos()+W*5-2,"RatStatue")
-me:beckon(RPD.Dungeon.hero:getPos())
+RPD.setAi(me,"Wandering")
 end
 me:spend(1)
 end,

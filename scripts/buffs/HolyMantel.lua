@@ -7,7 +7,7 @@ local IceBlock = luajava.bindClass("com.watabou.pixeldungeon.effects.IceBlock")
 return buff.init{
 desc = function ()
 return {
-icon = 2,
+icon = 3,
 name = RPD.StringsManager:maybeId("Holy_Mantel_Buff"),
 info = "DieHard_Info",
 }
@@ -30,6 +30,8 @@ charAct = function(self,buff)
 if buff.target:hp() <= 5 then
 buff.target:hp(buff.target:ht())
 IceBlock:freeze(buff.target:getSprite())
+RPD.removeBuff(buff.target, "ModBuff")
+RPD.permanentBuff(buff.target, "ModBuff")
 end
 end
 }

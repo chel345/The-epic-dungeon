@@ -1,19 +1,18 @@
 {
     "appearance": {
         "desc": {
-
             "desc": "WndInfoCell_Nothing",
-            "name": "Level_TileFloor"
-
+            "name": "Level_TileFloor",
+            "clearCells": false,
+            "nonPassable": false,
+            "canStepOn": true
         },
         "sprite": {
             "imageIndex": 7,
             "textureFile": "levelObjects/RatTiles.png"
         }
     },
-    "canStepOn": true,
-    "kind": "CustomObject",
-    "nonPassable": false,
+    "kind": "Deco",
     "particles": "Candle",
     "script": "CustomObject"
 }

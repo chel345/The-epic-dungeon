@@ -69,6 +69,7 @@ missile:size(4);
 --missile:pour( RPD.Sfx.ElmoParticle.FACTORY, 0.01f);
 Splash.at(missile, cell,-3,3, 0x81ff2f, 1)
 LightRay.ray(RPD.Dungeon.hero:getPos(),cell)
+RPD.glog(RPD.Dungeon.level.map[cell])
         end
 if action == "action2" then
 RPD.glog(tostring(cell))

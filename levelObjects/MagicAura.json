@@ -1,10 +1,11 @@
 {
     "appearance": {
         "desc": {
-
             "desc": "WndInfoCell_Nothing",
-            "name": "Level_TileFloor"
-
+            "name": "Level_TileFloor",
+            "clearCells": false,
+            "nonPassable": false,
+            "canStepOn": true
         },
         "sprite": {
             "animations": {
@@ -25,8 +26,6 @@
             "textureFile": "levelObjects/MagicAura.png"
         }
     },
-    "canStepOn": true,
-    "kind": "CustomObject",
-    "nonPassable": false,
+    "kind": "Deco",
     "script": "CustomObject"
 }

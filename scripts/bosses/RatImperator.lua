@@ -10,7 +10,7 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init({ 
-act       = function(me, ai, me)
+act       = function(me, ai, mee)
 if me:canAttack(RPD.Dungeon.hero) then
 me:getSprite():attack(RPD.Dungeon.hero:getPos())
 me:spend(1)

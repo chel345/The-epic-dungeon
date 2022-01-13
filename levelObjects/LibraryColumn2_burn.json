@@ -1,10 +1,11 @@
 {
     "appearance": {
         "desc": {
-
             "desc": "WndInfoCell_Nothing",
-            "name": "Level_TileFloor"
-
+            "name": "Level_TileFloor",
+            "clearCells": false,
+            "nonPassable": true,
+            "losBlocker": true
         },
         "particles": "Candle",
         "sprite": {
@@ -21,8 +22,6 @@
             "textureFile": "levelObjects/LibraryColumn.png"
         }
     },
-    "canStepOn": true,
-    "kind": "CustomObject",
-    "nonPassable": false,
+    "kind": "Deco",
     "script": "CustomObject"
 }

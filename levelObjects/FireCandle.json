@@ -2,9 +2,10 @@
     "appearance": {
         "desc": {
             "desc": "WndInfoCell_Nothing",
-            "name": "Level_TileWall"
-
-
+            "name": "Level_TileWall",
+            "clearCells": false,
+            "nonPassable": false,
+            "canStepOn": true
         },
         "sprite": {
             "animations": {
@@ -23,8 +24,6 @@
             "textureFile": "levelObjects/FireCandle.png"
         }
     },
-    "canStepOn": true,
-    "kind": "CustomObject",
-    "nonPassable": false,
+    "kind": "Deco",
     "script": "CustomObject"
 }

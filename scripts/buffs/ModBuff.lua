@@ -30,7 +30,7 @@ return buff.init{
     desc  = function ()
         return {
             icon          = -1,
-            name          = "CounterBuff_Name",
+            name          = RPD.StringsManager:maybeId("J"),
             info          = "CounterBuff_Info"
         }
     end,

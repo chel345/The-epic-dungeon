@@ -22,10 +22,10 @@ local W = RPD.Dungeon.level:getWidth()
 local tile =
 {
     kind="CustomObject",
-    object_desc="NightTile5"
+    object_desc="HallTile4"
 }
 
-RPD.roomsInstruments.spawnObj(4,tile,4,cell)
+RPD.roomsInstruments.spawnObj(9,tile,4,cell)
 
 for i = 0, math.random(0,10) do
 local item = Treasury:getLevelTreasury():bestOf(Treasury.Category.POTION,4 )

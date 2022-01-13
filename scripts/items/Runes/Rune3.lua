@@ -26,11 +26,10 @@ return item.init{
     actions = function() return {RPD.StringsManager:maybeId("Activate")} end,
 
     cellSelected = function(self, thisItem, action, cell,item)
-thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack) 
-
         if action == RPD.StringsManager:maybeId("Activate") and cell ~= nil then
 thisItem:getUser():spend(1)
-local dst = RPD.Ballistica:cast(thisItem:getUser():getPos(), cell, true, true, true)
+local dst = RPD.Ballistica:cast(thisItem:getUser():getPos(), cell, true, true, false)
+RPD.glog(thisItem:getUser():getPos())
 local enemy = RPD.Actor:findChar(dst)
 if enemy then
 RPD.affectBuff(enemy, RPD.Buffs.Light , 10*thisItem:level())
@@ -43,6 +42,7 @@ RPD.zapEffect( thisItem:getUser():getPos(), dst, "DeathRay")
 end
 
 end
+thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack)
 end,
     execute = function(self, item, hero, action)
         if action == RPD.StringsManager:maybeId("Activate") then

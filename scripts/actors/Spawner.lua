@@ -22,7 +22,7 @@ local now = 0
 local function getCell()
 local level = RPD.Dungeon.level
 local cell = math.random(1,level:getLength())
-if level.solid[cell] or level.nearWalls[cell] or level.pit[cell] or level.fieldOfView[cell] or (not level.passable[cell]) or level.map[cell] == RPD.Terrain.WALL or level.map[cell] == RPD.Terrain.WALL_DECO or RPD.Actor:findChar(cell) or cell == 0 or level.map[cell] == RPD.Terrain.BOOKSHELF or level.map[cell] == RPD.Terrain.CHASM or level.map[cell] == RPD.Terrain.BARRICADE or level.map[cell] == 14 or level.map[cell] == 48 or level.map[cell] == 63 then
+if level.solid[cell] or level.nearWalls[cell] or level.pit[cell] or level.fieldOfView[cell] or (not level.passable[cell]) or level.map[cell] == RPD.Terrain.WALL or level.map[cell] == RPD.Terrain.WALL_DECO or RPD.Actor:findChar(cell) or cell == 0 or level.map[cell] == RPD.Terrain.BOOKSHELF or level.map[cell] == RPD.Terrain.CHASM or level.map[cell] == RPD.Terrain.BARRICADE or level.map[cell] == 14 or level:getTopLevelObject(cell) or level.map[cell] == 48 or level.map[cell] == 63 then
 return getCell()
 end
 return cell

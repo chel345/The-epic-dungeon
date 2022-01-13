@@ -63,8 +63,8 @@ end
 RPD.roomsInstruments = {
 spawnObj = function(tile,obj,radius,cell)
 local level = RPD.Dungeon.level
-local x = level:cellX(cell)
-local y = level:cellY(cell)
+local x = level:cellX(cell+1)
+local y = level:cellY(cell+1)
 for o = x - radius, x + radius do
 for k = y - radius, y + radius do
 local pos = RPD.Dungeon.level:cell(o,k)

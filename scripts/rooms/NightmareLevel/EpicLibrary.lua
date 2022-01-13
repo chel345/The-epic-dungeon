@@ -21,7 +21,7 @@ local W = RPD.Dungeon.level:getWidth()
 
 for i = 0, math.random(0,10) do
 local item = Treasury:getLevelTreasury():bestOf(Treasury.Category.SCROLL,4 )
-RPD.roomsInstruments.spawnIt(9,item,4,cell)
+RPD.roomsInstruments.spawnIt(1,item,4,cell)
 end
 
 local mob = RPD.mob("CrystalMod")

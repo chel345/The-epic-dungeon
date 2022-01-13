@@ -34,9 +34,6 @@ local mobs = {
 "EarthElemental",
 "IceElemental"
 }
-
-
- item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
         local level = RPD.Dungeon.level
             local mob = RPD.mob(mobs[math.random(1,4)])
             local pos = level:getEmptyCellNextTo(hero:getPos())
@@ -45,6 +42,7 @@ local mobs = {
 level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero));
     end
   end
+  item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
  end,
  bag = function(self, item)
         return "ScrollHolder"

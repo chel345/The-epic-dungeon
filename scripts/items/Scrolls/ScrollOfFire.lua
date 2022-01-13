@@ -29,7 +29,6 @@ RPD.playSound( "snd_read.mp3")
         if action == RPD.Actions.read then 
        local level = RPD.Dungeon.level
         local hero = RPD.Dungeon.hero
-item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
        local x = level:cellX(cell)
         local y = level:cellY(cell)
         for i = x - 1, x + 3 do
@@ -42,6 +41,7 @@ item:detach(RPD.Dungeon.hero:getBelongings().backpack)
         end
     end 
 end
+item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
 end,
 bag = function(self, item)
         return "ScrollHolder"

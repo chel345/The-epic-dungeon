@@ -39,7 +39,7 @@ local Chest =
     object_desc="ShadowPortal"
 }
 RPD.createLevelObject(Chest,cell-W*2)
-local mob = RPD.mob("PortalGuard")
+local mob = RPD.mob("LaserSolder")
 local level = RPD.Dungeon.level
 mob:setPos(cell)
 level:spawnMob(mob)
