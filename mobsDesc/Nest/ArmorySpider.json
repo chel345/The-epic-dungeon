@@ -16,6 +16,5 @@
   "name_objective": "ArmorySpider_Object",
   "spriteDesc": "spritesDesc/ArmorySpider_Desc.json",
   "viewDistance": 8,
-  "walkingType": "NORMAL",
-  
+  "walkingType": "NORMAL"
 }

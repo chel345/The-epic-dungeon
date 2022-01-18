@@ -19,10 +19,10 @@ return cell
 end
 
 return mob.init({ 
-act       = function(me, ai, mee)
+act       = function(me)
 me:setPos(getCell())
 me:getSprite():update()
-me:spend(3)
+me:spend(1)
 end
 })
 
