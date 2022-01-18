@@ -19,12 +19,14 @@ return cell
 end
 
 return mob.init({ 
-act       = function(me, ai, mee)
+act       = function(me)
 if math.random(1,2) == 2 then
+--[[
 me:spend(2)
 local n = getCell()
 me:setPos(n)
 me:getSprite():move(me:getPos(),n)
+me:getSprite():update()
         for i = 1,2 do
             local mob = RPD.mob("NightmareBall")
             local pos = RPD.Dungeon.level:getEmptyCellNextTo(me:getPos())
@@ -34,18 +36,19 @@ me:getSprite():move(me:getPos(),n)
            end
         end
 elseif math.random(1,2) == 2 then
+--]]
 local x = RPD.Dungeon.level:cellX(me:getPos())
 local y = RPD.Dungeon.level:cellY(me:getPos())
-        for i = x - 4, x + 4 do
-         for j = y - 4, y + 4 do
+        for i = x - 3, x + 3 do
+         for j = y - 3, y + 3 do
 local pos = RPD.Dungeon.level:cell(i,j)
-local soul =  RPD.Actor:findChar(pos-1)
+local soul =  RPD.Actor:findChar(pos)
 if RPD.Dungeon.level.map[pos] == RPD.Terrain.EMPTY then
-if soul and soul ~= me then 
-RPD.topEffect(pos-1,"ShadowTentacle")
+if soul and soul ~= me and soul == RPD.Dungeon.hero then 
+RPD.topEffect(pos,"ShadowTentacle")
 soul:damage(math.random(25,60), me)
  else
-RPD.topEffect(pos-1,"ShadowTentacle")
+RPD.topEffect(pos,"ShadowTentacle")
 end
 end
 end
@@ -55,10 +58,19 @@ local n = getCell()
 me:setPos(n)
 me:getSprite():move(me:getPos(),n)
 elseif math.random(1,2) == 2 then
-me:spend(1)
+local n = 0
+local level = RPD.Dungeon.level
+for i = 0, level:getLength() do
+local mob = RPD.Actor:findChar(i)
+if mob and mob ~= RPD.Dungeon.hero and mob:getMobClassName() == "Nightmare/MirorGrimm" then
+n = n + 1
+end
+end
+if n < 4 then
 local n = getCell()
 me:setPos(n)
 me:getSprite():move(me:getPos(),n)
+me:getSprite():update()
         for i = 1,2 do
             local mob = RPD.mob("MirorGrimm")
             local pos = RPD.Dungeon.level:getEmptyCellNextTo(me:getPos())
@@ -67,7 +79,8 @@ me:getSprite():move(me:getPos(),n)
                 RPD.Dungeon.level:spawnMob(mob)
            end
         end
-elseif math.random(1,3) == 1 then
+end
+else
 RPD.topEffect(me:getPos()-RPD.Dungeon.level:getWidth()-1,"Void")
 RPD.zapEffect(me:getPos()-RPD.Dungeon.level:getWidth()-1, RPD.Dungeon.hero:getPos(), "Shadow")
 RPD.Dungeon.hero:damage(math.random(20,40), me)
@@ -83,24 +96,15 @@ RPD.Dungeon.hero:damage(math.random(20,40), me)
 RPD.topEffect(me:getPos()+RPD.Dungeon.level:getWidth()+1,"Void")
 RPD.zapEffect(me:getPos()+RPD.Dungeon.level:getWidth()+1, RPD.Dungeon.hero:getPos(), "Shadow")
 RPD.Dungeon.hero:damage(math.random(20,40), me)
-else
-for i=1, RPD.Dungeon.level:getLength()-1 do
-if RPD.Dungeon.level.map[i] == RPD.Terrain.EMPTY then
-if math.random(1,200) == 1 then
-local mob = RPD.mob("NightmareAngel") 
-mob:setPos(i-1)
-RPD.Dungeon.level:spawnMob(mob)
-end
-end
-end
 end
 
 end,
-damage = function(me, ai, me, src, dmg)
+damage = function(me)
 RPD.GameScene:flash(0x370C0C)
 local n = getCell()
 me:setPos(n)
 me:getSprite():move(me:getPos(),n)
+me:getSprite():update()
 end,
 die = function(self, cause)
 RPD.playSound("snd_boss.mp3")

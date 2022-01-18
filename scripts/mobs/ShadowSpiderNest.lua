@@ -13,7 +13,7 @@ return mob.init{
 interact = function(self, chr)
     RPD.resetPos(self,chr)
 end,
-act       = function(me, ai, me)
+act       = function(me, ai, mee)
 
 summonBee = function()
 local level = RPD.Dungeon.level

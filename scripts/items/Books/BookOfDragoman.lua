@@ -11,27 +11,6 @@ local item = require "scripts/lib/item"
 
 local EPD = require "scripts/lib/dopClasses"
 
-dialog = function(index)
-if index == 0 then
-RPD.setAi(selff,"SetPos")
-RPD.removeBuff(selff,"FollowMe")
-RPD.removeBuff(selff,"Attacher")
-end
-if index == 1 then
-RPD.permanentBuff(selff,"FollowMe")
-end
-if index == 2 then
-RPD.removeBuff(selff,"FollowMe")
-RPD.setAi(selff,"none")
-RPD.removeBuff(selff,"Attacher")
-end
-if index == 3 then
-RPD.removeBuff(selff,"FollowMe")
-RPD.removeBuff(selff,"Attacher")
-ctor:selectCell(selectMob,RPD.StringsManager:maybeId("Choose_A_Target"))
-end
-end
-
 
 return item.init{
  desc  = function ()
@@ -65,6 +44,26 @@ activate = function(self, item, hero)
     end,
     
 cellSelected = function(self, thisItem, action, cell)
+local dialog = function(index)
+if index == 0 then
+RPD.setAi(selff,"SetPos")
+RPD.removeBuff(selff,"FollowMe")
+RPD.removeBuff(selff,"Attacher")
+end
+if index == 1 then
+RPD.permanentBuff(selff,"FollowMe")
+end
+if index == 2 then
+RPD.removeBuff(selff,"FollowMe")
+RPD.setAi(selff,"none")
+RPD.removeBuff(selff,"Attacher")
+end
+if index == 3 then
+RPD.removeBuff(selff,"FollowMe")
+RPD.removeBuff(selff,"Attacher")
+ctor:selectCell(selectMob,RPD.StringsManager:maybeId("Choose_A_Target"))
+end
+end
 if action == RPD.StringsManager:maybeId("Action_Use") then
 ctor = thisItem
 --local dst = RPD.Ballistica:cast(thisItem:getUser():getPos(), cell, true, true, true)

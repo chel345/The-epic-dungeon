@@ -97,11 +97,6 @@
       
 "Halls5":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/BossLevel/ShadowLordLevel.json","music":"HallsLevel.ogg","script":"scripts/actors/Levels/HallsLevel"},
 
-"Halls2_p":{"kind":"HallsLevel", "depth":22,      "size":[32,32],"music":"HallsLevel.ogg","script":"scripts/actors/Levels/HallsLevel_p", "noBuild":true},
-      
-"Halls3_p":{"kind":"HallsLevel", "depth":23,      "size":[32,32],"music":"HallsLevel.ogg","script":"scripts/actors/Levels/HallsLevel_p", "noBuild":true},
-      
-"Halls4_p":{"kind":"HallsLevel", "depth":24,      "size":[32,32],"music":"HallsLevel.ogg","script":"scripts/actors/Levels/HallsLevel_p", "noBuild":true},
 
 
 "Light1":{"kind":"RandomLevel", "depth":26, "file":"LevelsDesc/KindLevel/LightLevel.json", "script":"scripts/actors/Levels/LightLevel"
@@ -114,7 +109,7 @@
 "Light4":{"kind":"RandomLevel", "depth":29, "file":"LevelsDesc/KindLevel/LightLevel.json", "music":"LightLevel.ogg","script":"scripts/actors/Levels/LightLevel", "noBuild":true},
        
 "Light5":{"kind":"PredesignedLevel", "depth":30, "file":"LevelsDesc/BossLevel/LightBossLevel.json", "music":"LightLevel.ogg","script":"scripts/actors/Levels/LightLevel"},
-      
+  
 
 
 "HallCastle1":{"kind":"RandomLevel", "depth":31, "file":"LevelsDesc/KindLevel/NetherCastleLevel.json", "music":"CastleLevel.ogg", "script":"scripts/actors/Levels/HallCastleLevel", "noBuild":true},
@@ -532,11 +527,6 @@
 "Halls3":[["Halls4"],["Halls2"]],
 "Halls4":[["Halls5"],["Halls3"]],
 "Halls5":[["portal_room_lvl25"],["Halls4"]],
-
-"Halls2_p":[["Halls3"],["Imp"]],
-"Halls3_p":[["Halls4"],["Halls2"]],
-"Halls4_p":[["Halls5"],["Halls3"]],
-"Halls5_p":[["portal_room_lvl25"],["Halls4"]],
 
 
 "Light1":[["Light2"],["portal_room_lvl25"]],

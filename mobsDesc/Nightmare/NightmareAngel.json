@@ -3,7 +3,7 @@
   "attackRange": 10,
   "attackSkill": 22,
   "baseSpeed": 1,
-  "canBePet": true,
+  "canBePet": false,
   "defenseSkill": 30,
   "description": "NightmareAngel_Desc",
   "dmgMax": 30,
