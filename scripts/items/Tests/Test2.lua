@@ -25,7 +25,7 @@ return item.init{
         local level = RPD.Dungeon.level
      
         if level.map[cell] then
-            local mob = RPD.mob("ArmorySpider")
+            local mob = RPD.mob("WhiteBall")
     mob:setPos(cell)
       level:spawnMob(mob)     
         else
