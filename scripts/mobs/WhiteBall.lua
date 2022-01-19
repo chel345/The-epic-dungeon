@@ -16,7 +16,7 @@ end,
 interact = function(self, chr)
     RPD.resetPos(self,chr)
 end,
-act       = function(me, ai, me)
+act       = function(me, ai)
 
 zap = function()
 local cell = RPD.Ballistica:cast(me:getPos(),RPD.Dungeon.hero:getPos(),true,true,true)

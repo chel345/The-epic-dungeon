@@ -23,5 +23,6 @@
   "name_objective": "StatueOfDem_Object",
   "scriptFile": "scripts/miniBosses/StatueOfDemon",
   "spriteDesc": "spritesDesc/StatueOfDemon_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "movable"       :false
 }
