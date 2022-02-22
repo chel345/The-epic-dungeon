@@ -8,10 +8,10 @@
             "canStepOn": true
         },
         "sprite": {
-            "imageIndex": 3,
-            "textureFile": "levelObjects/NightTiles.png"
+            "imageIndex": 0,
+            "textureFile": "levelObjects/NightmareChasmLight.png"
         }
     },
-    "kind": "Deco",
-    "script": "FlareNightmareLight2"
+    "kind": "CustomObject",
+    "script": "NightmareChasmLight"
 }

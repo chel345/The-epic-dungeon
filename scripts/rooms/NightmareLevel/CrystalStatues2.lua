@@ -19,6 +19,13 @@ end,
 objects = function(cell)
 local W = RPD.Dungeon.level:getWidth()
 
+local tile2 =
+{
+    kind="CustomObject",
+    object_desc="NightmareChasmLight"
+}
+RPD.createLevelObject(tile2,cell)
+
 local tile =
 {
     kind="CustomObject",

@@ -77,7 +77,11 @@ effect(from,to)
 return
 end
 local level = RPD.Dungeon.level
-level:set(cell,RPD.Terrain.EMPTY_SP)
+local object = level:getTopLevelObject(cell)
+if object then
+object.sprite:kill()
+level:remove(object)
+end
 RPD.GameScene:updateMap(cell)
 effect(from,cell)
 removeObj(cell)
@@ -88,12 +92,13 @@ end
 local level = RPD.Dungeon.level
 local x = level:cellX(me:getPos())
 local y = level:cellY(me:getPos())
-for i = x - 4, x + 4 do
-for j = y - 4, y + 4 do
+for i = x - 3, x + 3 do
+for j = y - 3, y + 3 do
 local pos = RPD.Dungeon.level:cell(i,j)
-if level.map[pos] == RPD.Terrain.STATUE_SP then
+local object = level:getTopLevelObject(pos)
+if object then
 if math.random(1,16) == 1 then
-summon(pos-1)
+summon(pos)
 me:getSprite():attack(1)
 RPD.playSound( "snd_zap.mp3" )
 end

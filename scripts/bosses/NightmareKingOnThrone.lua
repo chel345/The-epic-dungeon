@@ -7,10 +7,18 @@
 
 local RPD = require "scripts/lib/epicClasses"
 
+local EPD = require "scripts/lib/dopClasses"
+
 local mob = require"scripts/lib/mob"
+
+local storage = require "scripts/lib/storage"
 
 return mob.init({ 
 act       = function(me, ai, mee)
+if not storage.get("phrase1") then
+EPD.showQuestWindow(me,RPD.StringsManager:maybeId("NightmareKingOnThrone_Phrase1"))
+storage.put("phrase1",true)
+end
 local n = 0
 local level = RPD.Dungeon.level
 for i = 0, level:getLength() do
@@ -29,18 +37,20 @@ local Chest =
     kind="CustomObject",
     object_desc= "NightTile11"
 }
-RPD.createLevelObject(Chest,37)
+RPD.createLevelObject(Chest,37+15)
 local Chest =
 {
     kind="CustomObject",
     object_desc= "NightTile12"
 }
-RPD.createLevelObject(Chest,52)
+RPD.createLevelObject(Chest,52+15)
+EPD.showQuestWindow(me,RPD.StringsManager:maybeId("NightmareKingOnThrone_Phrase2"))
 me:destroy()
 me:getSprite():killAndErase()
 end
 
 end
+
 })
 
 

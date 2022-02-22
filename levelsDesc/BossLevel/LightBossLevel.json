@@ -28,10 +28,10 @@
    "entrance":[8,17],
    "mobs":[
 {"kind":"bosses/WarlokBoss","x":8,"y":6},
- {"kind":"LightCrystal","x":2,"y":2},
- {"kind":"LightCrystal","x":2,"y":12}, 
-{"kind":"LightCrystal","x":13,"y":2}, 
-{"kind":"LightCrystal","x":13,"y":12}
+ {"kind":"Light/LightCrystal","x":2,"y":2},
+ {"kind":"Light/LightCrystal","x":2,"y":12}, 
+{"kind":"Light/LightCrystal","x":13,"y":2}, 
+{"kind":"Light/LightCrystal","x":13,"y":12}
  ],
 "objects":[
         {

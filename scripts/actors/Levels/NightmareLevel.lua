@@ -15,6 +15,7 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
     activate = function()
+local level = RPD.Dungeon.level
 if RPD.Dungeon.depth ~= 25 then
 Ginerator.CreateLevel("NightmareLevel",true)
 for i = 1,RPD.Dungeon.level:getLength()-1 do       
@@ -28,6 +29,17 @@ end
 if not storage.get("deco") then
 storage.put("deco",true)
 for i = 1, RPD.Dungeon.level:getLength()-1 do
+if RPD.Dungeon.level.map[i] == 0 and (not level:getTopLevelObject(i)) then
+if math.random(1,10) == 1 then
+local tile =
+{
+    kind="CustomObject",
+    object_desc="NightmareChasmLight"
+}
+RPD.createLevelObject(tile,i-1)
+end
+end
+
 if RPD.Dungeon.level.map[i] == 1 and (not level:getTopLevelObject(i)) then
 if math.random(1,70) == 1 then
 local Chest =
@@ -35,7 +47,7 @@ local Chest =
     kind="CustomObject",
     object_desc= ("NightTile"..tostring(math.random(3,4)))
 }
-RPD.createLevelObject(Chest,i)
+RPD.createLevelObject(Chest,i-1)
 end
 end
 end
@@ -45,90 +57,6 @@ end
 
 if RPD.Dungeon.depth == 25 and (not storage.get("obj")) then
 storage.put("obj",true)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,63)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,48)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,64)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,49)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,65)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,66)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,50)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,51)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,68)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,53)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,69)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,54)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,70)
-local Chest =
-{
-    kind="CustomObject",
-    object_desc= ("Viewer"..tostring(math.random(1,5)))
-}
-RPD.createLevelObject(Chest,55)
 end
 return true
 end,

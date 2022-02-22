@@ -22,20 +22,12 @@ getWidth = function()
 return 7
 end,
 objects = function(cell)
-local level = RPD.Dungeon.level
-local x = level:cellX(cell)
-local y = level:cellY(cell)
-for i = x - 3, x + 3 do
-	for j = y - 3, y + 3 do
-local pos = RPD.Dungeon.level:cell(i,j)
-item = Treasury:getLevelTreasury():bestOf(Treasury.Category.WEAPON,4 )
+local item = Treasury:getLevelTreasury():bestOf(Treasury.Category.WEAPON,4 )
 RPD.Dungeon.level:drop(item,cell-1).type = RPD.Heap.Type.TOMB
 
 item = Treasury:getLevelTreasury():bestOf(Treasury.Category.ARMOR,4 )
 RPD.Dungeon.level:drop(item,cell+1).type = RPD.Heap.Type.TOMB
 
-end
-end
 end
 }
 return customRoom

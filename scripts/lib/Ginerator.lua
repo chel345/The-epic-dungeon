@@ -375,7 +375,7 @@ if getRandomCellAround(st) then
    room.printRoom(st,gin.RandRooms[math.random(1,#gin.RandRooms)])
    end
    room.Tunel(st,old)
-	return generate()
+   return generate()
 else
    if getRandomCellAround(l) then
    st = l
