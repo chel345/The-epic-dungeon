@@ -19,6 +19,7 @@ end,
 objects = function(cell)
 local W = RPD.Dungeon.level:getWidth()
 
+
 local tile =
 {
     kind="CustomObject",

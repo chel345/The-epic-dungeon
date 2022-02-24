@@ -36,18 +36,25 @@ local sp2 =
 }
 RPD.createLevelObject(sp2,p-W)
 RPD.createLevelObject(sp1,p)
-RPD.Dungeon.level:set(p-W,RPD.Terrain.STATUE_SP)
+--RPD.Dungeon.level:set(p-W,RPD.Terrain.STATUE_SP)
 end
 
 local level = RPD.Dungeon.level
 local x = level:cellX(cell)
 local y = level:cellY(cell)
-for i = x - 3, x + 4 do
-for j = y - 3, y + 4 do
+for i = x - 3, x + 3 do
+for j = y - 3, y + 3 do
 local pos = RPD.Dungeon.level:cell(i,j)
+local level = RPD.Dungeon.level
+--local object = level:getTopLevelObject(pos)
+--if object then
+--RPD.glog("L")
+--object.sprite:kill()
+---level:remove(object)
 if level.map[pos] == RPD.Terrain.STATUE_SP then
 add(pos-1)
 end
+--end
 end
 end
 
