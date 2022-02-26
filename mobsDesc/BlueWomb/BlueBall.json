@@ -20,5 +20,6 @@
   "name_objective": "BlueBall_Object",
   "scriptFile": "scripts/mobs/BlueBall",
   "spriteDesc": "spritesDesc/BlueBall_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "movable"       :false
 }

@@ -2,17 +2,16 @@
     "appearance": {
         "desc": {
             "desc": "WndInfoCell_Nothing",
-            "name": "Level_TileWall",
+            "name": "Level_TileFloor",
+            "nonPassable": false,
             "clearCells": false,
-            "nonPassable": true,
-            "losBlocker": false
+            "canStepOn": true
         },
         "sprite": {
             "imageIndex": 1,
-            "textureFile": "levelObjects/Viewers.png"
+            "textureFile": "levelObjects/SkullCharge.png"
         }
     },
     "kind": "Deco",
-    "nonPassable": true,
     "script": "CustomObject"
 }

@@ -16,37 +16,37 @@
          "y":10
         },
         {
-         "kind":"BlueBall",
+         "kind":"BlueWomb/BlueBall",
          "x":24,
          "y":10
         },
         {
-         "kind":"BlueHeart",
+         "kind":"BlueWomb/BlueHeart",
          "x":5,
          "y":25
         },
         {
-         "kind":"BlueHeart",
+         "kind":"BlueWomb/BlueHeart",
          "x":5,
          "y":15
         },
         {
-         "kind":"BlueBall",
+         "kind":"BlueWomb/BlueBall",
          "x":5,
          "y":5
         },
         {
-         "kind":"BlueBall",
+         "kind":"BlueWomb/BlueBall",
          "x":25,
          "y":5
         },
         {
-         "kind":"BlueBall",
+         "kind":"BlueWomb/BlueBall",
          "x":15,
          "y":5
         },
         {
-         "kind":"BlueBall",
+         "kind":"BlueWomb/BlueBall",
          "x":15,
          "y":25
         }

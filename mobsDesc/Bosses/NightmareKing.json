@@ -1,13 +1,13 @@
 {
-  "attackDelay": 1,
-  "attackRange": 1,
+  "attackDelay": 3,
+  "attackRange": 10,
   "attackSkill": 25,
   "baseSpeed": 1,
   "canBePet": false,
   "defenseSkill": 20,
   "description": "Grimm_Desc",
-  "dmgMax": 40,
-  "dmgMin": 30,
+  "dmgMax": 0,
+  "dmgMin": 0,
   "dr": 5,
   "exp": 40,
   "flying": false,
@@ -23,5 +23,6 @@
   "name_objective": "Grimm_Object",
   "scriptFile": "scripts/bosses/Grimm",
   "spriteDesc": "spritesDesc/Grimm_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "movable"       :false
 }

@@ -29,6 +29,15 @@ end
 if not storage.get("deco") then
 storage.put("deco",true)
 for i = 1, RPD.Dungeon.level:getLength()-1 do
+if level.map[i] == 36 and math.random(1,3) == 1 then
+local Chest =
+{
+    kind="CustomObject",
+    object_desc="YellowLamp"
+}
+RPD.createLevelObject(Chest,i-1)
+level:set(i-1,14)
+end
 if RPD.Dungeon.level.map[i] == 0 and (not level:getTopLevelObject(i)) then
 if math.random(1,10) == 1 then
 local tile =
@@ -71,7 +80,6 @@ if not storage.get("storynight") then
        storage.put("storynight",true)
 end
 end
-
 return true
 end
 })

@@ -49,7 +49,7 @@ NPCRoomHeigth = 7,
 Range = 10000,
 GinFactor = 20,
 RoomFactor = 0,
-MiniBoss = "DM50Room",
+MiniBoss = {"DM50Room"},
 LevelMiniBoss = 13
 }
 

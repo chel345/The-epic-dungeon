@@ -51,7 +51,7 @@ LevelNPC = nil,
 Range = 100000,
 GinFactor = 20,
 RoomFactor = 0,
-MiniBoss = "HugeCrabRoom",
+MiniBoss = {"SnailKing","HugeCrabRoom"},
 LevelMiniBoss = 4
 }
 if RPD.Dungeon.depth > 3 then

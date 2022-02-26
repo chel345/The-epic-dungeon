@@ -34,10 +34,12 @@ RPD.Dungeon.level:drop(item,cell+2+W*2).type = RPD.Heap.Type.TOMB
 item = Treasury:getLevelTreasury():bestOf(Treasury.Category.ARMOR,4 )
 RPD.Dungeon.level:drop(item,cell+2-W*2).type = RPD.Heap.Type.TOMB
 
+local a = math.random(1,2)
+
 local tile =
 {
     kind="CustomObject",
-    object_desc="NightTile1"
+    object_desc=("NightTile"..tostring(a))
 }
 RPD.roomsInstruments.spawnObj(1,tile,4,cell)
 local tile1 =

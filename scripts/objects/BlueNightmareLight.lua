@@ -15,5 +15,8 @@ return object.init{
         return true
     end,
     addedToScene = function(self, object)
+        local Halo = RPD.new("com.watabou.pixeldungeon.effects.Halo",14,0xffffff,0.1)
+        Halo:point(DungeonTileMap:tileCenterToWorld(object:getPos()).x,DungeonTileMap:tileCenterToWorld(object:getPos()).y-4)
+        RPD.GameScene:effect(Halo)
     end
 }

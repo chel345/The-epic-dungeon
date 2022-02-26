@@ -7,7 +7,6 @@
             "nonPassable": false,
             "canStepOn": true
         },
-        "particles": "Candle",
         "sprite": {
             "animations": {
                 "basic": {
@@ -23,5 +22,5 @@
         }
     },
     "kind": "Deco",
-    "script": "CustomObject"
+    "script": "NightmareLight"
 }

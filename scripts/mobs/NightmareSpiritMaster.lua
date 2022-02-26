@@ -9,14 +9,17 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
+local NightamreFires = require "scripts/effects/NightmareFires"
+
 return mob.init{
     zapProc = function(self, cause)
-        local level = RPD.Dungeon.level
-            --local mob = RPD.mob("NightmareBall")
-            --local pos = level:getEmptyCellNextTo(self:getPos())
-            --if (level:cellValid(pos)) then
-                --mob:setPos(pos)
-                --level:spawnMob(mob)
-           --end
+        NightamreFires.attach(self:getPos(),cause:getPos(),1)
+    end,
+    die = function(self)
+        local w = RPD.Dungeon.level:getWidth()
+        NightamreFires.attach(self:getPos(),self:getPos()-2,2)
+        NightamreFires.attach(self:getPos(),self:getPos()-w*2-1,2)
+        NightamreFires.attach(self:getPos(),self:getPos()+w*2+1,2)
+        NightamreFires.attach(self:getPos(),self:getPos()+2,2)
     end
 }

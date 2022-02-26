@@ -48,7 +48,7 @@ NPCRoomHeigth = 9,
 Range = 10000,
 GinFactor = 20,
 RoomFactor = 0,
-MiniBoss = "RatcatcherRoom",
+MiniBoss = {"RatcatcherRoom"},
 LevelMiniBoss = 7
 }
 

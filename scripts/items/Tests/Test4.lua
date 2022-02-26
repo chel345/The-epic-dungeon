@@ -73,6 +73,10 @@ missile:size(4);
 --LightRay.ray(RPD.Dungeon.hero:getPos(),cell)
 NightamreFires.attach(RPD.Dungeon.hero:getPos(),cell,20)
 RPD.glog(RPD.Dungeon.level.map[cell])
+local object = RPD.Dungeon.level:getTopLevelObject(cell)
+if object then
+RPD.glog(object:getEntityKind())
+end
         end
 if action == "action2" then
 RPD.glog(tostring(cell))

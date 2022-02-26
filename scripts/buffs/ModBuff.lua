@@ -60,21 +60,6 @@ cry = nil
 end, 
 
     charAct = function(self,buff)
-if not storage.get("Crystal") then
-storage.put("Crystal",true)
-for i = 1,RPD.Dungeon.level:getLength()-1 do  
-local maybeMob = RPD.Actor:findChar(i)         
-if maybeMob and maybeMob  ~= RPD.Dungeon.hero and maybeMob:getMobClassName() == "Crystal" then
-maybeMob:destroy() 
-maybeMob:getSprite():killAndErase()
-CrystalMod:setPos(i)
-local CrystalMod = RPD.mob("CrystalMod")
-
-RPD.Dungeon.level:spawnMob(CrystalMod)
-end
-end
-end
-
 EPD.time = EPD.time + 1
 if EPD.time % 8 == 0 then
 RPD.Dungeon.hero:spendSkillPoints(-1)
