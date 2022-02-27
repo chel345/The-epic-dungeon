@@ -12,7 +12,7 @@
    "multiexit":[[3,4],[11,5],[7,10]],
    "mobs":[
 {"kind":"Goo","x":3,"y":5},
-{"kind":"RatKing","x":9,"y":4}
+{"kind":"Sewer/SuprimeRat","x":9,"y":4}
 ]
 
 }

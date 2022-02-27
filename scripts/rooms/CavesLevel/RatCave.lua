@@ -31,7 +31,7 @@ RPD.Dungeon.level:drop(item,cell)
 local candle =
 {
     kind="CustomObject",
-    object_desc="Candle"
+    object_desc="RatCandle"
 }
 RPD.createLevelObject(candle, cell-1)
 RPD.createLevelObject(candle, cell+1)

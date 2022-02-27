@@ -27,7 +27,7 @@ mob:setPos(cell+W-1)
 level:spawnMob(mob);
 local mob = RPD.mob("Statue")
 local level = RPD.Dungeon.level
-mob:setPos(cell+W+1)
+mob:setPos(cell+W*2+1)
 level:spawnMob(mob);
 local mob = RPD.mob("ArmoredStatue")
 local level = RPD.Dungeon.level

@@ -49,7 +49,7 @@ NPCRoomHeigth = 7,
 Range = 10000,
 GinFactor = 20,
 RoomFactor = 0,
-MiniBoss = "StatueOfDemonRoom",
+MiniBoss = {"StatueOfDemonRoom"},
 LevelMiniBoss = 29
 }
 

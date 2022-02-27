@@ -12,6 +12,8 @@ local actor = require "scripts/lib/actor"
 
 local storage = require "scripts/lib/storage"
 
+local DungeonTileMap = luajava.bindClass("com.watabou.pixeldungeon.DungeonTilemap")
+
 return actor.init({
 activate = function()
 if RPD.Dungeon.depth == 31 then
@@ -63,12 +65,35 @@ RPD.Dungeon.level:drop(RPD.item("Tears/TearsWand"),130).type = RPD.Heap.Type.LOC
 storage.put("tears",true)
 end
 
-RPD.GameScene:particleEffect("Candle", 123)
-RPD.GameScene:particleEffect("Candle", 183)
-RPD.GameScene:particleEffect("Candle", 127)
-RPD.GameScene:particleEffect("Candle", 187)
-RPD.GameScene:particleEffect("Candle", 191)
-RPD.GameScene:particleEffect("Candle", 131)
+local cell = 123
+local Halo = RPD.new("com.watabou.pixeldungeon.effects.Halo",14,0xffffff,0.1)
+Halo:point(DungeonTileMap:tileCenterToWorld(cell).x,DungeonTileMap:tileCenterToWorld(cell).y-4)
+RPD.GameScene:effect(Halo)
+
+local cell = 183
+local Halo = RPD.new("com.watabou.pixeldungeon.effects.Halo",14,0xffffff,0.1)
+Halo:point(DungeonTileMap:tileCenterToWorld(cell).x,DungeonTileMap:tileCenterToWorld(cell).y-4)
+RPD.GameScene:effect(Halo)
+
+local cell = 127
+local Halo = RPD.new("com.watabou.pixeldungeon.effects.Halo",14,0xffffff,0.1)
+Halo:point(DungeonTileMap:tileCenterToWorld(cell).x,DungeonTileMap:tileCenterToWorld(cell).y-4)
+RPD.GameScene:effect(Halo)
+
+local cell = 187
+local Halo = RPD.new("com.watabou.pixeldungeon.effects.Halo",14,0xffffff,0.1)
+Halo:point(DungeonTileMap:tileCenterToWorld(cell).x,DungeonTileMap:tileCenterToWorld(cell).y-4)
+RPD.GameScene:effect(Halo)
+
+local cell = 191
+local Halo = RPD.new("com.watabou.pixeldungeon.effects.Halo",14,0xffffff,0.1)
+Halo:point(DungeonTileMap:tileCenterToWorld(cell).x,DungeonTileMap:tileCenterToWorld(cell).y-4)
+RPD.GameScene:effect(Halo)
+
+local cell = 131
+local Halo = RPD.new("com.watabou.pixeldungeon.effects.Halo",14,0xffffff,0.1)
+Halo:point(DungeonTileMap:tileCenterToWorld(cell).x,DungeonTileMap:tileCenterToWorld(cell).y-4)
+RPD.GameScene:effect(Halo)
 
 end
 if RPD.Dungeon.depth == 35 then

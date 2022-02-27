@@ -14,8 +14,10 @@ RPD.ModdingMode = luajava.bindClass("com.nyrds.util.ModdingMode")
 
 local functions = {}
 
-RPD.addFunction = function(f)
-	table.insert(functions, {f = f, n = 1})
+RPD.addFunction = function(h)
+    if h then
+	    table.insert(functions, {f = h, n = 1})
+	end
 end
 
 RPD.runFunctions = function()

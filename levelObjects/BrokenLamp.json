@@ -1,0 +1,17 @@
+{
+    "kind": "CustomObject",
+    "script": "BrokenLamp",
+    "appearance": {
+        "desc": {
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileWall",
+            "clearCells": false,
+            "nonPassable": false,
+            "canStepOn": true
+        },
+        "sprite": {
+            "textureFile": "levelObjects/BrokenLamp.png",
+            "imageIndex": 0
+        }
+    }
+}

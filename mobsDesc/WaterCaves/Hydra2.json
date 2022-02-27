@@ -18,7 +18,6 @@
   "maxLvl": 21,
   "name": "Hydra_Name",
   "name_objective": "Hydra_Object",
-  "scriptFile": "scripts/mobs/Hydra",
   "spriteDesc": "spritesDesc/Hydra_Desc.json",
   "walkingType": "NORMAL"
 }

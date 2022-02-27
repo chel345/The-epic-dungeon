@@ -22,6 +22,9 @@ spawner = spawner or false
 if not storage.get("key") then
 script = loadfile("levelsGinerators/"..file..".lua")
 gin = script()
+if gin.MiniBoss then
+gin.MiniBoss = gin.MiniBoss[math.random(1,#gin.MiniBoss)]
+end
 for i = 1, RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.ENTRANCE then
 RPD.Dungeon.hero:move(i-1)

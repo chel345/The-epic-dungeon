@@ -7,7 +7,7 @@ local Treasury = luajava.bindClass("com.nyrds.pixeldungeon.items.Treasury")
 local customRoom = {
 map = function()
 return {
-41, 41, 41, 41, 41, 41, 41, 41, 41, 5, 1, 1, 1, 1, 1, 1, 1, 41, 41, 1, 36, 41, 5, 41, 36, 1, 41, 41, 1, 41, 0, 0, 0, 41, 1, 41, 41, 1, 5, 0, 11, 0, 5, 1, 41, 41, 1, 41, 0, 0, 0, 41, 1, 41, 41, 1, 36, 41, 5, 41, 36, 1, 41, 41, 1, 1, 1, 1, 1, 1, 1, 5, 41, 41, 41, 41, 41, 41, 41, 41, 41
+41, 41, 41, 41, 41, 41, 41, 41, 41, 5, 1, 1, 1, 1, 1, 1, 1, 41, 41, 1, 14, 41, 5, 41, 14, 1, 41, 41, 1, 41, 0, 0, 0, 41, 1, 41, 41, 1, 5, 0, 11, 0, 5, 1, 41, 41, 1, 41, 0, 0, 0, 41, 1, 41, 41, 1, 14, 41, 5, 41, 14, 1, 41, 41, 1, 1, 1, 1, 1, 1, 1, 5, 41, 41, 41, 41, 41, 41, 41, 41, 41
 }
 end,
 getHidth = function()
@@ -28,6 +28,13 @@ local mob = RPD.mob("CrystalMod")
 mob:setPos(cell)
 RPD.Dungeon.level:spawnMob(mob)
 
+local tile =
+{
+    kind="CustomObject",
+    object_desc="YellowLamp"
+}
+
+RPD.roomsInstruments.spawnObj(14,tile,4,cell)
 end,
 locked = function()
 return nil

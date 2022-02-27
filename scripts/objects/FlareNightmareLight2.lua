@@ -15,8 +15,13 @@ return object.init{
         return true
     end,
     addedToScene = function(self, object)
-        local Halo = RPD.new("com.watabou.pixeldungeon.effects.Halo",14,0xffffff,0.1)
-        Halo:point(DungeonTileMap:tileCenterToWorld(object:getPos()).x,DungeonTileMap:tileCenterToWorld(object:getPos()).y-4)
-        RPD.GameScene:effect(Halo)
+        local Flare = RPD.new("com.watabou.pixeldungeon.effects.Flare",5,6):color(0xff0000,true)
+        local Vis = RPD.new("com.watabou.noosa.Visual",DungeonTileMap:tileCenterToWorld(object:getPos()).x+2,DungeonTileMap:tileCenterToWorld(object:getPos()).y-2,1,1)
+        local Gr = RPD.new("com.watabou.noosa.Group")
+        Vis:setParent(Gr)
+        Flare:show(Vis,0f)
+        --Flare:point(DungeonTileMap:tileCenterToWorld(object:getPos()).x+3000,DungeonTileMap:tileCenterToWorld(object:getPos()).y-4)
+        --RPD.Dungeon.hero:getSprite():getParent():addToBack(Flare)
+        RPD.GameScene:effect(Flare)
     end
 }

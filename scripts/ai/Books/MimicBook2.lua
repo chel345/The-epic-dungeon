@@ -116,6 +116,6 @@ end,
     end,
 
     status = function(self, ai, me)
-        return "охотится на тебя"
+        return RPD.StringsManager:maybeId("attack_on_you")
     end
 }

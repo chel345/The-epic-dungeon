@@ -20,5 +20,6 @@
   "name_objective": "GooBall_Object",
   "scriptFile": "scripts/mobs/GooBall",
   "spriteDesc": "spritesDesc/GooBall_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "movable"       :false
 }

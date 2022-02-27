@@ -13,6 +13,5 @@
         }
     },
     "kind": "Deco",
-    "particles": "Candle",
-    "script": "CustomObject"
+    "script": "NightmareLight"
 }

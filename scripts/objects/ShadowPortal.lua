@@ -11,6 +11,9 @@ local object = require "scripts/lib/object"
 local DungeonTileMap = luajava.bindClass("com.watabou.pixeldungeon.DungeonTilemap")
 
 return object.init{
+    getLayer = function()
+    return 0
+    end,
     stepOn = function(self, object, hero)
         return true
     end,

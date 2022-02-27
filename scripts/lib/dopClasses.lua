@@ -275,7 +275,7 @@ elseif wand == "SummonerWand" then
 RPD.playSound( "snd_meld.mp3" )
 local levele = RPD.Dungeon.level
 for i = 1,2+level do
-local mobb = RPD.mob("Bee")
+local mobb = RPD.mob("BeeBad")
 local pos = levele:getEmptyCellNextTo(mob:getPos())
 if (levele:cellValid(pos)) then
 mobb:setPos(pos)
