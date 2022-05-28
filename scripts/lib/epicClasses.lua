@@ -15,19 +15,38 @@ RPD.ModdingMode = luajava.bindClass("com.nyrds.util.ModdingMode")
 local functions = {}
 
 RPD.addFunction = function(h)
-    if h then
-	    table.insert(functions, {f = h, n = 1})
+	if h then
+		table.insert(functions, {f = h, n = 1})
 	end
 end
 
 RPD.runFunctions = function()
+	--RPD.glog(string.format("RPD.runFunctions start"))
 	for k, entry in pairs(functions) do
-		if not entry.f(entry.n) then
-			functions[k] = nil
+		local res, ret = pcall(entry.f, entry.n)
+
+		if not res then
+			RPD.glog(string.format("function failed %s", ret))
+		else
+			if not ret then
+				functions[k] = nil
+			end
 		end
+
 		entry.n = entry.n + 1
 	end
+	--RPD.glog(string.format("RPD.runFunctions end"))
 end
+
+RPD.addFunction( function(n)
+	if n % 100 == 0 then
+		RPD.glog(string.format("tick %d",n))
+		if n % 1000 == 0 then
+			error("Wild bug appears!")
+		end
+	end
+	return true
+end)
 
 RPD.mob = function(strMob)
 	for _,i in pairs(Indicator()) do
@@ -40,11 +59,11 @@ end
 
 RPD.resetPos = function(mob,chr)
 	local ownPos  = mob:getPos()
-    local newPos  = chr:getPos()
-    mob:move(newPos)
-    mob:getSprite():move(ownPos, newPos)
-    chr:move(ownPos)
-    chr:getSprite():move(newPos, ownPos)
+	local newPos  = chr:getPos()
+	mob:move(newPos)
+	mob:getSprite():move(ownPos, newPos)
+	chr:move(ownPos)
+	chr:getSprite():move(newPos, ownPos)
 end
 
 RPD.neutralMob = function()
@@ -63,34 +82,34 @@ RPD.getMobs = function(level)
 end
 
 RPD.roomsInstruments = {
-spawnObj = function(tile,obj,radius,cell)
-local level = RPD.Dungeon.level
-local x = level:cellX(cell+1)
-local y = level:cellY(cell+1)
-for o = x - radius, x + radius do
-for k = y - radius, y + radius do
-local pos = RPD.Dungeon.level:cell(o,k)
-if level.map[pos] == tile then
-RPD.createLevelObject(obj,pos-1)
-end
-end
-end
-end,
-spawnIt = function(tile,item,radius,cell)
-local level = RPD.Dungeon.level
-local cells = {0}
-local x = level:cellX(cell)
-local y = level:cellY(cell)
-for o = x - radius, x + radius do
-for k = y - radius, y + radius do
-local pos = RPD.Dungeon.level:cell(o,k)
-if level.map[pos] == tile then
-cells[#cells+1]=pos
-end
-end
-end
-level:drop(item,cells[math.random(1,#cells)])
-end
+	spawnObj = function(tile,obj,radius,cell)
+		local level = RPD.Dungeon.level
+		local x = level:cellX(cell+1)
+		local y = level:cellY(cell+1)
+		for o = x - radius, x + radius do
+			for k = y - radius, y + radius do
+				local pos = RPD.Dungeon.level:cell(o,k)
+				if level.map[pos] == tile then
+					RPD.createLevelObject(obj,pos-1)
+				end
+			end
+		end
+	end,
+	spawnIt = function(tile,item,radius,cell)
+		local level = RPD.Dungeon.level
+		local cells = {0}
+		local x = level:cellX(cell)
+		local y = level:cellY(cell)
+		for o = x - radius, x + radius do
+			for k = y - radius, y + radius do
+				local pos = RPD.Dungeon.level:cell(o,k)
+				if level.map[pos] == tile then
+					cells[#cells+1]=pos
+				end
+			end
+		end
+		level:drop(item,cells[math.random(1,#cells)])
+	end
 }
 
 return RPD
