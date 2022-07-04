@@ -15,17 +15,18 @@ local LightRay = {
 
         image.origin:set(0, image.height / 2)
 
-        image.x = s.x - image.origin.x
-        image.y = s.y - image.origin.y-2
+        image:setPos(s.x - image.origin.x,s.y - image.origin.y-2)
 
         local dx = e.x - s.x
         local dy = e.y - s.y
 
         image.angle = math.atan2(dy, dx) * A
-        image:setScale(math.sqrt(dx * dx + dy * dy) / image.width, 0.3)
+        image:setScaleX(math.sqrt(dx * dx + dy * dy) / image.width)
+        image:setScaleY(0.3)
 
         local function update(n)
-            image:setScale(math.sqrt(dx * dx + dy * dy) / image.width, n / 45)
+            image:setScaleX(math.sqrt(dx * dx + dy * dy) / image.width)
+            image:setScaleY(n/45)
             if n % 15 == 0 then
                 image:killAndErase()
                 return false

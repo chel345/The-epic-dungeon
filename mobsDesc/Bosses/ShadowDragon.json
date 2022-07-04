@@ -23,5 +23,9 @@
   "name_objective": "ShadowDrag_Object",
   "scriptFile": "scripts/bosses/ShadowDragon",
   "spriteDesc": "spritesDesc/ShadowDragon_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+   "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

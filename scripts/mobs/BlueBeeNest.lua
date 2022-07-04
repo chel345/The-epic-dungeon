@@ -9,13 +9,7 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init{
-    interact = function(self, chr)
-    	RPD.resetPos(self,chr)
-    end,
-act       = function(me, ai)
-
-summonBee = function()
+local summonBee = function(me)
 local level = RPD.Dungeon.level
 local hero = RPD.Dungeon.hero
 local mob = RPD.mob("BlueBee")
@@ -26,14 +20,15 @@ level:spawnMob(mob,0,me:getPos())
 end
 end
 
+return mob.init{
+    interact = function(self, chr)
+    	RPD.resetPos(self,chr)
+    end,
+act       = function(me)
 me:spend(math.random(10,20))
-summonBee()
-
+summonBee(me)
 end,
 die = function(self, cell, dmg)
 RPD.topEffect(self:getPos(),"BlueMagicCould")
-end,
-damage = function(me, level)
-RPD.setAi(me,"BlueBeeNest")
 end
 }

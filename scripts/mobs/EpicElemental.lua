@@ -14,7 +14,7 @@ return mob.init({
         self:immunities():add(RPD.Blobs.Fire)
     end,
     move = function(self, cell)
-        RPD.placeBlob( RPD.Blobs.Fire, self:getPos(), 10 );
+        RPD.placeBlob( RPD.Blobs.Fire, self:getPos(), 10 )
     end
 })
 

@@ -10,18 +10,17 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-    attackProc = function(me, level)
-        RPD.playSound( "TentacleAttack.ogg" )
-    end,
-    die = function(self,enemy,dmg)
-        RPD.playSound( "TentacleAttack.ogg" )
-for i = 1, RPD.Dungeon.level:getLength()-1 do
+attackProc = function(self, enemy, dmg)
+RPD.playSound( "TentacleAttack.ogg" )
+return dmg
+end,
+die = function(self,enemy,dmg)
+RPD.playSound( "TentacleAttack.ogg" )
+for i = 0, RPD.Dungeon.level:getLength()-1 do
 local maybeMob = RPD.Actor:findChar(i)          
-if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:ht() == 3500 then
+if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() == "Bosses/Monstro" then
 maybeMob:damage(100,RPD.Dungeon.hero)
 end
 end
-RPD.playSound( "TentacleAttack.ogg" )
 end
-
 }

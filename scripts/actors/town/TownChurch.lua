@@ -22,7 +22,13 @@ RPD.GameScene:particleEffect("Candle", 314);
             if RPD.Dungeon.level.map[i] == RPD.Terrain.EMPTY and math.random(1,5) == 1 then
                 local emitter = RPD.Sfx.CellEmitter:get(i-1)
                 emitter:pour(RPD.Sfx.WindParticle.FACTORY, 16)
-            end
+                local levelSize = RPD.Dungeon.level:getLength()
+              end
+              local mob = RPD.Actor:findChar(i)
+  if mob then
+  mob:getSprite():tint(0,0,0,0.3)
+  end
+
         end
 
     end

@@ -21,7 +21,7 @@ it = item
             name      = RPD.StringsManager:maybeId("TearsSword_Name"),
             info      = RPD.StringsManager:maybeId("TearsSword_Info"),
             stackable = false,
-            price     = 10000,
+            price     = 0,
             upgradable = true,
             equipable = "weapon"
         }
@@ -42,7 +42,7 @@ end
 return 0
 end,
 attackProc = function(self,item,hero,enemy,dmg)
-if dmg >= item:level()*20+1.5 then
+if dmg >= item:level()*20+1 then
 item:level(item:level()+1)
 else
 item:level(item:level()-1)

@@ -1,6 +1,6 @@
 {
   "texture" : "effects/DarckShot.png",
-  "width"  : 13,
-  "height" : 15,
+  "width"  : 16,
+  "height" : 16,
   "anim"   : { "fps" : 3,  "looped" : true,    "frames" : [0] }
 }

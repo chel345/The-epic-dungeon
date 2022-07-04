@@ -37,7 +37,7 @@ RPD.runFunctions = function()
 	end
 	--RPD.glog(string.format("RPD.runFunctions end"))
 end
-
+--[[
 RPD.addFunction( function(n)
 	if n % 100 == 0 then
 		RPD.glog(string.format("tick %d",n))
@@ -47,7 +47,7 @@ RPD.addFunction( function(n)
 	end
 	return true
 end)
-
+--]]
 RPD.mob = function(strMob)
 	for _,i in pairs(Indicator()) do
 		if RPD.ModdingMode:isResourceExistInMod("mobsDesc/"..i.."/"..strMob..".json") then

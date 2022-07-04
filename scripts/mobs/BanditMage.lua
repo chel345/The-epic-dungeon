@@ -10,8 +10,13 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-    zapProc = function(self,enemy,dmg)
-    local Wand = RPD.creteItem("WandOfMagicMissile", {level = 12})
-    Wand:mobWandUse(self,enemy:getPos())
+zapProc = function(self,enemy,dmg)
+local Wand = RPD.creteItem("WandOfMagicMissile", {level = 12})
+Wand:mobWandUse(self,enemy:getPos())
+return dmg*0
+end,
+zapMiss = function(self, enemy)
+local Wand = RPD.creteItem("WandOfMagicMissile", {level = 12})
+Wand:mobWandUse(self,enemy:getPos())
 end
 }

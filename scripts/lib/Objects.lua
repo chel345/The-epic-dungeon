@@ -17,7 +17,7 @@ local bottom =
 RPD.createLevelObject(bottom,cell)
 end,
 addTiles = function(cell,empty,wall,wall_deco,x_,y_)
-if empty ~= nil then
+if empty then
 
 Object =
 {
@@ -37,7 +37,7 @@ end
 end
 
 end
-if wall ~= nil then
+if wall then
 
 Object =
 {
@@ -54,7 +54,7 @@ end
 end
 
 end
-if wall_deco ~= nil then
+if wall_deco then
 
 Object =
 {

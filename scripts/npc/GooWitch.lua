@@ -14,18 +14,6 @@ local storage = require "scripts/lib/storage"
 local mob = require"scripts/lib/mob"
 
 return mob.init({
-spawn = function(self)
-local level = RPD.Dungeon.level
-local W = level:getWidth()
-cell = math.random(1,level:getLength()-1)
-while level.map[cell] ~= RPD.Terrain.EMPTY and cell ~= self:getPos() do
-cell = math.random(1,level:getLength()-1)
-end
-local mob = RPD.mob("MirrorWorm")
-local level = RPD.Dungeon.level
-mob:setPos(cell)
-level:spawnMob(mob)
-end,
 interact = function(self, chr)
 if not storage.get("interact") then
 EPD.showQuestWindow(self, RPD.StringsManager:maybeId("GooWitch_Phrase1"))

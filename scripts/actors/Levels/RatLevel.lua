@@ -19,10 +19,12 @@ activate = function()
 if RPD.Dungeon.depth ~= 10 then
 Ginerator.CreateLevel("RatLevel",true)
 end
+--[[
 if not storage.get("Deco") then
 storage.put("Deco")
 RPD.Dungeon.level:set(RPD.Dungeon.hero:getPos(),RPD.Terrain.ENTRANCE)
 end
+--]]
 for i = 1,RPD.Dungeon.level:getLength()-2 do           
 local maybeMob = RPD.Actor:findChar(i)          
 if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() ==  "Shopkeeper" then

@@ -9,8 +9,7 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init{
-zapProc = function(me,enemy,dmg)
+local function zapEffect(me,enemy)
 local mob = RPD.mob("effects/Boll") 
 mob:setPos(me:getPos())
 RPD.Dungeon.level:spawnMob(mob)
@@ -25,7 +24,14 @@ mob:getSprite():emitter():start(RPD.Sfx.ShadowParticle.UP, 0.01,factor*10)
 
 mob:destroy()
 RPD.playSound( "snd_zap.mp3" )
-return dmg
 end
 
+return mob.init{
+zapMiss = function(me,enemy)
+zapEffect(me,enemy)
+end,
+zapProc = function(self, enemy, dmg)
+zapEffect(self,enemy)
+return dmg
+end
 }

@@ -40,13 +40,13 @@ local Keg =
     object_desc="Keg"
 }
 RPD.createLevelObject(Keg, cell-W*2-2)
-local Shest =
+local Chest =
 {
     kind="CustomObject",
-    object_desc="Shest1"
+    object_desc="Chest"
 }
-RPD.createLevelObject(Shest, cell-W*2-1)
-RPD.createLevelObject(Shest, cell-W*2)
+RPD.createLevelObject(Chest, cell-W*2-1)
+RPD.createLevelObject(Chest, cell-W*2)
 
 end,
 locked = function()

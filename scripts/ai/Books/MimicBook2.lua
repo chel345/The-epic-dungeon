@@ -14,7 +14,7 @@ act       = function(self, ai, me)
 me:getSprite():idle()
 if RPD.Dungeon.level:distance(RPD.Dungeon.hero:getPos(),me:getPos()) < 5 then
 
-top = function(from,to)
+local top = function(from,to)
 local mob = RPD.mob("effects/Boll") 
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
@@ -24,7 +24,7 @@ mob:getSprite():emitter():start(RPD.Sfx.ElmoParticle.FACTORY, 0.01,factor*10+1)
 mob:destroy()
 end
 
-bottom = function(from,to)
+local bottom = function(from,to)
 local mob = RPD.mob("effects/Boll") 
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
@@ -34,14 +34,14 @@ mob:getSprite():emitter():start(RPD.Sfx.ElmoParticle.FACTORY, 0.01,factor*10+1)
 mob:destroy()
 end
 
-center = function(from,to)
+local center = function(from,to)
 missile = me:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
 missile:reset( from,to,nil)
 missile:size(8)
 missile:pour( RPD.Sfx.ElmoParticle.FACTORY, 0.01)
 end
 
-effect = function(from,to)
+local effect = function(from,to)
 if math.random(1,2) == 1 then
 top(from,to)
 elseif math.random(1,2) == 1 then
@@ -51,7 +51,7 @@ bottom(from,to)
 end
 end
 
-removeObj = function(cell)
+local removeObj = function(cell)
 local level = RPD.Dungeon.level
 local object = level:getTopLevelObject(cell)
 if object then
@@ -60,14 +60,14 @@ object.sprite:kill()
 end
 end
 
-addStatue = function(cell)
+local addStatue = function(cell)
 local maybeMob = RPD.mob("SumStatue")
 maybeMob:setPos(cell)
 RPD.Dungeon.level:spawnMob(maybeMob)
 maybeMob:getSprite():emitter():burst( RPD.Sfx.ElmoParticle.FACTORY, 5)
 end
 
-summon = function(cell)
+local summon = function(cell)
 local from = me:getPos()
 local to = RPD.Ballistica:cast(from,cell,true,true,true)
 local enemy = RPD.Actor:findChar(to)

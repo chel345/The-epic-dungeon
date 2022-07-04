@@ -17,7 +17,7 @@
   "lootChance": 0.1,
   "maxLvl": 0,
   "name": "Piranha_Name",
-  "name_objective": "Piranha_Object",
+  "name_objective": "Piranha_Name_Objective",
   "scriptFile": "scripts/mobs/Piranha",
   "spriteDesc": "spritesDesc/Piranha_Desc.json",
   "walkingType": "WATER"

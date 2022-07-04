@@ -62,11 +62,16 @@ end
 if not storage.get("Deco") then
 storage.put("Deco")
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-if RPD.Dungeon.level.map[i] == 4 then
-if RPD.Dungeon.level.water[i+32] then
+if RPD.Dungeon.level.map[i] == 4 and RPD.Dungeon.level.water[i+32] then
 RPD.Dungeon.level:set(i-1,RPD.Terrain.WALL_DECO)
 RPD.GameScene:updateMap(i-1)
 end
+if math.random(1,25) == 1 and RPD.Dungeon.depth == 4 and RPD.Dungeon.level.map[i] == 4 and RPD.Dungeon.level.map[i+32] ~= 4 then
+local deco = {
+kind = "Deco",
+object_desc = "RatEyes"
+}
+RPD.createLevelObject(deco,i-1)
 end
 end
 end

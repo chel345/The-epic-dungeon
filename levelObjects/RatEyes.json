@@ -1,0 +1,26 @@
+{
+    "appearance": {
+        "desc": {
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileFloor",
+            "clearCells": false,
+            "nonPassable": false,
+            "canStepOn": true
+        },
+        "sprite": {
+            "animations": {
+                "basic": {
+                    "fps": 5,
+                    "frames": [
+                    0,0,0,0,0,0,1
+                    ],
+                    "looped": true
+                }
+            },
+            "imageIndex": 0,
+            "textureFile": "levelObjects/RatEyes.png"
+        }
+    },
+    "kind": "Deco",
+    "script": "CustomObject"
+}

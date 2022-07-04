@@ -11,7 +11,7 @@ local room = {
         local map  = CustomRoom.map()
         num        = 1
         for i = math.floor(Hr / 2 * (-1)), math.floor(Hr / 2) do
-            Ccell = cell + w * (i + 1)
+            local Ccell = cell + w * (i + 1)
             for j = Ccell - math.floor(Wr / 2), Ccell + math.floor(Wr / 2) do
                 if num > Hr * Wr then
                     if CustomRoom.objects ~= nil then CustomRoom.objects(cell) end
@@ -208,112 +208,90 @@ end
         end
 
     end,
-    Tunel      = function(from, cell)
+Tunel      = function(from, cell)
+local level  = RPD.Dungeon.level
+local w      =  level:getWidth()
 
-        level  = RPD.Dungeon.level
-        a      = from
-        w      = level:getWidth()
-        a_y    = level:cellY(a)
-        cell_y = level:cellY(cell)
-        a_x    = level:cellX(a)
-        cell_x = level:cellX(cell)
+local set    = function(p,k)
+local pos = p
+local level  = RPD.Dungeon.level
 
-        set    = function(pos)
-            if level:cellY(pos - 1) == 0 then
-                pos = pos + 1
-            end
+--RPD.glog(tostring(pos).." - ")
+pos = p + k
+--RPD.glog(tostring(pos))
+--[[
+if level.map[pos] == RPD.Terrain.WALL then
+level:set(p, RPD.Terrain.EMPTY)
+RPD.bottomEffect(p,"Debag")
+end
+--]]
 
-            if level.map[pos] == RPD.Terrain.CHASM then
-                if level.map[pos] == RPD.Terrain.PEDESTAL and pos ~= cell then
-                    level:set(pos - 1, RPD.Terrain.EMPTY_SP)
-                end
-                if level.map[cell] ~= 0 then
-                    level:set(pos - 1, RPD.Terrain.EMPTY_SP)
-                end
-            end
+local object = level:getTopLevelObject(p)
+if object and level.map[pos] ~= RPD.Terrain.STATUE_SP and level.map[pos] ~= RPD.Terrain.LOCKED_DOOR and level.map[pos] ~= RPD.Terrain.EMBERS then
+level:remove(object)
+object.sprite:kill()
+end
 
-            if level.map[pos] == RPD.Terrain.BARRICADE then
-                level:set(pos - 1, RPD.Terrain.EMPTY)
-            end
+if level.map[pos] == RPD.Terrain.PEDESTAL then
+level:set(p, RPD.Terrain.EMPTY_SP)
+elseif level.map[pos] == 0 then
+level:set(p, RPD.Terrain.EMPTY_SP)
+elseif level.map[pos] == RPD.Terrain.BARRICADE then
+level:set(p, RPD.Terrain.EMPTY)
+elseif level.map[pos] == RPD.Terrain.WALL then
+level:set(p, RPD.Terrain.EMPTY)
+elseif level.map[pos] == RPD.Terrain.WALL_DECO then
+level:set(p, RPD.Terrain.EMPTY)
+elseif level.map[pos] == RPD.Terrain.BOOKSHELF then
+level:set(p, RPD.Terrain.EMPTY)
+elseif level.map[pos] == RPD.Terrain.STATUE_SP then
+level:set(p, level.map[cell])
+elseif level.map[pos] == RPD.Terrain.STATUE then
+level:set(p, level.map[cell])
+end
 
-            --RPD.topEffect(pos, "Debag_forever")
 
+end
 
-            if level.map[pos] == 0 then
-                level:set(pos - 1, RPD.Terrain.EMPTY_SP)
-            end
+local to_y = level:cellY(cell)
+local to_x = level:cellX(cell)
+local variant = math.random(1,2)
+local function create(now)
+if now == cell then
+return
+end
+local from_y    = level:cellY(now)
+local from_x    = level:cellX(now)
+local g = 0
 
-            if level.map[pos] == RPD.Terrain.WALL or level.map[pos] == 25 then
-                level:set(pos - 1, RPD.Terrain.EMPTY)
-            end
+if from_y ~= to_y then
+if from_y > to_y then
+f = -w
+else
+f = w
+end
+end
 
-            if level.map[pos] == RPD.Terrain.WALL_DECO then
-                local object = level:getTopLevelObject(pos - 1)
-                if object then
-                    level:remove(object)
-                end
-                level:set(pos - 1, RPD.Terrain.EMPTY)
-            end
+if from_x ~= to_x then
+if from_x > to_x then
+f = -1
+g = 1
+else
+f = 1
+g = 1
+end
+end
 
-            if level.map[pos] == RPD.Terrain.BOOKSHELF then
-                level:set(pos - 1, RPD.Terrain.EMPTY)
-            end
-            if level.map[pos] == RPD.Terrain.STATUE_SP then
-                level:set(pos - 1, level.map[cell])
-            end
-            if level.map[pos] == RPD.Terrain.STATUE then
-                level:set(pos - 1, level.map[cell])
-            end
+set(now+f,g)
 
-            local object = level:getTopLevelObject(pos - 1)
-            if object and level.map[pos - 1] ~= RPD.Terrain.STATUE_SP and level.map[pos - 1] ~= RPD.Terrain.LOCKED_DOOR and level.map[pos] ~= RPD.Terrain.EMBERS then
-                level:remove(object)
-                object.sprite:kill()
-            end
+return create(now+f)
+end
 
-        end
-
-        while a ~= cell do
-            --for i = 1, 100 do
-            if cell_x ~= a_x then
-                if cell_x > a_x then
-                    set(a)
-                    a   = a + 1
-                    a_y = level:cellY(a)
-                    a_x = level:cellX(a)
-                    set(a)
-                end
-                if cell_x < a_x then
-                    set(a)
-                    a   = a - 1
-                    a_y = level:cellY(a)
-                    a_x = level:cellX(a)
-                    set(a)
-                end
-            end
-            if cell_x == a_x then
-                if cell_y ~= a_y then
-                    if cell_y > a_y then
-                        set(a)
-                        a   = a + w
-                        a_y = level:cellY(a)
-                        a_x = level:cellX(a)
-                        set(a)
-
-                    end
-                    if cell_y < a_y then
-                        set(a)
-                        a   = a - w
-                        a_y = level:cellY(a)
-                        a_x = level:cellX(a)
-                        set(a)
-
-                    end
-                end
-            end
-        end
-
-    end,
+create(from,0)
+set(from,0)
+set(cell,0)
+set(level:cell(level:cellX(cell),level:cellY(from)),0)
+end,
 
     Correct    = function()
         local level = RPD.Dungeon.level

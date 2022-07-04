@@ -12,12 +12,14 @@ local mob = require"scripts/lib/mob"
 local LightRay = require "scripts/effects/LightRay"
 
 return mob.init{
-    zapProc = function(self, enemy, dmg) -- ranged attack
-        LightRay.ray(self:getPos(),enemy:getPos())
-        RPD.affectBuff(enemy, RPD.Buffs.Light , math.random(0,1))
-        RPD.affectBuff(enemy, RPD.Buffs.Vertigo , math.random(0,1))
-        enemy:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.UP, 8 )
-        --RPD.zapEffect(self:getPos(), enemy:getPos(), "DeathRay")
-        return dmg
-    end
+zapProc = function(self, enemy, dmg)
+LightRay.ray(self:getPos(),enemy:getPos())
+RPD.affectBuff(enemy, RPD.Buffs.Light , math.random(0,1))
+RPD.affectBuff(enemy, RPD.Buffs.Vertigo , math.random(0,1))
+enemy:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.UP, 8 )
+return dmg
+end,
+zapMiss = function(self, enemy)
+LightRay.ray(self:getPos(),enemy:getPos())
+end
 }

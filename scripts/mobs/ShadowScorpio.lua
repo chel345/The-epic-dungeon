@@ -13,11 +13,12 @@ return mob.init{
     stats = function(self)
         RPD.permanentBuff(self, RPD.Buffs.Invisibility)
     end,
-    zapProc = function(self, enemy, dmg)
+    zapMiss = function(self, enemy)
         RPD.removeBuff(self, RPD.Buffs.Invisibility)
     end,
  attackProc = function(self, enemy, dmg)
         RPD.removeBuff(self, RPD.Buffs.Invisibility)
+        return dmg
     end
 
 }

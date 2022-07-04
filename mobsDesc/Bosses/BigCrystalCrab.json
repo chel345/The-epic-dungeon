@@ -20,5 +20,11 @@
   "name_objective": "BigCrystalCrab_Object",
   "scriptFile": "scripts/bosses/BigCrystalCrab",
   "spriteDesc": "spritesDesc/BigCrystalCrab_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+    "immunities": [
+    "Fire",
+    "LiquidFlame",
+    "Burning"
+  ],
+  "isBoss":true
 }

@@ -24,5 +24,9 @@
   "scriptFile": "scripts/bosses/Grimm",
   "spriteDesc": "spritesDesc/Grimm_Desc.json",
   "walkingType": "NORMAL",
-  "movable"       :false
+  "movable"       :false,
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

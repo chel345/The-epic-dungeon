@@ -20,5 +20,8 @@ return object.init{
     addedToScene = function(self, object,level, data)
 			local emitter = RPD.Sfx.CellEmitter:get(object:getPos())
 			emitter:pour(RPD.Sfx.ShadowParticle.CURSE, 0.16)
+    end,
+    getLayer = function()
+    return 2
     end
 }

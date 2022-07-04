@@ -9,13 +9,9 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-local buffs = {
-    RPD.Buffs.Frost 
-}
-
 return mob.init{
-    zapProc = function(self, enemy, dmg) -- ranged attack
-        RPD.affectBuff(enemy, buffs[math.random(1,#buffs)])
+    zapProc = function(self, enemy, dmg)
+        RPD.affectBuff(enemy, RPD.Buffs.Frost,1)
         return dmg
     end
 }

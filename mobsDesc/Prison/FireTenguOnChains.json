@@ -1,0 +1,15 @@
+{
+  "canBePet": false,
+  "description": "FireTengu_Desc",
+  "gender": "FireTengu_Gender",
+  "name": "FireTengu_Name",
+  "name_objective": "FireTengu_Object",
+  "scriptFile": "scripts/bosses/TenguOnChains",
+  "spriteDesc": "spritesDesc/FireTenguOnChains_Desc.json",
+  "walkingType": "NORMAL",
+  "aiState": "Passive",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "immortal"      :true,
+  "movable"       :false
+}

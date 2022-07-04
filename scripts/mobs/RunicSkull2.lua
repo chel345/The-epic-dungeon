@@ -9,24 +9,28 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init{
-    zapProc = function(self, enemy, dmg)
+local function spawnSkeleton()
 local level = RPD.Dungeon.level
 local hero = RPD.Dungeon.hero
-            local mob = RPD.mob("Skeleton")
-   local x = level:cellX(cell)
-        local y = level:cellY(cell)
-        for i = x - 1, x + 3 do
-            for j = y - 1, y + 3 do
-            local pos = level:getEmptyCellNextTo(hero:getPos())
-            if (level:cellValid(pos)) then
-                mob:setPos(pos)
-level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero));
-  end
-  end
-end 
+local mob = RPD.mob("Skeleton")
+for i = 0, 2 do
+local pos = level:getEmptyCellNextTo(hero:getPos())
+if (level:cellValid(pos)) then
+mob:setPos(pos)
+level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
+end
+end
+end
+
+return mob.init{
+zapProc = function(self, enemy, dmg)
+spawnSkeleton()
+return dmg*0
 end,
-    interact = function(self, chr)
-    	RPD.resetPos(self,chr)
-    end
+zapMiss = function(self, enemy)
+spawnSkeleton()
+end,
+interact = function(self, chr)
+RPD.resetPos(self,chr)
+end
 }

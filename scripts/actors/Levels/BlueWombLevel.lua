@@ -34,6 +34,14 @@ end
 if not storage.get("Deco") then
 storage.put("Deco")
 for i = 1, RPD.Dungeon.level:getLength()-1 do
+if RPD.Dungeon.level.map[i] == 11 then
+local deco =
+{
+    kind = "Deco",
+    object_desc = "BluePedestal"
+}
+RPD.createLevelObject(deco, i-1)
+end
 if RPD.Dungeon.level.map[i] == 4 then
 if RPD.Dungeon.level.water[i+50] then
 local deco =

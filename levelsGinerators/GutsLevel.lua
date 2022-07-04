@@ -53,7 +53,7 @@ MiniBoss = {"YogsEyeRoom"},
 LevelMiniBoss = 39,
 WombFactor = 2,
 WombFactorChanse = 60,
-WombSeed = 4
+WombSeed = 10
 }
 
 return table

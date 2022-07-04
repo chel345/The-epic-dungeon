@@ -14,7 +14,7 @@ act       = function(self, ai, me)
 me:getSprite():idle()
 if RPD.Dungeon.level:distance(RPD.Dungeon.hero:getPos(),me:getPos()) < 3 then
 
-addStatue = function(cell,statue)
+local addStatue = function(cell,statue)
 local mob = RPD.mob(statue)
 mob:setPos(RPD.Dungeon.level:cellX(cell))
 RPD.Dungeon.level:spawnMob(mob)

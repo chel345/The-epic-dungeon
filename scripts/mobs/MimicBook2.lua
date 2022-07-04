@@ -10,14 +10,12 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-interact = function(self, chr)
-    RPD.resetPos(self,chr)
-end,
 spawn = function(self)
 RPD.setAi(self,"Books/MimicBook2")
 end,
-attackProc = function(self)
+attackProc = function(self,enemy,dmg)
 RPD.setAi(self,"Books/MimicBook2")
+return dmg*0
 end,
 die = function(self, enemy, cell, dmg)
 RPD.topEffect(self:getPos(),"Explotion")

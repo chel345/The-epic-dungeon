@@ -15,7 +15,6 @@ return mob.init{
     end,
     damage = function(self, cause)
         local level = RPD.Dungeon.level
-        print(self, cause)
 
         for i = 1,2 do
             local mob = RPD.mob("Larva")
@@ -26,8 +25,11 @@ return mob.init{
             end
         end
     end,
+    zapMiss = function(self, enemy)
+RPD.topEffect(enemy:getPos(),"Bone")
+    end,
     zapProc = function(self, enemy, dmg)
-RPD.topEffect(enemy:getPos(),"Skill")
+    RPD.topEffect(enemy:getPos(),"Bone")
     return dmg
     end
 }

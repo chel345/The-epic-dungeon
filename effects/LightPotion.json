@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/LightPotion.png",
+  "width"  : 3,
+  "height" : 6,
+  "anim"   : { "fps" : 3,  "looped" : true,    "frames" : [0] }
+}

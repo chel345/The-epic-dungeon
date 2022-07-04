@@ -20,5 +20,9 @@
   "name_objective": "Treuhnit_Object",
   "scriptFile": "scripts/bosses/Treuhnit",
   "spriteDesc": "spritesDesc/Treuhnit_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

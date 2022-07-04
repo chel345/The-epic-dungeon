@@ -23,5 +23,9 @@
   "name_objective": "EpicHydra_Object",
   "scriptFile": "scripts/bosses/EpicHydra",
   "spriteDesc": "spritesDesc/EpicHydra_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

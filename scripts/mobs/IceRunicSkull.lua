@@ -12,9 +12,11 @@ local mob = require"scripts/lib/mob"
 return mob.init{
     zapProc = function(self, enemy, dmg) 
  RPD.affectBuff(enemy, RPD.Buffs.Frost, 300)
+ return dmg
     end,
     attackProc = function(self, enemy, dmg) 
  RPD.affectBuff(enemy, RPD.Buffs.Frost, 300)
+ return dmg
     end,
     interact = function(self, chr)
     	RPD.resetPos(self,chr)

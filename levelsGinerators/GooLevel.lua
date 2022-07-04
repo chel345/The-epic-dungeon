@@ -1,6 +1,6 @@
 local table = 
 {
-kind = "Womb",
+kind = "Castle",
 Entrance = "CavesEntrance",
 EntranceDebag = "EntranceDebag",
 Exit = "CavesExit",
@@ -10,8 +10,7 @@ RoomHeigth = 7,
 RoomWidth = 7, 
 RandRooms = {"GooRoom","GooSloth","GooBalls","GooLibrary","BigGooLibrary","GooArmory","GooEye","GooChaos","GooWarehause","GooChasm","GooTomb","GooFishbowl","GooStatue","GooTeeth","GooBestRoom","GooBestRoom","GooBestRoom"},
 --RandRooms = {"SpinnerNest"},
-HasBase = false,
-Items = {"Ration"},
+HasBase = true,
 Water = true,
 WaterMin = 1,
 WaterMax = 3,
@@ -46,14 +45,10 @@ levelNPC = 22,
 NPCRoom = "GooWitchRoom",
 NPCRoomWidth = 7,
 NPCRoomHeigth = 7,
-Range = 10000,
 GinFactor = 20,
 RoomFactor = 0,
-MiniBoss = {"GooHashRoom"},
-LevelMiniBoss = 24,
-WombFactor = 2,
-WombFactorChanse = 60,
-WombSeed = 4
+MiniBoss = {"BookshelfMonsterRoom","GooHashRoom"},
+LevelMiniBoss = 24
 }
 
 return table

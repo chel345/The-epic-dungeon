@@ -31,7 +31,7 @@ if math.random(1,20) == 1 then
 RPD.affectBuff(me, RPD.Buffs.Invisibility,3)
 end
 
-me:spend(3)
+me:spend(2)
 
 local storage = require "scripts/lib/storage"
 
@@ -83,8 +83,6 @@ end,
     zapProc = function(self,enemy,dmg)
 local Music = luajava.bindClass("com.watabou.noosa.audio.Music")
 Music.INSTANCE:play("ost_boss_1_fight.ogg",true)
-
-self:spend(1)
 
 RPD.zapEffect(self:getPos(),enemy:getPos(),"Ice")
 end,

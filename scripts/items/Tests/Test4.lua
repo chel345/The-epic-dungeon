@@ -13,8 +13,6 @@ local RPD = require "scripts/lib/epicClasses"
 
 local item = require "scripts/lib/item"
 
-local Process = require "scripts/lib/Process"
-
 --local Ginerator = require "scripts/lib/Ginerator"
 
 local room = require "scripts/lib/room"
@@ -43,36 +41,15 @@ RPD.glog(level.map[cell])
 --RPD.glog((not (level.solid[cell] or level.nearWalls[cell] or level.pit[cell] or level.fieldOfView[cell] or (not level.passable[cell]) or level.map[cell] == RPD.Terrain.WALL or level.map[cell] == RPD.Terrain.WALL_DECO or RPD.Actor:findChar(cell) or cell == 0)))
 end
         if action == "action3" then
-            RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n") 
---[[
-RPD.Sfx.MagicMissile:purpleLight(thisItem:getUser():getSprite():getParent(),thisItem:getUser():getPos(),cell,Callback.callback)
---]]
---local Callback = luajava.bindClass("com.watabou.utils.Callback")
---missile = thisItem:getUser():getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
---missile:reset( thisItem:getUser():getPos(),cell,Callback.callback)
---missile:size(40)
---BloodParticle = luajava.bindClass("com.watabou.pixeldungeon.effects.particles.BloodParticle")
---missile:pour( BloodParticle.FACTORY, 0.04)
---Splash = luajava.bindClass("com.watabou.pixeldungeon.effects.Splash")
---Splash.at(missile, 3.1415926f / 2, 0xFFBB0000, 9)
---Splash.at(missile, RPD.Dungeon.hero:getPos(),1,5, 0xFFBB0000, 90)
---missile:pour(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.COIN  ), 0.01)
+RPD.glogp("performing "..action.."on cell"..tostring(cell).."\n")
+--NightamreFires.attach(thisItem:getUser():getPos(),cell,100)
+LightRay.ray(thisItem:getUser():getPos(),cell)
+--room.Tunel(RPD.Dungeon.hero:getPos(),cell)
 RPD.glog(RPD.Dungeon.level:cellX(cell))
 RPD.glog(RPD.Dungeon.level:cellY(cell))
 
+RPD.glog(tostring(RPD.Dungeon.level.map[cell+1]))
 
---RPD.new("com.watabou.noosa.particles.Emitter")
---RPD.new("com.watabou.noosa.particles.PixelParticle")
-
-Splash = luajava.bindClass("com.watabou.pixeldungeon.effects.Splash")
-missile = thisItem:getUser():getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset( thisItem:getUser():getPos(),cell,nil)
-missile:size(4);
---missile:pour( RPD.Sfx.ElmoParticle.FACTORY, 0.01f);
---Splash.at(missile, cell,-3,3, 0x81ff2f, 1)
---LightRay.ray(RPD.Dungeon.hero:getPos(),cell)
-NightamreFires.attach(RPD.Dungeon.hero:getPos(),cell,20)
-RPD.glog(RPD.Dungeon.level.map[cell])
 local object = RPD.Dungeon.level:getTopLevelObject(cell)
 if object then
 RPD.glog(object:getEntityKind())

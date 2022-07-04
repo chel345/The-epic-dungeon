@@ -20,5 +20,9 @@
   "name_objective": "IceKing_Object",
   "scriptFile": "scripts/bosses/IceKing",
   "spriteDesc": "spritesDesc/IceKing_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

@@ -18,7 +18,7 @@ activate = function()
 if RPD.Dungeon.depth ~= 25 then
 Ginerator.CreateLevel("BanditLevel")
 if not storage.get("Deco") then
-storage.put("Deco")
+storage.put("Deco",true)
 for i = 1, RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == 4 then
 if math.random(1,100) == 1 then

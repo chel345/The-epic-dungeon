@@ -12,14 +12,18 @@ local mob = require"scripts/lib/mob"
 local NightamreFires = require "scripts/effects/NightmareFires"
 
 return mob.init{
-    zapProc = function(self, cause)
-        NightamreFires.attach(self:getPos(),cause:getPos(),1)
-    end,
-    die = function(self)
-        local w = RPD.Dungeon.level:getWidth()
-        NightamreFires.attach(self:getPos(),self:getPos()-2,2)
-        NightamreFires.attach(self:getPos(),self:getPos()-w*2-1,2)
-        NightamreFires.attach(self:getPos(),self:getPos()+w*2+1,2)
-        NightamreFires.attach(self:getPos(),self:getPos()+2,2)
-    end
+zapMiss = function(self, cause)
+NightamreFires.attach(self:getPos(),cause:getPos(),1)
+end,
+zapProc = function(self,cause,dmg)
+NightamreFires.attach(self:getPos(),cause:getPos(),1)
+return dmg
+end,
+die = function(self)
+local w = RPD.Dungeon.level:getWidth()
+NightamreFires.attach(self:getPos(),self:getPos()-2,2)
+NightamreFires.attach(self:getPos(),self:getPos()-w*2-1,2)
+NightamreFires.attach(self:getPos(),self:getPos()+w*2+1,2)
+NightamreFires.attach(self:getPos(),self:getPos()+2,2)
+end
 }

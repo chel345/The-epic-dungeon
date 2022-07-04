@@ -23,5 +23,9 @@
   "name_objective": "WarlokB_Object",
   "scriptFile": "scripts/bosses/Warlok",
   "spriteDesc": "spritesDesc/Warlok_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

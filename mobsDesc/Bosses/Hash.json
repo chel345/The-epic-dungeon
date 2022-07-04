@@ -20,5 +20,9 @@
   "name_objective": "Hash_Object",
   "scriptFile": "scripts/bosses/Hash",
   "spriteDesc": "spritesDesc/Hash_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+   "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

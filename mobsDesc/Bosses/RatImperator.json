@@ -20,5 +20,9 @@
   "name_objective": "RatImperator_Object",
   "scriptFile": "scripts/bosses/RatImperator",
   "spriteDesc": "spritesDesc/RatImperator_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

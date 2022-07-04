@@ -12,7 +12,6 @@ local mob = require"scripts/lib/mob"
 return mob.init({
     die = function(self, cause)
         local level = RPD.Dungeon.level
-        print(self, cause)
 
         for i = 1,2 do
             local mob = RPD.mob("Hydra2")

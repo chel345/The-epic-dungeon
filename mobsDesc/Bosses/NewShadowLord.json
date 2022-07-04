@@ -23,5 +23,9 @@
   "name_objective": "NewShadowLord_Object",
   "scriptFile": "scripts/bosses/ShadowLord",
   "spriteDesc": "spritesDesc/ShadowLord.json",
-  "walkingType": "ABSOLUTE"
+  "walkingType": "ABSOLUTE",
+      "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

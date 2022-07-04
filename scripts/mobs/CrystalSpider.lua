@@ -19,16 +19,14 @@ local buffs = {
 }
 
 return mob.init{
-    zapProc = function(self, enemy, dmg) -- ranged attack
+    zapProc = function(self, enemy, dmg)
 if math.random(1,2) == 1 then
         RPD.affectBuff(enemy, buffs[math.random(1,#buffs)],1)
 end
-        RPD.zapEffect(self:getPos(), enemy:getPos(), "PcevdoZap")
-        RPD.zapEffect(self:getPos(), enemy:getPos(), "PcevdoZap")
-        RPD.zapEffect(self:getPos(), enemy:getPos(), "PcevdoZap")
-        RPD.zapEffect(self:getPos(), enemy:getPos(), "PcevdoZap")
-        RPD.zapEffect(self:getPos(), enemy:getPos(), "PcevdoZap")
-
-        return dmg
+    RPD.zapEffect(self:getPos(), enemy:getPos(), "PcevdoZap")
+    return dmg
+    end,
+    zapMiss = function(self, enemy)
+    RPD.zapEffect(self:getPos(), enemy:getPos(), "PcevdoZap")
     end
 }

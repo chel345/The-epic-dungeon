@@ -11,12 +11,13 @@ local mob = require"scripts/lib/mob"
 
 local SolderLaser = require"scripts/effects/SolderLaser"
 
-local function makeMob()
-  return {
-    zapProc = function(self, enemy, dmg)
-        SolderLaser.ray(self:getPos(),enemy:getPos())
-        return dmg
-    end
-  }
+
+return mob.init{
+zapMiss = function(self, enemy)
+SolderLaser.ray(self:getPos(),enemy:getPos())
+end,
+zapProc = function(self, enemy, dmg)
+SolderLaser.ray(self:getPos(),enemy:getPos())
+return dmg
 end
-return mob.init(makeMob())
+}
