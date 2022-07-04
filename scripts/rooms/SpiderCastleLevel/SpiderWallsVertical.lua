@@ -2,8 +2,6 @@ local RPD = require "scripts/lib/epicClasses"
 
 local EPD = require "scripts/lib/dopClasses"
 
-local Process = require "scripts/lib/Process"
-
 local room = require "scripts/lib/room"
 
 local Treasury = luajava.bindClass("com.nyrds.pixeldungeon.items.Treasury")

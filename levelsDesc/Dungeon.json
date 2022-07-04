@@ -184,27 +184,27 @@
 
 
 
-"Goo1":{"kind":"RandomLevel", "depth":21, "file":"levelsDesc/KindLevel/GooLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "noBuild":true, "nMobs":0},
-      
-"Goo2":{"kind":"RandomLevel", "depth":22, "file":"levelsDesc/KindLevel/GooLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "noBuild":true, "nMobs":0},
-      
-"Goo3":{"kind":"RandomLevel", "depth":23, "file":"levelsDesc/KindLevel/GooLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "noBuild":true, "nMobs":0},
+"Goo1":{"kind":"PredesignedLevel", "depth":21, "file":"levelsDesc/KindLevel/GooLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "nMobs":0, "objectsKind":10, "tiles":"tiles_goo_xyz.png"},
 
-"Goo4":{"kind":"RandomLevel", "depth":24, "file":"levelsDesc/KindLevel/GooLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "noBuild":true, "nMobs":0},
+"Goo2":{"kind":"PredesignedLevel", "depth":22, "file":"levelsDesc/KindLevel/GooLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "nMobs":0, "objectsKind":10, "tiles":"tiles_goo_xyz.png"},
       
-"Goo5":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/BossLevel/GooBossLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "nMobs":0},
+"Goo3":{"kind":"PredesignedLevel", "depth":23, "file":"levelsDesc/KindLevel/GooLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "nMobs":0, "objectsKind":10, "tiles":"tiles_goo_xyz.png"},
+
+"Goo4":{"kind":"PredesignedLevel", "depth":24, "file":"levelsDesc/KindLevel/GooLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "nMobs":0, "objectsKind":10, "tiles":"tiles_goo_xyz.png"},
+      
+"Goo5":{"kind":"PredesignedLevel", "depth":25, "file":"levelsDesc/BossLevel/GooBossLevel.json", "music":"GooLevel.ogg","script":"scripts/actors/Levels/GooLevel", "nMobs":0, "objectsKind":10},
 
 
 
-"Spider1":{"kind":"RandomLevel", "depth":26, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true, "nMobs":0},
+"Spider1":{"kind":"RandomLevel", "depth":26, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true, "nMobs":0, "objectsKind":9,"tiles":"tiles_spider_castle_xyz.png"},
       
-"Spider2":{"kind":"RandomLevel", "depth":27, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true, "nMobs":0},
+"Spider2":{"kind":"RandomLevel", "depth":27, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true, "nMobs":0, "objectsKind":9,"tiles":"tiles_spider_castle_xyz.png"},
       
-"Spider3":{"kind":"RandomLevel", "depth":28, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true, "nMobs":0},
+"Spider3":{"kind":"RandomLevel", "depth":28, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true, "nMobs":0, "objectsKind":9,"tiles":"tiles_spider_castle_xyz.png"},
       
-"Spider4":{"kind":"RandomLevel", "depth":29, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true, "nMobs":0},
+"Spider4":{"kind":"RandomLevel", "depth":29, "file":"levelsDesc/KindLevel/SpiderCastelLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "noBuild":true, "nMobs":0, "objectsKind":9,"tiles":"tiles_spider_castle_xyz.png"},
       
-"Spider5":{"kind":"PredesignedLevel", "depth":30, "file":"levelsDesc/BossLevel/SpiderCastelBossLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "nMobs":0},
+"Spider5":{"kind":"PredesignedLevel", "depth":30, "file":"levelsDesc/BossLevel/SpiderCastelBossLevel.json", "music":"SpiderCasteLevel.ogg","script":"scripts/actors/Levels/SpiderCastleLevel", "nMobs":0, "objectsKind":9},
 
 
 
@@ -689,7 +689,7 @@
 "Skeleton2":[["Skeleton3"],["Skeleton1"]],
 "Skeleton3":[["Skeleton4"],["Skeleton2"]],
 "Skeleton4":[["Skeleton5"],["Skeleton3"]],
-"Skeleton5":[["portal_room_lvl30"],["Skeleton4"]],
+"Skeleton5":[["portal_room_lvl30_u"],["Skeleton4"]],
 
 
 "LastLevel_u":[["Sewer1"],["portal_room_lvl30"]],

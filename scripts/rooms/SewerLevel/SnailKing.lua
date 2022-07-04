@@ -45,7 +45,7 @@ local object = objectFactory:objectByName(plants[math.random(1,7)])
 object:setPos(cell)
 RPD.Dungeon.level:addLevelObject(object)
 --]]
-RPD.Dungeon.level:plant(RPD.item(plants[math.random(1,7)]),cell)
+RPD.Dungeon.level:plant(RPD.item(plants[math.random(1,8)]),cell)
 end
 local W = RPD.Dungeon.level:getWidth()
 add(cell-W*2-2)

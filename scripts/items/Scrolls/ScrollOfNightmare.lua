@@ -9,6 +9,7 @@ local RPD = require "scripts/lib/epicClasses"
 local TIME_TO_READ = 1
 local item = require "scripts/lib/item"
 
+local NightamreFires = require "scripts/effects/NightmareFires"
 
 return item.init{
     desc  = function ()
@@ -23,23 +24,37 @@ return item.init{
         }
     end,
     actions = function() return {RPD.Actions.read} end,
+
     execute = function(self, item, hero, action, cause )
+   
+if action == RPD.Actions.read then
+
+local level = RPD.Dungeon.level
+local dmg = RPD.Dungeon.depth*5
+
+local n = 0
+for i = 0, level:getLength()-1 do
+local mob = RPD.Actor:findChar(i)
+if mob and level.fieldOfView[i] and mob ~= item:getUser() then
+n = n + 1
+end
+end
+for i = 0, level:getLength()-1 do
+local mob = RPD.Actor:findChar(i)
+if mob and level.fieldOfView[i] and mob ~= item:getUser() then
+mob:damage(dmg/n,item:getUser())
+NightamreFires.attach(item:getUser():getPos(),i,1)
+end
+end
+
+item:detach(RPD.Dungeon.hero:getBelongings().backpack)
 RPD.Dungeon.hero:spend(TIME_TO_READ)
 RPD.playSound( "snd_read.mp3")
-        if action == RPD.Actions.read then
- 
-        local level = RPD.Dungeon.level
-        for i = 1,4 do
-            local mob = RPD.mob("NightmareBall")
-            local pos = level:getEmptyCellNextTo(item:getUser():getPos())
-            if (level:cellValid(pos)) then
-                mob:setPos(pos)
-level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero));
-           end
-        end
- end 
- item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
+
+end
+
 end,
+
 bag = function(self, item)
         return "ScrollHolder"
     end

@@ -11,11 +11,9 @@ local mob = require"scripts/lib/mob"
 
 return mob.init{
 interact = function(self, chr)
-    RPD.resetPos(self,chr)
+RPD.resetPos(self,chr)
 end,
-act       = function(me, ai, mee)
-
-summonBee = function()
+act       = function(me, ai)
 local level = RPD.Dungeon.level
 local hero = RPD.Dungeon.hero
 local mob = RPD.mob("ShadowSpider")
@@ -23,12 +21,8 @@ local pos = level:getEmptyCellNextTo(me:getPos())
 if (level:cellValid(pos)) then
 mob:setPos(pos)
 level:spawnMob(mob,0,me:getPos())
-me:damage(100,me)
+me:damage(300,me)
 end
-end
-
 me:spend(math.random(10,20))
-summonBee()
-
 end
 }

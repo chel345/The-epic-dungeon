@@ -52,10 +52,11 @@
 /*
 {"kind":"Ration"},
 */
-{"kind":"Rotberry.Seed"},
+{"kind":"Weapons/Epee"},
 {"kind": "PotionOfMindVision","level":100},
 {"kind": "ScrollOfMagicMapping",       "quantity": 10000000000000},
 {"kind": "PotionOfMindVision",       "quantity": 10000000000000},
+{"kind": "Scrolls/ScrollOfNightmare",       "quantity": 1000},
 {"kind": "PotionOfInvisibility",     "quantity": 1000000000},
 {"kind":"Tests/Test2","quantity": 10},
 {"kind":"Tests/Test1","quantity": 10},
@@ -68,7 +69,7 @@
 
     ], 
     "str": 150000,
-    "hp": 2000000,
+    "hp": 1000000000,
     "magicAffinity": "Common"
   },
   "WARRIOR": {
@@ -76,7 +77,7 @@
       "kind": "ShortSword",
       "identified": true
     },
-    "str": 11,
+    "str": 13,
     "knownItems": [
       {
         "kind": "PotionOfStrength"

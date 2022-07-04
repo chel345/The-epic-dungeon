@@ -22,7 +22,7 @@ local W = RPD.Dungeon.level:getWidth()
 local Chest =
 {
     kind="CustomObject",
-    object_desc="Shest2"
+    object_desc="Chest"
 }
 RPD.createLevelObject(Chest,cell-W*2-2)
 RPD.createLevelObject(Chest,cell-W*2-1)

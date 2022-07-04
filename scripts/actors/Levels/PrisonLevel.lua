@@ -57,6 +57,52 @@ maybeMob:getSprite():killAndErase()
 end
 end
 -- Ginerator.newArcs("prison")
+if RPD.Dungeon.depth == 10 and (not storage.get("spawn_tengu")) then
+local tengu = {
+"PoisonTenguOnChains",
+"FireTenguOnChains",
+"ShadowTenguOnChains"
+}
+local GameLoop = luajava.bindClass("com.nyrds.pixeldungeon.game.GameLoop")
+if GameLoop:getDifficultyFactor() == 2 then
+local mob = RPD.mob(tengu[3])
+mob:setPos(67)
+RPD.Dungeon.level:spawnMob(mob)
+local mob = RPD.mob(tengu[1])
+mob:setPos(50)
+RPD.Dungeon.level:spawnMob(mob)
+local mob = RPD.mob(tengu[2])
+mob:setPos(54)
+RPD.Dungeon.level:spawnMob(mob)
+else
+local type = math.random(1,3)
+local chains = {
+kind="Deco",
+object_desc="Chains"
+}
+if type == 1 then
+local mob = RPD.mob(tengu[type])
+mob:setPos(50)
+RPD.Dungeon.level:spawnMob(mob)
+RPD.createLevelObject(chains,67)
+RPD.createLevelObject(chains,54)
+elseif type == 2 then
+local mob = RPD.mob(tengu[type])
+mob:setPos(54)
+RPD.Dungeon.level:spawnMob(mob)
+RPD.createLevelObject(chains,67)
+RPD.createLevelObject(chains,50)
+elseif type == 3 then
+local mob = RPD.mob(tengu[type])
+mob:setPos(67)
+RPD.Dungeon.level:spawnMob(mob)
+RPD.createLevelObject(chains,54)
+RPD.createLevelObject(chains,50)
+end
+end
+
+storage.put("spawn_tengu",true)
+end
 return true
 end,
     actionTime = function()

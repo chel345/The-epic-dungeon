@@ -1,26 +1,26 @@
 {
    "texture" : "GooEye.png",
-   "width" : 20,
-   "height" : 30,
+   "width" : 16,
+   "height" : 16,
    "idle" : {
       "fps" : 5,
       "looped" : true,
-      "frames" : [0,1,2]
+      "frames" : [0,1,2,1]
    },
    "run" : {
-      "fps" : 15,
+      "fps" : 5,
       "looped" : true,
-      "frames" : [3,4,5]
+      "frames" : [0,1,2,1]
    },
    "attack" : {
-      "fps" : 12,
+      "fps" : 5,
       "looped" : false,
-      "frames" : [10,11,12]
+      "frames" : [3,4,5]
    },
    "die" : {
       "fps" : 12,
       "looped" : false,
-      "frames" : [7,8,9]
+      "frames" : [6,7,8,9]
    }
 }
 

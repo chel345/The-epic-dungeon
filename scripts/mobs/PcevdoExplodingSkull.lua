@@ -10,8 +10,8 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-    attackProc = function(self, enemy, dmg)
+attackProc = function(self, enemy, dmg)
 self:damage(300,enemy)
-    return dmg
-    end
+return dmg*0
+end
 }

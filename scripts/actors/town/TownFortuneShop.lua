@@ -21,6 +21,14 @@ emitter = RPD.Sfx.CellEmitter:get(i)
 emitter:pos(58,46,1,1)
 emitter:pour(RPD.Sfx.FlameParticle.FACTORY, 0.16)
 RPD.GameScene:particleEffect("Candle", 32);
+local levelSize = RPD.Dungeon.level:getLength()
+        for i = 0 , levelSize - 1 do
+  local mob = RPD.Actor:findChar(i)
+  if mob then
+  mob:getSprite():tint(0,0,0,0.3)
+  end
+        end
+
     end
 
 })

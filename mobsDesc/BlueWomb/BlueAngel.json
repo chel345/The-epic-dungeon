@@ -19,5 +19,6 @@
   "name": "BlueAngel_Name",
   "name_objective": "BlueAngel_Object",
   "spriteDesc": "spritesDesc/BlueAngel_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "scriptFile": "scripts/mobs/BlueAngel"
 }

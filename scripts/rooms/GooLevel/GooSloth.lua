@@ -28,7 +28,7 @@ if math.random(1,8) == 1 then
 local item = Treasury:getLevelTreasury():bestOf(Treasury.Category.POTION,4 )
 RPD.Dungeon.level:drop(item,pos-1)
 elseif math.random(1,8) == 1 then
-local mob = RPD.mob("Sloth")
+local mob = RPD.mob("GooGoo")
 local level = RPD.Dungeon.level
 mob:setPos(pos-1)
 level:spawnMob(mob)

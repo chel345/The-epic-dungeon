@@ -18,6 +18,8 @@ return 7
 end,
 objects = function(cell)
 
+local level = RPD.Dungeon.level
+
 local W = level:getWidth()
 local mob = RPD.mob("WhiteBall")
 local level = RPD.Dungeon.level

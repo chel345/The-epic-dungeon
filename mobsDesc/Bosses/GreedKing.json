@@ -21,5 +21,8 @@
   "scriptFile": "scripts/bosses/GreedKing",
   "spriteDesc": "spritesDesc/GreedKing_Desc.json",
   "walkingType": "NORMAL",
-  "movable"       :false
+  "movable"       :false,
+   "immunities": [
+    "Death"
+  ]
 }

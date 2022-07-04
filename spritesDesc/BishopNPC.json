@@ -1,7 +1,7 @@
 {
    "texture" : "mobs/town_bishop3.png",
    "width" : 16,
-   "height" : 16,
+   "height" : 18,
    "idle" : {
       "fps" : 6,
       "looped" : true,

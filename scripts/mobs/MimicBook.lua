@@ -11,13 +11,14 @@ local mob = require"scripts/lib/mob"
 
 return mob.init{
 interact = function(self, chr)
-    RPD.resetPos(self,chr)
+RPD.resetPos(self,chr)
 end,
 spawn = function(self)
 RPD.setAi(self,"Books/MimicBook")
 end,
-attackProc = function(self)
+attackProc = function(self,enemy,dmg)
 RPD.setAi(self,"Books/MimicBook")
+return dmg*0
 end,
 die = function(self, enemy, cell, dmg)
 RPD.topEffect(self:getPos(),"Explotion")

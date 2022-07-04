@@ -10,11 +10,15 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-    zapProc = function(self, enemy, dmg, cell)
+zapProc = function(self, enemy, dmg, cell)
 local hero = RPD.Dungeon.hero
 RPD.placeBlob(RPD.Blobs.ToxicGas, hero:getPos(), 30);
 end,
-    interact = function(self, chr)
-    	RPD.resetPos(self,chr)
-    end,
+zapMiss = function(self, enemy, dmg, cell)
+local hero = RPD.Dungeon.hero
+RPD.placeBlob(RPD.Blobs.ToxicGas, hero:getPos(), 30);
+end,
+interact = function(self, chr)
+RPD.resetPos(self,chr)
+end
 }

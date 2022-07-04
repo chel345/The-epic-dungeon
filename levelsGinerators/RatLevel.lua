@@ -42,14 +42,14 @@ LevelShop = 6,
 ShopWidth = 5,
 ShopHeigth = 5,
 levelNPC = 8,
-NPCRoom = "RatEpicBankerRoom",
-NPCRoomWidth = 9,
-NPCRoomHeigth = 9,
+NPCRoom = "RatcatcherRoom",
+NPCRoomWidth = 5,
+NPCRoomHeigth = 5,
 Range = 10000,
 GinFactor = 20,
 RoomFactor = 0,
-MiniBoss = {"RatcatcherRoom"},
-LevelMiniBoss = 7
+MiniBoss = {"GhostBankerRoom","RatEpicBankerRoom"},
+LevelMiniBoss = 9
 }
 
 return table

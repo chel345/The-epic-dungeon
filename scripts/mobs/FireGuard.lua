@@ -9,25 +9,26 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
+local function zapEffect(self,enemy)
+local missile = self:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
+missile:reset( self:getPos(),enemy:getPos(),nil)
+missile:size(10)
+missile:pour( RPD.Sfx.FlameParticle.FACTORY, 0.01f)
+end
+
 return mob.init{
 die = function(self)
-if RPD.Dungeon.level ~= nil then
 self:getSprite():emitter():start( RPD.Sfx.FlameParticle.FACTORY,0.1,2)
-end
 end,
 attackProc = function(self, enemy, dmg)
-missile = self:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset( self:getPos(),enemy:getPos(),nil)
-missile:size(10);
-missile:pour( RPD.Sfx.FlameParticle.FACTORY, 0.01f);
+zapEffect(self, enemy)
 return dmg
 end,
+zapMiss = function(self, enemy)
+zapEffect(self, enemy)
+end,
 zapProc = function(self, enemy, dmg)
-missile = self:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset( self:getPos(),enemy:getPos(),nil)
-missile:size(10);
-missile:pour( RPD.Sfx.FlameParticle.FACTORY, 0.01f);
-RPD.placeBlob( RPD.Blobs.Fire, enemy:getPos(), 10)
+zapEffect(self, enemy)
 return dmg
 end
 }

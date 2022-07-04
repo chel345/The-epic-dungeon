@@ -19,8 +19,6 @@ local gameScene = require "scripts/userServices/gameScene"
 
 local storage = require "scripts/lib/storage"
 
-local Process = require "scripts/lib/Process"
-
 --local Ginerator = require "scripts/lib/Ginerator"
 
 return item.init{
@@ -58,9 +56,7 @@ end
 RPD.glog(client:receiveMessage())
 client:stop()
 --]]
-local mob = RPD.mob("WaterZombie")
-mob:setPos(RPD.Dungeon.hero:getPos())
-RPD.Dungeon.level:spawnMob(mob)
+RPD.glog(RPD.Dungeon.level:objectsKind())
 end 
 end 
 }

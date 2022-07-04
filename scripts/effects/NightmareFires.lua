@@ -25,8 +25,7 @@ local zap = function(from, to)
     local s = DungeonTileMap:tileCenterToWorld(from)
     local e = DungeonTileMap:tileCenterToWorld(to)
 
-    bolt.x = s.x - 16*4
-    bolt.y = s.y - 16*4
+    bolt:setPos(s.x - 16*4 + math.random(-10,10),s.y - 16*4)
     emitter.x = s.x
     emitter.y = s.y
         
@@ -51,8 +50,7 @@ local zap = function(from, to)
             emitter:killAndErase()
             return false
         end
-        bolt.x = bolt.x + g*c
-        bolt.y = bolt.y + d/time*g + (f-(math.abs(time)/speed/2))*g/factor --bolt.y + d/time*g
+        bolt:setPos(bolt.x + g*c,bolt.y + d/time*g + (f-(math.abs(time)/speed/2))*g/factor)
         emitter.x = emitter.x + g*c
         emitter.y = emitter.y + d/time*g + (f-(math.abs(time)/speed/2))*g/factor
         return true

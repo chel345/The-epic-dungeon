@@ -11,15 +11,16 @@ local mob = require"scripts/lib/mob"
 
 local EPD = require "scripts/lib/dopClasses"
 
-
-
 return mob.init{
-zapProc = function(self,enemy,dmg, cause)
+zapProc = function(self,enemy,dmg)
 EPD.Klak(enemy:getPos(),4,15,self,10,math.random(1,5),false)
-return nil
+return dmg*0
+end,
+zapMiss = function(self, enemy)
+EPD.Klak(enemy:getPos(),4,15,self,10,math.random(1,5),false)
 end,
 interact = function(self, chr)
-    RPD.resetPos(self,chr)
+RPD.resetPos(self,chr)
 end,
 die = function(self, enemy, dmg)
 RPD.topEffect(self:getPos(),"CouldExplotion")

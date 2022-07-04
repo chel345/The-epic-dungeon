@@ -24,7 +24,7 @@ cell = math.random(1,level:getLength()-1)
 while level.map[cell] ~= RPD.Terrain.EMPTY and cell ~= self:getPos() do
 cell = math.random(1,level:getLength()-1)
 end
-level:drop(RPD.item("CorpseDust"),cell).type = RPD.Heap.Type.SKELETON
+level:drop(RPD.item("Artifacts/CursedDust"),cell).type = RPD.Heap.Type.SKELETON
 end,
 interact = function(self, chr)
 if not storage.get("interact") then
@@ -32,10 +32,10 @@ EPD.showQuestWindow(self, RPD.StringsManager:maybeId("WandmakerNPC_Phrase1"))
 storage.put("interact",true)
 return
 end
-if RPD.Dungeon.hero:getBelongings():getItem("CorpseDust") then
+if RPD.Dungeon.hero:getBelongings():getItem("Artifacts/CursedDust") then
 EPD.showQuestWindow(self, RPD.StringsManager:maybeId("WandmakerNPC_Phrase2"))
 local hero = RPD.Dungeon.hero
-hero:getBelongings():getItem("CorpseDust"):detach(hero:getBelongings().backpack)
+hero:getBelongings():getItem("Artifacts/CursedDust"):detach(hero:getBelongings().backpack)
 Treasury = luajava.bindClass("com.nyrds.pixeldungeon.items.Treasury")
 local wand = Treasury:getLevelTreasury():bestOf(Treasury.Category.WAND,4 )
 RPD.Dungeon.hero:collect(wand)

@@ -14,9 +14,8 @@ local LightRay = {
         local e = DungeonTileMap:tileCenterToWorld(to)
 
         image.origin:set(0, image.height / 2)
-
-        image.x = s.x - image.origin.x
-        image.y = s.y - image.origin.y-7
+        
+        image:setPos(s.x,s.y-7)
 
         local dx = e.x - s.x
         local dy = e.y - s.y
@@ -24,7 +23,9 @@ local LightRay = {
         image.angle = math.atan2(dy, dx) * A
 
         local function update(n)
-            image:setScale(math.sqrt(dx * dx + dy * dy) / image.width, n / 15)
+            image:setScaleX(math.sqrt(dx * dx + dy * dy) / image.width)
+            image:setScaleY(n/15)
+
             if n % 15 == 0 then
                 image:killAndErase()
                 return false

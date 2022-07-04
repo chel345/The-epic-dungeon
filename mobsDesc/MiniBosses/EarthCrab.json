@@ -1,0 +1,29 @@
+{
+  "attackDelay": 1,
+  "attackRange": 10,
+  "attackSkill": 4,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 10,
+  "description": "EarthCrab_Desc",
+  "dmgMax": 5,
+  "dmgMin": 2,
+  "dr": 5,
+  "exp": 5,
+  "flying": false,
+  "friendly": false,
+  "gender": "EarthCrab_Gender",
+  "ht": 40,
+  "loot": {
+    "kind": "Earthroot.Seed",
+    "quantity": 5
+  },
+  "lootChance": 0.5,
+  "maxLvl": 6,
+  "name": "EarthCrab_Name",
+  "name_objective": "EarthCrab_Object",
+  "scriptFile": "scripts/miniBosses/EarthCrab",
+  "spriteDesc": "spritesDesc/EarthCrab_Desc.json",
+  "walkingType": "NORMAL",
+  "movable":false
+}

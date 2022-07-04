@@ -14,10 +14,7 @@ local EPD = require "scripts/lib/dopClasses"
 local storage = require "scripts/lib/storage"
 
 return mob.init{
-interact = function(self, chr)
-    RPD.resetPos(self,chr)
-end,
-damage = function(self, level)
+damage = function(self)
 RPD.placeBlob(RPD.Blobs.ToxicGas, self:getPos(), 50);
 end,
 die = function(self)

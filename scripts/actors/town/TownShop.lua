@@ -38,6 +38,11 @@ RPD.createLevelObject({
                 local emitter = RPD.Sfx.CellEmitter:get(i-1)
                 emitter:pour(RPD.Sfx.WindParticle.FACTORY, 16)
             end
+  local mob = RPD.Actor:findChar(i)
+  if mob then
+  mob:getSprite():tint(0,0,0,0.3)
+  end
+
         end
 
     end

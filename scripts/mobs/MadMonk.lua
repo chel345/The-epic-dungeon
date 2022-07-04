@@ -18,7 +18,7 @@ return mob.init{
                 local item  = items:get(math.random(0,items:size()-1))
                 item:removeItemFrom(enemy)
                 self:loot(item)
-self:yell("%s будет моим! Хаха! Тебе, %s, меня не одолеть!",item:name(), enemy:name())
+self:yell(RPD.StringsManager:maybeId("MadMonk_Phrase1"),item:name(), enemy:name())
                 RPD.setAi(self, "ThiefFleeing")
             end
         end

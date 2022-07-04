@@ -10,15 +10,11 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init({
-    spawn = function(self, cause)
---[[
-local h = RPD.Dungeon.hero
-self:ht(h:ht())
-self:hp(h:hp())
-self:defenseSkill(h)
-self:attackSkill(h)
-self:dr(h:dr())
---]]
+    spawn = function(self, level)
+local depth = RPD.Dungeon.depth
+self:ht(depth*10+1)
+self:hp(self:ht())
+self:dr(depth+2)
     end
 })
 

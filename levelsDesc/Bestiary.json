@@ -16,14 +16,10 @@
 "Light4":{ "Light/MagicGhost":1,"Light/MagicEye":1,"Light/MagicGuard":1},
 "HallCastle1":{"NetherCastle/FireNefrit":0.5,"NetherCastle/SpiritOfDark":1,"NetherCastle/ShadowSpider":1,"NetherCastle/WitherSkeleton":1},
 "HallCastle2":{"NetherCastle/FireNefrit":0.5,"NetherCastle/SpiritOfDark":1,"NetherCastle/ShadowSpider":1,"NetherCastle/AlbinoFireNefrit":1,"NetherCastle/WitherSkeleton":1},
-"Blue1":{"BlueWomb/BlueHeart":1,"BlueWomb/BlueBall":1,"BlueWomb/BlueZombie":1,"BlueWomb/BlueAngel":1},
-"Blue2":{"BlueWomb/BlueHeart":1,"BlueWomb/BlueBall":1,"BlueWomb/BlueZombie":1,"BlueWomb/BlueAngel":1},
-"Blue3":{"BlueWomb/BlueHeart":1,"BlueWomb/BlueBall":1,"BlueWomb/BlueZombie":1 ,"BlueWomb/BlueAngel":1},
-"Blue4":{"BlueWomb/BlueHeart":1,"BlueWomb/BlueBall":1,"BlueWomb/BlueZombie":1 ,"BlueWomb/BlueAngel":1},
-"Goo1":{"Goo/GooBall":1,"Goo/GooGoo":1,"Goo/Sloth":1,"Goo/GooAngel":1},
-"Goo2":{"Goo/GooBall":1,"Goo/GooGoo":1,"Goo/Sloth":1 ,"Goo/GooAngel":1},
-"Goo3":{"Goo/GooBall":1,"Goo/GooGoo":1,"Goo/Sloth":1 ,"Goo/GooAngel":0.5},
-"Goo4":{"Goo/GooBall":1,"Goo/GooGoo":1,"Goo/Sloth":1},
+"Blue1":{"BlueWomb/BlueHeart":1,"BlueWomb/BlueBall":1,"BlueWomb/BlueZombie":1,"BlueWomb/SleepingBlueAngel":1},
+"Blue2":{"BlueWomb/BlueHeart":1,"BlueWomb/BlueBall":1,"BlueWomb/BlueZombie":1,"BlueWomb/SleepingBlueAngel":1},
+"Blue3":{"BlueWomb/BlueHeart":1,"BlueWomb/BlueBall":1,"BlueWomb/BlueZombie":1 ,"BlueWomb/SleepingBlueAngel":1},
+"Blue4":{"BlueWomb/BlueHeart":1,"BlueWomb/BlueBall":1,"BlueWomb/BlueZombie":1 ,"BlueWomb/SleepingBlueAngel":1},
 "Crab1":{"Crab":1},
 "Crab2":{"Crab":1},
 "Crab3":{"Crab":1},
@@ -143,6 +139,10 @@
 "any":{"IceGuardianCore":1}
 },
 "PredesignedLevel":{
+"Goo1":{"Goo/GooBall":1,"Goo/GooGoo":1,"Goo/GooAngel":1},
+"Goo2":{"Goo/GooBall":1,"Goo/GooGoo":1,"Goo/GooAngel":1},
+"Goo3":{"Goo/GooBall":1,"Goo/GooGoo":1,"Goo/GooAngel":0.5},
+"Goo4":{"Goo/GooBall":1,"Goo/GooGoo":1},
 "Nest5":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.5,"SpiderGuard":0.03,"SpiderMindAmber":0.018, "Nest/IceSpider":1}
 },
   "Feelings":{

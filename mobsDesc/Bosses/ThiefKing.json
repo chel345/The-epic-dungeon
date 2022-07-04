@@ -20,5 +20,9 @@
   "name_objective": "ThiefKing_Object",
   "scriptFile": "scripts/bosses/ThiefKing",
   "spriteDesc": "spritesDesc/ThiefKing_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

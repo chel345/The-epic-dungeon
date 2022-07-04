@@ -20,5 +20,9 @@
   "name_objective": "GreedKing_Object",
   "scriptFile": "scripts/bosses/GreedKing2",
   "spriteDesc": "spritesDesc/GreedKing2_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+   "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

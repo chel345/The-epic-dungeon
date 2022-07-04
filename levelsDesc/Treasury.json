@@ -184,7 +184,8 @@
     "ShortSword": 0,
     "Longsword": 1,
     "CurareDart": 1,
-    "Dagger": 1
+    "Dagger": 1,
+    "Weapons/Epee":1
 /*
     "Guns/Gun":0.5,
     "Guns/Pichal":1,

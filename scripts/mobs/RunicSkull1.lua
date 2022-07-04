@@ -10,11 +10,16 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-    zapProc = function(self, enemy, dmg)
+zapProc = function(self, enemy, dmg)
 local hero = RPD.Dungeon.hero
 hero:heal(RPD.Dungeon.depth,hero)
-  end,
-    interact = function(self, chr)
-    	RPD.resetPos(self,chr)
-    end
+return dmg*0
+end,
+zapMiss = function(self, enemy)
+local hero = RPD.Dungeon.hero
+hero:heal(RPD.Dungeon.depth,hero)
+end,
+interact = function(self, chr)
+RPD.resetPos(self,chr)
+end
 }

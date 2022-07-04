@@ -24,7 +24,8 @@
     "Sleep",
     "Poison",
     "Vertigo",
-    "Bleeding"
+    "Bleeding",
+    "Death"
   ],
   "lootChance": 0,
   "maxLvl": 31,
@@ -32,5 +33,6 @@
   "name_objective": "Monstr_Object",
   "scriptFile": "scripts/bosses/Monstro",
   "spriteDesc": "spritesDesc/Monstro_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "isBoss":true
 }

@@ -46,7 +46,7 @@ end
 if level.map[i+1] == RPD.Terrain.EMPTY and level.map[i+level:getWidth()] == RPD.Terrain.EMPTY and math.random(1,60) == 1 then
 RPD.createLevelObject({
     kind="CustomObject",
-    object_desc="Shest1"
+    object_desc="OpenChest"
 }
 ,i)
 end

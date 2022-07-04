@@ -23,5 +23,9 @@
   "name_objective": "Volka_Object",
   "scriptFile": "scripts/bosses/Volkan",
   "spriteDesc": "spritesDesc/Volkan_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+   "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

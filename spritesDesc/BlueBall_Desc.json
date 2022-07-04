@@ -1,13 +1,10 @@
 {
   "texture" : "BlueBall.png",
-  "width"   : 11,
-  "height"  : 9,
+  "width"   : 16,
+  "height"  : 16,
 "zapEffect":"BlueBall",
-"idle"    : { "fps" : 1,  "looped" : false,     "frames" : [0] },
-"run"     : { "fps" : 20, "looped" : true,     "frames" : [0,1,2] },
-"die"     : { "fps" : 10, "looped" : false,    "frames" : [0,1,2,3,4,5] },
-"attack"  : { "fps" : 15, "looped" : false,    "frames" : [0,1] },
-"zap"     : { "fps" : 15, "looped" : false,    "frames" : [0,1] },
-
-"operate" : { "fps" : 8,  "looped" : false,    "frames" : [0,1,2] }
+"idle"    : { "fps" :5,  "looped" : false,     "frames" : [0,1] },
+"run"     : { "fps" : 5, "looped" : true,     "frames" : [0,1] },
+"die"     : { "fps" : 10, "looped" : false,    "frames" : [0,1,4,5,6] },
+"attack"  : { "fps" : 10, "looped" : false,    "frames" : [1,2,3,2,1] }
 }

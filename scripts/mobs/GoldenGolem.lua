@@ -10,7 +10,7 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init({
-    damage = function(self)
+damage = function(self)
 local level = RPD.Dungeon.level
 local item = RPD.ItemFactory:itemByName("Gold")
 level:drop(item,self:getPos())

@@ -35,5 +35,9 @@
   "name_objective": "IceNecromanter_Object",
   "scriptFile": "scripts/bosses/IceNecromanter",
   "spriteDesc": "spritesDesc/IceNecromanter_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+   "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

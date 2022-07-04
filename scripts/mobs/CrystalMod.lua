@@ -33,7 +33,7 @@ interact = function(self, chr)
 RPD.resetPos(self,chr)
 end,
 stats = function(self)
-a = storage.get("Wand") or math.random(1,#Wands)
+local a = storage.get("Wand") or math.random(1,#Wands)
 storage.put("Wand",a)
 
 self:ht(RPD.Dungeon.depth*2)
@@ -52,6 +52,7 @@ EPD.mobWandUser(Wands[a], self, enemy:getPos(),RPD.Dungeon.depth/2)
 else
 EPD.mobWandUser(Wands[a], self, enemy:getPos(),0)
 end
+return dmg
 end,
 zapProc = function(self,enemy,dmg)
 if RPD.Dungeon.depth ~= 0 then
@@ -59,6 +60,7 @@ EPD.mobWandUser(Wands[a], self, enemy:getPos(),RPD.Dungeon.depth/2)
 else
 EPD.mobWandUser(Wands[a], self, enemy:getPos(),0)
 end
+return dmg
 end,
 damage = function(me, level)
 RPD.playSound( "CrystalGaurd.ogg" )

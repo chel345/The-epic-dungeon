@@ -17,7 +17,7 @@ cell = celll - W -1
 local Chest =
 {
     kind="CustomObject",
-    object_desc="Shest1"
+    object_desc=""
 }
 RPD.createLevelObject(Chest,cell-W*2-2)
 RPD.createLevelObject(Chest,cell-W*2-1)
@@ -37,14 +37,6 @@ RPD.createLevelObject(Chest,cell+2)
 RPD.createLevelObject(Chest,cell+W+2)
 --]]
 RPD.playSound( "OpenChest.ogg")
-if kind == nil then
-kind = "Shest2"
-end
-if kind == "Shest2" then
-kind = "Shest1"
-else
-kind = "Shest2"
-end
 local level = RPD.Dungeon.level
 local x = level:cellX(cell)
 local y = level:cellY(cell)
@@ -59,7 +51,7 @@ level:remove(object)
 local Chest =
 {
     kind="CustomObject",
-    object_desc=kind
+    object_desc="OpenChest"
 }
 RPD.createLevelObject(Chest,pos)
 RPD.Sfx.CellEmitter:get(pos):burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.STEAM ), 2);

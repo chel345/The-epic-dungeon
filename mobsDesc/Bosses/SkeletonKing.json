@@ -20,5 +20,9 @@
   "name_objective": "SkeletonKing_Object",
   "scriptFile": "scripts/bosses/SkeletonKing",
   "spriteDesc": "spritesDesc/SkeletonKing_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true
 }

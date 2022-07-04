@@ -9,8 +9,6 @@ local RPD     = require "scripts/lib/epicClasses"
 
 local mob     = require "scripts/lib/mob"
 
-local Process = require "scripts/lib/Process"
-
 return mob.init({
     act       = function(me, ai, s)
 
@@ -20,15 +18,7 @@ return mob.init({
         if RPD.Dungeon.level:distance(hPos, myPos) < 4 then
             me:beckon(hPos)
         else
-            local mySprite = me:getSprite()
-            if Process.golden_gaurd_pos then
-                if mySprite then
-                    mySprite:move(myPos, Process.golden_gaurd_pos)
-                    mySprite:idle()
-                end
-                me:move(Process.golden_gaurd_pos)
-                me:spend(1)
-            end
+            me:spend(1)
         end
     end
 })

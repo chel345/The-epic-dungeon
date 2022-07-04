@@ -1,0 +1,15 @@
+{
+  "canBePet": false,
+  "description": "PoisonTengu_Desc",
+  "gender": "PoisonTengu_Gender",
+  "name": "PoisonTengu_Name",
+  "name_objective": "PoisonTengu_Object",
+  "scriptFile": "scripts/bosses/TenguOnChains",
+  "spriteDesc": "spritesDesc/PoisonTenguOnChains_Desc.json",
+  "walkingType": "NORMAL",
+  "aiState": "Passive",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "immortal"      :true,
+  "movable"       :false
+}

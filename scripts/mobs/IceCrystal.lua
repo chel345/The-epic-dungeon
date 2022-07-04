@@ -14,7 +14,7 @@ return mob.init{
     interact = function(self, chr)
     	RPD.resetPos(self,chr)
     end,
-    zapProc = function(self, enemy, dmg) -- ranged attack
+    zapProc = function(self, enemy, dmg)
         RPD.affectBuff(enemy, RPD.Buffs.Frost,4)
         return dmg
     end,

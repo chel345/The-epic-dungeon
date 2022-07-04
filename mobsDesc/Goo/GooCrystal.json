@@ -20,5 +20,6 @@
   "name_objective": "GooCrystal_Object",
   "scriptFile": "scripts/mobs/GooCrystal",
   "spriteDesc": "spritesDesc/GooCrystal_Desc.json",
-  "walkingType": "NORMAL"
+  "walkingType": "NORMAL",
+  "movable":false
 }

@@ -11,8 +11,10 @@ local mob = require"scripts/lib/mob"
 
 return mob.init{
 act       = function(me)
-
-addSkeleton = function()
+if RPD.Dungeon.level:distance(me:getPos(),RPD.Dungeon.hero:getPos()) > 3 then
+return
+end
+local addSkeleton = function()
 local level = RPD.Dungeon.level
 local x = level:cellX(me:getPos())
 local y = level:cellY(me:getPos())
@@ -36,10 +38,10 @@ end
 me:getSprite():dummyAttack()
 end
 
-earthquake = function()
+local earthquake = function()
 local level = RPD.Dungeon.level
 
-zap = function(cell)
+local zap = function(cell)
 local from = me:getPos()
 local to = cell
 local dst = RPD.Ballistica:cast(from,to,true,true,true)
@@ -81,6 +83,5 @@ missile = self:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
 missile:reset(self:getPos(),enemy:getPos(),nil)
 missile:size(6); 
 missile:pour(RPD.Sfx.EarthParticle.FACTORY, 0.05)
-RPD.setAi(self,"StatueOfDemon")
 end
 }

@@ -13,7 +13,6 @@ return mob.init({
 act       = function(me, ai, mee)
 if me:canAttack(RPD.Dungeon.hero) then
 me:getSprite():attack(RPD.Dungeon.hero:getPos())
-me:spend(1)
 me:attack(RPD.Dungeon.hero)
 local pos = RPD.Dungeon.hero:getPos()
 if pos == me:getPos() -1 then
@@ -41,7 +40,6 @@ me:getSprite():zap(i-1)
 local distance = RPD.Dungeon.level:distance(me:getPos(),i-1)
 RPD.Tweeners.JumpTweener:attachTo(mob:getSprite(),i-1, distance * 16,distance * 0.1f)
 mob:move(i-1)
-me:spend(1)
 end
 end
 end
@@ -100,7 +98,6 @@ if enemy and enemy ~= me then
 enemy:damage(math.random(5,15),me)
 end
 
-me:spend(1)
 break
 end
 end

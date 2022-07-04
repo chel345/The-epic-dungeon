@@ -15,8 +15,8 @@ return actor.init({
         return 1
     end,
     activate = function()
-RPD.removeBuff(RPD.Dungeon.hero, "ModBuff");
-RPD.permanentBuff(RPD.Dungeon.hero, "ModBuff");
+RPD.removeBuff(RPD.Dungeon.hero, "ModBuff")
+RPD.permanentBuff(RPD.Dungeon.hero, "ModBuff")
 if RPD.Dungeon.depth == 1 then
 if not storage.get("storymod") then
        local wnd = RPD.new(RPD.Objects.Ui.WndStory,RPD.StringsManager:maybeId("Mod_Story"))
@@ -60,6 +60,10 @@ for i = 0 , levelSize - 1 do
   if RPD.Dungeon.level.solid[i] then
    local emitter = RPD.Sfx.CellEmitter:get(i)
    emitter:pour(RPD.Sfx.SnowParticle.FACTORY, 2)
+  end
+  local mob = RPD.Actor:findChar(i)
+  if mob then
+  mob:getSprite():tint(0,0,0,0.3)
   end
 end
 end

@@ -9,11 +9,7 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init{
-interact = function(self, chr)
-    RPD.resetPos(self,chr)
-end,
-zapProc = function(self,enemy,dmg)
+local function zap(self,enemy)
 local mob = RPD.mob("effects/DarckSkull")
 mob:setPos(self:getPos())
 RPD.Dungeon.level:spawnMob(mob)
@@ -45,6 +41,17 @@ end
 end
 end
 end
+end
 
+return mob.init{
+interact = function(self, chr)
+RPD.resetPos(self,chr)
+end,
+zapProc = function(self,enemy,dmg)
+zap(self,enemy)
+return dmg*0
+end,
+zapMiss = function(self,enemy)
+zap(self,enemy)
 end
 }

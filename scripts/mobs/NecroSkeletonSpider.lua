@@ -9,19 +9,23 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init{
-attackProc = function(self, enemy, dmg)
-missile = self:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset( self:getPos(),enemy:getPos(),nil)
-missile:size(7)
-missile:pour( RPD.Sfx.PurpleParticle.FACTORY, 0.01f);
-return dmg
-end,
-zapProc = function(self, enemy, dmg)
-missile = self:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
+local function zapEffect(self, enemy)
+local missile = self:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
 missile:reset( self:getPos(),enemy:getPos(),nil)
 missile:size(6)
-missile:pour( RPD.Sfx.PurpleParticle.FACTORY, 0.01f);
+missile:pour( RPD.Sfx.PurpleParticle.FACTORY, 0.01f)
+end
+
+return mob.init{
+zapProc = function(self, enemy, dmg)
+zapEffect(self,enemy)
 return dmg
+end,
+attackProc = function(self, enemy, dmg)
+zapEffect(self,enemy)
+return dmg
+end,
+zapMiss = function(self, enemy)
+zapEffect(self,enemy)
 end
 }
