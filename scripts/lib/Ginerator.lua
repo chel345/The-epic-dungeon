@@ -318,7 +318,9 @@ local Ginerator = {
                 if gin.Items then
                     for i = 1, #gin.Items do
                         local r = Spawner().getCell()
-                        RPD.Dungeon.level:drop(RPD.item(gin.Items[i]), r)
+                        if r > 0 then
+                            RPD.Dungeon.level:drop(RPD.item(gin.Items[i]), r)
+                        end
                     end
                 end
 

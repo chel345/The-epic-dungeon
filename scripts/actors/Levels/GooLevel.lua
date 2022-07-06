@@ -21,46 +21,47 @@ local storage = require "scripts/lib/storage"
 
 return actor.init({
 activate = function()
-local level = RPD.Dungeon.level
+    local level = RPD.Dungeon.level
 
-if RPD.Dungeon.depth ~= 25 then
-if not storage.get("Chasm") then
-storage.put("Chasm",true)
+    if RPD.Dungeon.depth ~= 25 then
+        if not storage.get("Chasm") then
+            storage.put("Chasm",true)
 
-local cell = level:cell(level:getWidth()/2,level:getHeight()/2)
+            local cell = level:cell(level:getWidth()/2,level:getHeight()/2)
 
-local x = level:cellX(cell)
-local y = level:cellY(cell)
-local v = 15
-local s = v+1
+            local x = level:cellX(cell)
+            local y = level:cellY(cell)
+            local v = 15
+            local s = v+1
 
 
-local st = RPD.Dungeon.hero:getPos()
-room.printRoom(st, "CavesEntrance")
+            local st = RPD.Dungeon.hero:getPos()
+            room.printRoom(st, "CavesEntrance")
 
-Ginerator.CreateLevel("GooLevel",true)
-for i = x - v, x + v do
-s = s - 1
-for j = y - v+math.abs(s), y + v-math.abs(s) do
-level:set(level:cell(i,j),RPD.Terrain.CHASM)
-end
-end
-end
+            Ginerator.CreateLevel("GooLevel",true)
+            for i = x - v, x + v do
+                s = s - 1
+                for j = y - v+math.abs(s), y + v-math.abs(s) do
+                    level:set(level:cell(i,j),RPD.Terrain.CHASM)
+                end
+            end
+        end
 
-local r = Spawner().getCell()
-level:drop(RPD.item("Ration"),r)
+        local r = Spawner().getCell()
+        if r > 0 then
+            level:drop(RPD.item("Ration"),r)
+        end
 
-if RPD.Dungeon.depth == 22 then
-local cell = math.random(1,level:getLength()-1)
-while level.map[cell] ~= RPD.Terrain.EMPTY do
-cell = math.random(1,level:getLength()-1)
-end
-local mob = RPD.mob("MirrorWorm")
-local level = RPD.Dungeon.level
-mob:setPos(cell)
-level:spawnMob(mob)
-end
-end
+        if RPD.Dungeon.depth == 22 then
+            local cell = math.random(1,level:getLength()-1)
+            while level.map[cell] ~= RPD.Terrain.EMPTY do
+                cell = math.random(1,level:getLength()-1)
+            end
+            local mob = RPD.mob("MirrorWorm")
+            mob:setPos(cell)
+            level:spawnMob(mob)
+        end
+    end
 
 if not storage.get("Deco") then
 storage.put("Deco",true)
