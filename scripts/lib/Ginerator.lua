@@ -101,43 +101,28 @@ local Ginerator = {
                         end
                     end
 
-                    local r = math.random(1, l - 2)
-                    while (not room.canSpawnAt(r, gin.ExitWidth, gin.ExitHeigth)) do
-                        r = math.random(1, l - 2)
+                    local function spawnRoomForSure(roomWidth,roomHeight, roomKind)
+                        local r = math.random(w, L - w)
+                        while (not room.canSpawnAt(r, roomWidth, roomHeight)) do
+                            r = math.random(w, L - w)
+                        end
+                        room.printRoom(r, roomKind)
+                        room.Tunel(st, r)
+                        return r
                     end
-                    room.printRoom(r, gin.Exit)
-                    room.Tunel(st, r)
-                    level:setExit(r)
-                    st = r
+
+                    st = spawnRoomForSure(gin.ExitWidth, gin.ExitHeigth, gin.Exit)
 
                     if gin.Shop and gin.LevelShop == RPD.Dungeon.depth then
-                        r = math.random(1, l - 1)
-                        while (not room.canSpawnAt(r, gin.NPCRoomWidth, gin.NPCRoomHeigth)) do
-                            r = math.random(1, l - 1)
-                        end
-                        room.printRoom(r, gin.Shop)
-                        room.Tunel(st, r)
-                        st = r
+                        st = spawnRoomForSure(gin.NPCRoomWidth, gin.NPCRoomHeigth, gin.Shop)
                     end
 
                     if gin.MiniBoss and gin.LevelMiniBoss == RPD.Dungeon.depth then
-                        r = math.random(1, l - 2)
-                        while (not room.canSpawnAt(r, gin.NPCRoomWidth, gin.NPCRoomHeigth)) do
-                            r = math.random(1, l - 2)
-                        end
-                        room.printRoom(r, gin.MiniBoss)
-                        room.Tunel(st, r)
-                        st = r
+                        st = spawnRoomForSure(gin.NPCRoomWidth, gin.NPCRoomHeigth, gin.MiniBoss)
                     end
 
                     if gin.NPCRoom and gin.levelNPC == RPD.Dungeon.depth then
-                        r = math.random(1, l - 2)
-                        while (not room.canSpawnAt(r, gin.NPCRoomWidth, gin.NPCRoomHeigth)) do
-                            r = math.random(1, l - 2)
-                        end
-                        room.printRoom(r, gin.NPCRoom)
-                        room.Tunel(st, r)
-                        st = r
+                        st = spawnRoomForSure(gin.NPCRoomWidth, gin.NPCRoomHeigth, gin.NPCRoom)
                     end
 
                     -- st
@@ -361,7 +346,9 @@ local Ginerator = {
             if not res then
                 RPD.debug("Error in level " .. file .. ": " .. ret)
             end
+            RPD.debug("canSpawnAtCounter %s %d", file, room.getSpawnAtCounter())
         until res
+
         return res
     end,
 

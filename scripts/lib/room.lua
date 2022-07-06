@@ -35,6 +35,9 @@ local room = {
     resetSpawnCounter = function()
         canSpawnAtCounter = 0
     end,
+    getSpawnAtCounter = function()
+        return canSpawnAtCounter
+    end,
     canSpawnAt = function(cell, w, h)
 
         local level = RPD.Dungeon.level
@@ -48,7 +51,7 @@ local room = {
 
         canSpawnAtCounter = canSpawnAtCounter + 1
 
-        if canSpawnAtCounter > 10000 then
+        if canSpawnAtCounter > 5000 then
             error("Too many room spawn checks")
         end
 
