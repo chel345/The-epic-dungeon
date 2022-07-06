@@ -20,7 +20,7 @@ end
 
 return mob.init({
     act = function(me)
-        local tgt = Spawner.getCell()
+        local tgt = Spawner().getCell()
         if tgt > 0 then
             me:setPos(tgt)
             me:getSprite():update()

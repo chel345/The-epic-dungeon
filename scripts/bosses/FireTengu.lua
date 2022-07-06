@@ -15,7 +15,7 @@ local GameLoop = luajava.bindClass("com.nyrds.pixeldungeon.game.GameLoop")
 return mob.init({
     damage = function(me)
         local level = RPD.Dungeon.level
-        local cell = Spawner.getCell(level)
+        local cell = Spawner().getCell(level)
         if math.random(1, 2) == 1 and cell > 0 then
             local dst = RPD.Ballistica:cast(me:getPos(), cell, true, false, false)
             me:setPos(dst)
@@ -40,9 +40,9 @@ return mob.init({
         end
         RPD.forCellsAround(me:getPos(), spawn)
 
-        local i = Spawner.getCell()
+        local i = Spawner().getCell()
         while level:distance(i, hero:getPos()) < 3 and level:distance(i, hero:getPos()) > 0 do
-            i = Spawner.getCell()
+            i = Spawner().getCell()
         end
 
         local mob = RPD.mob("effects/Boll")

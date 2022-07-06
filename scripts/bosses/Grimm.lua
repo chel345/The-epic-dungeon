@@ -205,7 +205,7 @@ return mob.init({
     end,
     damage = function(me)
         RPD.GameScene:flash(0x370C0C)
-        local n = Spawner.getCell()
+        local n = Spawner().getCell()
         if n > 0 then
             me:setPos(n)
             me:getSprite():move(me:getPos(), n)
