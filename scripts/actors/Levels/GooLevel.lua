@@ -86,7 +86,7 @@ if level.map[i] == RPD.Terrain.EMPTY and math.random(1,50) == 1 then
 RPD.topEffect(i-1,"GooRain")
 end
 local maybeMob = RPD.Actor:findChar(i)          
-if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() ==  "Shopkeeper" then
+if maybeMob and maybeMob:getEntityKind() ==  "Shopkeeper" then
 RPD.topEffect(i,"GooKeeper")
 maybeMob:getSprite():killAndErase()
 end
