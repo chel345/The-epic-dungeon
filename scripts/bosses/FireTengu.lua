@@ -45,14 +45,17 @@ return mob.init({
             i = Spawner().getCell()
         end
 
-        local mob = RPD.mob("effects/Boll")
-        mob:setPos(me:getPos())
-        RPD.Dungeon.level:spawnMob(mob)
-        local factor = RPD.Dungeon.level:distance(me:getPos(), i)
-        RPD.Tweeners.JumpTweener:attachTo(mob:getSprite(), i, factor * 10, factor * 0.1)
-        mob:getSprite():emitter():start(RPD.Sfx.FlameParticle.FACTORY, 0.01, factor*10+1)
-        mob:destroy()
-        RPD.placeBlob(RPD.Blobs.LiquidFlame, i, 30)
+        if i > 0 then
+            local mob = RPD.mob("effects/Boll")
+            mob:setPos(me:getPos())
+            RPD.Dungeon.level:spawnMob(mob)
+            local factor = RPD.Dungeon.level:distance(me:getPos(), i)
+            RPD.Tweeners.JumpTweener:attachTo(mob:getSprite(), i, factor * 10, factor * 0.1)
+            mob:getSprite():emitter():start(RPD.Sfx.FlameParticle.FACTORY, 0.01, factor*10+1)
+            mob:destroy()
+            RPD.placeBlob(RPD.Blobs.LiquidFlame, i, 30)
+        end
+
         return dmg * 0
 
     end,
