@@ -71,11 +71,16 @@ end
 
 RPD.onThrowChance = function(item, base)
 	local ver = math.max(0, base - item:level() - item:getUser():effectiveSTR())
-	local chance = math.random(ver, base - 1)
+
 	if RPD.Dungeon.hero:effectiveSTR() >= base - item:level() then
 		ver = math.max( 0,base - item:level())
-		chance = math.random(base - 1, ver)
 	end
+
+	if ver >= base - 1 then
+		return true
+	end
+
+	local chance = math.random(ver, base - 1)
 
 	return ver == chance
 end
