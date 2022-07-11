@@ -42,9 +42,15 @@ return mob.init({
     end,
     damage = function(self)
         cell = storage.get("pos") or self:getPos()
-        local s = cell + math.random(-2, 2) + math.random(-2, 2) * RPD.Dungeon.level:getWidth()
-        while RPD.Dungeon.level.map[s] ~= 1 or s == RPD.Dungeon.hero:getPos() or RPD.Actor:findChar(s) do --здесь зависает если его окружить
-            s = cell + math.random(-2, 2) + math.random(-2, 2) * RPD.Dungeon.level:getWidth()
+        local w = RPD.Dungeon.level:getWidth()
+        local s = cell + math.random(-2, 2) + math.random(-2, 2) * w
+        local counter = 0
+        while RPD.Dungeon.level.map[s] ~= 1 or  RPD.Actor:findChar(s) do
+            s = cell + math.random(-2, 2) + math.random(-2, 2) * w
+            counter = counter + 1
+            if counter > 20 then
+                return
+            end
         end
         self:move(s)
         self:getSprite():move(self:getPos(), s)
