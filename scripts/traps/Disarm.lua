@@ -46,4 +46,3 @@ return trap.init(function(cell, char, data)
         removeItemFromHero(item)
     end
 end)
-
