@@ -20,6 +20,7 @@ locked = function()
 return nil
 end,
 objects = function(cell)
+local level = RPD.Dungeon.level
 local x = level:cellX(cell)
 local y = level:cellY(cell)
 for i = x - 3, x + 3 do

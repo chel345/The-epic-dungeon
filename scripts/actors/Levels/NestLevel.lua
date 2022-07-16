@@ -24,7 +24,7 @@ RPD.Dungeon.level:set(RPD.Dungeon.hero:getPos(),RPD.Terrain.ENTRANCE)
 end
 for i = 1,RPD.Dungeon.level:getLength()-1 do           
 local maybeMob = RPD.Actor:findChar(i)          
-if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() ==  "Shopkeeper" then
+if maybeMob and maybeMob:getEntityKind() ==  "Shopkeeper" then
 RPD.topEffect(i,"NestKeeper")
 maybeMob:getSprite():killAndErase()
 end

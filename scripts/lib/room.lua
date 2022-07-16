@@ -1,20 +1,24 @@
-local RPD  = require "scripts/lib/epicClasses"
+local RPD = require "scripts/lib/epicClasses"
 
-local EPD  = require "scripts/lib/dopClasses"
+local EPD = require "scripts/lib/dopClasses"
+
+local canSpawnAtCounter = 0
 
 local room = {
-    printRoom  = function(cell, Room)
+    printRoom = function(cell, Room)
         CustomRoom = require("scripts/rooms/" .. Room)
-        local Hr   = CustomRoom:getHidth()
-        local Wr   = CustomRoom:getWidth()
-        local w    = RPD.Dungeon.level:getWidth()
-        local map  = CustomRoom.map()
-        num        = 1
+        local Hr = CustomRoom:getHidth()
+        local Wr = CustomRoom:getWidth()
+        local w = RPD.Dungeon.level:getWidth()
+        local map = CustomRoom.map()
+        num = 1
         for i = math.floor(Hr / 2 * (-1)), math.floor(Hr / 2) do
             local Ccell = cell + w * (i + 1)
             for j = Ccell - math.floor(Wr / 2), Ccell + math.floor(Wr / 2) do
                 if num > Hr * Wr then
-                    if CustomRoom.objects ~= nil then CustomRoom.objects(cell) end
+                    if CustomRoom.objects ~= nil then
+                        CustomRoom.objects(cell)
+                    end
                     return
                 end
                 pcall(function()
@@ -28,15 +32,29 @@ local room = {
         end
         pcall(CustomRoom.objects(cell, RPD.Dungeon.level:getWidth()))
     end,
+    resetSpawnCounter = function()
+        canSpawnAtCounter = 0
+    end,
+    getSpawnAtCounter = function()
+        return canSpawnAtCounter
+    end,
     canSpawnAt = function(cell, w, h)
+
         local level = RPD.Dungeon.level
-        local W     = level:getWidth()
-        local x     = level:cellX(cell)
-        local y     = level:cellY(cell)
-        local l     = level:getLength()
+        local W = level:getWidth()
+        local x = level:cellX(cell)
+        local y = level:cellY(cell)
+        local l = level:getLength()
         if cell > l or cell < 1 then
-return false
-end
+            return false
+        end
+
+        canSpawnAtCounter = canSpawnAtCounter + 1
+
+        if canSpawnAtCounter > 5000 then
+            error("Too many room spawn checks")
+        end
+
         if x >= math.ceil(w / 2) and x <= W - math.ceil(w / 2) then
             if cell >= W * (w / 2) + 1 and cell <= l - W * (w / 2) - 1 then
                 for t = x - math.ceil(w / 2), x + math.ceil(w / 2) do
@@ -56,11 +74,11 @@ end
         end
         return false
     end,
-    addWater   = function(min, max, chanse)
+    addWater = function(min, max, chanse)
         for i = 2, RPD.Dungeon.level:getLength() - 1 do
-            r       = math.random(min, max)
+            r = math.random(min, max)
             --if canSpawnAt(i,r,r) then
-            level   = RPD.Dungeon.level
+            level = RPD.Dungeon.level
             local W = level:getWidth()
             local x = level:cellX(i)
             local y = level:cellY(i)
@@ -84,11 +102,11 @@ end
             end
         end
     end,
-    addGrass   = function(min, max, chanse)
+    addGrass = function(min, max, chanse)
         for i = 2, RPD.Dungeon.level:getLength() - 1 do
-            r       = math.random(min, max)
+            r = math.random(min, max)
             --if canSpawnAt(i,r,r) then
-            level   = RPD.Dungeon.level
+            level = RPD.Dungeon.level
             local W = level:getWidth()
             local x = level:cellX(i)
             local y = level:cellY(i)
@@ -115,7 +133,7 @@ end
             end
         end
     end,
-    addTraps   = function(traps, chanse)
+    addTraps = function(traps, chanse)
 
         for i = 2, RPD.Dungeon.level:getLength() - 1 do
             chanss = math.floor(chanse * 100)
@@ -196,10 +214,10 @@ end
                         end)
                     else
                         local trap = {
-                            kind     = "Trap",
-                            uses     = 1,
+                            kind = "Trap",
+                            uses = 1,
                             trapKind = "scriptFile",
-                            script   = ("scripts/traps/" .. trap)
+                            script = ("scripts/traps/" .. trap)
                         }
                         RPD.createLevelObject(trap, i - 1)
                     end
@@ -208,94 +226,94 @@ end
         end
 
     end,
-Tunel      = function(from, cell)
-local level  = RPD.Dungeon.level
-local w      =  level:getWidth()
-
-local set    = function(p,k)
-local pos = p
-local level  = RPD.Dungeon.level
-
---RPD.glog(tostring(pos).." - ")
-pos = p + k
---RPD.glog(tostring(pos))
---[[
-if level.map[pos] == RPD.Terrain.WALL then
-level:set(p, RPD.Terrain.EMPTY)
-RPD.bottomEffect(p,"Debag")
-end
---]]
-
-local object = level:getTopLevelObject(p)
-if object and level.map[pos] ~= RPD.Terrain.STATUE_SP and level.map[pos] ~= RPD.Terrain.LOCKED_DOOR and level.map[pos] ~= RPD.Terrain.EMBERS then
-level:remove(object)
-object.sprite:kill()
-end
-
-if level.map[pos] == RPD.Terrain.PEDESTAL then
-level:set(p, RPD.Terrain.EMPTY_SP)
-elseif level.map[pos] == 0 then
-level:set(p, RPD.Terrain.EMPTY_SP)
-elseif level.map[pos] == RPD.Terrain.BARRICADE then
-level:set(p, RPD.Terrain.EMPTY)
-elseif level.map[pos] == RPD.Terrain.WALL then
-level:set(p, RPD.Terrain.EMPTY)
-elseif level.map[pos] == RPD.Terrain.WALL_DECO then
-level:set(p, RPD.Terrain.EMPTY)
-elseif level.map[pos] == RPD.Terrain.BOOKSHELF then
-level:set(p, RPD.Terrain.EMPTY)
-elseif level.map[pos] == RPD.Terrain.STATUE_SP then
-level:set(p, level.map[cell])
-elseif level.map[pos] == RPD.Terrain.STATUE then
-level:set(p, level.map[cell])
-end
-
-
-end
-
-local to_y = level:cellY(cell)
-local to_x = level:cellX(cell)
-local variant = math.random(1,2)
-local function create(now)
-if now == cell then
-return
-end
-local from_y    = level:cellY(now)
-local from_x    = level:cellX(now)
-local g = 0
-
-if from_y ~= to_y then
-if from_y > to_y then
-f = -w
-else
-f = w
-end
-end
-
-if from_x ~= to_x then
-if from_x > to_x then
-f = -1
-g = 1
-else
-f = 1
-g = 1
-end
-end
-
-set(now+f,g)
-
-return create(now+f)
-end
-
-create(from,0)
-set(from,0)
-set(cell,0)
-set(level:cell(level:cellX(cell),level:cellY(from)),0)
-end,
-
-    Correct    = function()
+    Tunel = function(from, cell)
         local level = RPD.Dungeon.level
-        local w     = level:getWidth()
+        local w = level:getWidth()
+
+        local set = function(p, k)
+            local pos = p
+            local level = RPD.Dungeon.level
+
+            --RPD.glog(tostring(pos).." - ")
+            pos = p + k
+            --RPD.glog(tostring(pos))
+            --[[
+            if level.map[pos] == RPD.Terrain.WALL then
+            level:set(p, RPD.Terrain.EMPTY)
+            RPD.bottomEffect(p,"Debag")
+            end
+            --]]
+
+            local object = level:getTopLevelObject(p)
+            if object and level.map[pos] ~= RPD.Terrain.STATUE_SP and level.map[pos] ~= RPD.Terrain.LOCKED_DOOR and level.map[pos] ~= RPD.Terrain.EMBERS then
+                level:remove(object)
+                object.sprite:kill()
+            end
+
+            if level.map[pos] == RPD.Terrain.PEDESTAL then
+                level:set(p, RPD.Terrain.EMPTY_SP)
+            elseif level.map[pos] == 0 then
+                level:set(p, RPD.Terrain.EMPTY_SP)
+            elseif level.map[pos] == RPD.Terrain.BARRICADE then
+                level:set(p, RPD.Terrain.EMPTY)
+            elseif level.map[pos] == RPD.Terrain.WALL then
+                level:set(p, RPD.Terrain.EMPTY)
+            elseif level.map[pos] == RPD.Terrain.WALL_DECO then
+                level:set(p, RPD.Terrain.EMPTY)
+            elseif level.map[pos] == RPD.Terrain.BOOKSHELF then
+                level:set(p, RPD.Terrain.EMPTY)
+            elseif level.map[pos] == RPD.Terrain.STATUE_SP then
+                level:set(p, level.map[cell])
+            elseif level.map[pos] == RPD.Terrain.STATUE then
+                level:set(p, level.map[cell])
+            end
+
+
+        end
+
+        local to_y = level:cellY(cell)
+        local to_x = level:cellX(cell)
+        local variant = math.random(1, 2)
+        local function create(now)
+            if now == cell then
+                return
+            end
+            local from_y = level:cellY(now)
+            local from_x = level:cellX(now)
+            local g = 0
+
+            if from_y ~= to_y then
+                if from_y > to_y then
+                    f = -w
+                else
+                    f = w
+                end
+            end
+
+            if from_x ~= to_x then
+                if from_x > to_x then
+                    f = -1
+                    g = 1
+                else
+                    f = 1
+                    g = 1
+                end
+            end
+
+            set(now + f, g)
+
+            return create(now + f)
+        end
+
+        create(from, 0)
+        set(from, 0)
+        set(cell, 0)
+        set(level:cell(level:cellX(cell), level:cellY(from)), 0)
+    end,
+
+    Correct = function()
+        local level = RPD.Dungeon.level
+        local w = level:getWidth()
 
         for i = 1, RPD.Dungeon.level:getLength() - 1 do
             if level.map[i] == RPD.Terrain.EMPTY then
@@ -410,7 +428,7 @@ end,
     end,
 
     MakeBorder = function()
-        delete      = function(cell)
+        delete = function(cell)
             local level = RPD.Dungeon.level
             if level.map[cell] ~= RPD.Terrain.EMBERS and level.map[cell] ~= RPD.Terrain.STATUE then
                 local object = RPD.Dungeon.level:getTopLevelObject(cell)
@@ -430,7 +448,7 @@ end,
             end
         end
         local level = RPD.Dungeon.level
-        local W     = level:getWidth()
+        local W = level:getWidth()
         for i = 1, RPD.Dungeon.level:getLength() - 1 do
             --- top
             if i <= W then
@@ -464,7 +482,7 @@ end,
         end
     end,
 
-    addDoors   = function(Room, cell)
+    addDoors = function(Room, cell)
         CustomRoom = require("scripts/rooms/" .. Room)
         if pcall(
                 function(cell)
@@ -473,11 +491,11 @@ end,
         ) then
         end
         local level = RPD.Dungeon.level
-        local Hr    = CustomRoom:getHidth()
-        local Wr    = CustomRoom:getWidth()
-        local w     = RPD.Dungeon.level:getWidth()
-        local x     = level:cellX(cell)
-        local y     = level:cellY(cell)
+        local Hr = CustomRoom:getHidth()
+        local Wr = CustomRoom:getWidth()
+        local w = RPD.Dungeon.level:getWidth()
+        local x = level:cellX(cell)
+        local y = level:cellY(cell)
         for t = x - math.floor(Wr / 2) - 1, x + math.floor(Wr / 2) + 1 do
             for j = y - math.floor(Hr / 2) - 1, y + math.floor(Hr / 2) + 1 do
                 local pos = level:cell(t, j)
@@ -488,20 +506,20 @@ end,
                     if CustomRoom.locked() == "Barricade" then
                         level:set(pos, RPD.Terrain.BARRICADE)
                         cell = level:randomRespawnCell()
-                        dst  = level:distance(pos, cell)
+                        dst = level:distance(pos, cell)
                         while (dst > Hr and dst > Wr) do
                             cell = level:randomRespawnCell()
-                            dst  = level:distance(pos, cell)
+                            dst = level:distance(pos, cell)
                             level:drop(RPD.item("PotionOfLiquidFlame"), cell)
                         end
 
                         if CustomRoom.locked() == "LockedDoor" then
                             level:set(pos, RPD.Terrain.LOCKED_DOOR)
                             cell = level:randomRespawnCell()
-                            dst  = level:distance(pos, cell)
+                            dst = level:distance(pos, cell)
                             while (dst > Hr and dst > Wr) do
                                 cell = level:randomRespawnCell()
-                                dst  = level:distance(pos, cell)
+                                dst = level:distance(pos, cell)
                                 level:drop(RPD.item("IronKey"), cell)
                             end
                         end
