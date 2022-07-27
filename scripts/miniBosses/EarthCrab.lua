@@ -78,7 +78,9 @@ return mob.init {
         RPD.permanentBuff(self, RPD.Buffs.Invisibility)
     end,
     die = function(self)
-        emitter.on = false
+        if emitter then
+            emitter.on = false
+        end
     end,
     act = function(self)
         if not emitter then
