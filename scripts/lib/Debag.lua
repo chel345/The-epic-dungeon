@@ -62,7 +62,7 @@ if t[1] == Cstats then
 if t[2] == "attack" then
 for i = 1,RPD.Dungeon.level:getLength()-1 do           
 local maybeMob = RPD.Actor:findChar(i)
-if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() == "Heroes/Player" then
+if maybeMob and maybeMob:getEntityKind() == "Heroes/Player" then
 maybeMob:getSprite():attack(maybeMob:getPos()+1)
 end
 end
@@ -102,7 +102,7 @@ if t[1] == Cstats and t[2] == "hero" then
 -- спавн если нет, передвижение если нет и открытие следующего уровня для User.player
 for i = 1,RPD.Dungeon.level:getLength()-1 do           
 local maybeMob = RPD.Actor:findChar(i)
-if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() == "Heroes/Player" then
+if maybeMob and maybeMob:getEntityKind() == "Heroes/Player" then
 if t[5] ~= tostring(RPD.Dungeon.depth) then
 if t[5] > tostring(RPD.Dungeon.depth) then
 for i = 1, RPD.Dungeon.level:getLength()-1 do
@@ -231,7 +231,7 @@ if t[2] == "true" then
 RPD.glog("-- Ваш товарищ скончался.")
 for i = 1,RPD.Dungeon.level:getLength()-1 do           
 local maybeMob = RPD.Actor:findChar(i)
-if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() == "Heroes/Player" then
+if maybeMob and maybeMob:getEntityKind() == "Heroes/Player" then
 maybeMob:die()
 end
 end

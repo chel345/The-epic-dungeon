@@ -18,7 +18,7 @@ die = function(self,enemy,dmg)
 RPD.playSound( "TentacleAttack.ogg" )
 for i = 0, RPD.Dungeon.level:getLength()-1 do
 local maybeMob = RPD.Actor:findChar(i)          
-if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() == "Bosses/Monstro" then
+if maybeMob and maybeMob:getEntityKind() == "Bosses/Monstro" then
 maybeMob:damage(100,RPD.Dungeon.hero)
 end
 end

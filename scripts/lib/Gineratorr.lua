@@ -2,8 +2,6 @@ local RPD = require "scripts/lib/epicClasses"
 
 local room = require "scripts/lib/room"
 
-local Process = require"scripts/lib/Process"
-
 local storage = require"scripts/lib/storage"
 
 local script
