@@ -1,9 +1,0 @@
-{
-  "texture" : "RatBankerPedestal.png",
-  "width"  : 16,
-  "height" : 32,
-  "idle"   : { "fps" : 2,  "looped" : true,     "frames" : [0,0,0,1] },
-  "run"    : { "fps" : 14, "looped" : true,     "frames" : [0] },
-  "attack" : { "fps" : 11, "looped" : false,    "frames" : [0,2] },
-  "die"    : { "fps" : 11, "looped" : false,    "frames" : [0,3] }
-}

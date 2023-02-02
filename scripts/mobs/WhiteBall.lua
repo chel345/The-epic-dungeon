@@ -17,7 +17,7 @@ zapProc       = function(me, enemy, dmg)
 RPD.zapEffect(me:getPos(),enemy:getPos(),"WhiteBall")
 return dmg
 end,
-zapMiss = function(me,enemy)
+zapMiss = function(self,enemy)
 RPD.zapEffect(me:getPos(),enemy:getPos(),"WhiteBall")
 end
 }

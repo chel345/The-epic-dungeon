@@ -225,7 +225,7 @@ end,
 act = function()
 for i = 1,RPD.Dungeon.level:getLength()-1 do           
 local maybeMob = RPD.Actor:findChar(i)          
-if maybeMob and maybeMob:getEntityKind() == "Rat" then
+if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() == "Rat" then
 maybeMob:move(0)
 end
 end

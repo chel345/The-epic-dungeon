@@ -36,7 +36,7 @@ me:spend(3)
 elseif math.random(1,10) == 1 then
 for i = 1, RPD.Dungeon.level:getLength()-1 do
 local maybeMob = RPD.Actor:findChar(i)        
-if maybeMob and maybeMob:getEntityKind() == "Bosses/IceNecromanter" then
+if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() == "Bosses/IceNecromanter" then
 for i = 1,math.random(1,3) do
 local pos = RPD.Dungeon.level:getEmptyCellNextTo(maybeMob:getPos())
 if (RPD.Dungeon.level:cellValid(pos)) then

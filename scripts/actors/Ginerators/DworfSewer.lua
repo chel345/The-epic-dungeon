@@ -223,7 +223,7 @@ end,
 act = function()
 for i = 1,RPD.Dungeon.level:getLength()-1 do           
 local maybeMob = RPD.Actor:findChar(i)          
-if maybeMob and maybeMob:getEntityKind() == "effects/LightMagic" then
+if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() == "effects/LightMagic" then
 maybeMob:move(0)
 end
 end

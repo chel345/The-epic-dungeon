@@ -1,6 +1,0 @@
-{
-  "texture" : "effects/Debag.png",
-  "width"  : 16,
-  "height" : 16,
-  "anim"   : { "fps" : 1,  "looped" : false,    "frames" : [0,0,0,0,0,0,0] }
-}

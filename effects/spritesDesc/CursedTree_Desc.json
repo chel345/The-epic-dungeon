@@ -1,9 +1,0 @@
-{
-  "texture" : "CursedTree.png",
-  "width"  : 21,
-  "height" : 20,
-  "idle"   : { "fps" : 4,  "looped" : true,     "frames" : [0,1] },
-  "run"    : { "fps" : 14, "looped" : true,     "frames" : [1,3] },
-  "attack" : { "fps" : 11, "looped" : false,    "frames" : [2,3] },
-  "die"    : { "fps" : 11, "looped" : false,    "frames" : [4,5] }
-}

@@ -27,7 +27,7 @@ return trap.init(function(cell, char, data)
                 cellToDrop = cell
             end
 
-            level:animatedDrop(item, cellToDrop)
+            level:drop(item, cellToDrop).sprite:drop(cell)
         end
     end
 
@@ -46,3 +46,4 @@ return trap.init(function(cell, char, data)
         removeItemFromHero(item)
     end
 end)
+

@@ -1,6 +1,0 @@
-{
-  "texture" : "effects/SkullBolt.png",
-  "width"  : 7,
-  "height" : 7,
-  "anim"   : { "fps" : 1,  "looped" : true,    "frames" : [0] }
-}

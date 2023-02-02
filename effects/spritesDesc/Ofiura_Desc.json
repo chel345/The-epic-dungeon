@@ -1,9 +1,0 @@
-{
-  "texture" : "Ofiura.png",
-  "width"  : 16,
-  "height" : 16,
-  "idle"   : { "fps" : 3,  "looped" : true,     "frames" : [0,1,2] },
-  "run"    : { "fps" : 4, "looped" : true,     "frames" : [0,1,2] },
-  "attack" : { "fps" : 12, "looped" : false,    "frames" : [0,3,4,5,0,6,7,8,0,9,10,11,0,12,13,14] },
-  "die"    : { "fps" : 5, "looped" : false,    "frames" : [0,15,16,17] }
-}

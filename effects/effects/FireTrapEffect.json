@@ -1,6 +1,0 @@
-{
-  "texture" : "levelObjects/FireTenguTrap.png",
-  "width"  : 16,
-  "height" : 16,
-  "anim"   : { "fps" : 1,  "looped" : true,    "frames" : [0] }
-}

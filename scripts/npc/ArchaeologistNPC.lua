@@ -15,6 +15,8 @@ local mob = require"scripts/lib/mob"
 
 return mob.init({
 spawn = function(self)
+if not storage.get("item_was_spwn") then
+storage.put("item_was_spwn",true)
 local level = RPD.Dungeon.level
 local W = level:getWidth()
 cell = math.random(1,level:getLength()-1)
@@ -22,6 +24,7 @@ while level.map[cell] ~= RPD.Terrain.EMPTY and cell ~= self:getPos() do
 cell = math.random(1,level:getLength()-1)
 end
 level:drop(RPD.item("Artifacts/DeskOfRuns"),cell).type = RPD.Heap.Type.SKELETON
+end
 end,
 interact = function(self, chr)
 if not storage.get("interact") then

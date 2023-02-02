@@ -468,7 +468,7 @@
 
 
       
-"Scvern":{"kind":"RandomLevel", "depth":13, "file":"levelsDesc/SkvernNecropolis.json", "music":"SkvernLevel.ogg","script":"scripts/actors/Levels/SkvernLevel", "noBuild":true}
+"Scvern":{"kind":"RandomLevel", "depth":13, "file":"levelsDesc/SkvernNecropolis.json", "music":"SkvernLevel.ogg","script":"scripts/actors/Levels/SkvernLevel",  "noBuild":true}
 , "nMobs":0},
 
    "Graph":{
@@ -750,5 +750,3 @@
 , "nMobs":0},
    "Entrance":"0"
 }
-/* Не забудь, что нужно пофиксить канализацию и синюю утробу
-*/
