@@ -1,0 +1,13 @@
+{
+  "texture" : "AlbinoFireNefrit.png",
+  "width"   : 15,
+  "height"  : 16,
+"zapEffect":"Fire",
+"idle"    : { "fps" : 10,  "looped" : true,     "frames" : [0,1,2] },
+"run"     : { "fps" : 20, "looped" : true,     "frames" : [0,1,2] },
+"die"     : { "fps" : 20, "looped" : false,    "frames" : [4,5,6,7] },
+"attack"  : { "fps" : 15, "looped" : false,    "frames" : [8,9] },
+"zap"     : { "fps" : 15, "looped" : false,    "frames" : [8,9] },
+
+"operate" : { "fps" : 8,  "looped" : false,    "frames" : [0,1,2] }
+}

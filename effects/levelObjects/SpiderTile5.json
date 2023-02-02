@@ -1,0 +1,26 @@
+{
+    "appearance": {
+        "desc": {
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileFloor",
+            "clearCells": false,
+            "nonPassable": false,
+            "canStepOn": true
+        },
+        "sprite": {
+            "animations": {
+                "basic": {
+                    "fps": 10,
+                    "frames": [
+                        4
+                    ],
+                    "looped": true
+                }
+            },
+            "imageIndex": 4,
+            "textureFile": "levelObjects/SpiderTiles.png"
+        }
+    },
+    "kind": "Deco",
+    "script": "NightmareLight"
+}

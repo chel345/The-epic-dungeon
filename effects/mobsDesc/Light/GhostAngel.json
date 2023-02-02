@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 10,
+  "attackSkill": 25,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 1000,
+  "description": "GhostAngel_Desc",
+  "dmgMax": 20,
+  "dmgMin": 10,
+  "dr": 0,
+  "exp": 17,
+  "flying": true,
+  "friendly": false,
+  "gender": "GhostAngel_Gender",
+  "ht": 1,
+  "lootChance": 0,
+  "maxLvl": 30,
+  "name": "GhostAngel_Name",
+  "name_objective": "GhostAngel_Object",
+  "spriteDesc": "spritesDesc/GhostAngel_Desc.json",
+  "walkingType": "ABSOLUTE"
+}

@@ -1,0 +1,17 @@
+{
+    "appearance": {
+        "desc": {
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileWall",
+            "clearCells": false,
+            "nonPassable": true,
+            "losBlocker": true
+        },
+        "sprite": {
+            "imageIndex": 4,
+            "textureFile": "levelObjects/CavesCastle.png"
+        }
+    },
+    "kind": "Deco",
+    "script": "CustomObject"
+}

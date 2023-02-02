@@ -1,0 +1,23 @@
+{
+  "attackDelay": 5,
+  "attackRange": 1,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 30,
+  "description": "RedG_Desc",
+  "dmgMax": 60,
+  "dmgMin": 30,
+  "dr": 2,
+  "exp": 30,
+  "flying": false,
+  "friendly": false,
+  "gender": "RedG_Gender",
+  "ht": 90,
+  "lootChance": 0,
+  "maxLvl": 36,
+  "name": "RedG_Name",
+  "name_objective": "RedG_Object",
+  "spriteDesc": "spritesDesc/RedGoo_Desc.json",
+  "walkingType": "NORMAL"
+}

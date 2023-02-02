@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 30,
+  "description": "FungusGnoll_Desc",
+  "dmgMax": 50,
+  "dmgMin": 20,
+  "dr": 1,
+  "exp": 34,
+  "flying": false,
+  "friendly": false,
+  "gender": "FungusGnoll_Gender",
+  "ht": 70,
+  "loot": {
+    "kind": "Ration/Fungus"
+  },
+  "lootChance": 0.2,
+  "maxLvl": 36,
+  "name": "FungusGnoll_Name",
+  "name_objective": "FungusGnoll_Object",
+  "spriteDesc": "spritesDesc/FungusGnoll_Desc.json",
+  "viewDistance": 10,
+  "walkingType": "NORMAL"
+}

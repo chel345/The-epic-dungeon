@@ -1,0 +1,31 @@
+{
+   "texture" : "Lord.png",
+   "width" : 25,
+   "height" : 32,
+   "idle" : {
+      "fps" : 5,
+      "looped" : true,
+      "frames" : [0,0,1,0,0,2,0,0,3]
+   },
+   "run" : {
+      "fps" : 5,
+      "looped" : true,
+      "frames" : [0,0,1,0,0,2,0,0,3]
+   },
+   "attack" : {
+      "fps" : 6,
+      "looped" : false,
+      "frames" : [0,4,5,5,4,0]
+   },
+   "die" : {
+      "fps" : 10,
+      "looped" : false,
+      "frames" : [6,7,8]
+   },
+   "zap" : {
+      "fps" : 6,
+      "looped" : false,
+      "frames" : [0,4,5,5,4,0]
+   },
+   "bloodColor" : "0xffff7002"
+}

@@ -1,0 +1,28 @@
+{
+  "attackDelay": 1,
+  "attackRange": 10,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 23,
+  "description": "Treuhnit_Desc",
+  "dmgMax": 35,
+  "dmgMin": 25,
+  "dr": 5,
+  "exp": 50,
+  "flying": false,
+  "friendly": false,
+  "gender": "Treuhnit_Gender",
+  "ht": 400,
+  "lootChance": 1,
+  "maxLvl": 31,
+  "name": "Treuhnit_Name",
+  "name_objective": "Treuhnit_Object",
+  "scriptFile": "scripts/bosses/Treuhnit",
+  "spriteDesc": "spritesDesc/Treuhnit_Desc.json",
+  "walkingType": "NORMAL",
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true
+}

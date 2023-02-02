@@ -1,0 +1,14 @@
+{
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "UpDworfMonkNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "UpDworfMonkNPC_Gender",
+  "name": "UpDworfMonkNPC_Name",
+  "name_objective": "UpDworfMonkNPC_Object",
+  "scriptFile": "scripts/npc/UpDworfMonkNPC",
+  "spriteDesc": "spritesDesc/UpDworfMonkNPC_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
+}

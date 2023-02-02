@@ -1,0 +1,15 @@
+{
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "Viewer4_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "Viewer4_Gender",
+  "name": "Viewer4_Name",
+  "name_objective": "Viewer4_Object",
+  "spriteDesc": "spritesDesc/Viewer4_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
+
+}

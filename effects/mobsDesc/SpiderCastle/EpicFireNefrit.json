@@ -1,0 +1,32 @@
+{
+  "attackDelay": 1,
+  "attackRange": 10,
+  "attackSkill": 35,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 30,
+  "description": "EpicFireNefrit_Desc",
+  "dmgMax": 40,
+  "dmgMin": 25,
+  "dr": 4,
+  "exp": 25,
+  "flying": true,
+  "friendly": false,
+  "gender": "EpicFireNefrit_Gender",
+  "ht": 70,
+  "immunities": [
+    "Fire",
+    "LiquidFlame",
+    "Burning"
+  ],
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 0.5,
+  "maxLvl": 31,
+  "name": "EpicFireNefrit_Name",
+  "name_objective": "EpicFireNefrit_Object",
+  "scriptFile": "scripts/mobs/EpicFireNefrit",
+  "spriteDesc": "spritesDesc/EpicFireNefrit_Desc.json",
+  "walkingType": "NORMAL"
+}

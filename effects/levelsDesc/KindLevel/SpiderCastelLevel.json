@@ -1,0 +1,7 @@
+{
+   "width":50,
+   "height":50,
+
+   "tiles":"tiles_spider_castle.png",
+   "water":"water_goo.png"
+}

@@ -1,0 +1,38 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 5,
+  "description": "NightBrone_Desc",
+  "dmgMax": 30,
+  "dmgMin": 10,
+  "dr": 5,
+  "exp": 15,
+  "flying": false,
+  "friendly": false,
+  "gender": "NightBrone_Gender",
+  "ht": 120,
+  "immunities": [
+    "Paralysis",
+    "ToxicGas",
+    "Terror",
+    "Death",
+    "Amok",
+    "Blindness",
+    "Poison",
+    "Vertigo",
+    "Bleeding"
+  ],
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 1,
+  "maxLvl": 21,
+  "name": "NightBrone_Name",
+  "name_objective": "NightBrone_Object",
+  "scriptFile": "scripts/miniBosses/NightBrone",
+  "spriteDesc": "spritesDesc/NightBrone_Desc.json",
+  "walkingType": "NORMAL"
+}

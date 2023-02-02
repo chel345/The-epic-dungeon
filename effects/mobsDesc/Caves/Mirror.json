@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 16,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 15,
+  "description": "Mirror_Desc",
+  "dmgMax": 5,
+  "dmgMin": 2,
+  "dr": 0,
+  "exp": 0,
+  "flying": false,
+  "friendly": false,
+  "gender": "Mirror_Gender",
+  "ht": 20,
+  "lootChance": 0,
+  "maxLvl": 1,
+  "name": "Mirror_Name",
+  "name_objective": "Mirror_Object",
+  "spriteDesc": "spritesDesc/Mirorer_Desc.json",
+  "walkingType": "NORMAL"
+}

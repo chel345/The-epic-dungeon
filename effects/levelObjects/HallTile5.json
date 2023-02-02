@@ -1,0 +1,17 @@
+{
+    "appearance": {
+        "desc": {
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileWall",
+            "clearCells": false,
+            "nonPassable": false,
+            "canStepOn": true
+        },
+        "sprite": {
+            "imageIndex": 4,
+            "textureFile": "levelObjects/HallsTiles.png"
+        }
+    },
+    "kind": "Deco",
+    "script": "CustomObject"
+}

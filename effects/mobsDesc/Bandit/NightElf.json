@@ -1,0 +1,26 @@
+{
+  "attackDelay": 1,
+  "attackRange": 100,
+  "attackSkill": 45,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 30,
+  "description": "NightElf_Desc",
+  "dmgMax": 45,
+  "dmgMin": 15,
+  "dr": 5,
+  "exp": 20,
+  "flying": false,
+  "friendly": false,
+  "gender": "NightElf_Gender",
+  "ht": 50,
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 1,
+  "maxLvl": 26,
+  "name": "NightElf_Name",
+  "name_objective": "NightElf_Object",
+  "spriteDesc": "spritesDesc/NightElf_Desc.json",
+  "walkingType": "NORMAL"
+}

@@ -1,0 +1,28 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 27,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 30,
+  "description": "MagicGhost_Desc",
+  "dmgMax": 35,
+  "dmgMin": 10,
+  "dr": 0,
+  "exp": 17,
+  "flying": true,
+  "friendly": false,
+  "gender": "MagicGhost_Gender",
+  "ht": 90,
+  "loot": {
+    "kind": "ScrollOfMagicMapping"
+  },
+  "lootChance": 0.1,
+  "maxLvl": 30,
+  "name": "MagicGhost_Name",
+  "name_objective": "MagicGhost_Object",
+  "scriptFile": "scripts/mobs/MagicGhost",
+  "spriteDesc": "spritesDesc/MagicGhost_Desc.json",
+  "viewDistance": 10,
+  "walkingType": "NORMAL"
+}

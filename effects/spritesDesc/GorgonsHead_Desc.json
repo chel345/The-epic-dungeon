@@ -1,0 +1,29 @@
+{
+   "texture" : "GorgonsHead.png",
+   "width" : 16,
+   "height" : 16,
+   "idle" : {
+      "fps" : 7,
+      "looped" : true,
+      "frames" : [0,1]
+   },
+   "run" : {
+      "fps" : 7,
+      "looped" : true,
+      "frames" : [0,1]
+   },
+   "attack" : {
+      "fps" : 1,
+      "looped" : false,
+      "frames" : [0]
+   },
+   "die" : {
+      "fps" : 7,
+      "looped" : false,
+      "frames" : [2,3,4,5,6]
+   }
+}
+
+
+
+

@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 26,
+  "description": "GnollLiber_Desc",
+  "dmgMax": 16,
+  "dmgMin": 10,
+  "dr": 1,
+  "exp": 11,
+  "flying": false,
+  "friendly": false,
+  "gender": "GnollLiber_Gender",
+  "ht": 60,
+  "loot": {
+    "kind": "Gold",
+    "quantity": 250
+  },
+  "lootChance": 0.25,
+  "maxLvl": 21,
+  "name": "GnollLiber_Name",
+  "name_objective": "GnollLiber_Object",
+  "spriteDesc": "spritesDesc/GnollLiber_Desc.json",
+  "walkingType": "NORMAL"
+}

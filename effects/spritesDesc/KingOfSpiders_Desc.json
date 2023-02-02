@@ -1,0 +1,9 @@
+{
+  "texture" : "KingOfSpiders.png",
+  "width"  : 32,
+  "height" : 32,
+  "idle"   : { "fps" :1 ,  "looped" : true,     "frames" : [0,1] },
+  "run"    : { "fps" : 25, "looped" : true,     "frames" : [0,2,3,4,3,2] },
+  "attack" : { "fps" : 13, "looped" : false,    "frames" : [1,5] },
+  "die"    : { "fps" : 6, "looped" : false,    "frames" : [6,7] }
+}

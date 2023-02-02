@@ -1,0 +1,25 @@
+{
+   "texture" : "NightmareSpirit.png",
+   "width" : 16,
+   "height" : 16,
+   "idle" : {
+      "fps" : 6,
+      "looped" : true,
+      "frames" : [0, 1, 2]
+   },
+   "run" : {
+      "fps" : 6,
+      "looped" : true,
+      "frames" : [0, 1, 2]
+   },
+   "attack" : {
+      "fps" : 10,
+      "looped" : true,
+      "frames" : [3,4,5,6,4,3]
+   },
+   "die" : {
+      "fps" : 9,
+      "looped" : false,
+      "frames" : [4,5,6,7,8]
+   }
+}

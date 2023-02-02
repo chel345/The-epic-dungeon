@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 40,
+  "description": "RatStatuePet_Desc",
+  "dmgMax": 30,
+  "dmgMin": 12,
+  "dr": 0,
+  "exp": 3,
+  "flying": false,
+  "friendly": false,
+  "gender": "RatStatuePet_Gender",
+  "ht": 100,
+  "lootChance": 1,
+  "maxLvl": 0,
+  "name": "RatStatuePet_Name",
+  "name_objective": "RatStatuePet_Object",
+  "spriteDesc": "spritesDesc/RatStatue_Desc.json",
+  "walkingType": "NORMAL"
+}

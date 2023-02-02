@@ -1,0 +1,26 @@
+{
+  "attackDelay": 1,
+  "attackRange": 10,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 30,
+  "description": "BlueHeart_Desc",
+  "dmgMax": 60,
+  "dmgMin": 40,
+  "dr": 5,
+  "exp": 34,
+  "flying": false,
+  "friendly": false,
+  "gender": "BlueHeart_Gender",
+  "ht": 150,
+  "lootChance": 0,
+  "maxLvl": 36,
+  "name": "BlueHeart_Name",
+  "name_objective": "BlueHeart_Object",
+  "scriptFile": "scripts/mobs/BlueHeart",
+  "spriteDesc": "spritesDesc/BlueHeart_Desc.json",
+  "walkingType": "NORMAL",
+  "movable"       :false
+
+}

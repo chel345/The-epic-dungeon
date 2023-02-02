@@ -1,0 +1,17 @@
+{
+    "appearance": {
+        "desc": {
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileFloor",
+            "clearCells": false,
+            "nonPassable": true,
+            "losBlocker": true
+        },
+        "sprite": {
+            "imageIndex": 0,
+            "textureFile": "levelObjects/RatTiles.png"
+        }
+    },
+    "kind": "Deco",
+    "script": "CustomObject"
+}

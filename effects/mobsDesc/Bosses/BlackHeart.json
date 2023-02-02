@@ -1,0 +1,31 @@
+{
+  "aiState":"Hunting",
+  "attackDelay": 1,
+  "attackRange": 0,
+  "attackSkill": 22,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 13,
+  "description": "BlackHeart_Desc",
+  "dmgMax": 0,
+  "dmgMin": 0,
+  "viewDistance":0,
+  "dr": 5,
+  "exp": 50,
+  "flying": false,
+  "friendly": false,
+  "gender": "BlackHeart_Gender",
+  "ht": 300,
+  "lootChance": 0,
+  "maxLvl": 26,
+  "name": "BlackHeart_Name",
+  "name_objective": "BlackHeart_Object",
+  "scriptFile": "scripts/bosses/BlackHeart",
+  "spriteDesc": "spritesDesc/BlackHeart_Desc.json",
+  "walkingType": "NORMAL",
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true,
+  "movable":false
+}

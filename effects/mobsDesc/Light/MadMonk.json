@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 35,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 35,
+  "description": "MadMonk_Desc",
+  "dmgMax": 20,
+  "dmgMin": 18,
+  "dr": 2,
+  "exp": 18,
+  "flying": false,
+  "friendly": false,
+  "gender": "MadMonk_Gender",
+  "ht": 70,
+  "loot": {
+    "kind": "ScrollOfMagicMapping"
+  },
+  "lootChance": 0.5,
+  "maxLvl": 30,
+  "name": "MadMonk_Name",
+  "name_objective": "MadMonk_Object",
+  "scriptFile": "scripts/mobs/MadMonk",
+  "spriteDesc": "spritesDesc/MadMonk_Desc.json",
+  "walkingType": "NORMAL"
+}

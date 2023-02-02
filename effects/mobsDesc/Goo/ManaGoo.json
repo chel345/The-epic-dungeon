@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 25,
+  "description": "ManaGoo_Desc",
+  "dmgMax": 15,
+  "dmgMin": 10,
+  "dr": 4,
+  "exp": 0,
+  "flying": false,
+  "friendly": false,
+  "gender": "ManaGoo_Gender",
+  "ht": 20,
+  "lootChance": 0,
+  "maxLvl": 0,
+  "name": "ManaGoo_Name",
+  "name_objective": "ManaGoo_Object",
+  "spriteDesc": "spritesDesc/ManaGoo_Desc.json",
+  "walkingType": "NORMAL"
+}

@@ -1,0 +1,39 @@
+{
+  "attackDelay": 100000,
+  "attackRange": 32,
+  "attackSkill": 0,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 6,
+  "description": "ToxicRotHeart_Desc",
+  "dmgMax": 0,
+  "dmgMin": 0,
+  "dr": 10,
+  "exp": 14,
+  "flying": false,
+  "friendly": false,
+  "gender": "ToxicRotHeart_Gender",
+  "ht": 80,
+  "immunities": [
+    "Paralysis",
+    "ToxicGas",
+    "Terror",
+    "Death",
+    "Amok",
+    "Blindness",
+    "Sleep",
+    "Poison",
+    "Vertigo",
+    "Bleeding"
+  ],
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 1,
+  "maxLvl": 16,
+  "name": "ToxicRotHeart_Name",
+  "name_objective": "ToxicRotHeart_Object",
+  "scriptFile": "scripts/mobs/ToxicRotHeart",
+  "spriteDesc": "spritesDesc/ToxicRotHeart_Desc.json",
+  "movable"       :false
+}

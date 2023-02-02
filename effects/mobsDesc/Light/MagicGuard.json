@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 25,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 25,
+  "description": "MagicGuard_Desc",
+  "dmgMax": 30,
+  "dmgMin": 15,
+  "dr": 8,
+  "exp": 16,
+  "flying": false,
+  "friendly": false,
+  "gender": "MagicGuard_Gender",
+  "ht": 70,
+  "lootChance": 0,
+  "maxLvl": 30,
+  "name": "MagicGuard_Name",
+  "name_objective": "MagicGuard_Object",
+  "spriteDesc": "spritesDesc/MagicGuard_Desc.json",
+  "walkingType": "NORMAL"
+}

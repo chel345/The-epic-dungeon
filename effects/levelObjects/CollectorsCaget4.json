@@ -1,0 +1,27 @@
+{
+    "appearance": {
+        "desc": {
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileFloor",
+            "clearCells": false,
+            "nonPassable": false,
+            "canStepOn": true
+        },
+        "sprite": {
+            "animations": {
+                "basic": {
+                    "fps": 10,
+                    "frames": [
+                        6,
+                        7
+                    ],
+                    "looped": true
+                }
+            },
+            "imageIndex": 6,
+            "textureFile": "levelObjects/CollectorsCagets.png"
+        }
+    },
+    "kind": "Deco",
+    "script": "CustomObject"
+}

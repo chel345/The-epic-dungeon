@@ -1,0 +1,27 @@
+{
+  "aiState": "Hunting",
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 25,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 25,
+  "description": "MirrorWorm_Desc",
+  "dmgMax": 30,
+  "dmgMin": 20,
+  "dr": 3,
+  "exp": 17,
+  "flying": false,
+  "friendly": false,
+  "gender": "MirrorWorm_Gender",
+  "ht": 50,
+  "loot": {
+    "kind": "Artifacts/MirrorWormsShard"
+  },
+  "lootChance": 1,
+  "maxLvl": 26,
+  "name": "MirrorWorm_Name",
+  "name_objective": "MirrorWorm_Object",
+  "spriteDesc": "spritesDesc/MirrorWorm_Desc.json",
+  "walkingType": "NORMAL"
+}

@@ -1,0 +1,13 @@
+{
+  "aiState": "Passive",
+  "description": "MadRatBanker_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "MadRatBanker_Gender",
+  "name": "MadRatBanker_Name",
+  "name_objective": "MadRatBanker_Object",
+  "scriptFile": "scripts/mobs/MadRatBanker",
+  "spriteDesc": "spritesDesc/MadRatBanker_Desc.json",
+   "immortal"      :true,
+   "movable"       :false
+}

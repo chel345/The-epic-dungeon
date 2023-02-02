@@ -1,0 +1,12 @@
+{
+   "width":32,
+   "height":32,
+
+   "tiles":"tiles_library_level.png",
+   "water":"water_library_level.png",
+   
+    "rooms":[ "NULL" ,"NULL" ,"NULL","NULL"],
+ "items": [
+   {"kind":"ScrollOfUpgrade"}
+  ]
+}

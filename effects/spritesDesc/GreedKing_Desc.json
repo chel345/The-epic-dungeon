@@ -1,0 +1,26 @@
+{
+  "idle": {
+    "looped": true,
+    "frames": [0,1,2],
+    "fps": 4
+  },
+  "height": 19,
+  "texture": "GreedKing.png",
+  "width": 16,
+  "die": {
+    "looped": false,
+    "frames": [3,4,5],
+    "fps": 5
+  },
+  "attack": {
+    "looped": false,
+    "frames": [0],
+    "fps": 1
+  },
+  "run": {
+    "looped": true,
+    "frames": [0],
+    "fps": 1
+  },
+  "bloodColor": "0xffbb0000"
+}

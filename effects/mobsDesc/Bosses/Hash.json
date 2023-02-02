@@ -1,0 +1,28 @@
+{
+  "attackDelay": 1,
+  "attackRange": 6,
+  "attackSkill": 45,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 30,
+  "description": "Hash_Desc",
+  "dmgMax": 56,
+  "dmgMin": 30,
+  "dr": 12,
+  "exp": 100,
+  "flying": false,
+  "friendly": false,
+  "gender": "Hash_Gender",
+  "ht": 1200,
+  "lootChance": 0,
+  "maxLvl": 41,
+  "name": "Hash_Name",
+  "name_objective": "Hash_Object",
+  "scriptFile": "scripts/bosses/Hash",
+  "spriteDesc": "spritesDesc/Hash_Desc.json",
+  "walkingType": "NORMAL",
+   "immunities": [
+    "Death"
+  ],
+  "isBoss":true
+}

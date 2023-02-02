@@ -1,0 +1,31 @@
+{
+  "attackDelay": 1,
+  "attackRange": 10000,
+  "attackSkill": 10,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 13,
+  "description": "NewShadowLord_Desc",
+  "dmgMax": 65,
+  "dmgMin": 15,
+  "dr": 5,
+  "exp": 4,
+  "flying": true,
+  "friendly": false,
+  "gender": "NewShadowLord_Gender",
+  "ht": 400,
+  "loot": {
+    "kind": "ScrollOfWeaponUpgrade"
+  },
+  "lootChance": 1,
+  "maxLvl": 31,
+  "name": "NewShadowLord_Name",
+  "name_objective": "NewShadowLord_Object",
+  "scriptFile": "scripts/bosses/ShadowLord",
+  "spriteDesc": "spritesDesc/ShadowLord.json",
+  "walkingType": "ABSOLUTE",
+      "immunities": [
+    "Death"
+  ],
+  "isBoss":true
+}

@@ -1,0 +1,28 @@
+{
+  "attackDelay": 0.5,
+  "attackRange": 10,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 30,
+  "description": "ThiefKing_Desc",
+  "dmgMax": 30,
+  "dmgMin": 5,
+  "dr": 5,
+  "exp": 60,
+  "flying": false,
+  "friendly": false,
+  "gender": "ThiefKing_Gender",
+  "ht": 300,
+  "lootChance": 0,
+  "maxLvl": 26,
+  "name": "ThiefKing_Name",
+  "name_objective": "ThiefKing_Object",
+  "scriptFile": "scripts/bosses/ThiefKing",
+  "spriteDesc": "spritesDesc/ThiefKing_Desc.json",
+  "walkingType": "NORMAL",
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true
+}

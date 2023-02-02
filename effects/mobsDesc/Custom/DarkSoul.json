@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 10,
+  "attackSkill": 28,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 0,
+  "description": "DarkSoul_Desc",
+  "dmgMax": 40,
+  "dmgMin": 20,
+  "dr": 10,
+  "exp": 0,
+  "flying": true,
+  "friendly": false,
+  "gender": "DarkSoul_Gender",
+  "ht": 100,
+  "maxLvl": 0,
+  "name": "DarkSoul_Name",
+  "name_objective": "DarkSoul_Object",
+  "scriptFile": "scripts/mobs/DarkSoul",
+  "spriteDesc": "spritesDesc/DarkSoul_Desc.json",
+  "walkingType": "NORMAL"
+}

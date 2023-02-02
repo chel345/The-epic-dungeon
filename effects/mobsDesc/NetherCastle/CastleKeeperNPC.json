@@ -1,0 +1,13 @@
+{
+  "aiState": "Passive",
+  "description": "CastleKeeperNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "CastleKeeperNPC_Gender",
+  "name": "CastleKeeperNPC_Name",
+  "name_objective": "CastleKeeperNPC_Object",
+  "scriptFile": "scripts/npc/CastleKeeperNPC",
+  "spriteDesc": "spritesDesc/CastleKeeperNPC_Desc.json",
+   "immortal"      :true,
+   "movable"       :false
+}

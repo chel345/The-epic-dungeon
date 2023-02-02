@@ -1,0 +1,28 @@
+{
+  "attackDelay": 1,
+  "attackRange": 10,
+  "attackSkill": 50,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 22,
+  "description": "IceKing_Desc",
+  "dmgMax": 55,
+  "dmgMin": 30,
+  "dr": 5,
+  "exp": 50,
+  "flying": false,
+  "friendly": false,
+  "gender": "IceKing_Gender",
+  "ht": 500,
+  "lootChance": 0,
+  "maxLvl": 31,
+  "name": "IceKing_Name",
+  "name_objective": "IceKing_Object",
+  "scriptFile": "scripts/bosses/IceKing",
+  "spriteDesc": "spritesDesc/IceKing_Desc.json",
+  "walkingType": "NORMAL",
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true
+}

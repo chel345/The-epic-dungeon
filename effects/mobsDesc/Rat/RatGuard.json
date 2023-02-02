@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 12,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 9,
+  "description": "RatGuard_Desc",
+  "dmgMax": 9,
+  "dmgMin": 3,
+  "dr": 3,
+  "exp": 5,
+  "flying": false,
+  "friendly": false,
+  "gender": "RatGuard_Gender",
+  "ht": 23,
+  "lootChance": 1,
+  "maxLvl": 12,
+  "name": "RatGuard_Name",
+  "name_objective": "RatGuard_Object",
+  "spriteDesc": "spritesDesc/RatGuard_Desc.json",
+  "walkingType": "NORMAL"
+}

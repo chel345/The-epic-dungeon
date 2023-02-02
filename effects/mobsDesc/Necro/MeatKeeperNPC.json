@@ -1,0 +1,16 @@
+{
+  "baseSpeed"		 :0,
+  "attackDelay"	 :1,
+ "ht"            :5,
+  "spriteDesc"    :"spritesDesc/MeatKeeper_Desc.json",
+  "scriptFile"    :"scripts/npc/MeatKeeperNPC",
+  "description": "MeatKeeper_Desc",
+  "name": "MeatKeeper_Name",
+  "name_objective": "MeatKeeper_Object",
+  "gender": "MeatKeeper_Gender",
+  "friendly"      :true,
+  "movable"       :false,
+  "aiState"       :"Passive",
+  "fraction"      :"NEUTRAL",
+  "immortal"      :true
+}

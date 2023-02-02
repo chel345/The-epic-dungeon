@@ -1,0 +1,38 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 6,
+  "description": "Ofiura_Desc",
+  "dmgMax": 16,
+  "dmgMin": 10,
+  "dr": 10,
+  "exp": 14,
+  "flying": false,
+  "friendly": false,
+  "gender": "Ofiura_Gender",
+  "ht": 50,
+  "immunities": [
+    "Paralysis",
+    "ToxicGas",
+    "Terror",
+    "Death",
+    "Amok",
+    "Blindness",
+    "Sleep",
+    "Poison",
+    "Vertigo",
+    "Bleeding"
+  ],
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 1,
+  "maxLvl": 21,
+  "name": "Ofiura_Name",
+  "name_objective": "Ofiura_Object",
+  "spriteDesc": "spritesDesc/Ofiura_Desc.json",
+  "walkingType": "WATER"
+}

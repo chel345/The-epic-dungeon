@@ -1,0 +1,39 @@
+{
+  "attackDelay": 1,
+  "attackRange": 0,
+  "attackSkill": 0,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 0,
+  "description": "Rose_Desc",
+  "dmgMax": 0,
+  "dmgMin": 0,
+  "dr": 10,
+  "exp": 10,
+  "flying": false,
+  "friendly": false,
+  "gender": "Rose_Gender",
+  "ht": 50,
+  "immunities": [
+    "Paralysis",
+    "ToxicGas",
+    "Terror",
+    "Death",
+    "Amok",
+    "Blindness",
+    "Sleep",
+    "Poison",
+    "Vertigo",
+    "Bleeding"
+  ],
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 1,
+  "maxLvl": 32,
+  "name": "Rose_Name",
+  "name_objective": "Rose_Object",
+  "scriptFile": "scripts/miniBosses/Rose",
+  "spriteDesc": "spritesDesc/Rose_Desc.json",
+  "movable"       :false
+}

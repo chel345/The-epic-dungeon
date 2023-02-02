@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 28,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 0,
+  "description": "TearsGuard_Desc",
+  "dmgMax": 80,
+  "dmgMin": 40,
+  "dr": 20,
+  "exp": 0,
+  "flying": true,
+  "friendly": false,
+  "gender": "TearsGuard_Gender",
+  "ht": 100,
+  "maxLvl": 0,
+  "name": "TearsGuard_Name",
+  "name_objective": "TearsGuard_Object",
+  "scriptFile": "scripts/mobs/TearsGuard",
+  "spriteDesc": "spritesDesc/TearsGuard_Desc.json",
+  "walkingType": "NORMAL"
+}

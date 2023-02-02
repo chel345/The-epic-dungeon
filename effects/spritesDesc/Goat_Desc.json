@@ -1,0 +1,10 @@
+{
+  "texture" : "Goat.png",
+  "width"  : 19,
+  "height" : 22,
+  "idle"   : { "fps" : 4,  "looped" : true,     "frames" : [0, 1] },
+  "run"    : { "fps" : 4, "looped" : false,     "frames" : [0,1] },
+  "attack" : { "fps" : 12, "looped" : false,    "frames" : [0,2,6,2,0] },
+  "zap"    : { "fps" : 12, "looped" : false,    "frames" : [0,2,3,4,5] },
+  "die"    : { "fps" : 12, "looped" : false,    "frames" : [0,6,7,8,9] }
+}

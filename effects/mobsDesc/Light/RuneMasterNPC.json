@@ -1,0 +1,14 @@
+{
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "description": "RuneMasterNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "RuneMasterNPC_Gender",
+  "name": "RuneMasterNPC_Name",
+  "name_objective": "RuneMasterNPC_Object",
+  "scriptFile": "scripts/npc/RuneMasterNPC",
+  "spriteDesc": "spritesDesc/RuneMasterNPC_Desc.json",
+   "immortal"      :true,
+   "movable"       :false
+}

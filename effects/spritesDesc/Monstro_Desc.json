@@ -1,0 +1,36 @@
+{
+   "texture" : "Monstro.png",
+   "width" : 28,
+   "height" : 25,
+   "zapEffect":"DarcShot",
+   "idle" : {
+      "fps" : 2,
+      "looped" : false,
+      "frames" : [2,0,1,0]
+   },
+   "run" : {
+      "fps" : 2,
+      "looped" : true,
+      "frames" : [0,1,0]
+   },
+   "attack" : {
+      "fps" : 3,
+      "looped" : false,
+      "frames" : [0,1]
+   },
+   "zap" : {
+      "fps" : 3,
+      "looped" : false,
+      "frames" : [0,1,2]
+   },
+
+   "die" : {
+      "fps" : 3,
+      "looped" : false,
+      "frames" : [1]
+   }
+}
+
+
+
+

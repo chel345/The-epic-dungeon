@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/Void.png",
+  "width"  : 30,
+  "height" : 29,
+  "anim"   : { "fps" : 20,  "looped" : false,    "frames" : [0,1,2,0,1,2,0,1,2] }
+}

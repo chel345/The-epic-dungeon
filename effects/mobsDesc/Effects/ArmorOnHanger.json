@@ -1,0 +1,13 @@
+{
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "ArmorOnHanger_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "ArmorOnHanger_Gender",
+  "ht": 100000000000,
+  "name": "ArmorOnHanger_Name",
+  "name_objective": "ArmorOnHanger_Object",
+  "scriptFile": "scripts/mobs/timed/ArmorOnHanger",
+  "spriteDesc": "spritesDesc/ArmorOnHanger_Desc.json"
+}

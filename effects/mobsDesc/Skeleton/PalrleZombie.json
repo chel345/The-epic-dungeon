@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 35,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 30,
+  "description": "PalrleZombie_Desc",
+  "dmgMax": 40,
+  "dmgMin": 30,
+  "dr": 3,
+  "exp": 23,
+  "flying": false,
+  "friendly": false,
+  "gender": "PalrleZombie_Gender",
+  "ht": 100,
+  "lootChance": 0,
+  "maxLvl": 31,
+  "name": "PalrleZombie_Name",
+  "name_objective": "PalrleZombie_Object",
+  "spriteDesc": "spritesDesc/PalrleZombie_Desc.json",
+  "walkingType": "NORMAL"
+}

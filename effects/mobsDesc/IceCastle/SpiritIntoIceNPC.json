@@ -1,0 +1,14 @@
+{
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "SpiritIntoIceNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "SpiritIntoIceNPC_Gender",
+  "ht": 5000000,
+  "name": "SpiritIntoIceNPC_Name",
+  "name_objective": "SpiritIntoIceNPC_Object",
+  "scriptFile": "scripts/npc/SpiritIntoIceNPC",
+  "spriteDesc": "spritesDesc/SpiritIntoIceNPC_Desc.json"
+}

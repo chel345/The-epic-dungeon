@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 20,
+  "description": "Scout_Desc",
+  "dmgMax": 30,
+  "dmgMin": 15,
+  "dr": 15,
+  "exp": 20,
+  "flying": false,
+  "friendly": false,
+  "gender": "Scout_Gender",
+  "ht": 100,
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 1,
+  "maxLvl": 26,
+  "name": "Scout_Name",
+  "name_objective": "Scout_Object",
+  "scriptFile": "scripts/miniBosses/Scout",
+  "spriteDesc": "spritesDesc/Scout_Desc.json",
+  "walkingType": "NORMAL"
+}

@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 32,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 30,
+  "description": "WarlokSpider_Desc",
+  "dmgMax": 40,
+  "dmgMin": 15,
+  "dr": 4,
+  "exp": 21,
+  "flying": false,
+  "friendly": false,
+  "gender": "WarlokSpider_Gender",
+  "ht": 60,
+  "lootChance": 1,
+  "maxLvl": 31,
+  "name": "WarlokSpider_Name",
+  "name_objective": "WarlokSpider_Object",
+  "spriteDesc": "spritesDesc/WarlokSpider_Desc.json",
+  "walkingType": "NORMAL"
+}

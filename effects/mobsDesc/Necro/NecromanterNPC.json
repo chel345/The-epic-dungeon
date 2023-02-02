@@ -1,0 +1,15 @@
+{
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "baseSpeed": 0,
+  "description": "NecromanterNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "NecromanterNPC_Gender",
+  "name": "NecromanterNPC_Name",
+  "name_objective": "NecromanterNPC_Object",
+  "scriptFile": "scripts/npc/NecroNPC",
+  "spriteDesc": "spritesDesc/NecromanterNPC_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
+}

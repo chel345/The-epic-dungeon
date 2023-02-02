@@ -1,0 +1,6 @@
+{
+  "texture" : "effects/RaiseSkeleton.png",
+  "width"  : 16,
+  "height" : 16,
+  "anim"   : { "fps" : 7, "looped" : false, "frames" : [0,1,2] }
+}

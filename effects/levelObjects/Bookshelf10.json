@@ -1,0 +1,17 @@
+{
+    "appearance": {
+        "desc": {
+            "desc": "WndInfoCell_Nothing",
+            "name": "Level_TileFloor",
+            "nonPassable": true,
+            "clearCells": false,
+            "losBlocker": true
+        },
+        "sprite": {
+            "imageIndex": 9,
+            "textureFile": "levelObjects/Bookshelfs.png"
+        }
+    },
+    "kind": "Deco",
+    "script": "CustomObject"
+}

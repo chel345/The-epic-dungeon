@@ -1,0 +1,28 @@
+{
+  "attackDelay": 10000,
+  "attackRange": 0,
+  "attackSkill": 0,
+  "canBePet": false,
+  "defenseSkill": 0,
+  "description": "BlueBeeNest_Desc",
+  "dmgMax": 0,
+  "dmgMin": 0,
+  "dr": 5,
+  "exp": 10,
+  "flying": false,
+  "friendly": false,
+  "gender": "BlueBeeNest_Gender",
+  "ht": 60,
+  "loot": {
+    "kind": "Gold"
+  },
+  "lootChance": 0.5,
+  "maxLvl": 16,
+  "name": "BlueBeeNest_Name",
+  "name_objective": "BlueBeeNest_Object",
+  "scriptFile": "scripts/mobs/BlueBeeNest",
+  "spriteDesc": "spritesDesc/BlueBeeNest_Desc.json",
+  "viewDistanse": 0,
+  "walkingType": "NORMAL",
+  "movable"       :false
+}

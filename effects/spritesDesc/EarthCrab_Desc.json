@@ -1,0 +1,25 @@
+{
+   "texture" : "EarthCrab.png",
+   "width" : 25,
+   "height" : 27,
+   "idle" : {
+      "fps" : 5,
+      "looped" : true,
+      "frames" : [0,1,0,2]
+   },
+   "run" : {
+      "fps" : 3,
+      "looped" : false,
+      "frames" : [3,4,5,6,7]
+   },
+   "attack" : {
+      "fps" : 12,
+      "looped" : false,
+      "frames" : [8,9]
+   },
+   "die" : {
+      "fps" : 5,
+      "looped" : false,
+      "frames" : [3,4,5,6,7]
+   }
+}

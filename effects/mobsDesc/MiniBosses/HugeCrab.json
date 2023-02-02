@@ -1,0 +1,28 @@
+{
+  "attackDelay": 1,
+  "attackRange": 10,
+  "attackSkill": 4,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 10,
+  "description": "HugeCrab_Desc",
+  "dmgMax": 5,
+  "dmgMin": 2,
+  "dr": 5,
+  "exp": 5,
+  "flying": false,
+  "friendly": false,
+  "gender": "HugeCrab_Gender",
+  "ht": 20,
+  "loot": {
+    "kind": "MysteryMeat",
+    "quantity": 2
+  },
+  "lootChance": 0.25,
+  "maxLvl": 6,
+  "name": "HugeCrab_Name",
+  "name_objective": "HugeCrab_Object",
+  "scriptFile": "scripts/miniBosses/HugeCrab",
+  "spriteDesc": "spritesDesc/HugeCrab_Desc.json",
+  "walkingType": "NORMAL"
+}

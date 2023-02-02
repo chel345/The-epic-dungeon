@@ -1,0 +1,22 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 28,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 20,
+  "description": "IceKnight_Desc",
+  "dmgMax": 30,
+  "dmgMin": 15,
+  "dr": 3,
+  "exp": 12,
+  "flying": false,
+  "friendly": false,
+  "gender": "IceKnight_Gender",
+  "ht": 65,
+  "maxLvl": 21,
+  "name": "IceKnight_Name",
+  "name_objective": "IceKnight_Object",
+  "spriteDesc": "spritesDesc/IceKnihgt_Desc.json",
+  "walkingType": "NORMAL"
+}

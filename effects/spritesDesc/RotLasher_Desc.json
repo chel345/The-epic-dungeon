@@ -1,0 +1,10 @@
+{
+  "texture" : "RotLasher.png",
+  "zapEffect":"Dart",
+  "width"  : 12,
+  "height" : 16,
+  "idle"   : { "fps" : 2,  "looped" : true,     "frames" : [0,0,0,1] },
+  "run"    : { "fps" : 14, "looped" : true,     "frames" : [0] },
+  "attack" : { "fps" : 11, "looped" : false,    "frames" : [0,1,2,3] },
+  "die"    : { "fps" : 11, "looped" : false,    "frames" : [3,4,5,6] }
+}

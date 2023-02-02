@@ -1,0 +1,22 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 5,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 5,
+  "description": "SkvernSoul_Desc",
+  "dmgMax": 20,
+  "dmgMin": 7,
+  "dr": 2,
+  "exp": 9,
+  "flying": true,
+  "friendly": false,
+  "gender": "SkvernSoul_Gender",
+  "ht": 20,
+  "maxLvl": 16,
+  "name": "SkvernSoul_Name",
+  "name_objective": "SkvernSoul_Object",
+  "spriteDesc": "spritesDesc/SkvernSoul_Desc.json",
+  "walkingType": "NORMAL"
+}

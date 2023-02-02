@@ -1,0 +1,10 @@
+{
+  "texture" : "GoldenGolem.png",
+  "width"  : 16,
+  "height" : 16,
+  "deathEffect" : "Golem",
+  "idle"   : { "fps" : 2,  "looped" : true,    "frames" : [0,0,0,1,0,0,1,1] },
+  "run"    : { "fps" : 5, "looped" : true,     "frames" : [2,3] },
+  "attack" : { "fps" : 10, "looped" : false,    "frames" : [4,5] },
+  "die"    : { "fps" : 15, "looped" : false,    "frames" : [6,7] }
+}

@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 30,
+  "description": "BlueZombie_Desc",
+  "dmgMax": 40,
+  "dmgMin": 30,
+  "dr": 3,
+  "exp": 20,
+  "flying": false,
+  "friendly": false,
+  "gender": "BlueZombie_Gender",
+  "ht": 60,
+  "lootChance": 0,
+  "maxLvl": 36,
+  "name": "BlueZombie_Name",
+  "name_objective": "BlueZombie_Object",
+  "spriteDesc": "spritesDesc/BlueZombie_Desc.json",
+  "walkingType": "NORMAL"
+}

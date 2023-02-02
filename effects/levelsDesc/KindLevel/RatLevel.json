@@ -1,0 +1,7 @@
+{
+   "width":25,
+   "height":25,
+
+   "tiles":"tiles_rat_level.png",
+   "water":"water_spider_nest.png"
+}

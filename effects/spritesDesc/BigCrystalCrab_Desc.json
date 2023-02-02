@@ -1,0 +1,9 @@
+{
+  "texture" : "BigCrystalCrab.png",
+  "width"  : 19,
+  "height" : 15,
+  "idle"   : { "fps" : 5,  "looped" : true,     "frames" : [0, 1,2] },
+  "run"    : { "fps" : 10, "looped" : true,     "frames" : [0,1,2] },
+  "attack" : { "fps" : 12, "looped" : false,    "frames" : [3,4] },
+  "die"    : { "fps" : 15, "looped" : false,    "frames" : [1] }
+}

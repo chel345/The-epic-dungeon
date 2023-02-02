@@ -1,0 +1,29 @@
+{
+  "attackDelay": 2,
+  "attackRange": 4,
+  "attackSkill": 17,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 25,
+  "description": "FireGuard_Desc",
+  "dmgMax": 20,
+  "dmgMin": 15,
+  "dr": 14,
+  "exp": 12,
+  "flying": false,
+  "friendly": false,
+  "gender": "FireGuard_Gender",
+  "ht": 50,
+  "immunities": [
+    "Fire",
+    "LiquidFlame",
+    "Burning"
+  ],
+  "lootChance": 0.5,
+  "maxLvl": 25,
+  "name": "FireGuard_Name",
+  "name_objective": "FireGuard_Object",
+  "scriptFile": "scripts/mobs/FireGuard",
+  "spriteDesc": "spritesDesc/FireGuard_Desc.json",
+  "walkingType": "NORMAL"
+}

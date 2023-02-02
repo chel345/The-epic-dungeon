@@ -1,0 +1,31 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 18,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 28,
+  "description": "EpicHydra_Desc",
+  "dmgMax": 18,
+  "dmgMin": 24,
+  "dr": 3,
+  "exp": 40,
+  "flying": false,
+  "friendly": false,
+  "gender": "EpicHydra_Gender",
+  "ht": 200,
+  "loot": {
+    "kind": "SkeletonKey"
+  },
+  "lootChance": 1,
+  "maxLvl": 21,
+  "name": "EpicHydra_Name",
+  "name_objective": "EpicHydra_Object",
+  "scriptFile": "scripts/bosses/EpicHydra",
+  "spriteDesc": "spritesDesc/EpicHydra_Desc.json",
+  "walkingType": "NORMAL",
+  "immunities": [
+    "Death"
+  ],
+  "isBoss":true
+}

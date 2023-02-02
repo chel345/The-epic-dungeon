@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 30,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 20,
+  "description": "NightmareSpirit_Desc",
+  "dmgMax": 35,
+  "dmgMin": 10,
+  "dr": 4,
+  "exp": 18,
+  "flying": true,
+  "friendly": false,
+  "gender": "NightmareSpirit_Gender",
+  "ht": 60,
+  "lootChance": 0,
+  "maxLvl": 26,
+  "name": "NightmareSpirit_Name",
+  "name_objective": "NightmareSpirit_Object",
+  "spriteDesc": "spritesDesc/NightmareSpirit_Desc.json",
+  "walkingType": "NORMAL"
+}

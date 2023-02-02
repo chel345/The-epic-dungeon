@@ -1,0 +1,11 @@
+{
+   "width":32,
+   "height":32,
+
+   "tiles":"tiles_random_town.png",
+   "water":"water1.png",
+   
+    "rooms":[ "SHOP"],
+    "mobs":[
+       {"kind": ""}]
+}

@@ -1,0 +1,13 @@
+{
+  "aiState": "Passive",
+  "description": "RatcatcherAttack_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "RatcatcherAttack_Gender",
+  "name": "RatcatcherAttack_Name",
+  "name_objective": "RatcatcherAttack_Object",
+  "scriptFile": "scripts/npc/RatcatcherAttack",
+  "spriteDesc": "spritesDesc/RatcatcherNPC_Desc.json",
+   "immortal"      :true,
+   "movable"       :false
+}

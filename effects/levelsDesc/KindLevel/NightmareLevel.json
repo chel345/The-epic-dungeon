@@ -1,0 +1,11 @@
+{
+   "width":64,
+   "height":64,
+
+   "tiles":"tiles_nightmare_level.png",
+   "water":"water_nightmare.png",
+   
+    "rooms":[ "NULL" ,"NULL" ,"NULL"],
+ "items": [
+    {"kind":"PotionOfStrength" }  ]
+}

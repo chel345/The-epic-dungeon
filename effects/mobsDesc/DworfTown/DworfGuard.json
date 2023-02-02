@@ -1,0 +1,14 @@
+{
+  "aiState": "Passive",
+  "baseSpeed": 0,
+  "description": "DworfGuard_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "DworfGuard_Gender",
+  "name": "DworfGuard_Name",
+  "name_objective": "DworfGuard_Object",
+  "scriptFile": "scripts/npc/DworfGuard",
+  "spriteDesc": "spritesDesc/DworfGuard_Desc.json",
+  "immortal"      :true,
+  "movable"       :false
+}

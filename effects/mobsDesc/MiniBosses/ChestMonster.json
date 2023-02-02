@@ -1,0 +1,29 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 7,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 10,
+  "description": "ChestMonster_Desc",
+  "dmgMax": 3,
+  "dmgMin": 1,
+  "dr": 5,
+  "exp": 5,
+  "flying": false,
+  "friendly": false,
+  "gender": "ChestMonster_Gender",
+  "ht": 20,
+  "loot": {
+    "kind": "Gold",
+    "quantity": 100
+  },
+  "lootChance": 1,
+  "maxLvl": 6,
+  "name": "ChestMonster_Name",
+  "name_objective": "ChestMonster_Object",
+  "scriptFile": "scripts/miniBosses/ChestMonster",
+  "spriteDesc": "spritesDesc/ChestMonster_Desc.json",
+  "walkingType": "NORMAL",
+  "movable"       :false
+}

@@ -1,0 +1,154 @@
+{
+  "RandomLevel":{
+"End":{"Rat":1},
+"City4":{"FireElemental":1,"Monk":2,"Warlock":1,"Golem":3,"Succubus":0.02,"Senior":0.06,"City/EpicSummoner":3},
+ "Shad1":{"Shadow/ShadowScorpio":1, "Shadow/BlackGuard":1},
+ "Shad2":{"Shadow/ShadowScorpio":1,"Shadow/BlackGuard":1 },
+ "Shad3":{"Shadow/ShadowScorpio":1,"Shadow/BlackGuard":1 },
+ "Shad4":{"Shadow/ShadowScorpio":1,"Shadow/BlackGuard":1 },
+"Water1":{"WaterCaves/Hydra":1,"WaterCaves/GnollLiber":1,"Bat":1},
+"Water2":{"WaterCaves/Hydra":1,"WaterCaves/GnollLiber":1,"Bat":1,"WaterElemental":1},
+"Water3":{"WaterCaves/Hydra":1,"WaterCaves/GnollLiber":1,"Bat":1, "WaterCaves/LightingElemental":1},
+"Water4":{"WaterCaves/Hydra":1,"WaterCaves/GnollLiber":1,"Bat":1, "WaterCaves/LightingElemental":1},
+"Light1":{"Light/MagicGhost":1,"Light/MagicEye":1,"Light/MagicGuard":1,"Light/GhostAngel":1}, 
+"Light2":{ "Light/MagicGhost":1,"Light/MagicEye":1,"Light/MagicGuard":1,"Light/Angel":1}, 
+"Light3":{ "Light/MagicGhost":1,"Light/MagicEye":1,"Light/MagicGuard":1,"Light/GhostAngel":1}, 
+"Light4":{ "Light/MagicGhost":1,"Light/MagicEye":1,"Light/MagicGuard":1},
+"HallCastle1":{"NetherCastle/FireNefrit":0.5,"NetherCastle/SpiritOfDark":1,"NetherCastle/ShadowSpider":1,"NetherCastle/WitherSkeleton":1},
+"HallCastle2":{"NetherCastle/FireNefrit":0.5,"NetherCastle/SpiritOfDark":1,"NetherCastle/ShadowSpider":1,"NetherCastle/AlbinoFireNefrit":1,"NetherCastle/WitherSkeleton":1},
+"Blue1":{"BlueWomb/BlueHeart":1,"BlueWomb/BlueBall":1,"BlueWomb/BlueZombie":1,"BlueWomb/SleepingBlueAngel":1},
+"Blue2":{"BlueWomb/BlueHeart":1,"BlueWomb/BlueBall":1,"BlueWomb/BlueZombie":1,"BlueWomb/SleepingBlueAngel":1},
+"Blue3":{"BlueWomb/BlueHeart":1,"BlueWomb/BlueBall":1,"BlueWomb/BlueZombie":1 ,"BlueWomb/SleepingBlueAngel":1},
+"Blue4":{"BlueWomb/BlueHeart":1,"BlueWomb/BlueBall":1,"BlueWomb/BlueZombie":1 ,"BlueWomb/SleepingBlueAngel":1},
+"Crab1":{"Crab":1},
+"Crab2":{"Crab":1},
+"Crab3":{"Crab":1},
+"Crab4":{"Crab":1},
+"Bandit1":{"Rat":0},
+"Bandit2":{"Rat":0},
+"Bandit3":{"Rat":0},
+"Bandit4":{"Rat":0},
+"Skeleton1":{"Skeleton/Fallen":1,"Skeleton/PcevdoMage":1,"Skeleton/MagicGolem":1,"Skeleton/PalrleZombie":1,"Skeleton/Lich2.0":1 ,"Skeleton/CursedKnight":1},
+"Skeleton2":{"Skeleton/Fallen":1,"Skeleton/PcevdoMage":1,"Skeleton/PalrleZombie":1,"Skeleton/Lich2.0":1,"Skeleton/CursedKnight":1,"Skeleton/MagicGolem":1},
+"Skeleton3":{"Skeleton/Fallen":1,"Skeleton/PcevdoMage":1,"Skeleton/PalrleZombie":1,"Skeleton/Lich2.0":1,"Skeleton/CursedKnight":1,"Skeleton/MagicGolem":1},
+"Skeleton4":{"Skeleton/Fallen":1,"Skeleton/PcevdoMage":1,"Skeleton/PalrleZombie":1,"Skeleton/Lich2.0":1 ,"Skeleton/CursedKnight":1,"Skeleton/MagicGolem":1},
+"Magic1":{"MagicCaves/PcevdoExplodingSkull":1,"MagicCaves/CheldedCrystalCrab":1,"MagicCaves/CrystalCrab":1,"MagicCaves/CrystalSpider":1,"MagicCaves/CrystalAngel":1},
+"Magic2":{"MagicCaves/PcevdoExplodingSkull":1,"MagicCaves/CheldedCrystalCrab":1,"MagicCaves/CrystalCrab":1,"MagicCaves/CrystalSpider":1 ,"MagicCaves/CrystalAngel":1},
+"Magic3":{"MagicCaves/PcevdoExplodingSkull":1,"MagicCaves/CheldedCrystalCrab":1,"MagicCaves/CrystalCrab":1,"MagicCaves/CrystalSpider":1 ,"MagicCaves/CrystalAngel":1},
+"Magic4":{"MagicCaves/PcevdoExplodingSkull":1,"MagicCaves/CheldedCrystalCrab":1,"MagicCaves/CrystalCrab":1,"MagicCaves/CrystalSpider":1 ,"MagicCaves/CrystalAngel":1},
+"Rat1":{"Rat":1,"Rat/RatGuard":1,"Rat/RatArcher":1,"Rat/RatMage":1,"Albino":0.5},
+"Rat2":{"Rat":1,"Rat/RatGuard":1,"Rat/RatArcher":1,"Rat/RatMage":1,"Albino":0.5},
+"Rat3":{"Rat":1,"Rat/RatGuard":1,"Rat/RatArcher":1,"Rat/RatMage":1,"Albino":0.9},
+"Rat4":{"Rat":1,"Rat/RatGuard":1,"Rat/RatArcher":1,"Rat/RatMage":1,"Albino":0.5}, 
+"Scvern":{"Necro/SkvernKnight":1,
+"Necro/SkvernSoul":1,"Zombie":2, "ExplodingSkull":1.2},
+"Spider1":{"SpiderCastle/ShadowSpiderEgg":1,"SpiderCastle/ShadowSpiderNest":1,"SpiderCastle/ShadowWallSpider":1,"SpiderCastle/MagicShadowSpider":1,"SpiderCastle/WarlokSpider":1,"NetherCastle/ShadowSpider":1,"SpiderCastle/DarkAngel":0.5},
+"Spider2":{"SpiderCastle/ShadowSpiderEgg":1,"SpiderCastle/ShadowSpiderNest":1,"SpiderCastle/ShadowWallSpider":1,"SpiderCastle/MagicShadowSpider":1,"SpiderCastle/WarlokSpider":1,"NetherCastle/ShadowSpider":1 ,"SpiderCastle/DarkAngel":0.5},
+"Spider3":{"SpiderCastle/ShadowSpiderEgg":1,"SpiderCastle/ShadowSpiderNest":1,"SpiderCastle/ShadowWallSpider":1,"SpiderCastle/MagicShadowSpider":1,"SpiderCastle/WarlokSpider":1,"NetherCastle/ShadowSpider":1 ,"SpiderCastle/DarkAngel":0.5},
+"Spider4":{"SpiderCastle/ShadowSpiderEgg":1,"SpiderCastle/ShadowSpiderNest":1,"SpiderCastle/ShadowWallSpider":1,"SpiderCastle/MagicShadowSpider":1,"SpiderCastle/WarlokSpider":1,"NetherCastle/ShadowSpider":1 ,"SpiderCastle/DarkAngel":0.41},
+"Castle1":{"IceCastle/IceStatue":1,"IceCastle/IceGolem":1,"IceElemental":1,"IceCastle/IceAngel":0.1},
+"Castle2":{"IceCastle/IceStatue":1,"IceCastle/IceGolem":1,"IceElemental":1 ,"IceCastle/IceAngel":0.1},
+"Castle3":{"IceCastle/IceStatue":1,"IceCastle/IceGolem":1,"IceElemental":1 ,"IceCastle/IceAngel":0.1},
+"Castle4":{"IceCastle/IceStatue":1,"IceCastle/IceGolem":1,"IceElemental":1 ,"IceCastle/IceAngel":0.1},
+"Night1":{"Nightmare/NightmareSpiritMaster":1,"Nightmare/NightmareSpirit":1,"Nightmare/NightmareDarkMaster":1},
+"Night2":{"Nightmare/NightmareSpiritMaster":1,"Nightmare/NightmareSpirit":1,"Nightmare/NightmareDarkMaster":1},
+"Night3":{"Nightmare/NightmareSpiritMaster":1,"Nightmare/NightmareSpirit":1,"Nightmare/NightmareDarkMaster":1},
+"Night4":{"Nightmare/NightmareSpiritMaster":1,"Nightmare/NightmareSpirit":1,"Nightmare/NightmareDarkMaster":1},
+"Library1":{"Rat":0},
+"Library2":{"Rat":0},
+"Library3":{"Rat":0},
+"Library4":{"Rat":0}
+},
+"SewerLevel":{
+"Sewer1":{"Snail":1},
+"Sewer2":{"Snail":1,"Rat":1, "DeepSnail":0.03},
+"Sewer3":{"Rat":1,"Gnoll":1,"Crab":0.5,"Albino":0.03,"Swarm":0.02},
+"Sewer4":{"Rat":1,"Gnoll":2,"Crab":1,"DeepSnail":0.1,"Thief":0.01}
+},
+"SewerBossLevel":{
+      "any":{"Goo":1}
+},
+"PrisonLevel":{
+"Prison1":{"Skeleton":3,"Thief":1,"Swarm":1,"Shaman":1,"Bandit":0.03}, 
+"Prison2":{"Skeleton":4,"Thief":2,"Swarm":1,"Shaman":0.2,"Bandit":0.06,"Prison/Summoner":0.5},
+"Prison3":{"Skeleton":3,"Shaman":2,"Thief":1,"Swarm":1,"Bat":0.02,"Bandit":0.03,"Prison/Summoner":1,"Prison/Guard":0.5},
+"Prison4":{"Skeleton":3,"Shaman":3,"Thief":1,"Swarm":1,"Bat":0.02,"Brute":0.01,"Bandit":0.03,"Prison/Summoner":1,"Prison/Guard":1}
+},
+"PrisonBossLevel":{
+"any":{"Tengu":1}
+},
+"CavesLevel":{
+"Caves1":{"Bat":1,"Brute":0.2},
+"Caves2":{"Bat":1,"Brute":1,"Spinner":0.2,"Shielded":0.03},
+"Caves3":{"Bat":1,"Brute":3,"Spinner":1, "ShamanElder":1 ,"FireElemental":0.02,"Shielded":0.1},
+"Caves4":{"Bat":1,"Brute":3,"Caves/Mirrorer":4,"Shaman":1,"Monk":0.01,"Shielded":0.1}
+},
+"CavesBossLevel":{
+"any":{"DM300":1}
+},
+"CityLevel":{
+"City1":{"FireElemental":1,"Monk":0.2,"Warlock":1 ,"City/GoldenGolem":0.1},
+"City2":{"FireElemental":1,"Monk":1,"Warlock":1,"Senior":0.03 ,"City/GoldenGolem":0.1},
+"City3":{"FireElemental":1,"Monk":2,"Warlock":1,"Golem":1,"Senior":0.06,"City/GoldenGolem":0.1},
+"City4":{"FireElemental":1,"Monk":2,"Warlock":1,"Golem":1,"Senior":0.06,"City/GoldenGolem":0.1,"City/EpicSummoner":1}
+},
+"CityBossLevel":{
+"any":{"King":1}
+},
+"FakeLastLevel":
+{"any":{"Rat":0.1}
+},
+"HallsLevel":{
+"Halls2":{"Succubus":1,"Eye":1},
+"Halls3":{"Succubus":1,"Eye":2,"Scorpio":1,"Acidic":0.03,"Shadow/ShadowScorpio":0.2 },
+"Halls4":{"Succubus":1,"Eye":2,"Scorpio":3,"Acidic":0.09,"Shadow/ShadowScorpio":0.5},
+"Halls2_p":{"Succubus":1,"Eye":1},
+"Halls3_p":{"Succubus":1,"Eye":2,"Scorpio":1,"Acidic":0.03,"Shadow/ShadowScorpio":0.2 },
+"Halls4_p":{"Succubus":1,"Eye":2,"Scorpio":3,"Acidic":0.09,"Shadow/ShadowScorpio":0.5}
+},
+"HallsBossLevel":{
+"any":{"Yog":1,"YogsBrain":1,"YogsEye":1,"YogsHeart":1,"YogsTeeth":1}
+},
+"GutsLevel":{
+"Guts1":{"SuspiciousRat":1,"ZombieGnoll":2,"Worm":0.3,"Shadow/ShadowScorpio":0.02,"Guts/ChaosKnight":1 ,"Guts/ChaosAngel":1},
+"Guts2":{"SuspiciousRat":2,"ZombieGnoll":1,"Worm":1,"Eye":1,"Guts/ChaosKnight":1  ,"Guts/ChaosAngel":1},
+"Guts3":{"SuspiciousRat":1,"ZombieGnoll":1,"Worm":2,"FireElemental":0.02 ,"Guts/ChaosKnight":1,"Guts/ChaosAngel":1},
+"Guts4":{"SuspiciousRat":2,"ZombieGnoll":1,"Worm":2 ,"Guts/ChaosKnight":1  ,"Guts/ChaosAngel":1}
+},
+"SpiderLevel":{
+"Nest1":{"SpiderServant":1,"SpiderGuard":0.03},
+"Nest2":{"SpiderServant":1,"SpiderExploding":0.5,"SpiderGuard":0.03, "Nest/IceSpider":0.5},
+"Nest3":{"SpiderServant":1,"SpiderExploding":0.5,"SpiderMind":0.2,"SpiderGuard":0.03,"Nest/IceSpider":1},
+"Nest4":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.3,"SpiderGuard":0.03,"SpiderMindAmber":0.012}
+},
+   "NecroLevel":{
+"Necro1":{"Zombie":1, "Skeleton":1, "EnslavedSoul":0.9},
+"Necro2":{"Zombie":1, "ExplodingSkull":0.6, "EnslavedSoul":0.9, "DeathKnight":0.5,"DreadKnight":0.015},
+"Necro3":{"Zombie":2, "ExplodingSkull":1.2, "EnslavedSoul":0.9, "DeathKnight":0.5,"DreadKnight":0.015}
+},
+"NecroBossLevel":{
+"any":{"Bosses/IceNecromanter":0.5,"Lich":0.5}
+},
+"IceCavesLevel":{    
+"Ice1":{"Kobold":1,"ColdSpirit":2,"IceElemental":0.1,"Ice/IceNefrit":0.5},
+"Ice2":{"Kobold":2,"KoboldIcemancer":1,"IceElemental":0.2,"Ice/IceNefrit":1,"Ice/Thimagor1":0.5 },
+"Ice3":{"Kobold":2,"KoboldIcemancer":1,"IceElemental":0.3,"Ice/IceNefrit":1,"Ice/Thimagor2":0.5,"Ice/Thimagor1":1 },
+"Ice4":{"Kobold":2,"KoboldIcemancer":1,"ColdSpirit":1,"Ice/IceNefrit":1,"Ice/Thimagor1":1,"Ice/Thimagor2":0.5,"Ice/Thimagor3":0.05 }
+},
+"IceCavesBossLevel":{
+"any":{"IceGuardianCore":1}
+},
+"PredesignedLevel":{
+"Goo1":{"Goo/GooBall":1,"Goo/GooGoo":1,"Goo/GooAngel":1},
+"Goo2":{"Goo/GooBall":1,"Goo/GooGoo":1,"Goo/GooAngel":1},
+"Goo3":{"Goo/GooBall":1,"Goo/GooGoo":1,"Goo/GooAngel":0.5},
+"Goo4":{"Goo/GooBall":1,"Goo/GooGoo":1},
+"Nest5":{"SpiderServant":1,"SpiderExploding":1,"SpiderMind":0.5,"SpiderGuard":0.03,"SpiderMindAmber":0.018, "Nest/IceSpider":1}
+},
+  "Feelings":{
+    "Chance":0,
+    "CHASM":{"AirElemental":0},
+    "WATER":{"WaterElemental":0},
+    "GRASS":{"EarthElemental":0}
+  }
+}

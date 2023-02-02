@@ -1,0 +1,27 @@
+{
+  "attackDelay": 1,
+  "attackRange": 10,
+  "attackSkill": 16,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 15,
+  "description": "Mirrorer_Desc",
+  "dmgMax": 14,
+  "dmgMin": 7,
+  "dr": 2,
+  "exp": 8,
+  "flying": false,
+  "friendly": false,
+  "gender": "Mirrorer_Gender",
+  "ht": 30,
+  "loot": {
+    "kind": "Scrolls/ScrollOfMirror"
+  },
+  "lootChance": 1,
+  "maxLvl": 15,
+  "name": "Mirrorer_Name",
+  "name_objective": "Mirrorer_Object",
+  "scriptFile": "scripts/mobs/Mirorer",
+  "spriteDesc": "spritesDesc/Mirorer_Desc.json",
+  "walkingType": "NORMAL"
+}

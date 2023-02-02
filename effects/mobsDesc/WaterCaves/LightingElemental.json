@@ -1,0 +1,26 @@
+{
+  "attackDelay": 1,
+  "attackRange": 32,
+  "attackSkill": 15,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 20,
+  "description": "LightingElemental_Desc",
+  "dmgMax": 30,
+  "dmgMin": 10,
+  "dr": 2,
+  "exp": 15,
+  "flying": true,
+  "friendly": false,
+  "gender": "LightingElemental_Gender",
+  "ht": 60,
+  "loot": {
+    "kind": "Wands/WandOfMagicbolt"
+  },
+  "lootChance": 0.18,
+  "maxLvl": 21,
+  "name": "LightingElemental_Name",
+  "name_objective": "LightingElemental_Object",
+  "spriteDesc": "spritesDesc/LightingElemental_Desc.json",
+  "walkingType": "NORMAL"
+}

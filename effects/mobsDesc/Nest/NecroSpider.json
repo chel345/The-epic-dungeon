@@ -1,0 +1,23 @@
+{
+  "attackDelay": 1,
+  "attackRange": 1,
+  "attackSkill": 15,
+  "baseSpeed": 1,
+  "canBePet": false,
+  "defenseSkill": 19,
+  "description": "NecroSpider_Desc",
+  "dmgMax": 20,
+  "dmgMin": 10,
+  "dr": 2,
+  "exp": 10,
+  "flying": false,
+  "friendly": false,
+  "gender": "NecroSpider_Gender",
+  "ht": 50,
+  "lootChance": 0,
+  "maxLvl": 16,
+  "name": "NecroSpider_Name",
+  "name_objective": "NecroSpider_Object",
+  "spriteDesc": "spritesDesc/NecroSpider_Desc.json",
+  "walkingType": "NORMAL"
+}

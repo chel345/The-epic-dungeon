@@ -1,0 +1,14 @@
+{
+  "aiState": "Passive",
+  "attackDelay": 1,
+  "description": "MageNPC_Desc",
+  "fraction": "NEUTRAL",
+  "friendly": true,
+  "gender": "MageNPC_Gender",
+  "name": "MageNPC_Name",
+  "name_objective": "MageNPC_Object",
+  "scriptFile": "scripts/npc/MageNPC",
+  "spriteDesc": "spritesDesc/MageNPC_Desc.json",
+   "immortal"      :true,
+   "movable"       :false
+}

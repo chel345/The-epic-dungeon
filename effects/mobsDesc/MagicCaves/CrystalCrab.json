@@ -1,0 +1,22 @@
+{
+  "attackDelay": 1,
+  "attackRange": 3,
+  "attackSkill": 15,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 18,
+  "description": "CrystalCrab_Desc",
+  "dmgMax": 40,
+  "dmgMin": 20,
+  "dr": 7,
+  "exp": 24,
+  "flying": false,
+  "friendly": false,
+  "gender": "CrystalCrab_Gender",
+  "ht": 100,
+  "maxLvl": 34,
+  "name": "CrystalCrab_Name",
+  "name_objective": "CrystalCrab_Object",
+  "spriteDesc": "spritesDesc/CrystalCrab_Desc.json",
+  "walkingType": "NORMAL"
+}

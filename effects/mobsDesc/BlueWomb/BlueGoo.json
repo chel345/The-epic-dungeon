@@ -1,0 +1,23 @@
+{
+  "attackDelay": 5,
+  "attackRange": 1,
+  "attackSkill": 35,
+  "baseSpeed": 1,
+  "canBePet": true,
+  "defenseSkill": 9,
+  "description": "BlueG_Desc",
+  "dmgMax": 50,
+  "dmgMin": 20,
+  "dr": 1,
+  "exp": 28,
+  "flying": false,
+  "friendly": false,
+  "gender": "BlueG_Gender",
+  "ht": 90,
+  "lootChance": 0,
+  "maxLvl": 36,
+  "name": "BlueG_Name",
+  "name_objective": "BlueG_Object",
+  "spriteDesc": "spritesDesc/BlueGoo_Desc.json",
+  "walkingType": "NORMAL"
+}
