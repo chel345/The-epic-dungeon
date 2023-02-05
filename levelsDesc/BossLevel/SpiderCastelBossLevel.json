@@ -10,7 +10,7 @@
         }
         ],
  "tiles":"tiles_spider_castle_water.png",
- "tiles_logic":"tiles_spider_castle_water.png",
+ "tiles_logic":"tiles_spider_castle.png",
  "water":"water_goo.png",
  "width":30
 }
