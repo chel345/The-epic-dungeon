@@ -15,7 +15,8 @@ local aiDesc = {
 	stayOnSpawn  = false,
 	maxDistance = 4,
 	allies = {"Custom/IceSkeletonPet"},
-	attackRange = 1
+	attackRange = 1,
+	maxSpawnDst = 2
 }
 
 local function makeMob()
