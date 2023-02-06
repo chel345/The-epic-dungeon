@@ -56,9 +56,9 @@ local Ginerator = {
                     local genSteps = 0
                     local genStepsMax = 10000
 
-                    if gin.kind == "Womb" then
-                        room.ClearLevel()
+                    room.ClearLevel()
 
+                    if gin.kind == "Womb" then
                         local rr = gin.WombFactor
 
                         local set = function(cell)
@@ -95,7 +95,6 @@ local Ginerator = {
                     end
 
                     if not gin.HasBase and gin.kind ~= "Womb" then
-                        room.ClearLevel()
                         if room.canSpawnAt(st, gin.RoomWidth - 1, gin.RoomHeigth - 1) then
                             room.printRoom(st, gin.Entrance)
                         else
