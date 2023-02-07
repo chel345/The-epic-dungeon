@@ -37,6 +37,7 @@ local function getMob(desc,why)
 end
 
 local function canTo(pos,desc)
+  desc.maxSpawnDst = desc.maxSpawnDst or 2
   if desc.stayOnSpawn or RPD.Dungeon.level:distance(pos,desc.cell_spawn) > desc.maxSpawnDst then
       return false
   end

@@ -112,4 +112,13 @@ RPD.roomsInstruments = {
 	end
 }
 
+RPD.getCell = function()
+	local level = RPD.Dungeon.level
+	local cell = level:randomPassableCell()
+	if cell < 0 then
+		error("Can't find passable cell")
+	end
+	return cell
+end
+
 return RPD
