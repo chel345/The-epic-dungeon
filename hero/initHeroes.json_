@@ -52,7 +52,7 @@
 /*
 {"kind":"Ration"},
 */
-{"kind":"Artifacts/IceSkull"},
+{"kind":"Weapons/Epee"},
 {"kind": "PotionOfMindVision","level":100},
 {"kind": "ScrollOfMagicMapping",       "quantity": 10000000000000},
 {"kind": "PotionOfMindVision",       "quantity": 10000000000000},

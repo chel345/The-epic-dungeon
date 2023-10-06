@@ -2,6 +2,8 @@ local RPD = require "scripts/lib/epicClasses"
 
 local EPD = require "scripts/lib/dopClasses"
 
+local canSpawnAtCounter = 0
+
 local room = {
     printRoom = function(cell, Room)
         CustomRoom = require("scripts/rooms/" .. Room)
@@ -30,7 +32,14 @@ local room = {
         end
         pcall(CustomRoom.objects(cell, RPD.Dungeon.level:getWidth()))
     end,
+    resetSpawnCounter = function()
+        canSpawnAtCounter = 0
+    end,
+    getSpawnAtCounter = function()
+        return canSpawnAtCounter
+    end,
     canSpawnAt = function(cell, w, h)
+
         local level = RPD.Dungeon.level
         local W = level:getWidth()
         local x = level:cellX(cell)
@@ -39,6 +48,13 @@ local room = {
         if cell > l or cell < 1 then
             return false
         end
+
+        canSpawnAtCounter = canSpawnAtCounter + 1
+
+        if canSpawnAtCounter > 5000 then
+            error("Too many room spawn checks")
+        end
+
         if x >= math.ceil(w / 2) and x <= W - math.ceil(w / 2) then
             if cell >= W * (w / 2) + 1 and cell <= l - W * (w / 2) - 1 then
                 for t = x - math.ceil(w / 2), x + math.ceil(w / 2) do
@@ -247,9 +263,17 @@ local room = {
             elseif level.map[pos] == RPD.Terrain.BOOKSHELF then
                 level:set(p, RPD.Terrain.EMPTY)
             elseif level.map[pos] == RPD.Terrain.STATUE_SP then
+            if level.map[cell] ~= 0 then
                 level:set(p, level.map[cell])
+            else
+                 level:set(p, RPD.Terrain.EMPTY)
+            end
             elseif level.map[pos] == RPD.Terrain.STATUE then
+            if level.map[cell] ~= 0 then
                 level:set(p, level.map[cell])
+            else
+                 level:set(p, RPD.Terrain.EMPTY)
+            end
             end
 
 
@@ -459,6 +483,8 @@ local room = {
     end,
 
     ClearLevel = function()
+        local Object = luajava.bindClass("com.nyrds.pixeldungeon.levels.objects.LevelObject")
+
         for i = 1, RPD.Dungeon.level:getLength() - 1 do
             RPD.Dungeon.level:set(i - 1, RPD.Terrain.WALL)
         end

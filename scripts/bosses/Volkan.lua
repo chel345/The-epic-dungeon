@@ -9,7 +9,17 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init{
+local isPlaying = false
+
+return mob.init({ 
+    act = function(self)
+         if self:getState():getTag() == "HUNTING" then
+             if not isPlaying then
+                  RPD.playMusic("FireLord",true)
+                  isPlaying = true
+             end
+         end
+    end,
     stats = function(self)
                 RPD.permanentBuff(self, RPD.Buffs.Roots)
 end,
@@ -26,4 +36,4 @@ local level = RPD.Dungeon.level
 local item = RPD.ItemFactory:itemByName("SkeletonKey")
 level:drop(item,self:getPos())
 end
-}
+})

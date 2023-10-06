@@ -15,8 +15,17 @@ local zapEffects =
 "ParpleShot",
 "DarckShot"
 }
-return mob.init({ 
+local isPlaying = false
 
+return mob.init({ 
+    act = function(self)
+         if self:getState():getTag() == "HUNTING" then
+             if not isPlaying then
+                  RPD.playMusic("Hash",true)
+                  isPlaying = true
+             end
+         end
+    end,
     zapProc = function(enemy, self, cell, dmg)
 RPD.zapEffect(enemy:getPos(),self:getPos() ,zapEffects[math.random(1,3)])
 if math.random(1, 3) == 3 then

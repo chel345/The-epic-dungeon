@@ -9,7 +9,17 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
+local isPlaying = false
+
 return mob.init({ 
+    act = function(self)
+         if self:getState():getTag() == "HUNTING" then
+             if not isPlaying then
+                  RPD.playMusic("IceKing",true)
+                  isPlaying = true
+             end
+         end
+    end,
 zapProc = function(self, enemy,dmg)
 RPD.affectBuff(enemy, RPD.Buffs.Frost,4)
 local mob = RPD.mob("IceGaurd") 

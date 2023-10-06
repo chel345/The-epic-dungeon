@@ -1,7 +1,13 @@
 {
-   "width":25,
-   "height":25,
+   "width":20,
+   "height":20,
 
    "tiles":"tiles_rat_level.png",
-   "water":"water_spider_nest.png"
+   "water":"water_spider_nest.png",
+   
+    "rooms":[ "LIBRARY" ,"NULL" ,"NULL"],
+ "items": [
+   {"kind":"ScrollOfMagicMapping"}
+  ],
+  "nTraps":0
 }

@@ -1,10 +1,5 @@
 local RPD = require "scripts/lib/commonClasses"
 
-local EPD = require "scripts/lib/dopClasses"
-
-local room = require "scripts/lib/room"
-
-local Treasury = luajava.bindClass("com.nyrds.pixeldungeon.items.Treasury")
 
 local customRoom = {
 

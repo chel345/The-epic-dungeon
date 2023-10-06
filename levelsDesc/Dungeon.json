@@ -3,7 +3,7 @@
 
 "0":{"kind":"SewerLevel", "depth":0,        "size":[0,0], "nMobs":0},
 
-"Inn":{"kind":"PredesignedLevel", "depth":-1, "file":"levelsDesc/Inn_2021_03.json","noFogOfWar":"true", "isSafe":true, "music":"ost_town_1","script":"scripts/actors/town/TownInn", "nMobs":0},
+"Inn":{"kind":"PredesignedLevel", "depth":-1, "file":"levelsDesc/Inn_2021_03.json","noFogOfWar":"true", "isSafe":true, "music":"Inn","script":"scripts/actors/town/TownInn", "nMobs":0},
 
 "Test":{"kind":"TestLevel", "nMobs":0},
 
@@ -468,7 +468,7 @@
 
 
       
-"Scvern":{"kind":"RandomLevel", "depth":13, "file":"levelsDesc/SkvernNecropolis.json", "music":"SkvernLevel.ogg","script":"scripts/actors/Levels/SkvernLevel",  "noBuild":true}
+"Scvern":{"kind":"RandomLevel", "depth":13, "file":"levelsDesc/SkvernNecropolis.json", "music":"SkvernLevel.ogg","script":"scripts/actors/Levels/SkvernLevel", "noBuild":true}
 , "nMobs":0},
 
    "Graph":{
@@ -750,3 +750,5 @@
 , "nMobs":0},
    "Entrance":"0"
 }
+/* Не забудь, что нужно пофиксить канализацию и синюю утробу
+*/

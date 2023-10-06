@@ -21,7 +21,6 @@ RPD.addFunction = function(h)
 end
 
 RPD.runFunctions = function()
-	--RPD.glog(string.format("RPD.runFunctions start"))
 	for k, entry in pairs(functions) do
 		local res, ret = pcall(entry.f, entry.n)
 
@@ -35,19 +34,8 @@ RPD.runFunctions = function()
 
 		entry.n = entry.n + 1
 	end
-	--RPD.glog(string.format("RPD.runFunctions end"))
 end
---[[
-RPD.addFunction( function(n)
-	if n % 100 == 0 then
-		RPD.glog(string.format("tick %d",n))
-		if n % 1000 == 0 then
-			error("Wild bug appears!")
-		end
-	end
-	return true
-end)
---]]
+
 RPD.mob = function(strMob)
 	for _,i in pairs(Indicator()) do
 		if RPD.ModdingMode:isResourceExistInMod("mobsDesc/"..i.."/"..strMob..".json") then
@@ -75,10 +63,26 @@ RPD.getMobs = function(level)
 	for i = 1, level:getLength() do
 		local maybe = RPD.Actor:findChar(i)
 		if maybe then
-			mobs[#mobs+1] = maybe
+			table.insert(mobs, maybe)
 		end
 	end
 	return mobs
+end
+
+RPD.onThrowChance = function(item, base)
+	local ver = math.max(0, base - item:level() - item:getUser():effectiveSTR())
+
+	if RPD.Dungeon.hero:effectiveSTR() >= base - item:level() then
+		ver = math.max( 0,base - item:level())
+	end
+
+	if ver >= base - 1 then
+		return true
+	end
+
+	local chance = math.random(ver, base - 1)
+
+	return ver == chance
 end
 
 RPD.roomsInstruments = {
@@ -112,13 +116,6 @@ RPD.roomsInstruments = {
 	end
 }
 
-RPD.getCell = function()
-	local level = RPD.Dungeon.level
-	local cell = level:randomPassableCell()
-	if cell < 0 then
-		error("Can't find passable cell")
-	end
-	return cell
-end
+
 
 return RPD

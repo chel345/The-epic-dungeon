@@ -56,9 +56,7 @@ end
 RPD.glog(client:receiveMessage())
 client:stop()
 --]]
---RPD.glog(RPD.Dungeon.level:objectsKind())
-local mob = RPD.MobFactory:mobByName("Rat")
-RPD.glog(mob:canSpawnAt(RPD.Dungeon.level,67))
+RPD.glog(RPD.Dungeon.levelId)
 end 
 end 
 }

@@ -5,63 +5,39 @@
 ---
 
 local RPD = require "scripts/lib/commonClasses"
+local storage = require "scripts/lib/storage"
 
 local interlevelScene = {}
 
+local Camera = luajava.bindClass("com.watabou.noosa.Camera")
 
-windowShown = false
-
-function showWindowLoop(wnd)
-    RPD.RemixedDungeon:scene():enumerateWindows()
-    local activeWindow = RPD.RemixedDungeon:scene():getWindow(0)
-    if not windowShown then
-        if activeWindow == nil then
-            RPD.RemixedDungeon:scene():add(wnd)
-            windowShown = true
-        end
-    else
-        if activeWindow == nil then
-            wnd = nil
-            return true
-        end
-    end
-    return false
+local function add(file, h)
+local h = h or 128
+local img = RPD.new("com.watabou.noosa.Image", ("backgrounds/"..file..".png"))
+local k = Camera.main.height/h
+img:setPos(0,0)
+img:setScaleX(k)
+img:setScaleY(k)
+return img
 end
 
 --! Called when interlevelScene enters static mode
 interlevelScene.onStep = function(mode, done)
-    if not done then
-        return false
-    end
-
-    if not wnd then
-        if RPD.ModdingMode:inRemixed() then
-            if RPD.Dungeon.previousLevelId == '10s' and RPD.Badges:isUnlockedInThisGame(RPD.Badges.Badge.SPIDER_QUEEN_SLAIN) then
-                wnd = RPD.new(RPD.Objects.Ui.WndQuest, RPD.Dungeon.hero, RPD.textById("SpiderQueen_DieInfo"))
-            end
-
-            if RPD.Dungeon.previousLevelId == 'necro5' and RPD.Badges:isUnlockedInThisGame(RPD.Badges.Badge.LICH_SLAIN) then
-                wnd = RPD.new(RPD.Objects.Ui.WndQuest, RPD.Dungeon.hero, RPD.textById("Lich_DieInfo"))
-            end
-
-            if RPD.Dungeon.previousLevelId == 'ice5' and RPD.Badges:isUnlockedInThisGame(RPD.Badges.Badge.ICE_GUARDIAN_SLAIN) then
-                wnd = RPD.new(RPD.Objects.Ui.WndQuest, RPD.Dungeon.hero, RPD.textById("IceGuardianCore_DieInfo"))
-            end
-        end
-
         if RPD.Dungeon.levelId == 'Town' then
-            wnd = RPD.new("com.watabou.noosa.Image", "arts/Town.png")
-            wnd:setScaleX(0.2)
-            wnd:setScaleY(0.2)
-            RPD.GameScene:effect(wnd)
+           art = add("Hero",1440)
+        elseif RPD.Dungeon.levelId == 'Sewer1' then
+           art = add("SewerSnails")
         end
-    end
-
-    if not wnd then
-        return true
-    end
-
-    return showWindowLoop(wnd)
+        if art then
+        if storage.get(RPD.Dungeon.levelId) == nil then
+            RPD.RemixedDungeon:scene():add(art)
+            art = nil
+            storage.put(RPD.Dungeon.levelId,true)
+        else
+            art:killAndErase()
+        end
+        end
+    return true
 end
 
 

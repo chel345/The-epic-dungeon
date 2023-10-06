@@ -11,14 +11,10 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 
-local cell
-
 local mob = require"scripts/lib/mob"
 
 return mob.init({
 spawn = function(self)
-if not storage.get("dust_was_spwn") then
-storage.put("dust_was_spwn",true)
 local level = RPD.Dungeon.level
 local W = level:getWidth()
 cell = self:getPos()
@@ -29,7 +25,6 @@ while level.map[cell] ~= RPD.Terrain.EMPTY and cell ~= self:getPos() do
 cell = math.random(1,level:getLength()-1)
 end
 level:drop(RPD.item("Artifacts/CursedDust"),cell).type = RPD.Heap.Type.SKELETON
-end
 end,
 interact = function(self, chr)
 if not storage.get("interact") then

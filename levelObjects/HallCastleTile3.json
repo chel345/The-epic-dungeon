@@ -4,8 +4,8 @@
             "desc": "WndInfoCell_Nothing",
             "name": "Level_TileFloor",
             "clearCells": false,
-            "nonPassable": false,
-            "canStepOn": true
+            "nonPassable": true,
+            "losBlocker": true
         },
         "sprite": {
             "imageIndex": 2,

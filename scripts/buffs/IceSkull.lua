@@ -7,7 +7,7 @@ local buff = require "scripts/lib/buff"
 return buff.init{
     desc  = function ()
         return {
-            icon          = 7,
+            icon          = 8,
             name          = RPD.StringsManager:maybeId("Ice_Skull_Buff"),
             info          = "CounterBuff_Info",
         }

@@ -63,7 +63,6 @@ return buff.init {
     charAct = function(self, buff)
         local level = RPD.Dungeon.level
         local hero = RPD.Dungeon.hero
-        local mob
 
         pos = storage.get("pos")
 
@@ -79,6 +78,7 @@ return buff.init {
             end
         end
 
+        local mob
         for i = 1, level:getLength() - 1 do
             mob = RPD.Actor:findChar(i)
             if mob and mob ~= hero and mob:getMobClassName() == "Bosses/PoisonTengu" then
@@ -92,12 +92,8 @@ return buff.init {
             hero:setViewDistance(8)
         end
 
-        if not mob then
-            return
-        end
-
         local a = math.random(1, 10)
-        if math.random(1, 10) == 1 then
+        if mob and math.random(1, 10) == 1 then
             if a >= 2 then
                 local dst = RPD.Ballistica:cast(mob:getPos(), hero:getPos(), true, true, true)
                 RPD.placeBlob(RPD.Blobs.ConfusionGas, dst, 15)

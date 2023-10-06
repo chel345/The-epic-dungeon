@@ -9,8 +9,17 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init({ 
+local isPlaying = false
 
+return mob.init({ 
+    act = function(self)
+         if self:getState():getTag() == "HUNTING" then
+             if not isPlaying then
+                  RPD.playMusic("ShadowLord",true)
+                  isPlaying = true
+             end
+         end
+    end,
     damage = function(self, cell)
 local level = RPD.Dungeon.level
 if math.random(1,3) == 3  then

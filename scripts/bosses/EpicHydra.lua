@@ -9,7 +9,17 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init({
+local isPlaying = false
+
+return mob.init({ 
+    act = function(self)
+         if self:getState():getTag() == "HUNTING" then
+             if not isPlaying then
+                  RPD.playMusic("EpicHydra",true)
+                  isPlaying = true
+             end
+         end
+    end,
         attackProc = function(self, enemy, dmg)
         RPD.affectBuff(enemy,RPD.Buffs.Poison , 10)
         return dmg

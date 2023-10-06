@@ -37,7 +37,7 @@ end
 end
 for i = 1,RPD.Dungeon.level:getLength()-1 do           
 local maybeMob = RPD.Actor:findChar(i)          
-if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() ==  "Shopkeeper" and RPD.Dungeon.depth ~= 14 then
+if maybeMob and maybeMob:getEntityKind() ==  "Shopkeeper" and RPD.Dungeon.depth ~= 14 then
 RPD.topEffect(i,"DarckKeeper")
 maybeMob:getSprite():killAndErase()
 end
@@ -46,7 +46,7 @@ local keepers = {"DarckKeeper","DarkShopkeeper1","DarkShopkeeper2"}
 if RPD.Dungeon.depth == 14 then
 for i = 1,RPD.Dungeon.level:getLength()-1 do           
 local maybeMob = RPD.Actor:findChar(i)          
-if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:getMobClassName() ==  "Shopkeeper" then
+if maybeMob and maybeMob:getEntityKind() ==  "Shopkeeper" then
 RPD.topEffect(i,keepers[math.random(1,#keepers)])
 maybeMob:getSprite():killAndErase()
 end

@@ -23,7 +23,17 @@ local zapEffect =
 }
 
 local data
-return mob.init{
+local isPlaying = false
+
+return mob.init({ 
+    act = function(self)
+         if self:getState():getTag() == "HUNTING" then
+             if not isPlaying then
+                  RPD.playMusic("ThiefKing",true)
+                  isPlaying = true
+             end
+         end
+    end,
 zapProc = function(self, enemy, dmg)
 data = math.random(1, 3)
 RPD.zapEffect(self:getPos(), enemy:getPos(), zapEffect[data])
@@ -37,4 +47,4 @@ local level = RPD.Dungeon.level
 local item = RPD.ItemFactory:itemByName("SkeletonKey")
 level:drop(item,self:getPos())
 end
-}
+})
