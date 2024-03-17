@@ -6,7 +6,7 @@
  "tiles_logic":"tiles_vault.png",
  "mobs":[
         {
-         "kind":"bosses/CrabKing",
+         "kind":"Crab",
          "x":14,
          "y":11
         },

@@ -17,7 +17,11 @@ return item.init{
             }
     end,
     image = function()
-    return RPD.Dungeon.hero:getBelongings().leftHand:image()
+        local img = RPD.Dungeon.hero:getBelongings().leftHand:image()
+        if img >= 0 and img <= 2 then
+            return img
+        end
+        return 0
     end,
     info = function()
     return RPD.Dungeon.hero:getBelongings().leftHand:info()
