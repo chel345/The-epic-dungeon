@@ -19,5 +19,5 @@
    "water":"water1.png",
    "entrance":[8,1],
    "exit":[8,8],
-   "mobs":[{"kind":"bosses/RatKing","x":8,"y":6,"loot":{"kind":"SkeletonKey"}}]
+   "mobs":[{"kind":"bosses/RatImperator","x":8,"y":6,"loot":{"kind":"SkeletonKey"}}]
 }

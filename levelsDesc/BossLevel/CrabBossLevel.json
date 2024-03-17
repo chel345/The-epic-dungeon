@@ -6,22 +6,22 @@
  "tiles_logic":"tiles_vault.png",
  "mobs":[
         {
-         "kind":"bosses/CrabKing",
+         "kind":"Crab",
          "x":14,
          "y":11
         },
         {
-         "kind":"CheldedCrab",
+         "kind":"Crab",
          "x":18,
          "y":11
         },
         {
-         "kind":"CheldedCrab",
+         "kind":"Crab",
          "x":12,
          "y":11
         },
         {
-         "kind":"CheldedCrab",
+         "kind":"Crab",
          "x":18,
          "y":6
         }

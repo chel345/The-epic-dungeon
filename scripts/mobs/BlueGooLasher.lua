@@ -10,11 +10,17 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 local function zapEffect(self, enemy)
-local missile = self:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset( self:getPos(),enemy:getPos(),Callback.callback)
-missile:size(4)
-missile:pour( RPD.Sfx.ElmoParticle.FACTORY, 0.01f)
-RPD.playSound( "snd_zap.mp3" )
+
+    local sprite = self:getSprite()
+
+    if sprite:hasParent() then
+        local missile = sprite:getParent():recycle(RPD.Sfx.MagicMissile)
+        missile:reset( self:getPos(),enemy:getPos(),Callback.callback)
+        missile:size(4)
+        missile:pour( RPD.Sfx.ElmoParticle.FACTORY, 0.01f)
+    end
+
+    RPD.playSound( "snd_zap.mp3" )
 end
 
 return mob.init{

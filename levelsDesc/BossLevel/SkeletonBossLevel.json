@@ -11,12 +11,12 @@
          "y":15
         },
         {
-         "kind":"SkeletonHand",
+         "kind":"Skeleton/SkeletonHand",
          "x":17,
          "y":15
         },
         {
-         "kind":"SkeletonHand",
+         "kind":"Skeleton/SkeletonHand",
          "x":12,
          "y":15
         }

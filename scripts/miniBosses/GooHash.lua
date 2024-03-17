@@ -10,7 +10,7 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init({
-act       = function(self, ai, me)
+act       = function(me)
 if RPD.Dungeon.level:distance(me:getPos(),RPD.Dungeon.hero:getPos()) < 4 then
 RPD.playSound("GooHash.ogg")
 local to = RPD.Ballistica:cast(me:getPos(),RPD.Dungeon.hero:getPos(),true,true,true)
