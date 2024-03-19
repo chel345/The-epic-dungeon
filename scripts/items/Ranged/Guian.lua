@@ -31,13 +31,12 @@ return item.init {
     end,
 
     onThrow = function(self, item, cell)
-        local Callback = luajava.bindClass("com.watabou.utils.Callback")
         local user = item:getUser()
         local sprite = user:getSprite()
 
         if sprite:hasParent() then
             missile = sprite:getParent():recycle(RPD.Sfx.MagicMissile)
-            missile:reset(user:getPos(), cell, Callback.callback)
+            missile:reset(user:getPos(), cell, RPD.Util.nullCallback)
             missile:size(4);
             missile:pour(RPD.Sfx.EarthParticle.FACTORY, 0.08)
         end

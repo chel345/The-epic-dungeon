@@ -56,9 +56,8 @@ me:move(i-1)
 
 local dst = RPD.Ballistica:cast(me:getPos(),me:getPos()+1, true, true, true)
 local enemy = RPD.Actor:findChar(dst)
-local Callback = luajava.bindClass("com.watabou.utils.Callback")
 missile = me:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset(me:getPos(),dst,Callback.callback)
+missile:reset(me:getPos(),dst,RPD.Util.nullCallback)
 missile:size(6); 
 missile:pour(RPD.Sfx.EarthParticle.FACTORY, 0.05)
 if enemy and enemy ~= me then
@@ -67,9 +66,8 @@ end
 
 local dst = RPD.Ballistica:cast(me:getPos(),me:getPos()-1, true, true, true)
 local enemy = RPD.Actor:findChar(dst)
-local Callback = luajava.bindClass("com.watabou.utils.Callback")
 missile = me:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset(me:getPos(),dst,Callback.callback)
+missile:reset(me:getPos(),dst,RPD.Util.nullCallback)
 missile:size(6); 
 missile:pour(RPD.Sfx.EarthParticle.FACTORY, 0.05)
 if enemy and enemy ~= me then
@@ -78,9 +76,8 @@ end
 
 local dst = RPD.Ballistica:cast(me:getPos(),me:getPos()+RPD.Dungeon.level:getWidth(), true, true, true)
 local enemy = RPD.Actor:findChar(dst)
-local Callback = luajava.bindClass("com.watabou.utils.Callback")
 missile = me:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset(me:getPos(),dst,Callback.callback)
+missile:reset(me:getPos(),dst,RPD.Util.nullCallback)
 missile:size(6); 
 missile:pour(RPD.Sfx.EarthParticle.FACTORY, 0.05)
 if enemy and enemy ~= me then
@@ -89,9 +86,8 @@ end
 
 local dst = RPD.Ballistica:cast(me:getPos(),me:getPos()-RPD.Dungeon.level:getWidth(), true, true, true)
 local enemy = RPD.Actor:findChar(dst)
-local Callback = luajava.bindClass("com.watabou.utils.Callback")
 missile = me:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset(me:getPos(),dst,Callback.callback)
+missile:reset(me:getPos(),dst,RPD.Util.nullCallback)
 missile:size(6); 
 missile:pour(RPD.Sfx.EarthParticle.FACTORY, 0.05)
 if enemy and enemy ~= me then

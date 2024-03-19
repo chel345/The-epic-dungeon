@@ -50,9 +50,8 @@ local l = thisItem:level() +1
 
 RPD.playSound( "snd_lightning.ogg" )
 
-local Callback = luajava.bindClass("com.watabou.utils.Callback")
 missile = thisItem:getUser():getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset( thisItem:getUser():getPos(),dst,Callback.callback)
+missile:reset( thisItem:getUser():getPos(),dst,RPD.Util.nullCallback)
 missile:size(1);
 missile:pour( RPD.Sfx.EnergyParticle.FACTORY, 0.01f);
 

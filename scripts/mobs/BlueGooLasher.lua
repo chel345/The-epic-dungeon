@@ -15,7 +15,7 @@ local function zapEffect(self, enemy)
 
     if sprite:hasParent() then
         local missile = sprite:getParent():recycle(RPD.Sfx.MagicMissile)
-        missile:reset( self:getPos(),enemy:getPos(),Callback.callback)
+        missile:reset( self:getPos(),enemy:getPos(),RPD.Util.nullCallback)
         missile:size(4)
         missile:pour( RPD.Sfx.ElmoParticle.FACTORY, 0.01f)
     end

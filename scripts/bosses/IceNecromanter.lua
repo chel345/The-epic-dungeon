@@ -14,15 +14,25 @@ local storage = require "scripts/lib/storage"
 return mob.init {
     act = function(me, ai, mem)
 
-        local cell = 1
-        local pos = 1
-        while (true) do
+        local cell = -1
+        local pos = -1
+        for i = 1, 1000, 1 do
             cell = math.random(1, RPD.Dungeon.level:getLength() - 1)
             pos = RPD.Ballistica:cast(me:getPos(), cell, true, true, true)
             if RPD.Dungeon.hero:getPos() ~= pos and not RPD.Actor:findChar(pos) then
                 break
             end
+            pos = -1
         end
+
+        if not RPD.Dungeon.level:cellValid(pos) then
+            pos = RPD.Dungeon.level:randomPassableCell()
+            if not RPD.Dungeon.level:cellValid(pos) then
+                return
+            end
+        end
+
+
 
         --me:getSprite():emitter():start(RPD.Sfx.ElmoParticle.FACTORY,0.001,RPD.Dungeon.level:distance(me:getPos()*0.1,pos) )
         me:getSprite():move(me:getPos(), pos, true)

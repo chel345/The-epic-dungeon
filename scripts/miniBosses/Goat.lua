@@ -38,9 +38,8 @@ end
 end
 end,
     zapProc = function(self,enemy,dmg)
-local Callback = luajava.bindClass("com.watabou.utils.Callback")
 missile = self:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
-missile:reset( self:getPos(),enemy:getPos(),Callback.callback)
+missile:reset( self:getPos(),enemy:getPos(),RPD.Util.nullCallback)
 missile:size(4);
 missile:pour( RPD.Sfx.ShaftParticle.FACTORY, 0.005f);
     end,
